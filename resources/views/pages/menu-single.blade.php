@@ -11,8 +11,9 @@
 
     <div class="side columns">
         <ul>
+            <li class="mobile-current"><a>{!! $category->name !!}</a></li>
             @foreach(\App\MenuCategory::orderby('order', 'asc')->get() as $menuNav)
-            <li class="{{ isActive('menu/'.$menuNav->url) }}"><a href="{{ URL::to('menu/'.$menuNav->url) }}">{{ $menuNav->name }}</a></li>
+            <li class="{{ isActive('menu/'.$menuNav->url) }}"><a {!! URL::current() == URL::to('menu/'.$menuNav->url) ? null : 'href="'.URL::to('menu/'.$menuNav->url).'"' !!}>{{ $menuNav->name }}</a></li>
             @endforeach
         </ul>
     </div>

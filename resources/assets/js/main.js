@@ -41,4 +41,8 @@ $(document).ready(function () {
         $('.navigation').toggleClass('mobile-extended');
     });
 
+    $('li.mobile-current a').click(function() {
+       $('.columns.side').toggleClass('mobile-extended');
+    });
+
 });

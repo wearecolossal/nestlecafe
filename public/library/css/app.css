@@ -346,6 +346,10 @@ body {
     min-height: 496px;
     position: relative;
     z-index: 1000; }
+    .columns.side.mobile-extended {
+      min-height: 496px;
+      -webkit-transition: all 0.3s ease-in;
+      transition: all 0.3s ease-in; }
     .columns.side ul {
       margin: 0;
       padding: 0;
@@ -362,6 +366,8 @@ body {
       .columns.side li:hover, .columns.side li.active {
         background: url(../img/list-hover.png) no-repeat center center;
         background-size: 100%; }
+      .columns.side li.mobile-current {
+        display: none; }
       .columns.side li:last-child a {
         background: none; }
     .columns.side a {
@@ -606,6 +612,38 @@ body {
     font-size: 1em; }
   #footer .container {
     max-width: 90%; } }
+@media (max-width: 1025px) {
+  .columns.main {
+    float: none;
+    display: block;
+    margin: 0 auto; }
+  .columns.side {
+    width: 100%;
+    max-width: 320px;
+    display: block;
+    margin: 0 auto;
+    float: none;
+    background: #b91322;
+    min-height: inherit;
+    height: 50px;
+    overflow: hidden; }
+    .columns.side.mobile-extended li.mobile-current {
+      background: url(../img/mobile-extended-open.png) no-repeat center right; }
+    .columns.side ul {
+      border-left: 2px solid #000;
+      border-right: 2px solid #000; }
+    .columns.side li:hover, .columns.side li.active {
+      background: none; }
+    .columns.side li.active {
+      display: none; }
+    .columns.side li.mobile-current {
+      display: block;
+      background: url(../img/mobile-extended-closed.png) no-repeat center right;
+      width: 90%;
+      margin: 0 auto;
+      display: block; }
+    .columns.side a {
+      background: none; } }
 @media (max-width: 842px) {
   #footer .container {
     max-width: 100%; }
@@ -690,7 +728,9 @@ body {
   float: left;
   box-sizing: border-box;
   padding: 0 20px 0 0;
-  margin: 0 0 40px 0; }
+  margin: 0 0 40px 0;
+  -webkit-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in; }
   .menu-section h2 {
     color: #ffd41f;
     font-size: 1.05em;
@@ -710,6 +750,9 @@ body {
     padding: 0;
     margin: 0; }
 
+@media (max-width: 640px) {
+  .menu-section {
+    width: 100%; } }
 .bx-wrapper {
   position: absolute;
   top: -120px; }
