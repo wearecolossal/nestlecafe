@@ -213,6 +213,13 @@ body {
     .navlist a:hover, .navlist a.active {
       border-bottom: 3px solid #b91322; }
 
+@media (max-width: 1125px) {
+  .navigation .order-online {
+    padding-top: 80px;
+    padding-bottom: 55px; }
+    .navigation .order-online:hover {
+      padding-top: 110px;
+      padding-bottom: 55px; } }
 @media (max-width: 1019px) {
   .navigation .order-online {
     margin-top: -60px; }
@@ -277,6 +284,11 @@ body {
       box-sizing: border-box; }
       .navlist li:last-child {
         border-bottom: none; } }
+@media (max-width: 400px) {
+  .navigation .order-online {
+    width: 90px; }
+    .navigation .order-online span {
+      padding: 8px 0; } }
 .banner {
   background: #ccc;
   background-size: cover !important;

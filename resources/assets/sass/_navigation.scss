@@ -108,6 +108,18 @@
   }
 }
 
+@media (max-width:1125px) {
+  .navigation {
+    .order-online {
+      padding-top: 80px;
+      padding-bottom:55px;
+      &:hover {
+        padding-top:110px;
+        padding-bottom:55px;
+      }
+    }
+  }
+}
 
 
 @media (max-width:1019px) {
@@ -188,6 +200,17 @@
       box-sizing: border-box;
       &:last-child {
         border-bottom:none;
+      }
+    }
+  }
+}
+
+@media (max-width:400px) {
+  .navigation {
+    .order-online {
+      width:90px;
+      span {
+        padding: 8px 0;
       }
     }
   }
