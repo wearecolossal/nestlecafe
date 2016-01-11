@@ -43,7 +43,7 @@
         </div>
     </div>
 
-    <div class="section image left-align center-focus non-flex-on-mobile" style="background:url({{ URL::asset('library/img/section-app.jpg') }});height:400px;">
+    <div class="section image left-align center-focus non-flex-on-mobile" style="overflow:hidden;background:url({{ URL::asset('library/img/section-app.jpg') }});height:400px;">
         <div class="container full-on-mobile">
             <div class="content on-white">
                 <h1>Download Our App</h1>
