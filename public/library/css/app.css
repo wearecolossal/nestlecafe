@@ -630,7 +630,9 @@ body {
     height: 50px;
     overflow: hidden; }
     .columns.side.mobile-extended li.mobile-current a {
-      background: url(../img/mobile-extended-open.png) no-repeat center right; }
+      background: url(../img/mobile-extended-open.png) no-repeat center right;
+      display: block;
+      width: 100%; }
     .columns.side ul {
       border-left: 2px solid #000;
       border-right: 2px solid #000; }
@@ -644,7 +646,9 @@ body {
       margin: 0 auto;
       display: block; }
       .columns.side li.mobile-current a {
-        background: url(../img/mobile-extended-closed.png) no-repeat center right; }
+        background: url(../img/mobile-extended-closed.png) no-repeat center right;
+        display: block;
+        width: 100%; }
     .columns.side a {
       background: none; } }
 @media (max-width: 842px) {

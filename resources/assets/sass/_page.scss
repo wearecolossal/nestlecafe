@@ -344,6 +344,8 @@
         li.mobile-current {
           a {
             background:url(../img/mobile-extended-open.png) no-repeat center right;
+            display: block;
+            width: 100%;
           }
         }
       }
@@ -365,6 +367,8 @@
           display:block;
           a {
             background:url(../img/mobile-extended-closed.png) no-repeat center right;
+            display: block;
+            width: 100%;
           }
         }
       }
