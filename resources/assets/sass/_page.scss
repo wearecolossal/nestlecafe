@@ -342,7 +342,9 @@
       overflow: hidden;
       &.mobile-extended {
         li.mobile-current {
-          background:url(../img/mobile-extended-open.png) no-repeat center right;
+          a {
+            background:url(../img/mobile-extended-open.png) no-repeat center right;
+          }
         }
       }
       ul {
@@ -358,10 +360,12 @@
         }
         &.mobile-current {
           display:block;
-          background:url(../img/mobile-extended-closed.png) no-repeat center right;
           width:90%;
           margin:0 auto;
           display:block;
+          a {
+            background:url(../img/mobile-extended-closed.png) no-repeat center right;
+          }
         }
       }
       a {

@@ -629,7 +629,7 @@ body {
     min-height: inherit;
     height: 50px;
     overflow: hidden; }
-    .columns.side.mobile-extended li.mobile-current {
+    .columns.side.mobile-extended li.mobile-current a {
       background: url(../img/mobile-extended-open.png) no-repeat center right; }
     .columns.side ul {
       border-left: 2px solid #000;
@@ -640,10 +640,11 @@ body {
       display: none; }
     .columns.side li.mobile-current {
       display: block;
-      background: url(../img/mobile-extended-closed.png) no-repeat center right;
       width: 90%;
       margin: 0 auto;
       display: block; }
+      .columns.side li.mobile-current a {
+        background: url(../img/mobile-extended-closed.png) no-repeat center right; }
     .columns.side a {
       background: none; } }
 @media (max-width: 842px) {
