@@ -1,0 +1,75 @@
+.menulist {
+  margin-top:15px;
+  .menulist-item {
+    @include masonry();
+  }
+}
+
+@media (max-width:842px) {
+  .menulist {
+    .menulist-item {
+      @include masonry_mobile();
+    }
+  }
+}
+
+.menu-page {
+  max-width:700px;
+  width: 100%;
+  display:block;
+  margin: 0 auto;
+  h1 {
+    text-align: center;
+    color: $yellow;
+    font-family: $gothamBook, "Helvetica", sans-serif;
+    font-weight: 100;
+    font-size: 2.55em;
+    margin: 0;
+    padding: 30px 0;
+  }
+  p {
+    a {
+      color: $yellow;
+      text-decoration: none;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+    &.lead {
+      font-size: 1.5em;
+      color: #fff;
+      font-family: $gothamBook, "Helvetica", sans-serif;
+      font-weight: 100;
+      margin: 0 0 45px 0;
+    }
+  }
+}
+
+.menu-section {
+  width:50%;
+  float: left;
+  box-sizing: border-box;
+  padding: 0 20px 0 0;
+  margin: 0 0 40px 0;
+  h2 {
+    color: $yellow;
+    font-size: 1.05em;
+    font-weight: 100;
+    font-family: $gothamBook, "Helvetica", sans-serif;
+    text-transform: uppercase;
+    margin: 0;
+    padding: 0;
+  }
+  a {
+    color: $yellow;
+    text-decoration: none;
+  }
+  p {
+    color: #fff;
+    font-family: $gothamBook, "Helvetica", sans-serif;
+    font-size: 1em;
+    line-height: 1.25;
+    padding: 0;
+    margin: 0;
+  }
+}

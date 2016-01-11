@@ -1,0 +1,41 @@
+//FONT EMBED
+@font-face {
+  font-family: "Helvetica Rounded";
+  src: url("../fonts/Adobe-HelveticaRoundedLTStd-Bd.eot");
+  src: local("☺"),
+  url("../fonts/Adobe-HelveticaRoundedLTStd-Bd.woff") format("woff"),
+  url("../fonts/Adobe-HelveticaRoundedLTStd-Bd.otf") format("opentype"),
+  url("../fonts/Adobe-HelveticaRoundedLTStd-Bd.svg") format("svg");
+}
+
+@font-face {
+  font-family: "Gotham Rounded Book";
+  src: url("../fonts/GothamRnd-Book.eot");
+  src: local("☺"),
+  url("../fonts/GothamRnd-Book.woff") format("woff"),
+  url("../fonts/GothamRnd-Book.otf") format("opentype"),
+  url("../fonts/GothamRnd-Book.svg") format("svg");
+}
+
+@font-face {
+  font-family: "Gotham Rounded Book Italic";
+  src: url("../fonts/GothamRnd-BookIta.eot");
+  src: local("☺"),
+  url("../fonts/GothamRnd-BookIta.woff") format("woff"),
+  url("../fonts/GothamRnd-BookIta.otf") format("opentype"),
+  url("../fonts/GothamRnd-BookIta.svg") format("svg");
+}
+
+@font-face {
+  font-family: "Gotham Rounded Light Italic";
+  src: url("../fonts/GothamRnd-LightIta.eot");
+  src: local("☺"),
+  url("../fonts/GothamRnd-LightIta.woff") format("woff"),
+  url("../fonts/GothamRnd-LightIta.otf") format("opentype"),
+  url("../fonts/GothamRnd-LightIta.svg") format("svg");
+}
+
+$helvetica : "Helvetica Rounded";
+$gothamBook : "Gotham Rounded Book";
+$gothamBookIta : "Gotham Rounded Book Italic";
+$gothamLightIta : "Gotham Rounded Light Italic";

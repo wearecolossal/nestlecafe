@@ -1,0 +1,29 @@
+//BASE STYLES
+@mixin container($width) {
+  margin: 0 auto;
+  display: block;
+  width: 100%;
+  max-width: $width;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-yellow {
+  color: $yellow;
+}
+
+.text-brown {
+  color: $brown;
+}
+
+.red-dotted-divider {
+  height: 3px;
+  background: url(../img/repeat-dotted-red.png) repeat-x;
+  width: 100%;
+  position: absolute;
+  margin: 10px 0 0 0;
+  z-index: 0;
+  left: 0;
+}

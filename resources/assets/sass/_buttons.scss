@@ -1,0 +1,15 @@
+.btn {
+  &.wired {
+    border:2px solid $yellow;
+    margin: 0px 0px;
+    padding: 9px 15px 7px;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: $helvetica, "Helvetica", sans-serif;
+    &:after {
+      content:url(../img/btn-triangle-yellow.png);
+      padding-left: 7px;
+    }
+  }
+}

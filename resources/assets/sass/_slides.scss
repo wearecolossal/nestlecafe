@@ -1,0 +1,75 @@
+//SLIDE SHOW
+.bx-wrapper {
+  position: absolute;
+  top:-120px;
+}
+ul.slider {
+  padding: 0;
+  margin: 0 auto;
+  max-width: 1200px;
+  width: 100%;
+  li {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    max-width: 1200px;
+    height: 600px;
+    position: relative;
+    display: flex;
+    img {
+      position: absolute;
+      width: 100%;
+    }
+  }
+  .content {
+    position: absolute;
+    @include transition(.3s);
+  }
+  .subhead {
+    color: $red;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    &:before {
+      box-sizing: border-box;
+      padding:5px 0 5px 0;
+      @include dotted_divider('../img/repeat-dotted-red.png');
+    }
+    &:after {
+      box-sizing: border-box;
+      padding:5px 0 5px 0;
+      margin: 0 0 15px 0;
+      @include dotted_divider('../img/repeat-dotted-red.png');
+    }
+  }
+  .content {
+    padding: 190px 50px 50px 115px;
+  }
+  .heading {
+    color: #fff;
+    font-family: $helvetica, "Helvetica", sans-serif;
+    font-size: 5.62em;
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+  }
+  .tag {
+    font-family: $gothamBook, "Helvetica",sans-serif;
+    color: $brown;
+    text-transform: uppercase;
+    font-size: 1.25em;
+    padding: 0;
+    margin: 0;
+  }
+}
+
+@media (max-width:842px) {
+  .bx-wrapper {
+    top:0px;
+  }
+  ul.slider {
+    .content {
+      padding-left:20px;
+    }
+  }
+}
