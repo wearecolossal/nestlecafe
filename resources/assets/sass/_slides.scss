@@ -73,3 +73,11 @@ ul.slider {
     }
   }
 }
+
+@media (max-width:420px) {
+  ul.slider {
+    .heading {
+      font-size: 4em;
+    }
+  }
+}

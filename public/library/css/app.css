@@ -841,6 +841,9 @@ ul.slider {
 
   ul.slider .content {
     padding-left: 20px; } }
+@media (max-width: 420px) {
+  ul.slider .heading {
+    font-size: 4em; } }
 .btn.wired {
   border: 2px solid #ffd41f;
   margin: 0px 0px;
