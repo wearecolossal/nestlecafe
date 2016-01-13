@@ -112,6 +112,23 @@ textarea {
   z-index: 0;
   left: 0; }
 
+.placeholder-content {
+  height: 400px;
+  background: rgba(0, 0, 0, 0.4);
+  margin-top: 50px;
+  display: -webkit-box;
+  /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+  display: -ms-flexbox;
+  /* TWEENER - IE 10 */
+  display: -webkit-flex;
+  /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+  display: flex;
+  /* NEW, Spec - Firefox, Chrome, Opera */
+  align-items: center;
+  justify-content: center;
+  color: #ffd41f;
+  font-family: "Gotham Rounded Book", "Helvetica", sans-serif; }
+
 body {
   background: #291a13 url(../img/background-body.jpg) repeat-y center; }
 
@@ -421,7 +438,9 @@ body {
 
 @media (max-width: 842px) {
   .masonry .masonry-list-item.one-third, .masonry .masonry-list-item.two-third {
-    width: 100%; } }
+    width: 100%;
+    -webkit-transition: all 0.3s ease-in;
+    transition: all 0.3s ease-in; } }
 .section {
   width: 100%;
   display: block;
@@ -716,7 +735,9 @@ body {
 
 @media (max-width: 842px) {
   .menulist .menulist-item.one-third, .menulist .menulist-item.two-third {
-    width: 100%; } }
+    width: 100%;
+    -webkit-transition: all 0.3s ease-in;
+    transition: all 0.3s ease-in; } }
 .menu-page {
   max-width: 700px;
   width: 100%;

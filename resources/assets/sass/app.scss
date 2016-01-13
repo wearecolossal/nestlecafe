@@ -96,9 +96,9 @@ textarea {
    ========================================================================== */
 @import "fonts";
 @import "variables";
+@import "mixins";
 @import "base";
 @import "global";
-@import "mixins";
 @import "type";
 @import "navigation";
 @import "banner";
@@ -106,6 +106,8 @@ textarea {
 @import "menu";
 @import "slides";
 @import "buttons";
+
+
 
 /* ==========================================================================
    Helper classes

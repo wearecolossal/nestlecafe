@@ -55,6 +55,7 @@
 @mixin masonry_mobile() {
   &.one-third, &.two-third {
     width: 100%;
+    @include transition(.3s);
   }
 }
 

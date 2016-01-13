@@ -60,4 +60,11 @@ class PagesController extends Controller
     public function story() {
         return view('pages.story');
     }
+
+    /*
+     * FRANCHISE
+     */
+    public function franchise() {
+        return view('pages.franchise');
+    }
 }

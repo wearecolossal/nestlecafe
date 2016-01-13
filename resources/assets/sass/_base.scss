@@ -28,3 +28,14 @@
   left: 0;
 }
 
+.placeholder-content {
+  height:400px;
+  background:rgba(0, 0, 0, .4);
+  margin-top:50px;
+  @include flexbox();
+  align-items: center;
+  justify-content: center;
+  color: $yellow;
+  font-family: $gothamBook, "Helvetica", sans-serif;
+}
+

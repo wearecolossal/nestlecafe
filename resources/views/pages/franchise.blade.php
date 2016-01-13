@@ -2,7 +2,7 @@
 
 @section('banner', 'page simple')
 @section('bannerText')
-    {!! "Our Story" !!}
+    {!! "Franchising Opportunities" !!}
 @stop
 
 
