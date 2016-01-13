@@ -67,4 +67,11 @@ class PagesController extends Controller
     public function franchise() {
         return view('pages.franchise');
     }
+
+    /*
+     * FRANCHISE
+     */
+    public function order() {
+        return view('pages.order');
+    }
 }

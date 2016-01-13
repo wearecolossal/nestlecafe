@@ -20,6 +20,7 @@ Route::group(['prefix' => 'menu'], function () {
 Route::get('locations', 'PagesController@locator');
 Route::get('story', 'PagesController@story');
 Route::get('franchise', 'PagesController@franchise');
+Route::get('online-order', 'PagesController@order');
 /*
 |--------------------------------------------------------------------------
 | Application Routes
