@@ -419,13 +419,19 @@ body {
   text-transform: uppercase;
   text-decoration: none;
   position: relative;
-  text-shadow: 0px 0px 15px rgba(0, 0, 0, 0.75);
-  -webkit-transition: all 0.5s ease-in;
-  transition: all 0.5s ease-in;
-  background-size: cover !important; }
+  text-shadow: 0px 5px 8px rgba(0, 0, 0, 0.9);
+  box-sizing: border-box;
+  -webkit-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
+  background-position: center center !important;
+  background-size: auto 100% !important;
+  overflow: hidden; }
+  .masonry .masonry-list-item:hover {
+    background-size: auto 105% !important;
+    border: 1px solid #ffd41f; }
   .masonry .masonry-list-item.on-white {
     color: #332116;
-    text-shadow: 0px 0px 15px rgba(255, 255, 255, 0.85); }
+    text-shadow: 0px 5px 8px rgba(255, 255, 255, 0.9); }
   .masonry .masonry-list-item.one-third {
     width: 39%; }
   .masonry .masonry-list-item.two-third {
@@ -716,13 +722,19 @@ body {
     text-transform: uppercase;
     text-decoration: none;
     position: relative;
-    text-shadow: 0px 0px 15px rgba(0, 0, 0, 0.75);
-    -webkit-transition: all 0.5s ease-in;
-    transition: all 0.5s ease-in;
-    background-size: cover !important; }
+    text-shadow: 0px 5px 8px rgba(0, 0, 0, 0.9);
+    box-sizing: border-box;
+    -webkit-transition: all 0.3s ease-in;
+    transition: all 0.3s ease-in;
+    background-position: center center !important;
+    background-size: auto 100% !important;
+    overflow: hidden; }
+    .menulist .menulist-item:hover {
+      background-size: auto 105% !important;
+      border: 1px solid #ffd41f; }
     .menulist .menulist-item.on-white {
       color: #332116;
-      text-shadow: 0px 0px 15px rgba(255, 255, 255, 0.85); }
+      text-shadow: 0px 5px 8px rgba(255, 255, 255, 0.9); }
     .menulist .menulist-item.one-third {
       width: 39%; }
     .menulist .menulist-item.two-third {
@@ -770,7 +782,8 @@ body {
   padding: 0 20px 0 0;
   margin: 0 0 40px 0;
   -webkit-transition: all 0.3s ease-in;
-  transition: all 0.3s ease-in; }
+  transition: all 0.3s ease-in;
+  position: relative; }
   .menu-section h2 {
     color: #ffd41f;
     font-size: 1.05em;
@@ -781,7 +794,12 @@ body {
     padding: 0; }
   .menu-section a {
     color: #ffd41f;
-    text-decoration: none; }
+    text-decoration: none;
+    cursor: pointer;
+    -webkit-transition: all 0.3s ease-in;
+    transition: all 0.3s ease-in; }
+    .menu-section a:hover {
+      color: #b91322; }
   .menu-section p {
     color: #fff;
     font-family: "Gotham Rounded Book", "Helvetica", sans-serif;
@@ -789,7 +807,84 @@ body {
     line-height: 1.25;
     padding: 0;
     margin: 0; }
+  .menu-section #tooltip {
+    position: absolute;
+    width: 500px;
+    height: 335px;
+    display: none;
+    opacity: 0;
+    top: -370px;
+    border: 7px solid #ffd41f;
+    -webkit-transition: all 0.5s ease-in;
+    transition: all 0.5s ease-in; }
+    .menu-section #tooltip.odd {
+      left: 0; }
+      .menu-section #tooltip.odd:after {
+        left: 0px; }
+    .menu-section #tooltip.even {
+      right: 0; }
+      .menu-section #tooltip.even:after {
+        left: 170px; }
+    .menu-section #tooltip.active {
+      display: block;
+      opacity: 1; }
+    .menu-section #tooltip:after {
+      content: " ";
+      background: url(../img/menu-single-tooltip.png) no-repeat center center;
+      width: 53px;
+      height: 25px;
+      bottom: -25px;
+      position: absolute;
+      z-index: 1000; }
+    .menu-section #tooltip img {
+      width: 500px;
+      height: 335px;
+      position: absolute;
+      z-index: 1000;
+      border: 3px solid #2E1A11;
+      box-sizing: border-box; }
+    .menu-section #tooltip h3 {
+      color: #fff;
+      font-size: 1.25em;
+      font-weight: 100;
+      font-family: "Gotham Rounded Book", "Helvetica", sans-serif;
+      text-transform: uppercase;
+      width: 100%;
+      display: block;
+      white-space: nowrap;
+      text-align: right;
+      float: right;
+      margin: 0;
+      padding: 10px 20px;
+      box-sizing: border-box;
+      position: absolute;
+      z-index: 1500;
+      text-shadow: 0px 5px 8px rgba(0, 0, 0, 0.9); }
+      .menu-section #tooltip h3.on-white {
+        color: #2E1A11;
+        text-shadow: 0px 5px 8px rgba(255, 255, 255, 0.9); }
 
+@media (max-width: 1141px) {
+  .menu-section #tooltip {
+    display: block;
+    opacity: 1;
+    position: relative;
+    width: 100%;
+    height: inherit;
+    top: 0;
+    border: none;
+    border-bottom: 3px solid #ffd41f;
+    margin-bottom: 10px; }
+    .menu-section #tooltip img {
+      border: none;
+      width: 100%;
+      height: inherit;
+      position: relative;
+      margin-bottom: 15px; }
+    .menu-section #tooltip h3 {
+      display: none; }
+    .menu-section #tooltip:after {
+      background: none; } }
 @media (max-width: 640px) {
   .menu-section {
     width: 100%; } }

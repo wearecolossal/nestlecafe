@@ -31,7 +31,13 @@
             @foreach($items as $item)
                 <?php $iterator++; ?>
                 <div class="menu-section">
-                    <h2>{!! $item->name !!}</h2>
+                    @if($item->image)
+                        <div id="tooltip" class="{!! $iterator % 2 == 0 ? 'even' : 'odd' !!}">
+                            <h3 class="{{ $item->on_white == 1 ? 'on-white' : null }}">{!! $item->name !!}</h3>
+                            <img src="{{ URL::asset('library/img/menu/'.$item->image) }}" alt="{!! $item->name !!}">
+                        </div>
+                    @endif
+                    <h2><a class="tooltip">{!! $item->name !!}</a></h2>
                     <p>
                         {!! $item->description !!}
                     </p>
@@ -47,4 +53,10 @@
 @stop
 
 @section('scripts')
+    <script>
+        $('a.tooltip').hover(function(){
+           var tooltip = $(this).parent().parent().find('#tooltip');
+           tooltip.toggleClass('active');
+        });
+    </script>
 @stop
