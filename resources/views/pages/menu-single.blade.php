@@ -30,7 +30,7 @@
             <?php $iterator = 0; ?>
             @foreach($items as $item)
                 <?php $iterator++; ?>
-                <div class="menu-section">
+                <div class="menu-section {{ $item->image ? 'has-tooltip' : null }}">
                     @if($item->image)
                         <div id="tooltip" class="{!! $iterator % 2 == 0 ? 'even' : 'odd' !!}">
                             <h3 class="{{ $item->on_white == 1 ? 'on-white' : null }}">{!! $item->name !!}</h3>
@@ -54,8 +54,8 @@
 
 @section('scripts')
     <script>
-        $('a.tooltip').hover(function(){
-           var tooltip = $(this).parent().parent().find('#tooltip');
+        $('.menu-section').hover(function(){
+           var tooltip = $(this).find('#tooltip');
            tooltip.toggleClass('active');
         });
     </script>

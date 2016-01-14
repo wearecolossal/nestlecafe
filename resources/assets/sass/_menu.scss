@@ -49,10 +49,15 @@
   width:50%;
   float: left;
   box-sizing: border-box;
-  padding: 0 20px 0 0;
+  padding: 10px 20px 10px 10px;
   margin: 0 0 40px 0;
   @include transition(.3s);
   position: relative;
+  &.has-tooltip {
+    &:hover {
+      background:rgba(0, 0, 0, .4);
+    }
+  }
   h2 {
     color: $yellow;
     font-size: 1.05em;
@@ -67,9 +72,6 @@
     text-decoration: none;
     cursor: pointer;
     @include transition(.3s);
-    &:hover {
-      color: $red;
-    }
   }
   p {
     color: #fff;
@@ -148,6 +150,11 @@
 
 @media (max-width:1040px) {
   .menu-section {
+    &.has-tooltip {
+      &:hover {
+        background:none;
+      }
+    }
     #tooltip {
       display: block;
       opacity: 1;
