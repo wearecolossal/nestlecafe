@@ -1,6 +1,6 @@
 @extends('layouts.master')
 
-@section('banner', 'page')
+@section('banner', 'page mini')
 @section('background', URL::asset('library/img/banner-base.jpg'))
 @section('bannerText')
     {!! "Career <br/> Opportunities" !!}

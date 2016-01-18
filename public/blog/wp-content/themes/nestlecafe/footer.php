@@ -16,7 +16,7 @@
         <div class="footer-section">
             <h1>Nestlé Café</h1>
             <ul>
-                <li><a href="#">Online Ordering</a></li>
+                <li><a href="<?php echo str_replace('blog', 'online-order', site_url()); ?>">Online Ordering</a></li>
                 <li><a href="<?php echo str_replace('blog', 'about', site_url()); ?>">About Us</a></li>
                 <li><a href="<?php echo str_replace('blog', 'careers', site_url()); ?>">Careers</a></li>
                 <li><a href="#">Caf&eacute; Locations &amp; Events</a></li>

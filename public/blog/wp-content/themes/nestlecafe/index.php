@@ -18,7 +18,7 @@ get_header(); ?>
 	<div class="wrapper blog-pages">
         <section class="page">
             <div class="main-column">
-                        <div id="primary" class="content-area block light no-border">
+                        <div id="primary" class="content-area transparent">
                             <main id="main" class="site-main" role="main">
 
                                 <?php
@@ -59,7 +59,7 @@ get_header(); ?>
 
 
                     <div class="side-column">
-                        <div class="block light no-border">
+                        <div class="block transparent">
                             <?php
                             get_sidebar();
                             ?>

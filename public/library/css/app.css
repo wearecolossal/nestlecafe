@@ -375,6 +375,11 @@ body {
     height: 100%; }
   .banner.page {
     height: 327px; }
+    .banner.page.mini {
+      height: 200px; }
+      .banner.page.mini p {
+        text-align: right;
+        width: 100%; }
     .banner.page.simple {
       height: 200px;
       background: url(../img/repeat-dotted-red.png) bottom left repeat-x !important;
@@ -387,6 +392,10 @@ body {
   .banner.home {
     height: 600px; }
 
+.block.dark form label {
+  color: #EDEBD7; }
+.block.dark form select, .block.dark form input[type="text"], .block.dark form input[type="email"] {
+  color: #2E1A11; }
 section.page form label {
   display: block;
   font-family: "Gotham Rounded Book", "Helvetica", sans-serif;
@@ -1262,6 +1271,9 @@ ul.slider {
     background: #5d0a11; }
 .btn.btn-lg {
   font-size: 1em; }
+.btn.btn-sm {
+  font-size: .70em;
+  white-space: nowrap; }
 
 .blog-pages {
   margin: 0 auto;
@@ -1272,13 +1284,21 @@ ul.slider {
     padding-top: 0; }
   .blog-pages .main-column {
     padding-top: 0;
-    margin-top: 0 0 0 0; }
+    margin-top: 0 0 0 0;
+    color: #EDEBD7; }
+
+.entry-content p a {
+  color: #ffd41f; }
+
+.entry-meta a {
+  color: #ffd41f;
+  text-decoration: none; }
 
 .entry-title {
   color: #2E1A11;
   font-family: "Helvetica Rounded", "Helvetica", sans-serif; }
   .entry-title a {
-    color: #2E1A11;
+    color: #ffd41f;
     text-decoration: none; }
 
 /* ==========================================================================

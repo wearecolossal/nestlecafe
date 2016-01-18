@@ -17,7 +17,7 @@
             <br>
         </div>
         <div class="main-column">
-            <div class="block light no-border">
+            <div class="block dark">
                 {!! Form::open() !!}
                 <div class="form-group">
                     {!! Form::label('name', 'Name') !!}
@@ -281,7 +281,7 @@
                 <hr class="yellow-dotted-divider within">
                 <div class="clearfix"></div>
                 <h3>Looking For A Nearby Caf&eacute;?</h3>
-                <a href="" class="btn btn-red">Visit The Caf&eacute; Locator</a>
+                <a href="" class="btn wired btn-sm">Visit The Caf&eacute; Locator</a>
             </div>
             <div class="clearfix"></div>
         </div>

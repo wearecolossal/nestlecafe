@@ -1,6 +1,6 @@
 @extends('layouts.master')
 
-@section('banner', 'page')
+@section('banner', 'page mini')
 @section('background', URL::asset('library/img/banner-base.jpg'))
 @section('bannerText')
     {!! "About Us" !!}
@@ -12,7 +12,7 @@
         <div class="block header">
             <h2>A Dessert Cafe That Began With A Dream, <br> One World-Renowned Brand And A Passion For Service</h2>
         </div>
-        <div class="block light no-border">
+        <div class="block transparent">
             <p>
                 All great stories have a sensational beginning. A once upon a time. For us, it was a rich history of Nestl&eacute; brands woven into our lifestyle and a dream to make the world a beautiful place to spread the love and enhance the way we live. From the beginning, Nestl&eacute;&reg; Toll House&reg; Caf&eacute; by Chip&reg; was destined to be more than just a bakery; it's our passion for those sweet memorable moments in life.
                 <br><br>

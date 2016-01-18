@@ -26,6 +26,13 @@
   }
   &.page {
     height: 327px;
+    &.mini {
+      height: 200px;
+      p {
+        text-align: right;
+        width: 100%;
+      }
+    }
     &.simple {
       height:200px;
       background:url(../img/repeat-dotted-red.png) bottom left repeat-x !important;

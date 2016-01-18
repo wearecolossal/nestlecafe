@@ -1,6 +1,6 @@
 @extends('layouts.master')
 
-@section('banner', 'page')
+@section('banner', 'page mini')
 @section('background', URL::asset('library/img/banner-base.jpg'))
 @section('bannerText')
     {!! "Franchising <br/> Opportunities" !!}
@@ -22,7 +22,7 @@
             <div class="text-center">
                 <hr class="yellow-dotted-divider within">
                 <br>
-                <a href="http://www.nestlecafefranchise.com/our-story.html" target="_blank" class="btn btn-red btn-lg">Visit Nestl&eacute; Franchising Site</a>
+                <a href="http://www.nestlecafefranchise.com/our-story.html" target="_blank" class="btn wired btn-lg">Visit Nestl&eacute; Franchising Site</a>
                 <br><br>
             </div>
         </div>

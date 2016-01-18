@@ -1,4 +1,12 @@
 form {
+  .block.dark & {
+    label {
+      color: $beige;
+    }
+    select, input[type="text"], input[type="email"] {
+      color: $brown;
+    }
+  }
   section.page & {
     label {
       display: block;

@@ -18,7 +18,7 @@ get_header(); ?>
     <div class="wrapper blog-pages">
         <section class="page">
             <div class="main-column">
-                <div id="primary" class="content-area block light no-border">
+                <div id="primary" class="content-area block transparent">
                     <main id="main" class="site-main" role="main">
 
                         <?php
@@ -28,7 +28,7 @@ get_header(); ?>
 
                             // If comments are open or we have at least one comment, load up the comment template.
                             if ( comments_open() || get_comments_number() ) :
-                                comments_template();
+                                //comments_template();
                             endif;
 
                         endwhile; // End of the loop.
@@ -40,7 +40,7 @@ get_header(); ?>
 
 
                 <div class="side-column">
-                    <div class="block light no-border">
+                    <div class="block transparent">
                         <?php
                         get_sidebar();
                         ?>

@@ -1,0 +1,37 @@
+//Blog
+.blog-pages {
+  @include container(1024px);
+  section.page {
+    padding-top: 0;
+  }
+  .main-column {
+    padding-top: 0;
+    margin-top: 0 0 0 0;
+    color: $beige;
+  }
+}
+
+.entry-content {
+  p {
+    a {
+      color: $yellow;
+    }
+  }
+}
+
+.entry-meta {
+  a {
+    color:$yellow;
+    text-decoration: none;
+  }
+}
+
+.entry-title {
+  color: $brown;
+  font-family: $helvetica, "Helvetica", sans-serif;
+  a {
+    color: $yellow;
+    text-decoration: none;
+  }
+}
+
