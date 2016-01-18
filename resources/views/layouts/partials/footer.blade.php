@@ -8,7 +8,7 @@
                 <li class="{{ isActive('careers') }}"><a href="{{ URL::to('careers') }}">Careers</a></li>
                 <li><a href="#">Caf&eacute; Locations &amp; Events</a></li>
                 <li><a href="#">The Caf&eacute; Club</a></li>
-                <li><a href="#">Cookie Talk</a></li>
+                <li><a href="{{ URL::to('blog') }}">Cookie Talk</a></li>
             </ul>
         </div>
         <div class="footer-section">

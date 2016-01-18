@@ -159,6 +159,9 @@ textarea {
   color: #ffd41f;
   font-family: "Gotham Rounded Book", "Helvetica", sans-serif; }
 
+.hidden {
+  display: none; }
+
 body {
   background: #291a13 url(../img/background-body.jpg) repeat-y center;
   font-family: "Helvetica", sans-serif; }
@@ -1259,6 +1262,24 @@ ul.slider {
     background: #5d0a11; }
 .btn.btn-lg {
   font-size: 1em; }
+
+.blog-pages {
+  margin: 0 auto;
+  display: block;
+  width: 100%;
+  max-width: 1024px; }
+  .blog-pages section.page {
+    padding-top: 0; }
+  .blog-pages .main-column {
+    padding-top: 0;
+    margin-top: 0 0 0 0; }
+
+.entry-title {
+  color: #2E1A11;
+  font-family: "Helvetica Rounded", "Helvetica", sans-serif; }
+  .entry-title a {
+    color: #2E1A11;
+    text-decoration: none; }
 
 /* ==========================================================================
    Helper classes

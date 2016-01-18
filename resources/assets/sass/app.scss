@@ -108,6 +108,27 @@ textarea {
 @import "slides";
 @import "buttons";
 
+//Blog
+.blog-pages {
+  @include container(1024px);
+  section.page {
+    padding-top: 0;
+  }
+  .main-column {
+    padding-top: 0;
+    margin-top: 0 0 0 0;
+  }
+}
+
+.entry-title {
+  color: $brown;
+  font-family: $helvetica, "Helvetica", sans-serif;
+  a {
+    color: $brown;
+    text-decoration: none;
+  }
+}
+
 /* ==========================================================================
    Helper classes
    ========================================================================== */
