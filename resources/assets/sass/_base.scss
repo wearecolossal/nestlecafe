@@ -6,6 +6,21 @@
   max-width: $width;
 }
 
+@mixin dotted-divider($image) {
+  height: 3px;
+  background: url($image) repeat-x;
+  width: 100%;
+  position: absolute;
+  margin: 10px 0 0 0;
+  z-index: 0;
+  left: 0;
+  border:none;
+  outline: none;
+  &.within {
+    position: relative;
+  }
+}
+
 .text-center {
   text-align: center;
 }
@@ -19,13 +34,15 @@
 }
 
 .red-dotted-divider {
-  height: 3px;
-  background: url(../img/repeat-dotted-red.png) repeat-x;
-  width: 100%;
-  position: absolute;
-  margin: 10px 0 0 0;
-  z-index: 0;
-  left: 0;
+  @include dotted-divider('../img/repeat-dotted-red.png');
+}
+
+.yellow-dotted-divider {
+  @include dotted-divider('../img/repeat-dotted-yellow.png');
+}
+
+.brown-dotted-divider {
+  @include dotted-divider('../img/repeat-dotted-brown.png');
 }
 
 .placeholder-content {

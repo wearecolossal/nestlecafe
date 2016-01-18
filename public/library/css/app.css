@@ -105,12 +105,42 @@ textarea {
 
 .red-dotted-divider {
   height: 3px;
-  background: url(../img/repeat-dotted-red.png) repeat-x;
+  background: url("../img/repeat-dotted-red.png") repeat-x;
   width: 100%;
   position: absolute;
   margin: 10px 0 0 0;
   z-index: 0;
-  left: 0; }
+  left: 0;
+  border: none;
+  outline: none; }
+  .red-dotted-divider.within {
+    position: relative; }
+
+.yellow-dotted-divider {
+  height: 3px;
+  background: url("../img/repeat-dotted-yellow.png") repeat-x;
+  width: 100%;
+  position: absolute;
+  margin: 10px 0 0 0;
+  z-index: 0;
+  left: 0;
+  border: none;
+  outline: none; }
+  .yellow-dotted-divider.within {
+    position: relative; }
+
+.brown-dotted-divider {
+  height: 3px;
+  background: url("../img/repeat-dotted-brown.png") repeat-x;
+  width: 100%;
+  position: absolute;
+  margin: 10px 0 0 0;
+  z-index: 0;
+  left: 0;
+  border: none;
+  outline: none; }
+  .brown-dotted-divider.within {
+    position: relative; }
 
 .placeholder-content {
   height: 400px;
@@ -130,7 +160,14 @@ textarea {
   font-family: "Gotham Rounded Book", "Helvetica", sans-serif; }
 
 body {
-  background: #291a13 url(../img/background-body.jpg) repeat-y center; }
+  background: #291a13 url(../img/background-body.jpg) repeat-y center;
+  font-family: "Helvetica", sans-serif; }
+
+.text-right {
+  text-align: right; }
+
+.text-center {
+  text-align: center; }
 
 .navigation {
   height: 60px;
@@ -347,6 +384,44 @@ body {
   .banner.home {
     height: 600px; }
 
+section.page form label {
+  display: block;
+  font-family: "Gotham Rounded Book", "Helvetica", sans-serif;
+  color: #2E1A11; }
+section.page form input[type="text"], section.page form input[type="email"], section.page form textarea {
+  background: #ddd9b4;
+  border: none;
+  outline: none;
+  width: 100%;
+  padding: 15px;
+  display: block;
+  box-sizing: border-box; }
+section.page form select {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 15px;
+  background: #ddd9b4 url(../img/form-select-dropdown.png) center right no-repeat;
+  border: none;
+  outline: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none; }
+section.page form input[type="submit"] {
+  border: none;
+  background: #2E1A11;
+  color: #EDEBD7;
+  padding: 10px 20px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px; }
+  section.page form input[type="submit"]:hover {
+    background: #5d0a11; }
+section.page form .form-group {
+  margin: 10px 0;
+  box-sizing: border-box;
+  width: 100%;
+  position: relative; }
+
 .wrapper {
   margin: 0 auto;
   display: block;
@@ -449,6 +524,104 @@ body {
     width: 100%;
     -webkit-transition: all 0.3s ease-in;
     transition: all 0.3s ease-in; } }
+section.page {
+  display: block;
+  margin-top: 10px;
+  padding: 20px;
+  box-sizing: border-box;
+  position: relative; }
+  section.page .main-column {
+    width: 75%;
+    float: left;
+    display: block; }
+  section.page .side-column {
+    width: 25%;
+    float: left;
+    display: block;
+    height: 100%; }
+    section.page .side-column .block.dark {
+      padding: 5px 20px 25px; }
+
+@media (max-width: 640px) {
+  section.page .main-column {
+    width: 100%;
+    float: none; }
+  section.page .side-column {
+    margin-top: 45px;
+    width: 100%;
+    float: none; }
+    section.page .side-column .block.dark {
+      padding-top: 15px;
+      padding-bottom: 15px; } }
+.block.light h2, .block.dark h2 {
+  font-size: 1.75em;
+  margin: 0;
+  padding: 0;
+  font-family: "Helvetica Rounded", "Helvetica", sans-serif;
+  font-weight: 300; }
+.block.light h3, .block.dark h3 {
+  font-family: "Gotham Rounded Book", "Helvetica", sans-serif; }
+.block.light p.lead, .block.dark p.lead {
+  font-size: 1.25em; }
+.block.light p a, .block.dark p a {
+  color: #b91322;
+  text-decoration: none; }
+  .block.light p a:hover, .block.dark p a:hover {
+    color: #8b0e1a; }
+.block.light {
+  background: #EDEBD7;
+  box-sizing: border-box;
+  padding: 20px;
+  line-height: 1.5;
+  background-image: url(../img/repeat-dotted-brown.png);
+  background-repeat: repeat-x;
+  background-position: bottom left; }
+  .block.light.no-border {
+    background-image: none; }
+.block.dark, .block.transparent {
+  background: rgba(0, 0, 0, 0.4);
+  padding: 20px;
+  line-height: 1.5;
+  color: #ffd41f; }
+  .block.dark p, .block.transparent p {
+    color: #EDEBD7; }
+.block.transparent {
+  background: transparent;
+  padding-top: 20px; }
+.block.header {
+  color: #ffd41f; }
+  .block.header h2 {
+    font-family: "Gotham Rounded Book";
+    text-align: center;
+    font-size: 1.5em; }
+  .block.header a {
+    color: #e7182b;
+    text-decoration: none; }
+    .block.header a:hover {
+      color: #b91322;
+      text-decoration: underline; }
+.block.interstitial {
+  min-height: 256px;
+  background-color: #ddd9b4;
+  color: #2E1A11;
+  font-family: "Helvetica Rounded", "Helvetica", sans-serif;
+  font-size: 2em;
+  font-weight: 300;
+  box-sizing: border-box;
+  position: relative; }
+  .block.interstitial.side-image {
+    background-repeat: no-repeat !important;
+    background-position: left center !important; }
+    .block.interstitial.side-image .text-block {
+      float: right;
+      width: 60%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center; }
+  .block.interstitial .text-block {
+    padding: 20px; }
+
 .section {
   width: 100%;
   display: block;
@@ -475,37 +648,61 @@ body {
     .section.red h1 {
       color: #fff; }
       .section.red h1:before {
-        width: 100%;
         height: 3px;
-        content: " ";
-        display: block;
-        background: url("../img/repeat-dotted-brown.png") repeat-x center;
+        background: url("../img/repeat-dotted-brown.png") repeat-x;
+        width: 100%;
+        position: absolute;
+        margin: 10px 0 0 0;
+        z-index: 0;
+        left: 0;
+        border: none;
+        outline: none;
         margin-bottom: 10px; }
+        .section.red h1:before.within {
+          position: relative; }
       .section.red h1:after {
-        width: 100%;
         height: 3px;
-        content: " ";
-        display: block;
-        background: url("../img/repeat-dotted-brown.png") repeat-x center;
+        background: url("../img/repeat-dotted-brown.png") repeat-x;
+        width: 100%;
+        position: absolute;
+        margin: 10px 0 0 0;
+        z-index: 0;
+        left: 0;
+        border: none;
+        outline: none;
         margin-top: 10px; }
+        .section.red h1:after.within {
+          position: relative; }
   .section.yellow {
     background: #ffd41f; }
     .section.yellow h1 {
       color: #2E1A11; }
       .section.yellow h1:before {
-        width: 100%;
         height: 3px;
-        content: " ";
-        display: block;
-        background: url("../img/repeat-dotted-brown.png") repeat-x center;
+        background: url("../img/repeat-dotted-brown.png") repeat-x;
+        width: 100%;
+        position: absolute;
+        margin: 10px 0 0 0;
+        z-index: 0;
+        left: 0;
+        border: none;
+        outline: none;
         margin-bottom: 10px; }
+        .section.yellow h1:before.within {
+          position: relative; }
       .section.yellow h1:after {
-        width: 100%;
         height: 3px;
-        content: " ";
-        display: block;
-        background: url("../img/repeat-dotted-brown.png") repeat-x center;
+        background: url("../img/repeat-dotted-brown.png") repeat-x;
+        width: 100%;
+        position: absolute;
+        margin: 10px 0 0 0;
+        z-index: 0;
+        left: 0;
+        border: none;
+        outline: none;
         margin-top: 10px; }
+        .section.yellow h1:after.within {
+          position: relative; }
   .section.image {
     height: 551px;
     -webkit-background-size: cover !important;
@@ -602,6 +799,8 @@ body {
       list-style-type: none;
       margin: 0;
       padding: 0; }
+    #footer .footer-section li.active a {
+      color: #ffd41f; }
     #footer .footer-section a {
       color: #fff;
       text-decoration: none;
@@ -711,6 +910,61 @@ body {
     margin: 0 auto 25px;
     display: block;
     float: none; } }
+ul.awards-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0; }
+  ul.awards-list strong {
+    margin: 0;
+    padding: 0;
+    font-family: "Gotham Rounded Book", "Helvetica", sans-serif;
+    font-weight: 300;
+    font-size: 1.5em;
+    position: relative; }
+  ul.awards-list p {
+    margin: 0;
+    padding: 0;
+    font-size: 1.25em;
+    font-family: "Helvetica Rounded", "Helvetica", sans-serif; }
+    ul.awards-list p small {
+      font-size: .5em;
+      display: block;
+      line-height: 1.5; }
+  ul.awards-list li {
+    background: #b91322;
+    border: 3px solid #8b0e1a;
+    margin: 0 1% 1% 0;
+    padding: 0;
+    height: 75px;
+    width: 23%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    float: left;
+    position: relative; }
+    ul.awards-list li.enlarged {
+      height: 100px; }
+    ul.awards-list li.first-class strong:after {
+      content: "#1 in Category";
+      background: #8b0e1a;
+      color: #fff;
+      font-family: "Gotham Rounded Book", "Helvetica", sans-serif;
+      display: block;
+      position: absolute;
+      -webkit-border-radius: 10px;
+      -moz-border-radius: 10px;
+      border-radius: 10px;
+      padding: 2px 10px;
+      font-size: 12px;
+      white-space: nowrap;
+      bottom: -22px;
+      left: -20px;
+      text-align: center; }
+    ul.awards-list li.first-class p {
+      font-size: 1em;
+      padding-top: 15px; }
+
 .menulist {
   margin-top: 15px; }
   .menulist .menulist-item {
@@ -924,20 +1178,32 @@ ul.slider {
     ul.slider .subhead:before {
       box-sizing: border-box;
       padding: 5px 0 5px 0;
-      width: 100%;
       height: 3px;
-      content: " ";
-      display: block;
-      background: url("../img/repeat-dotted-red.png") repeat-x center; }
+      background: url("../img/repeat-dotted-red.png") repeat-x;
+      width: 100%;
+      position: absolute;
+      margin: 10px 0 0 0;
+      z-index: 0;
+      left: 0;
+      border: none;
+      outline: none; }
+      ul.slider .subhead:before.within {
+        position: relative; }
     ul.slider .subhead:after {
       box-sizing: border-box;
       padding: 5px 0 5px 0;
       margin: 0 0 15px 0;
-      width: 100%;
       height: 3px;
-      content: " ";
-      display: block;
-      background: url("../img/repeat-dotted-red.png") repeat-x center; }
+      background: url("../img/repeat-dotted-red.png") repeat-x;
+      width: 100%;
+      position: absolute;
+      margin: 10px 0 0 0;
+      z-index: 0;
+      left: 0;
+      border: none;
+      outline: none; }
+      ul.slider .subhead:after.within {
+        position: relative; }
   ul.slider .content {
     padding: 190px 50px 50px 115px; }
   ul.slider .heading {
@@ -975,6 +1241,24 @@ ul.slider {
   .btn.wired:after {
     content: url(../img/btn-triangle-yellow.png);
     padding-left: 7px; }
+.btn.btn-red {
+  background: #8b0e1a;
+  color: #EDEBD7;
+  text-decoration: none;
+  padding: 10px 15px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  font-size: 12px;
+  text-transform: uppercase;
+  font-family: "Gotham Rounded Book", "Helvetica", sans-serif;
+  white-space: nowrap;
+  -webkit-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in; }
+  .btn.btn-red:hover {
+    background: #5d0a11; }
+.btn.btn-lg {
+  font-size: 1em; }
 
 /* ==========================================================================
    Helper classes

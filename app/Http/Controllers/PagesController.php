@@ -74,4 +74,25 @@ class PagesController extends Controller
     public function order() {
         return view('pages.order');
     }
+
+    /*
+     * ABOUT US
+     */
+    public function about() {
+        return view('pages.about-us');
+    }
+
+    /*
+     * CONTACT US
+     */
+    public function customerService() {
+        return view('pages.customer-service');
+    }
+
+    /*
+     * CONTACT US
+     */
+    public function careers() {
+        return view('pages.careers');
+    }
 }

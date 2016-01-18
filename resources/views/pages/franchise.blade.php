@@ -1,15 +1,32 @@
 @extends('layouts.master')
 
-@section('banner', 'page simple')
+@section('banner', 'page')
+@section('background', URL::asset('library/img/banner-base.jpg'))
 @section('bannerText')
-    {!! "Franchising Opportunities" !!}
+    {!! "Franchising <br/> Opportunities" !!}
 @stop
 
 
 @section('content')
-    <div class="placeholder-content">
-        <h1>Page Content Pending</h1>
-    </div>
+    <section class="page">
+        <div class="block dark">
+            <h2 class="text-center">
+                You Just Have To Know Where To Find Them
+                <hr class="yellow-dotted-divider within">
+            </h2>
+            <p class="lead">
+                We invite you to explore the Nestl&eacute;&reg; Toll House&reg; Cafe&reg; franchise overview and engage in the subsequent learning and discovery steps of our highly compelling business opportunity.
+                <br> <br>
+                Please note, there are six (6) engaging questions for you to answer as you review our brochure. Once you are finished, you will have the opportunity to complete our online application.
+            </p>
+            <div class="text-center">
+                <hr class="yellow-dotted-divider within">
+                <br>
+                <a href="http://www.nestlecafefranchise.com/our-story.html" target="_blank" class="btn btn-red btn-lg">Visit Nestl&eacute; Franchising Site</a>
+                <br><br>
+            </div>
+        </div>
+    </section>
 @stop
 
 @section('scripts')

@@ -4,8 +4,8 @@
             <h1>Nestlé Café</h1>
             <ul>
                 <li><a href="#">Online Ordering</a></li>
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">Careers</a></li>
+                <li class="{{ isActive('about') }}"><a href="{{ URL::to('about') }}">About Us</a></li>
+                <li class="{{ isActive('careers') }}"><a href="{{ URL::to('careers') }}">Careers</a></li>
                 <li><a href="#">Caf&eacute; Locations &amp; Events</a></li>
                 <li><a href="#">The Caf&eacute; Club</a></li>
                 <li><a href="#">Cookie Talk</a></li>
@@ -40,7 +40,7 @@
             <h1>Support</h1>
             <ul>
                 <li><a href="#">Own a Caf&eacute;</a></li>
-                <li><a href="#">Customer Service</a></li>
+                <li class="{{ isActive('customer-service') }}"><a href="{{ URL::to('customer-service') }}">Customer Service</a></li>
                 <li><a href="#">Franchising Opportunities</a></li>
                 <li><a href="#">Treatdata</a></li>
                 <li><a href="#">CafeConnect</a></li>
