@@ -41,7 +41,7 @@
     <div class="container">
         <a href="<?php echo str_replace('blog', '', site_url()); ?>" class="logo"><img src="<?php echo str_replace('blog', 'library/img/logo.png', site_url()); ?>" alt=""></a>
         <ul class="navlist">
-            <li><a class="dropdown" data-dropdown="#menu" href="{{ URL::to('menu') }}">Menu</a></li>
+            <li><a class="dropdown" data-dropdown="#menu" href="<?php echo str_replace('blog', 'menu', site_url()); ?>">Menu</a></li>
             <li><a class="" href="<?php echo str_replace('blog', 'locations', site_url()); ?>">Caf&eacute; Locator</a></li>
             <li><a class="" href="<?php echo str_replace('blog', 'story', site_url()); ?>">Our Story</a></li>
             <li><a class="" href="<?php echo str_replace('blog', 'franchise', site_url()); ?>">Franchise</a></li>
