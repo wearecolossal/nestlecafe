@@ -38,9 +38,10 @@
             Connect with Us and Share Your Nestl&eacute; Cafe Experience!
         </h1>
         <div class="clearfix"></div>
-        <div id="instafeed">
+            <div id="instafeed">
 
-        </div>
+            </div>
+        <div class="clearfix"></div>
     </div>
 
     <div class="section image left-align center-focus non-flex-on-mobile" style="overflow:hidden;background:url({{ URL::asset('library/img/section-app.jpg') }});height:400px;">
@@ -74,8 +75,17 @@
         var feed = new Instafeed({
             get: 'user',
             userId: '201190894',
-            accessToken: 'd3972542c81449aaa9c3b0012c19641d'
+            accessToken: '201190894.704434c.064cb422809e4e5a8a2a37312c465cc0',
+            limit: 4,
+            resolution: 'standard_resolution'
         });
         feed.run();
+    </script>
+    <script>
+        $(document).ready(function(){
+            setTimeout(function(){
+                $('#instafeed a').attr('target', '_blank');
+            }, 1000);
+        });
     </script>
 @stop
