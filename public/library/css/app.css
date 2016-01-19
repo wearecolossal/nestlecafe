@@ -376,7 +376,8 @@ body {
   .banner.page {
     height: 327px; }
     .banner.page.mini {
-      height: 200px; }
+      height: 200px;
+      background-position: bottom center !important; }
       .banner.page.mini p {
         text-align: right;
         width: 100%; }
@@ -419,15 +420,17 @@ section.page form select {
   -moz-appearance: none;
   appearance: none; }
 section.page form input[type="submit"] {
-  border: none;
-  background: #2E1A11;
-  color: #EDEBD7;
-  padding: 10px 20px;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  border-radius: 5px; }
-  section.page form input[type="submit"]:hover {
-    background: #5d0a11; }
+  border: 2px solid #ffd41f;
+  margin: 0px 0px;
+  padding: 9px 15px 7px;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: "Helvetica Rounded", "Helvetica", sans-serif;
+  background: transparent; }
+  section.page form input[type="submit"]:after {
+    content: url(../img/btn-triangle-yellow.png);
+    padding-left: 7px; }
 section.page form .form-group {
   margin: 10px 0;
   box-sizing: border-box;
@@ -565,20 +568,20 @@ section.page {
     section.page .side-column .block.dark {
       padding-top: 15px;
       padding-bottom: 15px; } }
-.block.light h2, .block.dark h2 {
+.block.light h2, .block.dark h2, .block.transparent h2 {
   font-size: 1.75em;
   margin: 0;
   padding: 0;
   font-family: "Helvetica Rounded", "Helvetica", sans-serif;
   font-weight: 300; }
-.block.light h3, .block.dark h3 {
+.block.light h3, .block.dark h3, .block.transparent h3 {
   font-family: "Gotham Rounded Book", "Helvetica", sans-serif; }
-.block.light p.lead, .block.dark p.lead {
+.block.light p.lead, .block.dark p.lead, .block.transparent p.lead {
   font-size: 1.25em; }
-.block.light p a, .block.dark p a {
+.block.light p a, .block.dark p a, .block.transparent p a {
   color: #b91322;
   text-decoration: none; }
-  .block.light p a:hover, .block.dark p a:hover {
+  .block.light p a:hover, .block.dark p a:hover, .block.transparent p a:hover {
     color: #8b0e1a; }
 .block.light {
   background: #EDEBD7;

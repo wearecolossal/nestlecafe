@@ -95,4 +95,18 @@ class PagesController extends Controller
     public function careers() {
         return view('pages.careers');
     }
+
+    /*
+     * LEGAL
+     */
+    public function legal() {
+        return view('pages.legal');
+    }
+
+    /*
+     * LEGAL
+     */
+    public function cafeClub() {
+        return view('pages.cafe-club');
+    }
 }

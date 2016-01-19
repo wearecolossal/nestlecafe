@@ -14,7 +14,7 @@
         </div>
         <div class="block dark">
             <p><a href="http://nestlecafe.com/library/pdf/employment-application.pdf" target="_blank">Download our employment application</a> or search below for available positions.</p>
-            <iframe width="100%" height="768" class="career_embed" src="https://nestlecafe.hua.hrsmartpe.com/ats/job_search.php"></iframe>
+            <iframe width="100%" height="1200" class="career_embed" src="https://nestlecafe.hua.hrsmartpe.com/ats/job_search.php"></iframe>
         </div>
     </section>
 @stop

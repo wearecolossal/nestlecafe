@@ -9,6 +9,9 @@
 
 @section('content')
     <section class="page">
+        <div class="block header">
+            <h2 style="font-size:2em;">Life Is Full Of Treats</h2>
+        </div>
         <div class="block dark">
             <h2 class="text-center">
                 You Just Have To Know Where To Find Them

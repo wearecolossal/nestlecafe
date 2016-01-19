@@ -34,14 +34,8 @@ form {
       appearance: none;
     }
     input[type="submit"] {
-      border:none;
-      background:$brown;
-      color: $beige;
-      padding: 10px 20px;
-      @include border-radius(5px);
-      &:hover {
-        background:darken($red, 20%);
-      }
+      @include wiredButton();
+      background:transparent;
     }
     .form-group {
       margin: 10px 0;
