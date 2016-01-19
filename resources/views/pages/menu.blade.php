@@ -5,7 +5,7 @@
  {!! "Life's Simple Pleasures" !!}
 @stop
 
-@section('wrapper', 'full')
+@section('wrapper', 'enlarged')
 
 @section('content')
 

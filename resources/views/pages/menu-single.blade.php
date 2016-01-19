@@ -1,7 +1,7 @@
 @extends('layouts.master')
 
 @section('banner', 'page')
-@section('background', URL::asset('library/img/banner-menu.jpg'))
+@section('background', URL::asset('uploads/menu_banners/'.$category->banner))
 @section('bannerText')
     {!! "Life's<br>Simple<br>Pleasures" !!}
 @stop

@@ -1,10 +1,10 @@
 //PAGE STYLES
 .wrapper {
   @include container(1011px);
-  &.full {
+  &.enlarged {
     @include container(1100px);
   }
-  &.home {
+  &.home, &.full {
     @include container(100%);
   }
 }
@@ -102,6 +102,9 @@ section {
       .block.dark {
         padding:5px 20px 25px;
       }
+    }
+    .container {
+      @include container(1011px);
     }
   }
 }
@@ -240,6 +243,9 @@ section {
   }
   .container {
     @include container(1100px);
+    &.narrowed {
+      @include container(1011px);
+    }
   }
   &.red {
     background:$red;
@@ -260,6 +266,9 @@ section {
         display: block;
         margin-top:10px;
       }
+    }
+    p {
+      color: #fff;
     }
   }
   &.yellow {
