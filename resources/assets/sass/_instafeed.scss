@@ -1,0 +1,41 @@
+#instafeed {
+  a {
+    position: relative;
+    width: 25%;
+    display: block;
+    float: left;
+    box-sizing: border-box;
+    border:2px solid $yellow;
+    &:nth-child(1) {
+      border-left:none;
+    }
+    &:nth-child(4) {
+      border-right:none;
+    }
+    &:after {
+      content: url(../img/ico-instafeed.png);
+      position: absolute;
+      bottom:10px;
+      right:15px;
+    }
+  }
+  img {
+    max-width:320px;
+    width: 100%;
+    display: block;
+  }
+}
+
+@media (max-width:640px) {
+  #instafeed {
+    a {
+      width: 50%;
+      &:nth-child(2) {
+        border-right:none;
+      }
+      &:nth-child(3) {
+        border-left:none;
+      }
+    }
+  }
+}

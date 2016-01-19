@@ -56,11 +56,11 @@
             <small class="text-yellow">- Join! -</small>
             <div class="clearfix"></div>
             <div class="social-links">
-                <a href=""><img src="" alt=""></a>
-                <a href=""><img src="" alt=""></a>
-                <a href=""><img src="" alt=""></a>
-                <a href=""><img src="" alt=""></a>
-                <a href=""><img src="" alt=""></a>
+                <a href="https://www.facebook.com/nestlecafe" target="_blank"></a>
+                <a href="https://twitter.com/NestleCafe" target="_blank"></a>
+                <a href="https://www.instagram.com/nestlecafe/" target="_blank"></a>
+                <a href="https://www.youtube.com/user/NestleTollHouseCafe" target="_blank"></a>
+                <a href="https://www.pinterest.com/nestlecafe/" target="_blank"></a>
             </div>
         </div>
         <div class="clearfix"></div>

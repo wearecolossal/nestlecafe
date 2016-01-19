@@ -31,6 +31,10 @@
   border-radius: $radius;
 }
 
+@mixin backgroundPosX($arg) {
+  -ms-background-position-x:$arg !important;
+  background-position-x:$arg !important;
+}
 
 //MIXINS STYLES
 
