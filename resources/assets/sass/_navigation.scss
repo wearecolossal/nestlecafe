@@ -37,8 +37,9 @@
     padding: 17px 0;
     @include transition(.3s);
     &:hover {
-       height:163px;
-       padding:110px 0 0 0;
+       height:203px;
+       padding:150px 0 0 0;
+       margin-bottom:-40px;
      }
   }
   a.mobile-show {
@@ -128,7 +129,12 @@
 @media (max-width:1019px) {
   .navigation {
     .order-online {
-      margin-top:-60px;
+      margin-top:-120px;
+      &:hover {
+        height:263px;
+        padding:200px 0 0 0;
+        margin-bottom:-40px;
+      }
     }
   }
   .navlist {

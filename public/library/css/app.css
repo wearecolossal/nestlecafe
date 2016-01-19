@@ -211,8 +211,9 @@ body {
     -webkit-transition: all 0.3s ease-in;
     transition: all 0.3s ease-in; }
     .navigation .order-online:hover {
-      height: 163px;
-      padding: 110px 0 0 0; }
+      height: 203px;
+      padding: 150px 0 0 0;
+      margin-bottom: -40px; }
   .navigation a.mobile-show {
     display: none; }
   .navigation .menulist {
@@ -281,7 +282,11 @@ body {
       padding-bottom: 55px; } }
 @media (max-width: 1019px) {
   .navigation .order-online {
-    margin-top: -60px; }
+    margin-top: -120px; }
+    .navigation .order-online:hover {
+      height: 263px;
+      padding: 200px 0 0 0;
+      margin-bottom: -40px; }
 
   .navlist li {
     width: 20%;

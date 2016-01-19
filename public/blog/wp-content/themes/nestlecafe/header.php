@@ -62,7 +62,7 @@
 </nav>
 
 
-<div class="banner page mini" style="background:url(<?php echo str_replace('blog', 'library/img/banner-page.jpg', site_url()); ?>) bottom center !important;background-size:cover !important;">
+<div class="banner page mini" style="background:url(<?php echo str_replace('blog', 'uploads/page_banners/banner-cookie-talk.jpg', site_url()); ?>) bottom center !important;background-size:cover !important;">
 
     <div class="banner-wrapper">
         <div class="container">
