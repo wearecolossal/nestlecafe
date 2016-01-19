@@ -246,11 +246,18 @@ section {
     h1 {
       color: #fff;
       &:before {
+        content:" ";
         @include dotted_divider('../img/repeat-dotted-brown.png');
+        position: relative;
+        display: block;
         margin-bottom:10px;
+        margin-top:0;
       }
       &:after {
+        content:" ";
         @include dotted_divider('../img/repeat-dotted-brown.png');
+        position: relative;
+        display: block;
         margin-top:10px;
       }
     }
@@ -260,11 +267,18 @@ section {
     h1 {
       color: $brown;
       &:before {
+        content:" ";
         @include dotted_divider('../img/repeat-dotted-brown.png');
+        position: relative;
+        display: block;
         margin-bottom:10px;
+        margin-top:0;
       }
       &:after {
+        content:" ";
         @include dotted_divider('../img/repeat-dotted-brown.png');
+        position: relative;
+        display: block;
         margin-top:10px;
       }
     }
