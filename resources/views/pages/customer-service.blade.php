@@ -1,7 +1,7 @@
 @extends('layouts.master')
 
-@section('banner', 'page')
-@section('background', URL::asset('library/img/banner-page.jpg'))
+@section('banner', 'page mini')
+@section('background', URL::asset('library/img/banner-base.jpg'))
 @section('bannerText')
     {!! "Customer Service" !!}
 @stop

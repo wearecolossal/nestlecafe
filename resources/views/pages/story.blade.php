@@ -30,7 +30,7 @@
             </div>
         </div>
     </section>
-    <div class="section image" data-parallax="scroll" data-image-src="{{ URL::asset('library/img/section-support.jpg') }}" style="background-position-y: bottom !important;height:500px;">
+    <div class="section image" data-parallax="scroll" data-image-src="{{ URL::asset('library/img/section-support.jpg') }}" style="background-position-y: bottom !important;height:400px;">
         <div class="container">
             <div class="content">
                 <h1 style="margin-top:0;padding-top:0;">Support</h1>
@@ -38,7 +38,9 @@
                     Franchisees are provided with support during the construction process, training, and planning a smashing grand opening.
                     <br> <br>
                     Ongoing support includes operations training, marketing, business coaching, assistance with staffing and others in the field business services. Our consultants provide insight into the business' sales and profitability and offer suggestions and alternatives to both reduce costs and drive top line sales.
+                    <br><br>
                 </p>
+                <a href="{{ URL::to('franchise') }}" class="btn wired">Learn About Our Franchising Opportunities</a>
             </div>
         </div>
         <div class="clearfix"></div>
@@ -156,6 +158,9 @@
                 <br><br>
                 Glimpsed on a busy street or nibbling and sharing, Nestl&eacute;&reg; Toll House&reg; cookies make hearts beat faster, bring back a flood of memories, and dare the consumer to explore the possibilities our cafes have to offer.<br><br>
                 For us dessert created with a passion for life and endless imagination is more than a sweet temptation - it's a state of mind, an intriguing place, an experience that can take you on a journey.
+            </p>
+            <p class="text-center">
+                <a href=""{{ URL::to('menu') }} class="btn btn-red">Learn About Our Menu Items</a>
             </p>
         </div>
         <div class="clearfix"></div>

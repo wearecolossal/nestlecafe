@@ -25,3 +25,13 @@
     white-space: nowrap;
   }
 }
+
+.app-downloads {
+  a img {
+    @include transition(.3s);
+    &:hover {
+      background:rgba(255, 255, 255, .5);
+    }
+  }
+
+}

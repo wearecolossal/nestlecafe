@@ -101,9 +101,20 @@
   text-decoration: none;
   text-transform: uppercase;
   font-family: $helvetica, "Helvetica", sans-serif;
+  @include transition(.3s);
   &:after {
     content:url(../img/btn-triangle-yellow.png);
     padding-left: 7px;
+    @include transition(.3s);
+  }
+  &:hover {
+    background: rgba(255, 212, 31, .6);
+    border:2px solid transparent;
+    color: $brown;
+    &:after {
+      padding-left: 10px;
+      margin-right:3px;
+    }
   }
 }
 
