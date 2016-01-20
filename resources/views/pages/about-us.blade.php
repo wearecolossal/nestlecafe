@@ -10,7 +10,7 @@
 
 @section('content')
     <section class="page">
-        <div class="container">
+        <div class="container compressed">
             <div class="block header">
                 <h2>A Dessert Cafe That Began With A Dream, <br> One World-Renowned Brand And A Passion For Service</h2>
             </div>
