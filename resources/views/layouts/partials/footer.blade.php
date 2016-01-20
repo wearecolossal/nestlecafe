@@ -74,6 +74,7 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script>window.jQuery || document.write('<script src="{{ URL::asset('library/js/vendor/jquery-1.11.3.min.js') }}"><\/script>')</script>
 <script src="{{ URL::asset('library/js/plugins.js') }}"></script>
+<script src="{{ URL::asset('library/js/parallax.js') }}"></script>
 <script src="{{ URL::asset('library/js/main-min.js') }}"></script>
 @yield('scripts')
 <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->

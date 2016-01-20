@@ -28,7 +28,7 @@
         </div>
     </section>
 
-    <div class="section image" style="background:url({{ URL::asset('library/img/section-about.jpg') }}); background-position-y: center !important;height:300px;margin-bottom:-50px;">
+    <div class="section image" data-parallax="scroll" data-image-src="{{ URL::asset('library/img/section-about.jpg') }}" style="background-position-y: center !important;height:300px;margin-bottom:-50px;">
         <div class="container">
             <div class="content">
                 <h1 style="margin-top:0;padding-top:0;margin-bottom:10px;">Life happens at an <br> exhilarating speed...</h1>

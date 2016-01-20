@@ -30,7 +30,7 @@
             </div>
         </div>
     </section>
-    <div class="section image" style="background:url({{ URL::asset('library/img/section-support.jpg') }}); background-position-y: bottom !important;">
+    <div class="section image" data-parallax="scroll" data-image-src="{{ URL::asset('library/img/section-support.jpg') }}" style="background-position-y: bottom !important;">
         <div class="container">
             <div class="content">
                 <h1 style="margin-top:0;padding-top:0;">Support</h1>
