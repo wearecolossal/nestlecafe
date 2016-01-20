@@ -55,9 +55,18 @@
   background-position: center center !important;
   background-size:auto 100% !important;
   overflow: hidden;
+  img {
+    height: 100%;
+    @include transition(.3s);
+  }
   &:hover {
-    background-size:auto 105% !important;
-    border:1px solid $yellow;
+    img {
+      -webkit-transform: scale(1.2, 1.2);
+      -moz-transform: scale(1.2, 1.2);
+      -ms-transform: scale(1.2, 1.2);
+      -o-transform: scale(1.2, 1.2);
+      transform: scale(1.2, 1.2);
+    }
   }
   &.on-white {
     color: #332116;

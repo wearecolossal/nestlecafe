@@ -12,9 +12,9 @@
         <h1>Our Seasonal Picks <br><small>You'll love these unique treats' distinct seasonal flavor.</small></h1>
         <div class="container">
             <div class="masonry">
-                <div class="masonry-list-item one-third" style="background:url({{ URL::asset('library/img/menu-real-fruit-smoothies.jpg') }}) right top; background-size:cover;"><span>Real
+                <div class="masonry-list-item one-third"><img src="{{ URL::asset('library/img/menu-real-fruit-smoothies.jpg') }}" alt=""><span>Real
                     Fruit <br> Smoothies</span></div>
-                <div class="masonry-list-item two-third on-white" style="background:url({{ URL::asset('library/img/masonry-treat.jpg') }}) right top; background-size:cover;"><span>Treats for the <br> holiday season</span></div>
+                <div class="masonry-list-item two-third on-white"><img src="{{ URL::asset('library/img/masonry-treat.jpg') }}" alt=""><span>Treats for the <br> holiday season</span></div>
             </div>
         </div>
         <div class="clearfix"></div>
@@ -38,8 +38,10 @@
             Connect with Us and Share Your Nestl&eacute; Cafe Experience!
         </h1>
         <div class="clearfix"></div>
-            <div id="instafeed">
+            <div class="container full">
+                <div id="instafeed">
 
+                </div>
             </div>
         <div class="clearfix"></div>
     </div>
