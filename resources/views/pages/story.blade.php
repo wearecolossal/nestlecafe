@@ -18,7 +18,7 @@
         <div class="block transparent">
             <h2 class="text-center">It's About The Relationship</h2>
             <div class="clearfix"></div>
-            <div class="container">
+            <div class="container compressed">
                 <p>
                     It's not by chance that Nestl&eacute;&reg; Toll House&reg; Cafe by Chip&reg; continues to grow and have a phenomenal loyal consumer base. Like any good relationship, it seems the real secret to success is the ability to deliver a certain energy or vibe and uncommon creations that keep our consumers coming back for more.
                     <br> <br>
@@ -30,7 +30,7 @@
             </div>
         </div>
     </section>
-    <div class="section image" data-parallax="scroll" data-image-src="{{ URL::asset('library/img/section-support.jpg') }}" style="background-position-y: bottom !important;">
+    <div class="section image" data-parallax="scroll" data-image-src="{{ URL::asset('library/img/section-support.jpg') }}" style="background-position-y: bottom !important;height:500px;">
         <div class="container">
             <div class="content">
                 <h1 style="margin-top:0;padding-top:0;">Support</h1>
@@ -150,7 +150,7 @@
     </section>
     <div class="section yellow" style="margin-bottom:-50px;">
         <h1>Explore The Possibilities</small></h1>
-        <div class="container narrowed">
+        <div class="container compressed">
             <p>
                 What began with the Toll House&reg; chocolate chip cookie has grown into a dessert concept that knows no bounds. But what is it about this cookie that captivates us so much?
                 <br><br>

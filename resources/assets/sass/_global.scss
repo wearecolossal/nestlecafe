@@ -3,3 +3,16 @@ body {
   background:#291a13 url(../img/background-body.jpg) repeat-y center;
   font-family: "Helvetica", sans-serif;
 }
+
+.container {
+  @include container(1100px);
+  &.narrowed {
+    @include container(940px);
+  }
+  &.compressed {
+    @include container(800px);
+  }
+  &.thin {
+    @include container(640px);
+  }
+}
