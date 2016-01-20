@@ -51,7 +51,7 @@
   position: relative;
   text-shadow: 0px 5px 8px rgba(0, 0, 0, .9);
   box-sizing: border-box;
-  @include transition(.1s);
+  @include transition(.3s);
   background-position: center center !important;
   background-size:auto 100% !important;
   overflow: hidden;
