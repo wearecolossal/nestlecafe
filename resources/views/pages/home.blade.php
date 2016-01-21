@@ -21,7 +21,7 @@
         <div class="clearfix"></div>
     </div>
 
-    <div class="section image" data-parallax="scroll" data-image-src="{{ URL::asset('library/img/section-franchise.jpg') }}">
+    <div class="section image parallax" data-parallax="scroll" data-image-src="{{ URL::asset('library/img/section-franchise.jpg') }}">
         <div class="container">
             <div class="content">
                 <h1>Franchising Opportunity</h1>
@@ -47,7 +47,7 @@
         <div class="clearfix"></div>
     </div>
 
-    <div class="section image left-align center-focus non-flex-on-mobile" data-parallax="scroll" data-image-src="{{ URL::asset('library/img/section-app.jpg') }}" style="overflow:hidden;height:400px;">
+    <div class="section image parallax left-align center-focus non-flex-on-mobile" data-parallax="scroll" data-image-src="{{ URL::asset('library/img/section-app.jpg') }}" style="overflow:hidden;height:400px;">
         <div class="container full-on-mobile">
             <div class="content on-white">
                 <h1>Download Our App</h1>
@@ -66,7 +66,6 @@
 @section('scripts')
     <script src="{{ URL::asset('library/js/jquery.bxslider.js') }}"></script>
     <script src="{{ URL::asset('library/js/instafeed.js') }}"></script>
-
     <script>
         $(document).ready(function(){
            $('ul.slider').bxSlider({

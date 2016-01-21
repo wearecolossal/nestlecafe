@@ -24,7 +24,7 @@
                     Please note, there are six (6) engaging questions for you to answer as you review our brochure. Once you are finished, you will have the opportunity to complete our online application.
                     <br><br>
                 </p>
-                <a href="http://www.nestlecafefranchise.com/our-story.html" target="_blank" class="btn wired">Visit Nestl&eacute; Franchising Site</a>
+                <a href="http://www.nestlecafefranchise.com/our-story.html" target="_blank" class="btn wired">Learn More</a>
             </div>
         </div>
         <div class="clearfix"></div>

@@ -1,6 +1,5 @@
 var menuToggles = function(width) {
     if (width > 842) {
-        console.log('desktop')
         $('ul.navlist a.dropdown').mouseenter(function () {
             var target = $(this).data('dropdown');
             $(target).addClass('active');
