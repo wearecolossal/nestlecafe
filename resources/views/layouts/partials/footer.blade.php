@@ -6,7 +6,7 @@
                 <li class="{{ isActive('online-order') }}"><a href="{{ URL::to('online-order') }}">Online Ordering</a></li>
                 <li class="{{ isActive('about') }}"><a href="{{ URL::to('about') }}">About Us</a></li>
                 <li class="{{ isActive('careers') }} hidden"><a href="{{ URL::to('careers') }}">Careers</a></li>
-                <li class="{{ isActive('locations') }}"><a href="{{ URL::to('locations') }}">Caf&eacute; Locations &amp; Events</a></li>
+                <li class="{{ isActive('locations') }}"><a href="{{ URL::to('locations') }}">Caf&eacute; Locations</a></li>
                 <li class="{{ isActive('cafe-club') }}"><a href="{{ URL::to('cafe-club') }}">The Caf&eacute; Club</a></li>
                 <li><a href="{{ URL::to('blog') }}">Cookie Talk</a></li>
             </ul>
@@ -39,8 +39,7 @@
         <div class="footer-section">
             <h1>Support</h1>
             <ul>
-                <li><a href="{{ URL::to('franchise') }}">Own a Caf&eacute;</a></li>
-                <li class="{{ isActive('customer-service') }}"><a href="{{ URL::to('customer-service') }}">Customer Service</a></li>
+                <li class="{{ isActive('contact') }}"><a href="{{ URL::to('contact') }}">Contact Us</a></li>
                 <li class="{{ isActive('franchise') }}"><a href="{{ URL::to('franchise') }}">Franchising Opportunities</a></li>
                 <li><a href="https://www.treatdata.com/" target="_blank">Treatdata</a></li>
                 <li><a href="https://springfield2.franconnect.net/nestlecafe/" target="_blank">CafeConnect</a></li>
@@ -66,7 +65,7 @@
         <div class="clearfix"></div>
     </div>
     <div class="container fine-print">
-        <p>&copy; Copyright 2015 Crest Foods, Inc. All rights reserved. Nestl&eacute;<sup>&reg;</sup>, Toll House<sup>&reg;</sup> and certain other marks and associated label designs are trademarks of Soci&eacute;t&eacute; des Produits Nestl&eacute; S.A., Used by Crest Foods, Inc., and its independent franchisees, with permission​.</p>
+        <p>&copy; Copyright {{ date('Y') }} Crest Foods, Inc. All rights reserved. Nestl&eacute;<sup>&reg;</sup>, Toll House<sup>&reg;</sup> and certain other marks and associated label designs are trademarks of Soci&eacute;t&eacute; des Produits Nestl&eacute; S.A., Used by Crest Foods, Inc., and its independent franchisees, with permission​.</p>
     </div>
 </footer>
 

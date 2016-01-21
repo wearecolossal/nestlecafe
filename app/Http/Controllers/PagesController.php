@@ -85,8 +85,8 @@ class PagesController extends Controller
     /*
      * CONTACT US
      */
-    public function customerService() {
-        return view('pages.customer-service');
+    public function contact() {
+        return view('pages.contact');
     }
 
     /*

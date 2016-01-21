@@ -22,7 +22,7 @@ Route::get('story', 'PagesController@story');
 Route::get('franchise', 'PagesController@franchise');
 Route::get('online-order', 'PagesController@order');
 Route::get('about', 'PagesController@about');
-Route::get('customer-service', 'PagesController@customerService');
+Route::get('contact', 'PagesController@contact');
 Route::get('careers', 'PagesController@careers');
 Route::get('legal', 'PagesController@legal');
 Route::get('cafe-club', 'PagesController@cafeclub');

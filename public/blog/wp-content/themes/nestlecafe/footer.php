@@ -19,7 +19,7 @@
                 <li><a href="<?php echo str_replace('blog', 'online-order', site_url()); ?>">Online Ordering</a></li>
                 <li><a href="<?php echo str_replace('blog', 'about', site_url()); ?>">About Us</a></li>
                 <li><a href="<?php echo str_replace('blog', 'careers', site_url()); ?>">Careers</a></li>
-                <li><a href="<?php echo str_replace('blog', 'locations', site_url()); ?>">Caf&eacute; Locations &amp; Events</a></li>
+                <li><a href="<?php echo str_replace('blog', 'locations', site_url()); ?>">Caf&eacute; Locations</a></li>
                 <li><a href="<?php echo str_replace('blog', 'cafe-club', site_url()); ?>">The Caf&eacute; Club</a></li>
                 <li class="active"><a href="<?php echo site_url(); ?>">Cookie Talk</a></li>
             </ul>
@@ -52,8 +52,7 @@
         <div class="footer-section">
             <h1>Support</h1>
             <ul>
-                <li><a href="<?php echo str_replace('blog', 'franchise', site_url()); ?>">Own a Caf&eacute;</a></li>
-                <li><a href="<?php echo str_replace('blog', 'customer-service', site_url()); ?>">Customer Service</a></li>
+                <li><a href="<?php echo str_replace('blog', 'contact', site_url()); ?>">Contact Us</a></li>
                 <li><a href="<?php echo str_replace('blog', 'franchise', site_url()); ?>">Franchising Opportunities</a></li>
                 <li><a href="https://www.treatdata.com/" target="_blank">Treatdata</a></li>
                 <li><a href="https://springfield2.franconnect.net/nestlecafe/" target="_blank">CafeConnect</a></li>
@@ -79,7 +78,7 @@
         <div class="clearfix"></div>
     </div>
     <div class="container fine-print">
-        <p>&copy; Copyright 2015 Crest Foods, Inc. All rights reserved. Nestl&eacute;<sup>&reg;</sup>, Toll House<sup>&reg;</sup> and certain other marks and associated label designs are trademarks of Soci&eacute;t&eacute; des Produits Nestl&eacute; S.A., Used by Crest Foods, Inc., and its independent franchisees, with permission​.</p>
+        <p>&copy; Copyright <?php echo date('Y'); ?> Crest Foods, Inc. All rights reserved. Nestl&eacute;<sup>&reg;</sup>, Toll House<sup>&reg;</sup> and certain other marks and associated label designs are trademarks of Soci&eacute;t&eacute; des Produits Nestl&eacute; S.A., Used by Crest Foods, Inc., and its independent franchisees, with permission​.</p>
     </div>
 </footer>
 
