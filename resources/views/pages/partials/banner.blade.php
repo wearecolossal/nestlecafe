@@ -1,7 +1,7 @@
-<div class="banner @yield('banner')" style="background:url(@yield('background'))">
+<div class="banner @yield('banner')" style="background: @yield('hex') url(@yield('background'))">
     @if(URL::current() == URL::to('/'))
         <ul class="slider">
-            <li style="background:url({{ URL::asset('library/img/slider-mocha.jpg') }}); background-size:cover;">
+            <li style="background:#F1F295 url({{ URL::asset('uploads/slideshow/slider-mocha-vin.jpg') }}); background-size:cover;">
                 <div class="content">
                     <h2 class="subhead">Chill With Our Favorites</h2>
                     <h1 class="heading">Mocha <br> Frappes</h1>

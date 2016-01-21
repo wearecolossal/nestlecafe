@@ -4,6 +4,7 @@
     <link rel="stylesheet" href="{{ URL::asset('library/css/jquery.bxslider.css') }}">
 @stop
 
+@section('hex', '#F1F295')
 @section('banner', 'home')
 
 @section('content')
