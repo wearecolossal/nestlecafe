@@ -5,7 +5,7 @@
             <ul>
                 <li class="{{ isActive('online-order') }}"><a href="{{ URL::to('online-order') }}">Online Ordering</a></li>
                 <li class="{{ isActive('about') }}"><a href="{{ URL::to('about') }}">About Us</a></li>
-                <li class="{{ isActive('careers') }}"><a href="{{ URL::to('careers') }}">Careers</a></li>
+                <li class="{{ isActive('careers') }} hidden"><a href="{{ URL::to('careers') }}">Careers</a></li>
                 <li class="{{ isActive('locations') }}"><a href="{{ URL::to('locations') }}">Caf&eacute; Locations &amp; Events</a></li>
                 <li class="{{ isActive('cafe-club') }}"><a href="{{ URL::to('cafe-club') }}">The Caf&eacute; Club</a></li>
                 <li><a href="{{ URL::to('blog') }}">Cookie Talk</a></li>

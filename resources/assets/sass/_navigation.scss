@@ -186,6 +186,11 @@
         padding: 0;
       }
     }
+    .menulist {
+      &.active {
+        display: none;
+      }
+    }
   }
   .navlist {
     display: none;

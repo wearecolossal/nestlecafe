@@ -1,7 +1,6 @@
-$(document).ready(function () {
-
-
-    if ($(window).width() > 842) {
+var menuToggles = function(width) {
+    if (width > 842) {
+        console.log('desktop')
         $('ul.navlist a.dropdown').mouseenter(function () {
             var target = $(this).data('dropdown');
             $(target).addClass('active');
@@ -35,9 +34,22 @@ $(document).ready(function () {
             $('.navigation').removeClass('extended');
         });
     }
+};
+
+$(document).ready(function () {
+    var width =  $(window).width();
+    menuToggles(width);
+
+    $(window).resize(function() {
+        width = $(this).width();
+        menuToggles(width);
+    });
+
+
 
     $('a.mobile-show').click(function () {
         $('ul.navlist').toggleClass('display');
+        $('.menulist').removeClass('active');
         $('.navigation').toggleClass('mobile-extended');
     });
 
