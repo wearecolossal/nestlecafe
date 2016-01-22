@@ -110,6 +110,14 @@ textarea {
 @import "blog";
 @import "instafeed";
 
+//Google Map
+.map-embed {
+  &.active {
+    width:100%;
+    height:500px;
+  }
+}
+
 
 
 
