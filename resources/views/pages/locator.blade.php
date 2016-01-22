@@ -6,8 +6,11 @@
 @stop
 
 @section('content')
+    <br><br>
+    <div class="clearfix"></div>
     <button onclick="codeAddress()">Code Address</button>
     <input id="address" type="textbox" value="" placeholder="Search for cafes">
+    <br><br>
     <div id="map" class="map-embed"></div>
 @stop
 
