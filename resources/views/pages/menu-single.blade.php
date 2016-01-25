@@ -34,7 +34,7 @@
                     @if($item->image)
                         <div id="tooltip" class="{!! $iterator % 2 == 0 ? 'even' : 'odd' !!}">
                             <h3 class="{{ $item->on_white == 1 ? 'on-white' : null }}">{!! $item->name !!}</h3>
-                            <img src="{{ URL::asset('library/img/menu/'.$item->image) }}" alt="{!! $item->name !!}">
+                            <img src="{{ URL::asset('uploads/menu_items/'.$item->image) }}" alt="{!! $item->name !!}">
                         </div>
                     @endif
                     <h2><a class="tooltip">{!! $item->name !!}</a></h2>
