@@ -31,11 +31,17 @@ Route::get('output-locations', function(){
     $outputs = \App\Cafe::orderby('lat', 'asc')->get();
     $locations = array();
     foreach($outputs as $output) {
+        if(strlen($output->image) < 1) {
+            $image = '';
+        } else {
+            $image = \Illuminate\Support\Facades\URL::asset('uploads/store_images/'.$output->image);
+        }
         array_push($locations, [
             'title' => $output->name,
             'lat' => $output->lat,
             'lng' => $output->lng,
-            'directions' => $output->maps_url
+            'directions' => $output->maps_url,
+            'thumbnail' => $image
         ]);
     }
     return $locations;
