@@ -19,6 +19,9 @@
             {{--src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD-JYeFLI2aIfjv8bS9dJMY_1HGaKEdiXU&sensor=false"></script>--}}
     <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script>
     <script>
+
+            //get markers
+
             var map = $("#map");
             var start = 0;
             var showMap = function(latitude, longitude) {
@@ -56,6 +59,8 @@
                     map: map,
                     title: 'You are here!'
                 });
+
+
             };
 
             function getLocation() {
@@ -85,7 +90,7 @@
                 geocoder = new google.maps.Geocoder();
                 var geoLat = position.coords.latitude;
                 var geoLng = position.coords.longitude;
-                setInitialMap(geoLat, geoLng, 15);
+                setInitialMap(geoLat, geoLng, 11);
             }
 
             function fallback() {
@@ -115,6 +120,42 @@
                 getLocation();
             }, 1000);
 
+            setTimeout(function(){
+                $.getJSON("{{ URL::to('output-locations') }}", function(json1) {
+                    $.each(json1, function(key, data) {
+                        var latLng = new google.maps.LatLng(data.lat, data.lng);
+                        // Creating a marker and putting it on the map
+                        var marker = new google.maps.Marker({
+                            position: latLng,
+                            map: map,
+                            animation: google.maps.Animation.DROP,
+                            title: data.title,
+                            direction: data.directions,
+                            icon: '{{ URL::asset('library/img/nestle-marker.png') }}'
+                        });
+                        var hide_map = '';
+                        if(marker.direction.length < 1) {
+                            hide_map = 'display:none';
+                        }
+                        var contentString = null;
+                        var infowindow = null;
+                        infowindow = new google.maps.InfoWindow();
+
+                        marker.addListener('click', function(){
+                            infowindow.setContent('<p><strong>' + this.title+ '</strong><br/> <a class="map-button" style="'+ hide_map +'" target="_blank" href="'+ this.direction +'">directions</a>');
+                            infowindow.open(map, this);
+                        });
+
+                        function toggleBounce() {
+                            if (marker.getAnimation() !== null) {
+                                marker.setAnimation(null);
+                            } else {
+                                marker.setAnimation(google.maps.Animation.BOUNCE);
+                            }
+                        }
+                    });
+                });
+            }, 3000);
 
     </script>
 @stop
