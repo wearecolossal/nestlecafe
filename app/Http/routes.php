@@ -26,26 +26,8 @@ Route::get('contact', 'PagesController@contact');
 Route::get('careers', 'PagesController@careers');
 Route::get('legal', 'PagesController@legal');
 Route::get('cafe-club', 'PagesController@cafeclub');
-
-Route::get('output-locations', function(){
-    $outputs = \App\Cafe::orderby('lat', 'asc')->get();
-    $locations = array();
-    foreach($outputs as $output) {
-        if(strlen($output->image) < 1) {
-            $image = '';
-        } else {
-            $image = \Illuminate\Support\Facades\URL::asset('uploads/store_images/'.$output->image);
-        }
-        array_push($locations, [
-            'title' => $output->name,
-            'lat' => $output->lat,
-            'lng' => $output->lng,
-            'directions' => $output->maps_url,
-            'thumbnail' => $image
-        ]);
-    }
-    return $locations;
-});
+Route::get('output-locations', 'LocationController@ajax');
+Route::get('filter-locations', 'LocationController@filter');
 /*
 |--------------------------------------------------------------------------
 | Application Routes

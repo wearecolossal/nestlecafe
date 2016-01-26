@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Cafe;
 use App\MenuCategory;
 use App\MenuItem;
 use Illuminate\Http\Request;
@@ -19,16 +20,22 @@ class PagesController extends Controller
      * @var MenuItem
      */
     private $menuItem;
+    /**
+     * @var Cafe
+     */
+    private $cafe;
 
     /**
      * PagesController constructor.
      * @param MenuCategory $menuCategory
      * @param MenuItem $menuItem
+     * @param Cafe $cafe
      */
-    public function __construct(MenuCategory $menuCategory, MenuItem $menuItem)
+    public function __construct(MenuCategory $menuCategory, MenuItem $menuItem, Cafe $cafe)
     {
         $this->menuCategory = $menuCategory;
         $this->menuItem = $menuItem;
+        $this->cafe = $cafe;
     }
 
     /*

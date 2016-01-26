@@ -91,6 +91,7 @@
                 geocoder = new google.maps.Geocoder();
                 var geoLat = position.coords.latitude;
                 var geoLng = position.coords.longitude;
+                console.log(geoLat+' , '+geoLng);
                 setInitialMap(geoLat, geoLng, 11);
             }
 
