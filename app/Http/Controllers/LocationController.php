@@ -51,14 +51,14 @@ class LocationController extends Controller
         return $locations;
     }
 
-    public function filter()
+    public function filter($lat1, $lng1)
     {
         //$comparison = $this->cafe->orderby('lat', 'asc')->first();
         //$lat2 = $comparison->lat;
         //$lng2 = $comparison->lng;
 
-        $lat1 = 40.751754935372404;
-        $lng1 = -73.97476794280311;
+        //$lat1 = 40.751754935372404;
+        //$lng1 = -73.97476794280311;
         $lists = $this->cafe->orderby('lat', 'asc')->get();
         $filter = array();
         foreach ($lists as $list) {
