@@ -6,17 +6,21 @@
 @stop
 
 @section('content')
-    <br><br>
     <div class="clearfix"></div>
-    <button class="find-address">Search Caf&eacute;s</button>
-    <input id="address" type="textbox" value="" placeholder="Search for cafes">
-    <br><br>
-    <ul class="map-list" style="color:#fff">
+    <div class="locator-bar">
+        <div class="search">
+            <input id="address" type="text" value="" placeholder="Enter Address">
+            <button class="find-address">Search Caf&eacute;s</button>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+    <div class="output-list">
+        <ul class="map-list" style="color:#fff">
 
-    </ul>
-    <br><br>
+        </ul>
+    </div>
     <div id="map" class="map-embed"></div>
-
+    <div class="clearfix"></div>
 @stop
 
 @section('scripts')

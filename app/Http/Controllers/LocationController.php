@@ -51,6 +51,12 @@ class LocationController extends Controller
         return $locations;
     }
 
+    /**
+     * GET FILTER OF LOCATIONS
+     * @param $lat1
+     * @param $lng1
+     * @return array
+     */
     public function filter($lat1, $lng1)
     {
         //$comparison = $this->cafe->orderby('lat', 'asc')->first();
@@ -70,6 +76,18 @@ class LocationController extends Controller
         return $filter;
     }
 
+
+    /**
+     * GET DISTANCE BETWEEN LOCATION AND CAFES
+     * @param $lat1
+     * @param $lon1
+     * @param $lat2
+     * @param $lon2
+     * @param $unit
+     * @param $limit
+     * @param $id
+     * @return array|bool
+     */
     public function distance($lat1, $lon1, $lat2, $lon2, $unit, $limit, $id)
     {
 
@@ -81,12 +99,19 @@ class LocationController extends Controller
         $unit = strtoupper($unit);
         //$miles = round($miles);
         $location = $this->cafe->find($id);
+        if(strlen($location->image) < 1) {
+            $image = URL::asset('library/img/loc-noimg.jpg');
+        } else {
+            $image = URL::asset('uploads/store_images/'.$location->image);
+        }
         $array = array();
         if ($miles <= $limit) {
             array_push($array, [
+                'image' => $image,
                 'miles' => $miles,
                 'id'   => $location->id,
                 'name' => $location->name,
+                'address' => $location->address.'<br/>'.$location->city.', '.$location->state.' '.$location->zip_code,
                 'lat' => $location->lat,
                 'lng' => $location->lng,
                 'state' => $location->state,
@@ -106,4 +131,5 @@ class LocationController extends Controller
 //            return round($miles). ' Miles';
 //        }
     }
+
 }

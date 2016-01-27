@@ -140,7 +140,7 @@ function mapScript(filterLocation, outputLocation, markerIcon) {
         var geoLng = position.coords.longitude;
         //console.log(geoLat+' , '+geoLng);
         filterStores(geoLat, geoLng);
-        setInitialMap(geoLat, geoLng, 11);
+        setInitialMap(geoLat, geoLng, 10);
     }
 
     function fallback() {
@@ -178,9 +178,9 @@ function mapScript(filterLocation, outputLocation, markerIcon) {
         $.getJSON(filterLocation + lat + "/" + lng, function (json1) {
             $.each(json1, function (key, data) {
                 $('.map-list').append('' +
-                    '<li data-miles="'+ data[0].miles +'"><strong>Caf&eacute; Name: </strong> '+data[0].name+'<br>' +
-                    '<strong>Distance:</strong> ' + Math.round(data[0].miles) +
-                    ' miles</li>' +
+                    '<li data-miles="'+ data[0].miles +'"><div class="list-container"><div class=image-container" style="background:url('+data[0].image+') top left;background-size:cover;width:200px;height:150px;float:left;"></div><div class="cafe-info">'+data[0].name+'<br>'+'<small>'+ data[0].address +'</small>' +
+                    '<br/><small>' + Math.round(data[0].miles) +
+                    ' miles</small></div><div class="clearfix"></div><div class="services"></div></div></li>' +
                     '');
                 //country: "USA"
                 //id: 33
@@ -191,6 +191,9 @@ function mapScript(filterLocation, outputLocation, markerIcon) {
                 //state: "Pennsylvania"
                 //list += '<li>'+data[0].name+'</li>';
             });
+            if(json1.length < 1) {
+                $('.map-list').html('<li>Sorry, there are no nearby caf&eacute;s!</li>');
+            }
         });
         setTimeout(function(){
             sortByMiles();
@@ -243,7 +246,6 @@ function mapScript(filterLocation, outputLocation, markerIcon) {
             });
         }, 3000);
     };
-
     function sortByMiles() {
         $(".map-list li").sort(sort_li) // sort elements
             .appendTo('.map-list'); // append again to the list
