@@ -115,7 +115,16 @@ class LocationController extends Controller
                 'lat' => $location->lat,
                 'lng' => $location->lng,
                 'state' => $location->state,
-                'country' => $location->country
+                'country' => $location->country,
+                'bakery' => $location->bakery,
+                'icecream' => $location->icecream,
+                'coffee' => $location->coffee,
+                'frozenyogurt' => $location->frozenyogurt,
+                'smoothies' => $location->smoothies,
+                'wifi' => $location->wifi,
+                'curbside' => $location->curbside,
+                'cookie' => $location->cookie,
+                'savory' => $location->savory
             ]);
             return $array;
         }

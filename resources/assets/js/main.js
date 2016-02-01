@@ -58,11 +58,11 @@ $(document).ready(function () {
 });
 
 /*========================
-* GOOGLE
-* MAP SCRIPT
-========================== */
-function mapScript(filterLocation, outputLocation, markerIcon) {
-    $('button.find-address').on('click', function(){
+ * GOOGLE
+ * MAP SCRIPT
+ ========================== */
+function mapScript(filterLocation, outputLocation, markerIcon, imageLibrary) {
+    $('button.find-address').on('click', function () {
         codeAddress();
     });
 
@@ -100,11 +100,11 @@ function mapScript(filterLocation, outputLocation, markerIcon) {
         $('#map').addClass('active');
         map = new google.maps.Map(document.getElementById("map"), mapOptions);
         var myLatLng = {lat: geoLat, lng: geoLng};
-        var marker = new google.maps.Marker({
-            position: myLatLng,
-            map: map,
-            title: 'You are here!'
-        });
+        //var marker = new google.maps.Marker({
+        //    position: myLatLng,
+        //    map: map,
+        //    title: 'You are here!'
+        //});
 
 
     };
@@ -140,7 +140,7 @@ function mapScript(filterLocation, outputLocation, markerIcon) {
         var geoLng = position.coords.longitude;
         //console.log(geoLat+' , '+geoLng);
         filterStores(geoLat, geoLng);
-        setInitialMap(geoLat, geoLng, 10);
+        setInitialMap(geoLat, geoLng, 9);
     }
 
     function fallback() {
@@ -154,12 +154,12 @@ function mapScript(filterLocation, outputLocation, markerIcon) {
         var address = document.getElementById("address").value;
         geocoder.geocode({'address': address}, function (results, status) {
             if (status == google.maps.GeocoderStatus.OK) {
-                map.setZoom(11);
+                map.setZoom(9);
                 map.setCenter(results[0].geometry.location);
-                var marker = new google.maps.Marker({
-                    map: map,
-                    position: results[0].geometry.location
-                });
+                //var marker = new google.maps.Marker({
+                //    map: map,
+                //    position: results[0].geometry.location
+                //});
                 filterStores(results[0].geometry.location.lat(), results[0].geometry.location.lng());
                 outputStores();
             } else {
@@ -178,10 +178,9 @@ function mapScript(filterLocation, outputLocation, markerIcon) {
         $.getJSON(filterLocation + lat + "/" + lng, function (json1) {
             $.each(json1, function (key, data) {
                 $('.map-list').append('' +
-                    '<li data-miles="'+ data[0].miles +'"><div class="list-container"><div class=image-container" style="background:url('+data[0].image+') top left;background-size:cover;width:200px;height:150px;float:left;"></div><div class="cafe-info">'+data[0].name+'<br>'+'<small>'+ data[0].address +'</small>' +
+                    '<li data-miles="' + data[0].miles + '"><div class="list-container"><div class="image-container" style="background:url(' + data[0].image + ')"></div><div class="cafe-info">' + data[0].name + '<br>' + '<small>' + data[0].address + '</small>' +
                     '<br/><small>' + Math.round(data[0].miles) +
-                    ' miles</small></div><div class="clearfix"></div><div class="services"></div></div></li>' +
-                    '');
+                    ' miles</small></div><div class="clearfix"></div><div class="services">'+'<img class="active-'+data[0].wifi+' loc-wifi" src="'+imageLibrary+'/loc-wifi.png" width="30"/>'+'<img class="active-'+data[0].coffee+' loc-coffee" src="'+imageLibrary+'/loc-coffee.png" width="30"/>'+'<img class="active-'+data[0].cookie+' loc-cookie" src="'+imageLibrary+'/loc-cookie.png" width="30"/>'+'<img class="active-'+data[0].frozenyogurt+' loc-frozenyogurt" src="'+imageLibrary+'/loc-frozenyogurt.png" width="30"/>'+'<img class="active-'+data[0].bakery+' loc-bakery" src="'+imageLibrary+'/loc-bakery.png" width="30"/>'+'<img class="active-'+data[0].curbside+' loc-curbside" src="'+imageLibrary+'/loc-curbside.png" width="30"/>'+'<img class="active-'+data[0].icecream+' loc-icecream" src="'+imageLibrary+'/loc-icecream.png" width="30"/>'+'<img class="active-'+data[0].savory+' loc-savory" src="'+imageLibrary+'/loc-savory.png" width="30"/>'+'</div><div class="clearfix"></div></div><div class="clearfix"></div></li>');
                 //country: "USA"
                 //id: 33
                 //lat: "40.093139"
@@ -191,14 +190,14 @@ function mapScript(filterLocation, outputLocation, markerIcon) {
                 //state: "Pennsylvania"
                 //list += '<li>'+data[0].name+'</li>';
             });
-            if(json1.length < 1) {
-                $('.map-list').html('<li>Sorry, there are no nearby caf&eacute;s!</li>');
+            if (json1.length < 1) {
+                $('.map-list').html('<li class="no-result">Sorry, there are no nearby caf&eacute;s!</li>');
             }
         });
-        setTimeout(function(){
+        setTimeout(function () {
             sortByMiles();
         }, 1000);
-        setTimeout(function(){
+        setTimeout(function () {
             $('.map-list').fadeIn();
         }, 1500);
     };
@@ -246,12 +245,31 @@ function mapScript(filterLocation, outputLocation, markerIcon) {
             });
         }, 3000);
     };
+
     function sortByMiles() {
         $(".map-list li").sort(sort_li) // sort elements
             .appendTo('.map-list'); // append again to the list
         // sort function callback
-        function sort_li(a, b){
+        function sort_li(a, b) {
             return ($(b).data('miles')) < ($(a).data('miles')) ? 1 : -1;
         };
     };
+
+    $('.filter-choices a').on('click', function () {
+        var that = $(this);
+        $('.map-list li.no-results').remove();
+        var filter = $(this).data('filter');
+        if(that.hasClass('chosen')) {
+            $('.filter-choices a').removeClass('chosen');
+            $('.map-list li').fadeIn();
+        } else {
+            $('.filter-choices a').removeClass('chosen');
+            $(this).addClass('chosen');
+            $('.map-list li').fadeOut();
+            $('img.active-1.'+filter).parent().parent().parent().fadeIn();
+            if($('img.active-1.'+filter).length < 1) {
+                $('.map-list').append('<li class="no-result">Sorry, there are results for your filter!</li>');
+            }
+        }
+    });
 }

@@ -17,6 +17,14 @@
   display: flex;         /* NEW, Spec - Firefox, Chrome, Opera */
 }
 
+@mixin flexItem($number, $fallback) {
+  -webkit-box-flex: $number;   /* OLD - iOS 6-, Safari 3.1-6 */
+  width: $fallback;            /* For old syntax, otherwise collapses. */
+  -webkit-flex: $number;       /* Safari 6.1+. iOS 7.1+, BB10 */
+  -ms-flex: $number;           /* IE 10 */
+  flex: $number;
+}
+
 @mixin blur($amount) {
   -webkit-filter: blur($amount);
   -moz-filter: blur($amount);
