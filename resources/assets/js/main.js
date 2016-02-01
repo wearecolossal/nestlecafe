@@ -105,14 +105,13 @@ function mapScript(filterLocation, outputLocation, markerIcon, imageLibrary) {
         //    map: map,
         //    title: 'You are here!'
         //});
-
-
     };
 
     function getLocation() {
         if (navigator.geolocation) {
             navigator.geolocation.getCurrentPosition(initialize, geoError);
             outputStores();
+            $('.mobile.notice').addClass('active');
         } else {
             map.innerHTML = "Geolocation is not supported by this browser.";
         }
@@ -177,10 +176,28 @@ function mapScript(filterLocation, outputLocation, markerIcon, imageLibrary) {
         $('.map-list').hide();
         $.getJSON(filterLocation + lat + "/" + lng, function (json1) {
             $.each(json1, function (key, data) {
+
+                var onlineLength = data[0].online_order.length;
+                var hideOnline = " ";
+                if(onlineLength < 1) {
+                    hideOnline = 'hide';
+                }
+                var mapLength = data[0].map.length;
+                var hideMap = " ";
+                if(mapLength < 1) {
+                    hideMap = 'hide';
+                }
+                var facebookLength = data[0].facebook.length;
+                console.log(facebookLength);
+                var hideFacebook = " ";
+                if(facebookLength < 1) {
+                    hideFacebook = 'hide';
+                }
+
                 $('.map-list').append('' +
                     '<li data-miles="' + data[0].miles + '"><div class="list-container"><div class="image-container" style="background:url(' + data[0].image + ')"></div><div class="cafe-info">' + data[0].name + '<br>' + '<small>' + data[0].address + '</small>' +
                     '<br/><small>' + Math.round(data[0].miles) +
-                    ' miles</small></div><div class="clearfix"></div><div class="services">'+'<img class="active-'+data[0].wifi+' loc-wifi" src="'+imageLibrary+'/loc-wifi.png" width="30"/>'+'<img class="active-'+data[0].coffee+' loc-coffee" src="'+imageLibrary+'/loc-coffee.png" width="30"/>'+'<img class="active-'+data[0].cookie+' loc-cookie" src="'+imageLibrary+'/loc-cookie.png" width="30"/>'+'<img class="active-'+data[0].frozenyogurt+' loc-frozenyogurt" src="'+imageLibrary+'/loc-frozenyogurt.png" width="30"/>'+'<img class="active-'+data[0].bakery+' loc-bakery" src="'+imageLibrary+'/loc-bakery.png" width="30"/>'+'<img class="active-'+data[0].curbside+' loc-curbside" src="'+imageLibrary+'/loc-curbside.png" width="30"/>'+'<img class="active-'+data[0].icecream+' loc-icecream" src="'+imageLibrary+'/loc-icecream.png" width="30"/>'+'<img class="active-'+data[0].savory+' loc-savory" src="'+imageLibrary+'/loc-savory.png" width="30"/>'+'</div><div class="clearfix"></div></div><div class="clearfix"></div></li>');
+                    ' miles</small><br><a target="_blank" class="'+hideOnline+' online-order" href="'+data[0].online_order+'">Online Order</a> <a target="_blank" class="'+hideMap+'" href="'+data[0].map+'">Get Directions</a></div><div class="clearfix"></div><div class="services">'+'<img class="active-'+data[0].wifi+' loc-wifi" src="'+imageLibrary+'/loc-wifi.png" width="30"/>'+'<img class="active-'+data[0].coffee+' loc-coffee" src="'+imageLibrary+'/loc-coffee.png" width="30"/>'+'<img class="active-'+data[0].cookie+' loc-cookie" src="'+imageLibrary+'/loc-cookie.png" width="30"/>'+'<img class="active-'+data[0].frozenyogurt+' loc-frozenyogurt" src="'+imageLibrary+'/loc-frozenyogurt.png" width="30"/>'+'<img class="active-'+data[0].bakery+' loc-bakery" src="'+imageLibrary+'/loc-bakery.png" width="30"/>'+'<img class="active-'+data[0].curbside+' loc-curbside" src="'+imageLibrary+'/loc-curbside.png" width="30"/>'+'<img class="active-'+data[0].icecream+' loc-icecream" src="'+imageLibrary+'/loc-icecream.png" width="30"/>'+'<img class="active-'+data[0].savory+' loc-savory" src="'+imageLibrary+'/loc-savory.png" width="30"/>'+'<a target="_blank" href="'+data[0].facebook+'" class="facebook '+hideFacebook+'"><img src="'+imageLibrary+'/ico-facebook.png" width="25"/></a><div class="clearfix"></div></div><div class="clearfix"></div></div><div class="clearfix"></div></li>');
                 //country: "USA"
                 //id: 33
                 //lat: "40.093139"

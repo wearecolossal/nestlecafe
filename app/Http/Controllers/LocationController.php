@@ -124,7 +124,10 @@ class LocationController extends Controller
                 'wifi' => $location->wifi,
                 'curbside' => $location->curbside,
                 'cookie' => $location->cookie,
-                'savory' => $location->savory
+                'savory' => $location->savory,
+                'map' => $location->maps_url,
+                'facebook' => $location->facebook_url,
+                'online_order' => $location->online_order
             ]);
             return $array;
         }

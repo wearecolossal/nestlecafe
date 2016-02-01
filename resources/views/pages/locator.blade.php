@@ -7,6 +7,7 @@
 
 @section('content')
     <div class="clearfix"></div>
+    <div class="mobile notice"><span>Please scroll down to view your results</span></div>
     <div class="locator-bar">
         <div class="search">
             <input id="address" type="text" value="" placeholder="Enter Address">
