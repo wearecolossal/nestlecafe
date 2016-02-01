@@ -185,11 +185,13 @@ textarea {
     float:none;
     box-sizing: border-box;
     padding: 0px 10px;
+    background:rgba(0, 0, 0, .4);
   }
   ul {
     margin: 0;
     padding: 0;
     list-style-type: none;
+    width: 100%;
   }
   li {
     height:200px;
@@ -236,12 +238,16 @@ textarea {
 
 ul.map-list {
   .list-container {
+    width: 100%;
     .image-container {
       background-position:top left !important;
       background-size:cover !important;
       width:200px;
       height:150px;
       float:left;
+    }
+    .cafe-info {
+      width: 240px;
     }
   }
 }
@@ -250,8 +256,8 @@ ul.map-list {
   ul.map-list {
     .list-container {
       .image-container {
-        width:150px;
-        height:100px;
+        //width:150px;
+        //height:100px;
       }
     }
   }
@@ -325,6 +331,11 @@ ul.map-list {
       position: relative;
       &:hover {
         background:rgba(0, 0, 0, .2);
+      }
+      &.chosen {
+        background:rgba(0, 0, 0, .5);
+      }
+      &:hover, &.chosen {
         padding-top:35px !important;
         &:before {
           content:attr(data-tooltip-title);
@@ -339,9 +350,6 @@ ul.map-list {
           background:lighten($red, 5%);
           padding: 5px 0;
         }
-      }
-      &.chosen {
-        background:rgba(0, 0, 0, .5);
       }
       &:first-child {
         border-left:none;
