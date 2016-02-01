@@ -286,6 +286,47 @@ ul.map-list {
   }
 }
 
+@media (max-width:640px) {
+  .locator-bar {
+    input[type="text"] {
+      width: 100%;
+    }
+    button {
+      width: 100%;
+    }
+  }
+  .map-filter-bar {
+    .filter-choices {
+      display: block !important;
+      width: 100%;
+      padding: 0 !important;
+      margin: 0 !important;
+      box-sizing: content-box !important;
+    }
+    a {
+      width:33% !important;
+      display: block !important;
+      float: left;
+      box-sizing: border-box;
+      margin: 0 !important;
+      padding-top:35px !important;
+      &:before {
+        content:attr(data-tooltip-title);
+        color:#fff;
+        position: absolute;
+        top:0;
+        left:0;
+        width: 100%;
+        display:block;
+        text-align: center;
+        font-size: 12px;
+        background:lighten($red, 5%);
+        padding: 5px 0;
+      }
+    }
+  }
+}
+
 .map-container {
   width: 50%;
   float: left;

@@ -26,6 +26,7 @@
             <a data-tooltip="yes" data-tooltip-title="Curbside" data-filter="loc-curbside"><img src="{{ URL::asset('library/img/loc-curbside.png') }}" alt=""></a>
             <a data-tooltip="yes" data-tooltip-title="Cookies" data-filter="loc-cookie"><img src="{{ URL::asset('library/img/loc-cookie.png') }}" alt=""></a>
             <a data-tooltip="yes" data-tooltip-title="Savory" data-filter="loc-savory"><img src="{{ URL::asset('library/img/loc-savory.png') }}" alt=""></a>
+            <div class="clearfix"></div>
         </div>
     </div>
     <div class="clearfix"></div>
