@@ -1,10 +1,4 @@
 @charset "UTF-8";
-/*! HTML5 Boilerplate v5.2.0 | MIT License | https://html5boilerplate.com/ */
-/*
- * What follows is the result of much research on cross-browser styling.
- * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
- * Kroc Camen, and the H5BP dev community and team.
- */
 /* ==========================================================================
    Base styles: opinionated defaults
    ========================================================================== */
@@ -1446,9 +1440,36 @@ ul.slider {
 .entry-content img {
   max-width: 100% !important; }
 
+.widget ul {
+  margin: 0;
+  padding: 0; }
+.widget li {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  background: transparent;
+  border: 3px solid #8b0e1a;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+  margin: 0 0 10px 0;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out; }
+  .widget li:hover {
+    background: rgba(0, 0, 0, 0.4); }
+  .widget li a {
+    color: #fff;
+    text-decoration: none;
+    width: 100%;
+    display: block;
+    padding: 10px 15px; }
+
 .entry-meta a {
   color: #ffd41f;
   text-decoration: none; }
+
+.page-title {
+  font-family: "Helvetica Rounded"; }
 
 .entry-title {
   color: #ffd41f;
@@ -1456,6 +1477,14 @@ ul.slider {
   .entry-title a {
     color: #ffd41f;
     text-decoration: none; }
+
+article.type-post {
+  background: url(../img/repeat-dotted-yellow.png) bottom center repeat-x;
+  padding-bottom: 25px;
+  margin-bottom: 25px; }
+
+span.posted-on {
+  font-size: 12px; }
 
 #instafeed a {
   position: relative;

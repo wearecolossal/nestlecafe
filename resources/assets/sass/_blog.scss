@@ -22,11 +22,42 @@
   }
 }
 
+.widget {
+  ul {
+    margin: 0;
+    padding: 0;
+  }
+  li {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background:transparent;
+    border:3px solid darken($red, 10%);
+    @include border-radius(20px);
+    margin:0 0 10px 0;
+    @include transition(.3s);
+    &:hover {
+      background: rgba(0, 0, 0, .4);
+    }
+    a {
+      color: #fff;
+      text-decoration: none;
+      width: 100%;
+      display: block;
+      padding: 10px 15px;
+    }
+  }
+}
+
 .entry-meta {
   a {
     color:$yellow;
     text-decoration: none;
   }
+}
+
+.page-title {
+  font-family: $helvetica;
 }
 
 .entry-title {
@@ -38,3 +69,12 @@
   }
 }
 
+article.type-post {
+  background:url(../img/repeat-dotted-yellow.png) bottom center repeat-x;
+  padding-bottom: 25px;
+  margin-bottom:25px;
+}
+
+span.posted-on {
+  font-size: 12px;
+}
