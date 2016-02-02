@@ -49,16 +49,9 @@
         <a href="<?php echo str_replace('blog', 'online-order', site_url()); ?>" class="order-online"><span>Online Order</span></a>
         <a class="mobile-show"><img src="<?php echo str_replace('blog', 'library/img/ico-menu.png', site_url()); ?>" height="30" alt=""></a>
     </div>
-    <?php
-    /*
-    ?>
     <ul class="menulist dropdown" id="menu">
-        @foreach(\App\MenuCategory::orderby('order', 'asc')->get() as $menuNav)
-        <li><a href="{{ URL::to('menu/'.$menuNav->url) }}">{{ $menuNav->name }}</a></li>
-        @endforeach
+
     </ul>
-    */
-    ?>
 </nav>
 
 

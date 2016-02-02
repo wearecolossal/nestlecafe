@@ -29,6 +29,9 @@ Route::get('cafe-club', 'PagesController@cafeclub');
 Route::get('output-locations', 'LocationController@ajax');
 Route::get('filter-locations/{lat1}/{lng1}', 'LocationController@filter');
 Route::get('filter-order-locations/{lat1}/{lng1}', 'LocationController@orderFilter');
+
+//Snippets
+Route::get('snippet/menu-items', 'SnippetController@outputMenuItems');
 /*
 |--------------------------------------------------------------------------
 | Application Routes
