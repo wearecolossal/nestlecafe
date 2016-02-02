@@ -1546,40 +1546,13 @@ ul.slider {
         margin-right: 3px; }
 
 .output-list {
-  width: 50%;
+  width: 75%;
   float: left;
   display: block;
   min-height: 500px;
   background: rgba(0, 0, 0, 0.4);
   padding: 10px;
   box-sizing: border-box; }
-  .output-list.online-order {
-    width: 100%; }
-    .output-list.online-order li.cafe-list-item {
-      position: relative;
-      padding-bottom: 5px; }
-      .output-list.online-order li.cafe-list-item:first-child {
-        background-color: #2E1A11;
-        color: #ffd41f;
-        padding: 0 0 10px 0; }
-        .output-list.online-order li.cafe-list-item:first-child .cafe-info span.name:before {
-          content: "Your Closest Cafe";
-          position: absolute;
-          top: 0px;
-          left: 0;
-          display: block;
-          white-space: nowrap;
-          font-size: 14px;
-          background: #ffd41f;
-          color: #2E1A11;
-          padding: 5px 10px;
-          z-index: 9999;
-          font-family: "Helvetica Rounded"; }
-      .output-list.online-order li.cafe-list-item .cafe-info {
-        max-width: 600px !important;
-        width: 100% !important; }
-      .output-list.online-order li.cafe-list-item .services {
-        display: none; }
   .output-list .image-container {
     width: 33%;
     position: relative;
@@ -1656,6 +1629,92 @@ ul.slider {
       .output-list .services img.filter-out {
         opacity: 0; }
       .output-list .services img.remove {
+        display: none; }
+
+.order-list {
+  width: 100%;
+  float: left;
+  display: block;
+  min-height: 500px;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 10px;
+  box-sizing: border-box; }
+  .order-list .image-container {
+    width: 33%;
+    position: relative;
+    display: block;
+    max-width: 200px;
+    height: 150px; }
+  .order-list .cafe-info {
+    float: left !important;
+    box-sizing: border-box;
+    padding: 20px; }
+    .order-list .cafe-info a {
+      color: #b91322;
+      font-size: 14px;
+      text-decoration: none; }
+      .order-list .cafe-info a.hide {
+        display: none; }
+  .order-list a.facebook {
+    float: right;
+    width: 25px; }
+  .order-list .online-order {
+    background: #8b0e1a;
+    color: #fff !important;
+    text-decoration: none;
+    font-size: 12px;
+    font-family: "Helvetica Rounded";
+    padding: 5px;
+    margin: 0 0 0 0; }
+    .order-list .online-order.hide {
+      display: none; }
+  .order-list .services {
+    height: 50px;
+    width: 100%;
+    float: none;
+    box-sizing: border-box;
+    padding: 0px 10px;
+    background: rgba(0, 0, 0, 0.4); }
+    .order-list .services a.hide {
+      display: none; }
+  .order-list ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    width: 100%; }
+  .order-list li {
+    height: inherit;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    background: url(../img/repeat-dotted-yellow.png) bottom center repeat-x;
+    margin-bottom: 10px; }
+    .order-list li:last-child {
+      background: none; }
+    .order-list li.no-result {
+      background: #5d0a11;
+      border: 1px solid #b91322;
+      font-family: "Gotham Rounded Book";
+      font-size: 1.25em;
+      color: #b91322;
+      text-align: center !important;
+      padding: 20px;
+      height: inherit  !important;
+      box-sizing: border-box; }
+  .order-list .services {
+    width: 100%;
+    padding-top: 10px;
+    text-align: left; }
+    .order-list .services img {
+      margin-right: 5px;
+      -webkit-transition: all 0.5s ease-in-out;
+      transition: all 0.5s ease-in-out; }
+      .order-list .services img.active-0 {
+        display: none; }
+      .order-list .services img.filter-out {
+        opacity: 0; }
+      .order-list .services img.remove {
         display: none; }
 
 ul.map-list .list-container {

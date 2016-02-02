@@ -59,21 +59,16 @@ class LocationController extends Controller
      */
     public function filter($lat1, $lng1)
     {
-        //$comparison = $this->cafe->orderby('lat', 'asc')->first();
-        //$lat2 = $comparison->lat;
-        //$lng2 = $comparison->lng;
-
         //$lat1 = 40.751754935372404;
         //$lng1 = -73.97476794280311;
         $lists = $this->cafe->orderby('lat', 'asc')->get();
-        $filter = array();
-        foreach ($lists as $list) {
-            $answer = $this->distance($lat1, $lng1, $list->lat, $list->lng, 'm', 100, $list->id);
-            if($answer) {
-                array_push($filter, $answer);
-            }
-        }
-        return $filter;
+        return $this->filterQuery($lat1, $lng1, $lists);
+    }
+
+    public function orderFilter($lat1, $lng1)
+    {
+        $lists = $this->cafe->where('online_order', '!=', '')->orderby('lat', 'asc')->get();
+        return $this->filterQuery($lat1, $lng1, $lists);
     }
 
 
@@ -142,6 +137,24 @@ class LocationController extends Controller
 //        } else {
 //            return round($miles). ' Miles';
 //        }
+    }
+
+    /**
+     * @param $lat1
+     * @param $lng1
+     * @param $lists
+     * @return array
+     */
+    public function filterQuery($lat1, $lng1, $lists)
+    {
+        $filter = array();
+        foreach ($lists as $list) {
+            $answer = $this->distance($lat1, $lng1, $list->lat, $list->lng, 'm', 100, $list->id);
+            if ($answer) {
+                array_push($filter, $answer);
+            }
+        }
+        return $filter;
     }
 
 }
