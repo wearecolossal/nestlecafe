@@ -1577,40 +1577,40 @@ span.posted-on {
         margin-right: 3px; }
 
 .output-list {
-  width: 50%;
-  float: left;
+  width: 100%;
+  float: none;
   display: block;
   min-height: 500px;
   background: rgba(0, 0, 0, 0.4);
   padding: 10px;
   box-sizing: border-box; }
-  .output-list.online-order {
-    width: 100%; }
-    .output-list.online-order li.cafe-list-item {
-      position: relative;
-      padding-bottom: 5px; }
-      .output-list.online-order li.cafe-list-item:first-child {
-        background-color: #2E1A11;
-        color: #ffd41f;
-        padding: 0 0 10px 0; }
-        .output-list.online-order li.cafe-list-item:first-child .cafe-info span.name:before {
-          content: "Your Closest Cafe";
-          position: absolute;
-          top: 0px;
-          left: 0;
-          display: block;
-          white-space: nowrap;
-          font-size: 14px;
-          background: #ffd41f;
-          color: #2E1A11;
-          padding: 5px 10px;
-          z-index: 9999;
-          font-family: "Helvetica Rounded"; }
-      .output-list.online-order li.cafe-list-item .cafe-info {
-        max-width: 600px !important;
-        width: 100% !important; }
-      .output-list.online-order li.cafe-list-item .services {
-        display: none; }
+  .output-list.online-order li.cafe-list-item {
+    position: relative;
+    width: 100% !important;
+    min-height: inherit !important;
+    padding-bottom: 5px; }
+    .output-list.online-order li.cafe-list-item:first-child {
+      background-color: #2E1A11;
+      color: #ffd41f;
+      padding: 0 0 10px 0; }
+      .output-list.online-order li.cafe-list-item:first-child .cafe-info span.name:before {
+        content: "Your Closest Cafe";
+        position: absolute;
+        top: 0px;
+        left: 0;
+        display: block;
+        white-space: nowrap;
+        font-size: 14px;
+        background: #ffd41f;
+        color: #2E1A11;
+        padding: 5px 10px;
+        z-index: 9999;
+        font-family: "Helvetica Rounded"; }
+    .output-list.online-order li.cafe-list-item .cafe-info {
+      max-width: 600px !important;
+      width: 100% !important; }
+    .output-list.online-order li.cafe-list-item .services {
+      display: none; }
   .output-list .image-container {
     width: 33%;
     position: relative;
@@ -1645,8 +1645,7 @@ span.posted-on {
     width: 100%;
     float: none;
     box-sizing: border-box;
-    padding: 0px 10px;
-    background: rgba(0, 0, 0, 0.4); }
+    padding: 0px 10px; }
     .output-list .services a.hide {
       display: none; }
   .output-list ul {
@@ -1656,15 +1655,16 @@ span.posted-on {
     width: 100%; }
   .output-list li {
     height: inherit;
-    width: 100%;
+    width: 50%;
+    float: left;
+    min-height: 250px;
     display: flex;
     align-items: center;
     justify-content: flex-start;
     background: url(../img/repeat-dotted-yellow.png) bottom center repeat-x;
     margin-bottom: 10px; }
-    .output-list li:last-child {
-      background: none; }
     .output-list li.no-result {
+      width: 100%;
       background: #5d0a11;
       border: 1px solid #b91322;
       font-family: "Gotham Rounded Book";
@@ -1700,6 +1700,11 @@ ul.map-list .list-container {
   ul.map-list .list-container .cafe-info {
     width: 240px; }
 
+@media (max-width: 990px) {
+  .locator-bar input[type="text"] {
+    width: 60%; }
+  .locator-bar button {
+    width: 40%; } }
 @media (max-width: 920px) {
   .map-container {
     display: none; }
@@ -1712,7 +1717,8 @@ ul.map-list .list-container {
     margin: 0 auto;
     display: block; }
     ul.map-list li {
-      height: inherit !important; }
+      height: inherit !important;
+      width: 100%; }
     ul.map-list .list-container .image-container {
       width: 180px;
       height: 130px; } }
@@ -1745,22 +1751,20 @@ ul.map-list .list-container {
       display: block;
       text-align: center;
       font-size: 12px;
-      background: #d01526;
+      background: #412518;
       padding: 5px 0; } }
 .map-container {
-  width: 50%;
-  float: left;
-  box-sizing: border-box;
-  padding: 10px 0px 10px 10px; }
+  width: 100%;
+  float: none;
+  box-sizing: border-box; }
 
 .map-embed.active {
   width: 100%;
   height: 500px;
-  border: 4px solid #ffd41f;
   box-sizing: border-box; }
 
 .map-filter-bar {
-  background: #b91322; }
+  background: #2E1A11; }
   .map-filter-bar h4 {
     font-size: 1em;
     color: #fff;
@@ -1795,9 +1799,9 @@ ul.map-list .list-container {
       /* IE 10 */
       flex: 1;
       padding: 20px 10px 20px;
-      border-top: 1px solid #e7182b;
-      border-left: 1px solid #e7182b;
-      border-right: 1px solid #e7182b;
+      border-top: 1px solid #532f1f;
+      border-left: 1px solid #532f1f;
+      border-right: 1px solid #532f1f;
       -webkit-transition: all 0.3s ease-in-out;
       transition: all 0.3s ease-in-out;
       position: relative; }
@@ -1817,7 +1821,7 @@ ul.map-list .list-container {
           display: block;
           text-align: center;
           font-size: 12px;
-          background: #d01526;
+          background: #412518;
           padding: 5px 0; }
       .map-filter-bar .filter-choices a:first-child {
         border-left: none; }

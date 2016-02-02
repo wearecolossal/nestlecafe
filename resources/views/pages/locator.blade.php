@@ -5,6 +5,8 @@
     {!! "Caf&eacute; Locator" !!}
 @stop
 
+@section('wrapper', 'full no-padding')
+
 @section('content')
     <div class="clearfix"></div>
     <div class="mobile notice"><span>Please scroll down to view your results</span></div>
@@ -31,14 +33,18 @@
         </div>
     </div>
     <div class="clearfix"></div>
-    <div class="output-list">
-        <ul class="map-list" style="color:#fff">
-
-        </ul>
-    </div>
     <div class="map-container">
         <div id="map" class="map-embed"></div>
     </div>
+    <div class="container">
+        <div class="output-list">
+            <ul class="map-list" style="color:#fff">
+
+            </ul>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+
     <div class="clearfix"></div>
 @stop
 

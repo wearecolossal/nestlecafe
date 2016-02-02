@@ -20,6 +20,7 @@
         <ul class="map-list" style="color:#fff">
 
         </ul>
+        <div class="clearfix"></div>
     </div>
     <div style="display:none">
         <div class="map-container">
