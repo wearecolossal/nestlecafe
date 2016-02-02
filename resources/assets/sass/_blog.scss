@@ -17,6 +17,9 @@
       color: $yellow;
     }
   }
+  img {
+    max-width:100% !important;
+  }
 }
 
 .entry-meta {
@@ -27,7 +30,7 @@
 }
 
 .entry-title {
-  color: $brown;
+  color: $yellow;
   font-family: $helvetica, "Helvetica", sans-serif;
   a {
     color: $yellow;

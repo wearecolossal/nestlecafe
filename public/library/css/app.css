@@ -1443,13 +1443,15 @@ ul.slider {
 
 .entry-content p a {
   color: #ffd41f; }
+.entry-content img {
+  max-width: 100% !important; }
 
 .entry-meta a {
   color: #ffd41f;
   text-decoration: none; }
 
 .entry-title {
-  color: #2E1A11;
+  color: #ffd41f;
   font-family: "Helvetica Rounded", "Helvetica", sans-serif; }
   .entry-title a {
     color: #ffd41f;
