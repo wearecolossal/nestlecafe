@@ -12,7 +12,7 @@
     <div class="mobile notice"><span>Please scroll down to view your results</span></div>
     <div class="locator-bar">
         <div class="search">
-            <input id="address" type="text" value="" placeholder="Enter Address">
+            <input id="address" type="text" value="" placeholder="Search by City, State or ZIP Code">
             <button class="find-address">Search Caf&eacute;s</button>
         </div>
     </div>
