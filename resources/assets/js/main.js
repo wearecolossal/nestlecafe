@@ -74,6 +74,7 @@ function mapScript(filterLocation, outputLocation, markerIcon, imageLibrary) {
         var coords = new google.maps.LatLng(latitude, longitude);
 
         var options = {
+            scrollwheel: false,
             zoom: 15,
             center: coords,
             mapTypeControl: false,
@@ -209,6 +210,7 @@ function mapScript(filterLocation, outputLocation, markerIcon, imageLibrary) {
     var setInitialMap = function (geoLat, geoLng, zoom) {
         var latlng = new google.maps.LatLng(geoLat, geoLng);
         var mapOptions = {
+            scrollwheel: false,
             zoom: zoom,
             center: latlng,
             styles:[

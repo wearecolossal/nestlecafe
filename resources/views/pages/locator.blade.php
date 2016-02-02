@@ -16,6 +16,11 @@
             <button class="find-address">Search Caf&eacute;s</button>
         </div>
     </div>
+
+    <div class="clearfix"></div>
+    <div class="map-container">
+        <div id="map" class="map-embed"></div>
+    </div>
     <div class="map-filter-bar">
         <h4>Filters</h4>
 
@@ -31,10 +36,6 @@
             <a data-tooltip="yes" data-tooltip-title="Savory" data-filter="loc-savory"><img src="{{ URL::asset('library/img/loc-savory.png') }}" alt=""></a>
             <div class="clearfix"></div>
         </div>
-    </div>
-    <div class="clearfix"></div>
-    <div class="map-container">
-        <div id="map" class="map-embed"></div>
     </div>
     <div class="container">
         <div class="output-list">
