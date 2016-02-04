@@ -517,7 +517,7 @@ function mapScript(filterLocation, outputLocation, markerIcon, imageLibrary) {
             $('.map-list li').fadeOut();
             $('img.active-1.'+filter).parent().parent().parent().fadeIn();
             if($('img.active-1.'+filter).length < 1) {
-                $('.map-list').append('<li class="no-result">Sorry, there are results for your filter!</li>');
+                $('.map-list').append('<li class="no-result">Sorry, there are no results for your filter!</li>');
             }
         }
     });
