@@ -486,9 +486,11 @@ section {
     float:right;
     img {
       @include transition(.2s);
+      max-width:intrinsic;
+      width: 100%;
     }
     a {
-      padding:10px 20px;
+      padding:15px 5px;
       &:hover {
         img {
           @include brightness(150%);
@@ -635,9 +637,18 @@ section {
     }
     .fine-print {
       p {
-        width: 80%;
+        width: 100%;
         margin:30px auto 0;
         display: block;
+        float: none;
+        padding: 0 20px;
+      }
+      .footer-logos {
+        width: 100%;
+        float: none;
+        box-sizing: border-box;
+        padding: 10px 20px;
+        text-align: center;
       }
     }
   }

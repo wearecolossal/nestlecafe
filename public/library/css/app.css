@@ -964,9 +964,11 @@ section.page {
     float: right; }
     #footer .footer-logos img {
       -webkit-transition: all 0.2s ease-in-out;
-      transition: all 0.2s ease-in-out; }
+      transition: all 0.2s ease-in-out;
+      max-width: intrinsic;
+      width: 100%; }
     #footer .footer-logos a {
-      padding: 10px 20px; }
+      padding: 15px 5px; }
       #footer .footer-logos a:hover img {
         -webkit-filter: brightness(150%);
         -moz-filter: brightness(150%);
@@ -1067,9 +1069,17 @@ section.page {
     width: 100%;
     border-top: 1px solid #fff; }
   #footer .fine-print p {
-    width: 80%;
+    width: 100%;
     margin: 30px auto 0;
-    display: block; } }
+    display: block;
+    float: none;
+    padding: 0 20px; }
+  #footer .fine-print .footer-logos {
+    width: 100%;
+    float: none;
+    box-sizing: border-box;
+    padding: 10px 20px;
+    text-align: center; } }
 @media (max-width: 640px) {
   #footer .footer-section {
     width: 80%;
