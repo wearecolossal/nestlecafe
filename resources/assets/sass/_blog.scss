@@ -86,6 +86,12 @@ h2.entry-title {
   padding: 0 0;
 }
 
+@media (max-width:640px) {
+  h2.entry-title {
+    font-size:2em;
+  }
+}
+
 article.type-post {
   background:url(../img/repeat-dotted-yellow.png) bottom center repeat-x;
   padding-bottom: 25px;
@@ -100,4 +106,10 @@ aside#secondary {
   background:url(../img/repeat-dotted-yellow-vertical.png) top left repeat-y;
   box-sizing: border-box;
   padding: 0px 20px;
+}
+
+@media (max-width:640px) {
+  aside#secondary {
+    background:none;
+  }
 }

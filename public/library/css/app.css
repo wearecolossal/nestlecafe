@@ -1494,6 +1494,9 @@ h2.entry-title {
   margin: 0 0;
   padding: 0 0; }
 
+@media (max-width: 640px) {
+  h2.entry-title {
+    font-size: 2em; } }
 article.type-post {
   background: url(../img/repeat-dotted-yellow.png) bottom center repeat-x;
   padding-bottom: 25px;
@@ -1507,6 +1510,9 @@ aside#secondary {
   box-sizing: border-box;
   padding: 0px 20px; }
 
+@media (max-width: 640px) {
+  aside#secondary {
+    background: none; } }
 #instafeed a {
   position: relative;
   width: 25%;
