@@ -1,20 +1,17 @@
 .btn {
-  &.wired {
+  &.wired, &.btn-yellow {
     @include wiredButton();
   }
   &.btn-red {
-    background: darken($red, 10%);
-    color: $beige;
-    text-decoration: none;
-    padding: 10px 15px;
-    @include border-radius(5px);
-    font-size: 12px;
-    text-transform: uppercase;
-    font-family: $gothamBook, 'Helvetica', sans-serif;
-    white-space: nowrap;
-    @include transition(.2s);
+    @include wiredButton();
+    border:2px solid $red;
+    color:$red;
+    &:after {
+      content:url(../img/btn-triangle-red.png);
+    }
     &:hover {
-      background: darken($red, 20%);
+      background:rgba(185, 19, 34, .4);
+      color:#fff;
     }
   }
   &.btn-lg {

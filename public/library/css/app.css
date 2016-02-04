@@ -1304,16 +1304,17 @@ ul.awards-list {
 ul.slider {
   padding: 0;
   margin: 0 auto;
-  max-width: 1200px;
   width: 100%; }
   ul.slider li {
     width: 100%;
     padding: 0;
     margin: 0;
-    max-width: 1200px;
     height: 600px;
     position: relative;
-    display: flex; }
+    display: flex;
+    background-position: top center !important;
+    -webkit-background-size: cover !important;
+    background-size: cover !important; }
     ul.slider li img {
       position: absolute;
       width: 100%; }
@@ -1381,7 +1382,7 @@ ul.slider {
 @media (max-width: 420px) {
   ul.slider .heading {
     font-size: 4em; } }
-.btn.wired {
+.btn.wired, .btn.btn-yellow {
   border: 2px solid #ffd41f;
   margin: 0px 0px;
   padding: 9px 15px 7px;
@@ -1391,34 +1392,47 @@ ul.slider {
   font-family: "Helvetica Rounded", "Helvetica", sans-serif;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out; }
-  .btn.wired:after {
+  .btn.wired:after, .btn.btn-yellow:after {
     content: url(../img/btn-triangle-yellow.png);
     padding-left: 7px;
     -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out; }
-  .btn.wired:hover {
+  .btn.wired:hover, .btn.btn-yellow:hover {
     background: rgba(255, 212, 31, 0.6);
     border: 2px solid transparent;
     color: #2E1A11; }
-    .btn.wired:hover:after {
+    .btn.wired:hover:after, .btn.btn-yellow:hover:after {
       padding-left: 10px;
       margin-right: 3px; }
 .btn.btn-red {
-  background: #8b0e1a;
-  color: #EDEBD7;
+  border: 2px solid #ffd41f;
+  margin: 0px 0px;
+  padding: 9px 15px 7px;
+  color: #fff;
   text-decoration: none;
-  padding: 10px 15px;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  border-radius: 5px;
-  font-size: 12px;
   text-transform: uppercase;
-  font-family: "Gotham Rounded Book", "Helvetica", sans-serif;
-  white-space: nowrap;
-  -webkit-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out; }
+  font-family: "Helvetica Rounded", "Helvetica", sans-serif;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  border: 2px solid #b91322;
+  color: #b91322; }
+  .btn.btn-red:after {
+    content: url(../img/btn-triangle-yellow.png);
+    padding-left: 7px;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out; }
   .btn.btn-red:hover {
-    background: #5d0a11; }
+    background: rgba(255, 212, 31, 0.6);
+    border: 2px solid transparent;
+    color: #2E1A11; }
+    .btn.btn-red:hover:after {
+      padding-left: 10px;
+      margin-right: 3px; }
+  .btn.btn-red:after {
+    content: url(../img/btn-triangle-red.png); }
+  .btn.btn-red:hover {
+    background: rgba(185, 19, 34, 0.4);
+    color: #fff; }
 .btn.btn-lg {
   font-size: 1em; }
 .btn.btn-sm {

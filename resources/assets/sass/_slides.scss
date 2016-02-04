@@ -6,16 +6,19 @@
 ul.slider {
   padding: 0;
   margin: 0 auto;
-  max-width: 1200px;
+  //max-width: 1200px;
   width: 100%;
   li {
     width: 100%;
     padding: 0;
     margin: 0;
-    max-width: 1200px;
+    //max-width: 1200px;
     height: 600px;
     position: relative;
     display: flex;
+    background-position: top center !important;
+    -webkit-background-size: cover !important;
+    background-size: cover !important;
     img {
       position: absolute;
       width: 100%;

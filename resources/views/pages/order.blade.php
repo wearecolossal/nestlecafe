@@ -5,6 +5,7 @@
     {!! "Online Order" !!}
 @stop
 
+@section('wrapper', 'full no-padding')
 
 @section('content')
     <div class="clearfix"></div>
@@ -16,11 +17,13 @@
         </div>
     </div>
     <div class="clearfix"></div>
-    <div class="output-list online-order">
-        <ul class="map-list" style="color:#fff">
+    <div class="container">
+        <div class="output-list online-order">
+            <ul class="map-list" style="color:#fff">
 
-        </ul>
-        <div class="clearfix"></div>
+            </ul>
+            <div class="clearfix"></div>
+        </div>
     </div>
     <div style="display:none">
         <div class="map-container">
