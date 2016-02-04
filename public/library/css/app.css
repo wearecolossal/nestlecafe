@@ -1479,7 +1479,10 @@ ul.slider {
   text-decoration: none; }
 
 .page-title {
-  font-family: "Helvetica Rounded"; }
+  font-family: "Gotham Rounded Book";
+  font-weight: 300;
+  margin-bottom: 0;
+  padding-bottom: 0; }
 
 .entry-title {
   color: #ffd41f;
