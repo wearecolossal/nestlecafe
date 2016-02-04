@@ -581,6 +581,8 @@ section.page form .form-group {
   background-position: center center !important;
   background-size: auto 100% !important;
   overflow: hidden; }
+  .masonry .masonry-list-item a {
+    color: inherit; }
   .masonry .masonry-list-item img {
     height: 100%;
     -webkit-transition: all 0.5s ease-in-out;
@@ -1125,6 +1127,8 @@ ul.awards-list {
     background-position: center center !important;
     background-size: auto 100% !important;
     overflow: hidden; }
+    .menulist .menulist-item a {
+      color: inherit; }
     .menulist .menulist-item img {
       height: 100%;
       -webkit-transition: all 0.5s ease-in-out;

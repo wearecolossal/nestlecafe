@@ -13,8 +13,8 @@
         <h1>Our Seasonal Picks <br><small>You'll love these unique treats' distinct seasonal flavor.</small></h1>
         <div class="container">
             <div class="masonry">
-                <div class="masonry-list-item one-third"><img src="{{ URL::asset('library/img/menu-real-fruit-smoothies.jpg') }}" alt=""><span>Real
-                    Fruit <br> Smoothies</span></div>
+                <div class="masonry-list-item one-third"><a href="{{ URL::to('menu/real-fruit-smoothies') }}"><img src="{{ URL::asset('library/img/menu-real-fruit-smoothies.jpg') }}" alt=""><span>Real
+                    Fruit <br> Smoothies</span></a></div>
                 <div class="masonry-list-item two-third on-white"><img src="{{ URL::asset('library/img/masonry-treat.jpg') }}" alt=""><span>Treats for the <br> holiday season</span></div>
             </div>
         </div>
@@ -26,7 +26,7 @@
             <div class="content">
                 <h1>Franchising Opportunity</h1>
                 <p>Explore the Nestl&eacute; Toll House Caf&eacute; franchise and engage in our highly compelling business opportunity.</p>
-                <a href="#" class="btn wired">Life is full of treats</a>
+                <a href="{{ URL::to('franchise') }}" class="btn wired">Life is full of treats</a>
                 <div class="clearfix"></div>
                 <small class="fine-print">- Existing franchisees find your location -</small>
             </div>

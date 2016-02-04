@@ -63,6 +63,9 @@
   background-position: center center !important;
   background-size:auto 100% !important;
   overflow: hidden;
+  a {
+    color: inherit;
+  }
   img {
     height: 100%;
     @include transition(.5s);
