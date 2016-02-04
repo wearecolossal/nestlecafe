@@ -948,7 +948,31 @@ section.page {
     color: #beab9e; }
     #footer .fine-print p {
       font-weight: 100;
-      font-size: .8em; }
+      font-size: .8em;
+      width: 80%;
+      float: left; }
+  #footer .footer-logos {
+    width: 20%;
+    display: -webkit-box;
+    /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+    display: -ms-flexbox;
+    /* TWEENER - IE 10 */
+    display: -webkit-flex;
+    /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+    display: flex;
+    /* NEW, Spec - Firefox, Chrome, Opera */
+    float: right; }
+    #footer .footer-logos img {
+      -webkit-transition: all 0.2s ease-in-out;
+      transition: all 0.2s ease-in-out; }
+    #footer .footer-logos a {
+      padding: 10px 20px; }
+      #footer .footer-logos a:hover img {
+        -webkit-filter: brightness(150%);
+        -moz-filter: brightness(150%);
+        -o-filter: brightness(150%);
+        -ms-filter: brightness(150%);
+        filter: brightness(150%); }
   #footer .social-links {
     width: 180px;
     margin: 0 auto;

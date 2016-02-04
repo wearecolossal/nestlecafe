@@ -66,6 +66,11 @@
     </div>
     <div class="container fine-print">
         <p>&copy; Copyright {{ date('Y') }} Crest Foods, Inc. All rights reserved. Nestl&eacute;<sup>&reg;</sup>, Toll House<sup>&reg;</sup> and certain other marks and associated label designs are trademarks of Soci&eacute;t&eacute; des Produits Nestl&eacute; S.A., Used by Crest Foods, Inc., and its independent franchisees, with permission​.</p>
+        <div class="footer-logos">
+            <a href="http://www.norton-creative.com" target="_blank"><img src="{{ URL::asset('library/img/footer-norton.png') }}" alt=""></a>
+            <a href="http://colossal.net" target="_blank"><img src="{{ URL::asset('library/img/footer-colossal.png') }}" alt=""></a>
+        </div>
+        <div class="clearfix"></div>
     </div>
 </footer>
 

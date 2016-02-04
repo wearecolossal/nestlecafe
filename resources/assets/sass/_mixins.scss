@@ -33,6 +33,14 @@
   filter: blur($amount);
 }
 
+@mixin brightness($amount) {
+  -webkit-filter: brightness($amount);
+  -moz-filter: brightness($amount);
+  -o-filter: brightness($amount);
+  -ms-filter: brightness($amount);
+  filter: brightness($amount);
+}
+
 @mixin border-radius($radius) {
   -webkit-border-radius: $radius;
   -moz-border-radius: $radius;

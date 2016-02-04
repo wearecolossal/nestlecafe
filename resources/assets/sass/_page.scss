@@ -476,7 +476,35 @@ section {
     p {
       font-weight: 100;
       font-size: .8em;
+      width:80%;
+      float: left;
     }
+  }
+  .footer-logos {
+    width:20%;
+    @include flexbox();
+    float:right;
+    img {
+      @include transition(.2s);
+    }
+    a {
+      padding:10px 20px;
+      &:hover {
+        img {
+          @include brightness(150%);
+        }
+      }
+    }
+    //a {
+    //  width: 50%;
+    //  display: block;
+    //  float: left;
+    //
+    //  img {
+    //    max-width:intrinsic;
+    //    width: 100%;
+    //  }
+    //}
   }
   .social-links {
     width:180px;

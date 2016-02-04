@@ -89,6 +89,11 @@
             Nestl&eacute;<sup>&reg;</sup>, Toll House<sup>&reg;</sup> and certain other marks and associated label
             designs are trademarks of Soci&eacute;t&eacute; des Produits Nestl&eacute; S.A., Used by Crest Foods, Inc.,
             and its independent franchisees, with permission​.</p>
+            <div class="footer-logos">
+                <a href="http://www.norton-creative.com" target="_blank"><img src="<?php echo str_replace('blog', 'library/img/footer-norton.png', site_url()); ?>" alt=""></a>
+                <a href="http://colossal.net" target="_blank"><img src="<?php echo str_replace('blog', 'library/img/footer-colossal.png', site_url()); ?>" alt=""></a>
+            </div>
+            <div class="clearfix"></div>
     </div>
 </footer>
 
