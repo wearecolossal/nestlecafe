@@ -436,7 +436,6 @@ body {
       display: block;
       width: 100%; }
       .banner.page.simple p {
-        padding: 0 15px 0 0;
         width: 100%;
         text-align: right; }
   .banner.home {
@@ -1473,10 +1472,16 @@ ul.slider {
 
 .entry-title {
   color: #ffd41f;
-  font-family: "Helvetica Rounded", "Helvetica", sans-serif; }
+  font-family: "Gotham Rounded Book", "Helvetica", sans-serif;
+  font-weight: 300; }
   .entry-title a {
     color: #ffd41f;
     text-decoration: none; }
+
+h2.entry-title {
+  font-size: 3em;
+  margin: 0 0;
+  padding: 0 0; }
 
 article.type-post {
   background: url(../img/repeat-dotted-yellow.png) bottom center repeat-x;
@@ -1484,7 +1489,12 @@ article.type-post {
   margin-bottom: 25px; }
 
 span.posted-on {
-  font-size: 12px; }
+  font-size: 14px; }
+
+aside#secondary {
+  background: url(../img/repeat-dotted-yellow-vertical.png) top left repeat-y;
+  box-sizing: border-box;
+  padding: 0px 20px; }
 
 #instafeed a {
   position: relative;

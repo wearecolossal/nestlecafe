@@ -62,11 +62,18 @@
 
 .entry-title {
   color: $yellow;
-  font-family: $helvetica, "Helvetica", sans-serif;
+  font-family: $gothamBook, "Helvetica", sans-serif;
+  font-weight: 300;
   a {
     color: $yellow;
     text-decoration: none;
   }
+}
+
+h2.entry-title {
+  font-size: 3em;
+  margin: 0 0;
+  padding: 0 0;
 }
 
 article.type-post {
@@ -76,5 +83,11 @@ article.type-post {
 }
 
 span.posted-on {
-  font-size: 12px;
+  font-size: 14px;
+}
+
+aside#secondary {
+  background:url(../img/repeat-dotted-yellow-vertical.png) top left repeat-y;
+  box-sizing: border-box;
+  padding: 0px 20px;
 }
