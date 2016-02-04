@@ -17,6 +17,9 @@ Route::group(['prefix' => 'menu'], function () {
     Route::get('/', 'PagesController@menu');
     Route::get('{url}', 'MenuController@single');
 });
+
+Route::get('emails/test', 'EmailController@sendContact');
+
 Route::get('locations', 'PagesController@locator');
 Route::get('story', 'PagesController@story');
 Route::get('franchise', 'PagesController@franchise');

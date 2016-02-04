@@ -297,7 +297,7 @@ section {
     }
   }
   &.image {
-    height:551px;
+    min-height:551px;
     -webkit-background-size: cover !important;
     background-size: cover !important;
     background-position: center -90px !important;
@@ -728,6 +728,30 @@ ul.awards-list {
         font-size: 1em;
         padding-top: 15px;
       }
+    }
+  }
+}
+
+@media (max-width:842px) {
+  ul.awards-list {
+    li {
+      width: 31%;
+    }
+  }
+}
+
+@media (max-width:640px) {
+  ul.awards-list {
+    li {
+      width: 47%;
+    }
+  }
+}
+
+@media (max-width:320px) {
+  ul.awards-list {
+    li {
+      width: 100%;
     }
   }
 }

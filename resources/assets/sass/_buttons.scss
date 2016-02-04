@@ -23,6 +23,16 @@
   }
 }
 
+@media (max-width:640px) {
+  .btn {
+    &.wired, &.btn-yellow, &.btn-red {
+      &.long {
+        font-size: .5em;
+      }
+    }
+  }
+}
+
 .app-downloads {
   a img {
     @include transition(.3s);

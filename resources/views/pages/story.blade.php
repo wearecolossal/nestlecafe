@@ -40,7 +40,7 @@
                     Ongoing support includes operations training, marketing, business coaching, assistance with staffing and others in the field business services. Our consultants provide insight into the business' sales and profitability and offer suggestions and alternatives to both reduce costs and drive top line sales.
                     <br><br>
                 </p>
-                <a href="{{ URL::to('franchise') }}" class="btn wired">Learn About Our Franchising Opportunities</a>
+                <a href="{{ URL::to('franchise') }}" class="btn wired long">Learn About Our Franchising Opportunities</a>
             </div>
         </div>
         <div class="clearfix"></div>

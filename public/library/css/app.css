@@ -807,7 +807,7 @@ section.page {
         .section.yellow h1:after.within {
           position: relative; }
   .section.image {
-    height: 551px;
+    min-height: 551px;
     -webkit-background-size: cover !important;
     background-size: cover !important;
     background-position: center -90px !important;
@@ -1142,6 +1142,15 @@ ul.awards-list {
       font-size: 1em;
       padding-top: 15px; }
 
+@media (max-width: 842px) {
+  ul.awards-list li {
+    width: 31%; } }
+@media (max-width: 640px) {
+  ul.awards-list li {
+    width: 47%; } }
+@media (max-width: 320px) {
+  ul.awards-list li {
+    width: 100%; } }
 .menulist {
   margin-top: 15px; }
   .menulist .menulist-item {
@@ -1474,6 +1483,9 @@ ul.slider {
   font-size: .70em;
   white-space: nowrap; }
 
+@media (max-width: 640px) {
+  .btn.wired.long, .btn.btn-yellow.long, .btn.btn-red.long {
+    font-size: .5em; } }
 .app-downloads a img {
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out; }
