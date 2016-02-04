@@ -32,19 +32,29 @@
     margin: 0;
     padding: 0;
     background:transparent;
-    border:3px solid darken($red, 10%);
-    @include border-radius(20px);
+    border:3px solid darken($yellow, 30%);
     margin:0 0 10px 0;
     @include transition(.3s);
+    position: relative;
     &:hover {
-      background: rgba(0, 0, 0, .4);
+      border:3px solid $yellow;
+      background: $yellow;
+      a {
+        color: $brown;
+      }
     }
     a {
       color: #fff;
       text-decoration: none;
       width: 100%;
       display: block;
-      padding: 10px 15px;
+      padding: 5px 10px;
+      position: relative;
+      &:after {
+        content:url(../img/btn-triangle-yellow.png);
+        float: right;
+        margin-right:20px;
+      }
     }
   }
 }

@@ -627,6 +627,11 @@ section.page {
     section.page .side-column .block.dark {
       padding: 5px 20px 25px; }
 
+@media (max-width: 990px) {
+  section.page .main-column {
+    width: 60%; }
+  section.page .side-column {
+    width: 40%; } }
 @media (max-width: 640px) {
   section.page .main-column {
     width: 100%;
@@ -1447,21 +1452,27 @@ ul.slider {
   margin: 0;
   padding: 0;
   background: transparent;
-  border: 3px solid #8b0e1a;
-  -webkit-border-radius: 20px;
-  -moz-border-radius: 20px;
-  border-radius: 20px;
+  border: 3px solid #856b00;
   margin: 0 0 10px 0;
   -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out; }
+  transition: all 0.3s ease-in-out;
+  position: relative; }
   .widget li:hover {
-    background: rgba(0, 0, 0, 0.4); }
+    border: 3px solid #ffd41f;
+    background: #ffd41f; }
+    .widget li:hover a {
+      color: #2E1A11; }
   .widget li a {
     color: #fff;
     text-decoration: none;
     width: 100%;
     display: block;
-    padding: 10px 15px; }
+    padding: 5px 10px;
+    position: relative; }
+    .widget li a:after {
+      content: url(../img/btn-triangle-yellow.png);
+      float: right;
+      margin-right: 20px; }
 
 .entry-meta a {
   color: #ffd41f;
