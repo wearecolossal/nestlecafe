@@ -99,24 +99,24 @@
 @stop
 
 @section('scripts')
-    <script>
-        $('form').on('submit', function(e){
-            e.preventDefault();
-            var that = $(this);
-            var url = that.attr('action');
-            $.ajax({
-                type: 'post',
-                url: url,
-                data: that.serialize(),
-                success: function (response) {
-                    if(response == 'success') {
-                        window.location.replace('{{ URL::to('contact/success') }}');
-                    } else {
-                        $('.alert').text('Please fill out all the required fields');
-                        $('.alert').removeClass('hidden');
-                    }
-                }
-            });
-        });
-    </script>
+    {{--<script>--}}
+        {{--$('form').on('submit', function(e){--}}
+            {{--e.preventDefault();--}}
+            {{--var that = $(this);--}}
+            {{--var url = that.attr('action');--}}
+            {{--$.ajax({--}}
+                {{--type: 'post',--}}
+                {{--url: url,--}}
+                {{--data: that.serialize(),--}}
+                {{--success: function (response) {--}}
+                    {{--if(response == 'success') {--}}
+                        {{--window.location.replace('{{ URL::to('contact/success') }}');--}}
+                    {{--} else {--}}
+                        {{--$('.alert').text('Please fill out all the required fields');--}}
+                        {{--$('.alert').removeClass('hidden');--}}
+                    {{--}--}}
+                {{--}--}}
+            {{--});--}}
+        {{--});--}}
+    {{--</script>--}}
 @stop
