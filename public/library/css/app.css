@@ -447,7 +447,7 @@ input {
 
 .block.dark form label {
   color: #EDEBD7; }
-.block.dark form select, .block.dark form input[type="text"], .block.dark form input[type="email"] {
+.block.dark form select, .block.dark form input[type="text"], .block.dark form input[type="email"], .block.dark form textarea {
   color: #2E1A11; }
 section.page form label {
   display: block;
