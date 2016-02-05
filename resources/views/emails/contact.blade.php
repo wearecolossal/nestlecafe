@@ -202,6 +202,7 @@
                                             @if($location->image)
                                                 <img src="{{ URL::asset('uploads/store_images/'.$location->image) }}" width="150" alt="">
                                             @endif
+                                            <br>
                                             #{{ $location->store_name }}<br>
                                             {{ $location->name }} <br>
                                             {{ $location->address }}<br>
