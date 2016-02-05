@@ -22,7 +22,7 @@
 
             <div class="block dark">
                 <div class="alert hidden" style="background:#ffd41f;padding:15px;color:#2E1A11;"></div>
-                {!! Form::open(['method' => 'POST', 'url' => 'mailer']) !!}
+                {!! Form::open() !!}
                 <div class="form-group">
                     <label for="">* = required</label>
                 </div>
