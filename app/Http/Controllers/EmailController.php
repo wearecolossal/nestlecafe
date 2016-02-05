@@ -63,8 +63,8 @@ class EmailController extends Controller
                 $m->to('tarun@colossal.net', 'Tarun Krishnan')->subject('A customer has submitted to the Nestl&eacute;&reg; Toll House&reg; Caf&eacute; By Chip Contact Form');
                 //$m->to('info@nestlecafe.com', 'Nestlé Toll House Café By Chip')->subject('A customer has submitted to the Nestl&eacute;&reg; Toll House&reg; Caf&eacute; By Chip Contact Form');
             });
-            return response()->json(['success']);
+            return redirect('contact/success');
         }
-        return response()->json(['error']);
+        return back()->with('error', 'Please fill out all required fields');
     }
 }
