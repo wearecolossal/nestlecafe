@@ -1163,7 +1163,8 @@ ul.awards-list {
     width: 31%; } }
 @media (max-width: 640px) {
   ul.awards-list li {
-    width: 47%; } }
+    width: 100%;
+    margin-right: 0%; } }
 @media (max-width: 320px) {
   ul.awards-list li {
     width: 100%; } }

@@ -9,6 +9,7 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Validator;
+use Illuminate\Support\Facades\Session;
 
 class EmailController extends Controller
 {
@@ -59,10 +60,11 @@ class EmailController extends Controller
             {
                 $m->from('marketing@nestlecafe.com', 'Nestlecafe');
 
-                $m->to('tarun@colossal.net', 'Tarun Krishnan')->subject('A customer has submitted to the Nestl&eacute;&reg; Toll House&reg; Caf&eacute; By Chip Contact Form');
+                //$m->to('tarun@colossal.net', 'Tarun Krishnan')->subject('A customer has submitted to the Nestl&eacute;&reg; Toll House&reg; Caf&eacute; By Chip Contact Form');
+                $m->to('info@nestlecafe.com', 'Nestlé Toll House Café By Chip')->subject('A customer has submitted to the Nestl&eacute;&reg; Toll House&reg; Caf&eacute; By Chip Contact Form');
             });
-            return back()->with('success', 'Thank you for contacting us! We will get back to your momentarily.');
+            return response()->json(['success']);
         }
-        return back()->with('error', 'Please fill out all the required fields');
+        return response()->json(['error']);
     }
 }

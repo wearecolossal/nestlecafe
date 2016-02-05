@@ -12,12 +12,6 @@
         <div class="block header">
             <h2>
                 Please contact us via the form below. We look forward to serving you. If you'd like to contact a store directly, go to the Nestlé Toll House Café by Chip <a href="{{ URL::to('locations') }}">store locator</a>.
-                @if(Session::get('success'))
-                    <p style="color:green">{{ Session::get('success') }}</p>
-                @endif
-                @if(Session::get('error'))
-                    <p style="color:red">{{ Session::get('error') }}</p>
-                @endif
             </h2>
             <hr class="red-dotted-divider within">
             <br>
@@ -27,17 +21,21 @@
         <div class="main-column">
 
             <div class="block dark">
+                <div class="alert hidden" style="background:#ffd41f;padding:15px;color:#2E1A11;"></div>
                 {!! Form::open(['method' => 'POST', 'url' => 'mailer']) !!}
                 <div class="form-group">
-                    {!! Form::label('name', 'Name') !!}
+                    <label for="">* = required</label>
+                </div>
+                <div class="form-group">
+                    {!! Form::label('name', 'Name*') !!}
                     <input name="name" id="name" type="text" />
                 </div>
                 <div class="form-group">
-                    {!! Form::label('email', 'Email') !!}
+                    {!! Form::label('email', 'Email*') !!}
                     <input name="email" id="email" type="text" />
                 </div>
                 <div class="form-group">
-                    {!! Form::label('reason', 'Reason') !!}
+                    {!! Form::label('reason', 'Reason*') !!}
                     <select name="subject" id="subject">
                         <option value="">Please Choose</option>
                         <option value="Change my order">Change my order</option>
@@ -60,7 +58,7 @@
                     </select>
                 </div>
                 <div class="form-group">
-                    {!! Form::label('comments', 'Comments') !!}
+                    {!! Form::label('comments', 'Comments*') !!}
                     <textarea class="" value="" name="comments" id="comments" cols="30" rows="10"></textarea>
                 </div>
                 <div class="form-group">
@@ -101,4 +99,25 @@
 @stop
 
 @section('scripts')
+    <script>
+        $('form').on('submit', function(e){
+            e.preventDefault();
+            var that = $(this);
+            var url = that.attr('action');
+            $.ajax({
+                type: 'post',
+                url: url,
+                data: that.serialize(),
+                success: function (response) {
+                    if(response == 'success') {
+                        $('.alert').text('Thank you! We will get back to you momentarily');
+                        $('.alert').removeClass('hidden');
+                    } else {
+                        $('.alert').text('Please fill out all the required fields');
+                        $('.alert').removeClass('hidden');
+                    }
+                }
+            });
+        });
+    </script>
 @stop
