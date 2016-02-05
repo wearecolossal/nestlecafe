@@ -12,15 +12,16 @@
         <div class="block header">
             <h2>
                 Please contact us via the form below. We look forward to serving you. If you'd like to contact a store directly, go to the Nestlé Toll House Café by Chip <a href="{{ URL::to('locations') }}">store locator</a>.
+                @if(Session::get('success'))
+                    <p style="color:green">{{ Session::get('success') }}</p>
+                @endif
+                @if(Session::get('error'))
+                    <p style="color:red">{{ Session::get('error') }}</p>
+                @endif
             </h2>
             <hr class="red-dotted-divider within">
             <br>
-            @if(Session::get('success'))
-                <p style="color:green">{{ Session::get('success') }}</p>
-            @endif
-            @if(Session::get('error'))
-                <p style="color:red">{{ Session::get('error') }}</p>
-            @endif
+
         </div>
 
         <div class="main-column">
