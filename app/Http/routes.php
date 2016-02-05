@@ -26,6 +26,7 @@ Route::get('franchise', 'PagesController@franchise');
 Route::get('online-order', 'PagesController@order');
 Route::get('about', 'PagesController@about');
 Route::get('contact', 'PagesController@contact');
+Route::get('contact/success', function(){ return view('pages.contact-thank'); });
 Route::get('careers', 'PagesController@careers');
 Route::get('legal', 'PagesController@legal');
 Route::get('cafe-club', 'PagesController@cafeclub');
