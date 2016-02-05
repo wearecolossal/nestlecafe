@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "8b87226d1f5f90e531a450856482edfc",
-    "content-hash": "ecc3cc09e278295cf0ab35499ed97d25",
+    "hash": "1b253ccb2d07daf2424fce1ca7c233dc",
+    "content-hash": "1473db1ce6f24278076323c5c02b4743",
     "packages": [
         {
             "name": "classpreloader/classpreloader",
@@ -2080,40 +2080,6 @@
             ],
             "description": "An officially supported mail provider to send mail from Laravel through Postmark, see instructions for integrating it here: https://github.com/wildbit/laravel-postmark-provider/blob/master/README.md",
             "time": "2015-11-10 14:43:06"
-        },
-        {
-            "name": "wildbit/postmark-php",
-            "version": "2.1.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/wildbit/postmark-php.git",
-                "reference": "9e02256570d9e86f0061ba21e7213144b16a3063"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/wildbit/postmark-php/zipball/9e02256570d9e86f0061ba21e7213144b16a3063",
-                "reference": "9e02256570d9e86f0061ba21e7213144b16a3063",
-                "shasum": ""
-            },
-            "require": {
-                "guzzlehttp/guzzle": "~6.0",
-                "php": ">=5.5.0"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "4.4.0"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-0": {
-                    "Postmark\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "description": "The officially supported client for Postmark (http://postmarkapp.com)",
-            "time": "2015-12-10 13:48:54"
         },
         {
             "name": "wildbit/swiftmailer-postmark",

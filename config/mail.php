@@ -54,7 +54,7 @@ return [
     |
     */
 
-    'from' => ['address' => 'online@nestlecafe.com', 'name' => 'Nestle Tollhouse Cafe By Chip'],
+    'from' => ['address' => 'marketing@nestlecafe.com', 'name' => 'Nestle Tollhouse Cafe By Chip'],
 
     /*
     |--------------------------------------------------------------------------

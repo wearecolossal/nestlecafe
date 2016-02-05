@@ -3,19 +3,24 @@
         <div class="footer-section">
             <h1>Nestlé Café</h1>
             <ul>
-                <li class="{{ isActive('online-order') }}"><a href="{{ URL::to('online-order') }}">Online Ordering</a></li>
+                <li class="{{ isActive('online-order') }}"><a href="{{ URL::to('online-order') }}">Online Ordering</a>
+                </li>
                 <li class="{{ isActive('about') }}"><a href="{{ URL::to('about') }}">About Us</a></li>
                 <li class="{{ isActive('careers') }} hidden"><a href="{{ URL::to('careers') }}">Careers</a></li>
-                <li class="{{ isActive('locations') }}"><a href="{{ URL::to('locations') }}">Caf&eacute; Locations</a></li>
-                <li class="{{ isActive('cafe-club') }}"><a href="{{ URL::to('cafe-club') }}">The Caf&eacute; Club</a></li>
+                <li class="{{ isActive('locations') }}"><a href="{{ URL::to('locations') }}">Caf&eacute; Locations</a>
+                </li>
+                <li class="{{ isActive('cafe-club') }}"><a href="{{ URL::to('cafe-club') }}">The Caf&eacute; Club</a>
+                </li>
                 <li><a href="{{ URL::to('blog') }}">Cookie Talk</a></li>
             </ul>
         </div>
         <div class="footer-section">
             <h1>Featured Brands</h1>
             <ul>
-                <li><a href="http://www.nestle-purelife.us/" target="_blank">Nestl&eacute;<sup>&reg;</sup> Pure Life<sup>&reg;</sup></a></li>
-                <li><a href="http://www.verybestbaking.com/Toll-House.aspx" target="_blank">Nestl&eacute;<sup>&reg;</sup> Toll House<sup>&reg;</sup></a></li>
+                <li><a href="http://www.nestle-purelife.us/" target="_blank">Nestl&eacute;<sup>&reg;</sup> Pure
+                        Life<sup>&reg;</sup></a></li>
+                <li><a href="http://www.verybestbaking.com/Toll-House.aspx"
+                       target="_blank">Nestl&eacute;<sup>&reg;</sup> Toll House<sup>&reg;</sup></a></li>
                 <li><a href="http://www.nestleusa.com/" target="_blank">Nestl&eacute;<sup>&reg;</sup></a></li>
                 <li><a href="http://www.wonka.com/" target="_blank">Wonka<sup>&reg;</sup></a></li>
                 <li><a href="http://www.butterfinger.com/" target="_blank">Butterfinger<sup>&reg;</sup></a></li>
@@ -29,10 +34,13 @@
             <ul>
                 <li><a href="http://www.edy.s.com/" target="_blank">Edy's<sup>&reg;</sup></a></li>
                 <li><a href="http://www.dreyers.com/" target="_blank">Dreyer's<sup>&reg;</sup></a></li>
-                <li><a href="http://www.nestle.com/Brands/IceCream/Pages/IceCreamCatalogue.aspx" target="_blank">Nestl&eacute; Ice Cream<sup>&reg;</sup></a></li>
+                <li><a href="http://www.nestle.com/Brands/IceCream/Pages/IceCreamCatalogue.aspx" target="_blank">Nestl&eacute;
+                        Ice Cream<sup>&reg;</sup></a></li>
                 <li><a href="http://www.nescafe.com" target="_blank">Nescaf&eacute;</a></li>
-                <li><a href="https://www.nestleprofessional-beverages.com.au/brands/buondi/" target="_blank">Buondi</a></li>
-                <li><a href="https://www.moevenpick-icecream.com/Pages/default.aspx" target="_blank">M&ouml;venpick<sup>&reg;</sup></a></li>
+                <li><a href="https://www.nestleprofessional-beverages.com.au/brands/buondi/" target="_blank">Buondi</a>
+                </li>
+                <li><a href="https://www.moevenpick-icecream.com/Pages/default.aspx"
+                       target="_blank">M&ouml;venpick<sup>&reg;</sup></a></li>
                 <li><a href="https://www.kitkat.com" target="_blank">Kit Kat<sup>&reg;</sup></a></li>
             </ul>
         </div>
@@ -40,7 +48,8 @@
             <h1>Support</h1>
             <ul>
                 <li class="{{ isActive('contact') }}"><a href="{{ URL::to('contact') }}">Contact Us</a></li>
-                <li class="{{ isActive('franchise') }}"><a href="{{ URL::to('franchise') }}">Franchising Opportunities</a></li>
+                <li class="{{ isActive('franchise') }}"><a href="{{ URL::to('franchise') }}">Franchising
+                        Opportunities</a></li>
                 <li><a href="https://www.treatdata.com/" target="_blank">Treatdata</a></li>
                 <li><a href="https://springfield2.franconnect.net/nestlecafe/" target="_blank">CafeConnect</a></li>
                 <li class="{{ isActive('legal') }}"><a href="{{ URL::to('legal') }}">Legal & Privacy Info</a></li>
@@ -48,6 +57,7 @@
         </div>
         <div class="footer-section text-center email-club">
             <h2>Join Our Email Club for News and Offers</h2>
+
             <form action="">
                 <input type="text" placeholder="Your Email Address">
             </form>
@@ -65,10 +75,16 @@
         <div class="clearfix"></div>
     </div>
     <div class="container fine-print">
-        <p>&copy; Copyright {{ date('Y') }} Crest Foods, Inc. All rights reserved. Nestl&eacute;<sup>&reg;</sup>, Toll House<sup>&reg;</sup> and certain other marks and associated label designs are trademarks of Soci&eacute;t&eacute; des Produits Nestl&eacute; S.A., Used by Crest Foods, Inc., and its independent franchisees, with permission​.</p>
+        <p>&copy; Copyright {{ date('Y') }} Crest Foods, Inc. All rights reserved. Nestl&eacute;<sup>&reg;</sup>, Toll
+            House<sup>&reg;</sup> and certain other marks and associated label designs are trademarks of Soci&eacute;t&eacute;
+            des Produits Nestl&eacute; S.A., Used by Crest Foods, Inc., and its independent franchisees, with
+            permission​.</p>
+
         <div class="footer-logos">
-            <a href="http://www.norton-creative.com" target="_blank"><img src="{{ URL::asset('library/img/footer-norton.png') }}" alt=""></a>
-            <a href="http://colossal.net" target="_blank"><img src="{{ URL::asset('library/img/footer-colossal.png') }}" alt=""></a>
+            <a href="http://www.norton-creative.com" target="_blank"><img
+                        src="{{ URL::asset('library/img/footer-norton.png') }}" alt=""></a>
+            <a href="http://colossal.net" target="_blank"><img src="{{ URL::asset('library/img/footer-colossal.png') }}"
+                                                               alt=""></a>
         </div>
         <div class="clearfix"></div>
     </div>
@@ -80,15 +96,29 @@
 <script src="{{ URL::asset('library/js/plugins.js') }}"></script>
 <script src="{{ URL::asset('library/js/parallax.js') }}"></script>
 <script src="{{ URL::asset('library/js/main-min.js') }}"></script>
-@yield('scripts')
-<!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
 <script>
-    (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-        e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-        e.src='https://www.google-analytics.com/analytics.js';
-        r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-    ga('create','UA-XXXXX-X','auto');ga('send','pageview');
+    $(document).ready(function () {
+        //Find document links in SQL DB and updates their URL
+        addUrlToDocuments('{{ URL::to('uploads/documents') }}/');
+    });
+</script>
+@yield('scripts')
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+<script>
+    (function (b, o, i, l, e, r) {
+        b.GoogleAnalyticsObject = l;
+        b[l] || (b[l] =
+                function () {
+                    (b[l].q = b[l].q || []).push(arguments)
+                });
+        b[l].l = +new Date;
+        e = o.createElement(i);
+        r = o.getElementsByTagName(i)[0];
+        e.src = 'https://www.google-analytics.com/analytics.js';
+        r.parentNode.insertBefore(e, r)
+    }(window, document, 'script', 'ga'));
+    ga('create', 'UA-XXXXX-X', 'auto');
+    ga('send', 'pageview');
 </script>
 </body>
 </html>

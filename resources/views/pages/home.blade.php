@@ -13,9 +13,8 @@
         <h1>Our Seasonal Picks <br><small>You'll love these unique treats' distinct seasonal flavor.</small></h1>
         <div class="container">
             <div class="masonry">
-                <div class="masonry-list-item one-third"><a href="{{ URL::to('menu/real-fruit-smoothies') }}"><img src="{{ URL::asset('library/img/menu-real-fruit-smoothies.jpg') }}" alt=""><span>Real
-                    Fruit <br> Smoothies</span></a></div>
-                <div class="masonry-list-item two-third on-white"><img src="{{ URL::asset('library/img/masonry-treat.jpg') }}" alt=""><span>Treats for the <br> holiday season</span></div>
+                <div class="masonry-list-item one-third"><a href="{{ URL::to('menu/bakery') }}"><img src="{{ URL::asset('library/img/callout-small-bakery.jpg') }}" alt=""><span>Strawberry <br>Cookie Cup</span></a></div>
+                <div class="masonry-list-item two-third"><a href="{{ URL::to('menu/bakery') }}"><img src="{{ URL::asset('library/img/callout-large-choco-strawberry.jpg') }}" alt=""><span>Treats for the <br> holiday season</span></a></div>
             </div>
         </div>
         <div class="clearfix"></div>
@@ -25,10 +24,10 @@
         <div class="container">
             <div class="content">
                 <h1>Franchising Opportunity</h1>
-                <p>Explore the Nestl&eacute; Toll House Caf&eacute; franchise and engage in our highly compelling business opportunity.</p>
+                <p>Explore the Nestl&eacute;&reg; Toll House&reg; Caf&eacute; franchise and engage in our highly compelling business opportunity.</p>
                 <a href="{{ URL::to('franchise') }}" class="btn wired">Life is full of treats</a>
                 <div class="clearfix"></div>
-                <small class="fine-print">- Existing franchisees find your location -</small>
+                <small class="fine-print"><a href="{{ URL::to('locations') }}">- Existing franchisees find your location -</a></small>
             </div>
         </div>
         <div class="clearfix"></div>
@@ -36,7 +35,7 @@
 
     <div class="section yellow">
         <h1 class="standard">
-            Connect with Us and Share Your Nestl&eacute; Cafe Experience!
+            Connect with Us and Share Your Nestl&eacute&reg;; Cafe Experience!
         </h1>
         <div class="clearfix"></div>
             <div class="container full">

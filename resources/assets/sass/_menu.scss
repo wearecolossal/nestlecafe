@@ -7,6 +7,18 @@
 
 @media (max-width:842px) {
   .menulist {
+    width:80%;
+    margin: 0 auto;
+    display: block;
+    .menulist-item {
+      @include masonry_mobile();
+    }
+  }
+}
+
+@media (max-width:640px) {
+  .menulist {
+    width: 100%;
     .menulist-item {
       @include masonry_mobile();
     }

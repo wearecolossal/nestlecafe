@@ -12,7 +12,7 @@
     <div class="menulist">
         @foreach($categories as $category)
         <a href="{{ URL::to('menu/'.$category->url) }}" class="menulist-item {{ $category->grid == 1 ? 'one-third' : 'two-third' }} {{ $category->on_white == 1 ? 'on-white' : null }}"><img
-                    src="{{ URL::asset('library/img/'.$category->image) }}" alt=""><span>{{ $category->name }}</span></a>
+                    src="{{ URL::asset('uploads/menu_list/'.$category->image) }}" alt=""><span>{{ $category->name }}</span></a>
         @endforeach
         <div class="clearfix"></div>
     </div>

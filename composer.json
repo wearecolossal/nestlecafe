@@ -11,8 +11,7 @@
     "php": ">=5.5.9",
     "laravel/framework": "5.2.*",
     "laravelcollective/html": "^5.2",
-    "wildbit/laravel-postmark-provider": "^2.0",
-    "wildbit/postmark-php": "^2.1"
+    "wildbit/laravel-postmark-provider": "^2.0"
   },
   "require-dev": {
     "fzaninotto/faker": "~1.4",
