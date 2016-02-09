@@ -160,7 +160,7 @@
                 For us dessert created with a passion for life and endless imagination is more than a sweet temptation - it's a state of mind, an intriguing place, an experience that can take you on a journey.
             </p>
             <p class="text-center">
-                <a href=""{{ URL::to('menu') }} class="btn btn-red">Learn About Our Menu Items</a>
+                <a href="{{ URL::to('menu') }}" class="btn btn-red">Learn About Our Menu Items</a>
             </p>
         </div>
         <div class="clearfix"></div>
