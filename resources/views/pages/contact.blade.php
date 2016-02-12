@@ -11,7 +11,7 @@
     <section class="page">
         <div class="block header">
             <h2>
-                Please contact us via the form below. We look forward to serving you. If you'd like to contact a store directly, go to the Nestlé Toll House Café by Chip <a href="{{ URL::to('locations') }}">store locator</a>.
+                Please contact us via the form below. We look forward to serving you. If you'd like to contact a store directly, go to the Nestlé Toll House Café by Chip <nobr><a href="{{ URL::to('locations') }}">store locator</a></nobr>.
             </h2>
             <hr class="red-dotted-divider within">
             <br>
@@ -69,7 +69,7 @@
         </div>
         <div class="side-column">
             <div class="block transparent">
-                <h3>Nestl&eacute; Tollhouse</h3>
+                <h3>Nestl&eacute;&reg; Toll House&reg; Caf&eacute; by Chip&reg;</h3>
                 <img src="{{ URL::asset('library/img/contact_corporateimg.jpg') }}" style="width:100%;max-width:intrinsic;margin:0 auto;display:block;" alt="">
                 <p>
                     <small>
@@ -90,7 +90,7 @@
                 <hr class="yellow-dotted-divider within">
                 <div class="clearfix"></div>
                 <h3>Looking For A Nearby Caf&eacute;?</h3>
-                <a href="" class="btn wired btn-sm">Visit The Caf&eacute; Locator</a>
+                <a href="{{ URL::to('locations') }}" class="btn wired btn-sm">Visit The Caf&eacute; Locator</a>
             </div>
             <div class="clearfix"></div>
         </div>

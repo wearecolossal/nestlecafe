@@ -36,8 +36,15 @@ Route::get('output-locations', 'LocationController@ajax');
 Route::get('filter-locations/{lat1}/{lng1}', 'LocationController@filter');
 Route::get('filter-order-locations/{lat1}/{lng1}', 'LocationController@orderFilter');
 
+//ADMIN
+Route::group(['prefix' => 'admin'], function(){
+    Route::resource('menu/categories', 'Admin\MenuCategoryController');
+    Route::resource('menu', 'Admin\MenuController');
+    Route::resource('cafes', 'Admin\CafeController');
+    Route::get('/', 'Admin\PagesController@index');
+});
 
-
+//SANDBOX
 Route::get('view-mailer', function(){ return view('emails.contact'); });
 //Snippets
 Route::get('snippet/menu-items', 'SnippetController@outputMenuItems');

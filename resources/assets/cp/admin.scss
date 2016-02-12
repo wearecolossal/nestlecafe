@@ -1,0 +1,21 @@
+@import "../sass/variables";
+@import "../sass/mixins";
+
+//EDIT MENU CATEGORY
+.category-grid {
+  a {
+    height:50px;
+    @include transition(.3s);
+    @include flexbox();
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    background:lighten(desaturate($brown, 25%), 50%);
+    cursor:pointer;
+    &.active, &:hover {
+      background:lighten(desaturate($brown, 0%), 25%);
+    }
+  }
+}
