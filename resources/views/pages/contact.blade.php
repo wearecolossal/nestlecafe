@@ -11,7 +11,7 @@
     <section class="page">
         <div class="block header">
             <h2>
-                Please contact us via the form below. We look forward to serving you. If you'd like to contact a store directly, go to the Nestlé Toll House Café by Chip <nobr><a href="{{ URL::to('locations') }}">store locator</a></nobr>.
+                Please contact us via the form below. We look forward to serving you. If you'd like to contact a store directly, go to the Nestl&eacute;&reg; Toll House&reg; Caf&eacute; by Chip <nobr><a href="{{ URL::to('locations') }}">store locator</a></nobr>.
             </h2>
             <hr class="red-dotted-divider within">
             <br>
