@@ -1,13 +1,20 @@
 <div class="banner @yield('banner')" style="background: url(@yield('background'))">
     @if(URL::current() == URL::to('/'))
         <ul class="slider">
-            <li style="background:#871303 url({{ URL::asset('uploads/slideshow/slider-valentine.jpg') }});">
+            <li style="background:#F1F295 url({{ URL::asset('uploads/slideshow/slider-spring.jpg') }});">
                 <div class="content">
-                    <h2 class="subhead">This Gift</h2>
-                    <h1 class="heading">Takes <br> The Cake</h1>
-                    <p class="tag" style="color:#fff;">Order Your <br>Special Valentine's <br>Day Cookie Cake Today</p>
+                    <h2 class="subhead">Spring Into Action </h2>
+                    <h1 class="heading" style="color:#2E1A11;text-shadow: 0px 3px 50px #fff">Cookie <br> Cakes</h1>
+                    <p class="tag"><a style="color:inherit" href="{{ URL::to('cafe-club') }}">Join our e-club</a> and receive a <br> FREE slice on your birthday.</p>
                 </div>
             </li>
+            {{--<li style="background:#871303 url({{ URL::asset('uploads/slideshow/slider-valentine.jpg') }});">--}}
+                {{--<div class="content">--}}
+                    {{--<h2 class="subhead">This Gift</h2>--}}
+                    {{--<h1 class="heading">Takes <br> The Cake</h1>--}}
+                    {{--<p class="tag" style="color:#fff;">Order Your <br>Special Valentine's <br>Day Cookie Cake Today</p>--}}
+                {{--</div>--}}
+            {{--</li>--}}
             <li style="background:#F1F295 url({{ URL::asset('uploads/slideshow/slider-mocha.jpg') }});">
                 <div class="content">
                     <h2 class="subhead">Chill With Our Favorites</h2>

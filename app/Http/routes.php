@@ -31,6 +31,7 @@ Route::post('contact', 'EmailController@sendContact');
 Route::get('contact/success', function(){ return view('pages.contact-thank'); });
 Route::get('careers', 'PagesController@careers');
 Route::get('legal', 'PagesController@legal');
+Route::get('signup', function(){ return redirect('cafe-club'); });
 Route::get('cafe-club', 'PagesController@cafeclub');
 Route::get('output-locations', 'LocationController@ajax');
 Route::get('filter-locations/{lat1}/{lng1}', 'LocationController@filter');
