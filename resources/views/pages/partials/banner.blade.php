@@ -5,7 +5,7 @@
                 <div class="content">
                     <h2 class="subhead">Spring Just Got Sweeter</h2>
                     <h1 class="heading" style="color:#2E1A11;text-shadow: 0px 3px 50px #fff">Cookie <br> Cakes</h1>
-                    <p class="tag">Grab a delicious cookie cake slice today!</p>
+                    <p class="tag">Grab a delicious <br> cookie cake slice today!</p>
                 </div>
             </li>
             {{--<li style="background:#871303 url({{ URL::asset('uploads/slideshow/slider-valentine.jpg') }});">--}}
