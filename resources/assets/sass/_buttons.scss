@@ -5,6 +5,9 @@
   &.yellow-text {
     color: $yellow !important;
   }
+  &.white-text {
+    color: #fff !important;
+  }
   &.btn-red {
     @include wiredButton();
     border:2px solid $red;

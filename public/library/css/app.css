@@ -1482,6 +1482,8 @@ ul.slider {
       margin-right: 3px; }
 .btn.yellow-text {
   color: #ffd41f !important; }
+.btn.white-text {
+  color: #fff !important; }
 .btn.btn-red {
   border: 2px solid #ffd41f;
   margin: 0px 0px;

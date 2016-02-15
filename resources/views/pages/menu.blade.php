@@ -26,7 +26,7 @@
             </div>
             <div class="block transparent text-center">
                 <p>
-                    <a data-load="document" href="Nestle-Tollhouse-Cafe-by-Chip-Nutrition-Facts.pdf" target="_blank" class="btn btn-yellow yellow-text">Nutrition Fact Sheet</a>
+                    <a data-load="document" href="Nestle-Tollhouse-Cafe-by-Chip-Nutrition-Facts.pdf" target="_blank" class="btn btn-yellow white-text">Nutrition Fact Sheet</a>
                 </p>
             </div>
         </div>
