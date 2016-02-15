@@ -61,7 +61,7 @@ class LocationController extends Controller
     {
         //$lat1 = 40.751754935372404;
         //$lng1 = -73.97476794280311;
-        $lists = $this->cafe->orderby('lat', 'asc')->get();
+        $lists = $this->cafe->where('lat', '!=', '')->whereNotNull('lat')->orderby('lat', 'asc')->get();
         return $this->filterQuery($lat1, $lng1, $lists);
     }
 

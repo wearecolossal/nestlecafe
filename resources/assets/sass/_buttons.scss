@@ -2,6 +2,9 @@
   &.wired, &.btn-yellow {
     @include wiredButton();
   }
+  &.yellow-text {
+    color: $yellow !important;
+  }
   &.btn-red {
     @include wiredButton();
     border:2px solid $red;

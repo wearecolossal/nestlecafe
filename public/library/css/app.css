@@ -1480,6 +1480,8 @@ ul.slider {
     .btn.wired:hover:after, .btn.btn-yellow:hover:after {
       padding-left: 10px;
       margin-right: 3px; }
+.btn.yellow-text {
+  color: #ffd41f !important; }
 .btn.btn-red {
   border: 2px solid #ffd41f;
   margin: 0px 0px;

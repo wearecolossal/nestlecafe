@@ -49,6 +49,8 @@ Route::group(['prefix' => 'admin'], function(){
 Route::get('view-mailer', function(){ return view('emails.contact'); });
 //Snippets
 Route::get('snippet/menu-items', 'SnippetController@outputMenuItems');
+Route::get('snippet/clean-store-image-urls', 'SnippetController@cleanImageUrl');
+Route::get('snippet/fill-cafe-services', 'SnippetController@fillServiceColumns');
 /*
 |--------------------------------------------------------------------------
 | Application Routes

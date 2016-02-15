@@ -103,7 +103,7 @@
     });
 </script>
 @yield('scripts')
-        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+<!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
 <script>
     (function (b, o, i, l, e, r) {
         b.GoogleAnalyticsObject = l;
@@ -117,7 +117,7 @@
         e.src = 'https://www.google-analytics.com/analytics.js';
         r.parentNode.insertBefore(e, r)
     }(window, document, 'script', 'ga'));
-    ga('create', 'UA-XXXXX-X', 'auto');
+    ga('create', 'UA-3699341-1', 'auto');
     ga('send', 'pageview');
 </script>
 </body>
