@@ -39,7 +39,8 @@ class MenuController extends Controller
         if(!menu301s($url)) {
             $category = $this->menuCategory->where('url', $url)->first();
             $items = $this->menuItem->where('category', $category->id)->where('archive', 0)->orderby('order', 'asc')->get();
-            return view('pages.menu-single', compact('category', 'items'));
+            $metaTitle = 'Menu » '.$category->name;
+            return view('pages.menu-single', compact('category', 'items', 'metaTitle'));
         }
         return menu301s($url);
     }

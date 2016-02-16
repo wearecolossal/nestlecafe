@@ -12,6 +12,14 @@ function isActive($url)
     return URL::current() == URL::to($url) ? 'active' : null;
 }
 
+function metaTitle($metaTitle = null) {
+    $base = 'Nestlé® Toll House® Café By Chip';
+    if($metaTitle) {
+        return $metaTitle.' - '.$base;
+    }
+    return $base;
+}
+
 function cafeHasNoServices($id)
 {
     $cafe = \App\Cafe::find($id);

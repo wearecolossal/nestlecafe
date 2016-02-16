@@ -50,70 +50,80 @@ class PagesController extends Controller
      * MENU
      */
     public function menu() {
+        $metaTitle = 'Menu';
         $categories = $this->menuCategory->where('list_order', '!=', 0)->orderby('list_order', 'asc')->get();
-        return view('pages.menu', compact('categories'));
+        return view('pages.menu', compact('categories', 'metaTitle'));
     }
     
     /*
      * CAFE LOCATOR
      */
     public function locator() {
-        return view('pages.locator');
+        $metaTitle = 'Café Locations';
+        return view('pages.locator', compact('metaTitle'));
     }
     
     /*
      * OUR STORY
      */
     public function story() {
-        return view('pages.story');
+        $metaTitle = 'Our Story';
+        return view('pages.story', compact('metaTitle'));
     }
 
     /*
      * FRANCHISE
      */
     public function franchise() {
-        return view('pages.franchise');
+        $metaTitle = 'Franchising Opportunities';
+        return view('pages.franchise', compact('metaTitle'));
     }
 
     /*
      * FRANCHISE
      */
     public function order() {
-        return view('pages.order');
+        $metaTitle = 'Order Online';
+        return view('pages.order', compact('metaTitle'));
     }
 
     /*
      * ABOUT US
      */
     public function about() {
-        return view('pages.about-us');
+        $metaTitle = 'About Us';
+        return view('pages.about-us', compact('metaTitle'));
     }
 
     /*
      * CONTACT US
      */
     public function contact() {
-        return view('pages.contact');
+        $metaTitle = 'Contact Us';
+        return view('pages.contact', compact('metaTitle'));
     }
 
     /*
      * CONTACT US
      */
     public function careers() {
-        return view('pages.careers');
+        $metaTitle = 'Careers';
+        return view('pages.careers', compact('metaTitle'));
     }
 
     /*
      * LEGAL
      */
     public function legal() {
-        return view('pages.legal');
+        $metaTitle = 'Legal & Privacy';
+        return view('pages.legal', compact('metaTitle'));
     }
 
     /*
-     * LEGAL
+     * CAFE CLUB
      */
     public function cafeClub() {
-        return view('pages.cafe-club');
+        $metaTitle = 'Café Club';
+        return view('pages.cafe-club', compact('metaTitle'));
     }
 }
