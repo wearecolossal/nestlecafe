@@ -11,6 +11,8 @@
 |
 */
 
+
+
 //PAGES
 Route::get('/', 'PagesController@index');
 Route::group(['prefix' => 'menu'], function () {
@@ -41,6 +43,8 @@ Route::get('filter-order-locations/{lat1}/{lng1}', 'LocationController@orderFilt
 Route::group(['prefix' => 'admin'], function(){
     Route::resource('menu/categories', 'Admin\MenuCategoryController');
     Route::resource('menu', 'Admin\MenuController');
+    Route::get('cafes/geolocate', 'Admin\CafeController@geolocate');
+    Route::post('cafes/{id}/update-services', ['as' => 'cafe.update-services', 'uses' => 'Admin\CafeController@updateServices']);
     Route::resource('cafes', 'Admin\CafeController');
     Route::get('/', 'Admin\PagesController@index');
 });
@@ -51,6 +55,8 @@ Route::get('view-mailer', function(){ return view('emails.contact'); });
 Route::get('snippet/menu-items', 'SnippetController@outputMenuItems');
 Route::get('snippet/clean-store-image-urls', 'SnippetController@cleanImageUrl');
 Route::get('snippet/fill-cafe-services', 'SnippetController@fillServiceColumns');
+//301s
+Route::get('{page}/{sub?}/{tert?}', 'RedirectController@index');
 /*
 |--------------------------------------------------------------------------
 | Application Routes

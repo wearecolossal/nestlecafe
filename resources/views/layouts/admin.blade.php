@@ -12,10 +12,7 @@
     <title>Nestlé Toll House Admin</title>
 
     <!-- Bootstrap Core CSS -->
-    <link href="{{ URL::asset('cp/css/bootstrap.min.css') }}" rel="stylesheet">
-
-    <!-- Custom CSS -->
-    <link href="{{ URL::asset('cp/css/sb-admin.css') }}" rel="stylesheet">
+    <link href="{{ URL::asset('cp/css/bootstrap.css') }}" rel="stylesheet">
 
     <!-- Morris Charts CSS -->
     <link href="{{ URL::asset('cp/css/plugins/morris.css') }}" rel="stylesheet">
@@ -48,10 +45,10 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="index.html">Neslt&eacute;&reg; Toll House&reg; Admin</a>
+            <a class="navbar-brand" href="index.html">Nestl&eacute;&reg; Toll House&reg; Admin</a>
         </div>
         <!-- Top Menu Items -->
-        <ul class="nav navbar-right top-nav">
+        <ul class="nav navbar-right top-nav hidden">
             <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-envelope"></i> <b class="caret"></b></a>
                 <ul class="dropdown-menu message-dropdown">

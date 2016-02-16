@@ -36,8 +36,11 @@ class MenuController extends Controller
      * SINGLE MENU ITEM
      */
     public function single($url) {
-        $category = $this->menuCategory->where('url', $url)->first();
-        $items = $this->menuItem->where('category', $category->id)->orderby('order', 'asc')->get();
-        return view('pages.menu-single', compact('category', 'items'));
+        if(!menu301s($url)) {
+            $category = $this->menuCategory->where('url', $url)->first();
+            $items = $this->menuItem->where('category', $category->id)->where('archive', 0)->orderby('order', 'asc')->get();
+            return view('pages.menu-single', compact('category', 'items'));
+        }
+        return menu301s($url);
     }
 }

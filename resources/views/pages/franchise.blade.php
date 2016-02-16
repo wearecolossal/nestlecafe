@@ -14,7 +14,7 @@
             <h2 style="font-size:2em;">Life Is Full Of Treats</h2>
         </div>
     </section>
-    <div class="section image" style="background:url({{ URL::asset('library/img/section-franchising-opportunities.jpg') }}); background-position-y: center !important;height:500px;">
+    <div class="section image" data-parallax="scroll" data-image-src="{{ URL::asset('library/img/section-franchising-opportunities.jpg') }}" style="background-position-y: bottom !important;height:500px;">
         <div class="container">
             <div class="content">
                 <h1 style="margin-top:0;padding-top:0;margin-bottom:10px;">You Just Have To Know <br> Where To Find Them</h1>

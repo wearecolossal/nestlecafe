@@ -14,7 +14,7 @@
             <h2 style="font-size:2em;">The Page You Requested Was Not Found</h2>
         </div>
     </section>
-    <div class="section image" style="background:url({{ URL::asset('library/img/section-404.jpg') }}); background-position-y: center !important;height:500px;">
+    <div class="section image" data-parallax="scroll" data-image-src="{{ URL::asset('library/img/section-404.jpg') }}" style="background-position-y: bottom !important;height:500px;" >
         <div class="container">
             <div class="content">
                 <h1 style="margin-top:0;padding-top:0;margin-bottom:10px;">The page you’re looking for can not be found, or an error has occurred with the site.</h1>
