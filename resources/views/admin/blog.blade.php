@@ -11,7 +11,7 @@
                 <p class="lead">Your login credentials are the same as your admin login credentials</p>
             </div>
             <div class="panel-footer text-center">
-                <a href="{{ URL::to('blog/wp-login.php') }}" class="btn btn-primary btn-lg">Launch Wordpress Admin</a>
+                <a target="_blank" href="{{ URL::to('blog/wp-login.php') }}" class="btn btn-primary btn-lg">Launch Wordpress Admin</a>
             </div>
         </div>
     </div>
