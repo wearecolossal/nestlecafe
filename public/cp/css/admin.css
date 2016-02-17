@@ -188,7 +188,6 @@ table.table thead {
 table.table tbody td {
   height: 75px; }
   table.table tbody td.actions {
-    text-align: center;
     border-left: 4px solid rgba(0, 0, 0, 0.07);
     background: rgba(0, 0, 0, 0.05); }
 
