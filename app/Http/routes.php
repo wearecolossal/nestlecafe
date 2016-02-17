@@ -52,6 +52,7 @@ Route::group(['middleware' => 'web'], function(){
     Route::post('login', 'LoginController@login');
     Route::get('logout', function(){ Auth::logout(); return redirect('/'); });
     Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function(){
+        Route::get('admins', 'Admin\PagesController@admins');
         Route::resource('menu/categories', 'Admin\MenuCategoryController');
         Route::resource('menu', 'Admin\MenuController');
         Route::get('cafes/{id}/archive', 'Admin\CafeController@archive');

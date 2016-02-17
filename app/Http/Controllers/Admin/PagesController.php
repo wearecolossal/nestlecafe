@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\User;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
@@ -12,14 +13,29 @@ class PagesController extends Controller
 {
     //
     /**
-     * PagesController constructor.
+     * @var User
      */
-    public function __construct()
+    private $user;
+
+    /**
+     * PagesController constructor.
+     * @param User $user
+     */
+    public function __construct(User $user)
     {
+        $this->user = $user;
     }
 
     public function index()
     {
-        return view('admin.index');
+        return redirect('admin/cafes');
+        //return view('admin.index');
     }
+
+    public function admins()
+    {
+        $admins = $this->user->orderby('name', 'asc')->get();
+        return view('admin.admins', compact('admins'));
+    }
+
 }

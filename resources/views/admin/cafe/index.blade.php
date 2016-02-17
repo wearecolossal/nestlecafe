@@ -8,23 +8,24 @@
             Add Cafe</a>
         <br><br>
     </div>
-    <div class="col-md-12 table-responsive">
-        <table class="table table-condensed table-bordered">
-            <thead>
-            <tr class="active">
-                <th style="width:75px">Store #</th>
-                <th>Name</th>
-                <th>Services</th>
-                <th>City, State, Country</th>
-                <th>Actions</th>
-            </tr>
-            </thead>
-            <tbody>
-            @foreach($cafes as $cafe)
-                <tr class="{{ !$cafe->image ? 'danger' : null }}">
-                    <td>#{{ sprintf('%04d', $cafe->store_number) }}</td>
-                    <td>{{ $cafe->name }} {!! !$cafe->image ? '<small class="text-danger"><em>No Image</em></small>' : null !!}</td>
-                    <td>
+    <div class="row">
+            <div class="col-md-12 table-responsive">
+                <table class="table table-condensed table-striped">
+                    <thead>
+                    <tr class="active">
+                        <th style="width:75px">Store #</th>
+                        <th>Name</th>
+                        <th>Services</th>
+                        <th>City, State, Country</th>
+                        <th>Actions</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    @foreach($cafes as $cafe)
+                        <tr class="{{ !$cafe->image ? 'danger' : null }}">
+                            <td>#{{ sprintf('%04d', $cafe->store_number) }}</td>
+                            <td>{{ $cafe->name }} {!! !$cafe->image ? '<small class="text-danger"><em>No Image</em></small>' : null !!}</td>
+                            <td>
                         <span class="{{ $cafe->bakery != 1 ? 'hidden' : null }}"><img
                                     src="{{ URL::asset('library/img/loc-bakery.png') }}" width="20" alt=""></span>
                         <span class="{{ $cafe->coffee != 1 ? 'hidden' : null }}"><img
@@ -43,20 +44,21 @@
                                     src="{{ URL::asset('library/img/loc-smoothies.png') }}" width="20" alt=""></span>
                         <span class="{{ $cafe->wifi != 1 ? 'hidden' : null }}"><img
                                     src="{{ URL::asset('library/img/loc-wifi.png') }}" width="20" alt=""></span>
-                        {!! cafeHasNoServices($cafe->id) !!}
-                    </td>
-                    <td>{{ $cafe->city.', '.$cafe->state.' '.$cafe->country }}</td>
-                    <td>
-                        <a href="{{ URL::to('admin/cafes/'.$cafe->id.'/edit') }}" class="btn btn-default btn-xs"><i
-                                    class="glyphicon glyphicon-edit"></i></a>
-                        <a data-toggle="modal" data-target="#archive"
-                           data-url="{{ URL::to('admin/cafes/'.$cafe->id.'/archive') }}"
-                           class="btn btn-default btn-xs archive"><i class="glyphicon glyphicon-trash text-danger"></i></a>
-                    </td>
-                </tr>
-            @endforeach
-            </tbody>
-        </table>
+                                {!! cafeHasNoServices($cafe->id) !!}
+                            </td>
+                            <td>{{ $cafe->city.', '.$cafe->state.' '.$cafe->country }}</td>
+                            <td>
+                                <a href="{{ URL::to('admin/cafes/'.$cafe->id.'/edit') }}" class="btn btn-default btn-xs"><i
+                                            class="glyphicon glyphicon-edit"></i></a>
+                                <a data-toggle="modal" data-target="#archive"
+                                   data-url="{{ URL::to('admin/cafes/'.$cafe->id.'/archive') }}"
+                                   class="btn btn-default btn-xs archive"><i class="glyphicon glyphicon-trash text-danger"></i></a>
+                            </td>
+                        </tr>
+                    @endforeach
+                    </tbody>
+                </table>
+            </div>
     </div>
 
     <!-- Modal -->
