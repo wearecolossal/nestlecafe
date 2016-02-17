@@ -60,6 +60,7 @@ Route::group(['middleware' => 'web'], function(){
         Route::get('cafes/geolocate', 'Admin\CafeController@geolocate');
         Route::post('cafes/{id}/update-services', ['as' => 'cafe.update-services', 'uses' => 'Admin\CafeController@updateServices']);
         Route::post('cafes/{id}/update-hours', ['as' => 'cafe.update-hours', 'uses' => 'Admin\CafeController@updateHours']);
+        Route::get('cafes/archives', 'Admin\CafeController@archived');
         Route::resource('cafes', 'Admin\CafeController');
         Route::get('/', 'Admin\PagesController@index');
     });

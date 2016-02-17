@@ -1,6 +1,7 @@
 @extends('layouts.admin')
 
-@section('page-header', 'Edit Cafe ('.$cafe->name.')')
+@section('page-header', 'Edit Cafe ('.$cafe->name.') <a href="'.URL::to('admin/cafes').'" class="btn btn-default pull-right"><i class="glyphicon glyphicon-chevron-left"></i> Back To Caf&eacute;s</a>')
+
 
 @section('content')
     <div class="col-md-8">

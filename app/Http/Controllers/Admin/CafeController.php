@@ -31,6 +31,12 @@ class CafeController extends Controller
         return view('admin.cafe.index', compact('cafes'));
     }
 
+    public function archived()
+    {
+        $cafes = $this->cafe->where('archive', 1)->orderby('name', 'asc')->get();
+        return view('admin.cafe.index', compact('cafes'));
+    }
+
     public function edit($id)
     {
         $cafe = $this->cafe->find($id);
