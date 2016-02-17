@@ -3,7 +3,11 @@
 @section('page-header', 'Admins')
 
 @section('content')
-
+    <div class="col-md-12">
+        <p class="lead">
+            Admin accounts have complete access to the administrative control panel. This allows admins to add, edit and delete record-based data. To add or remove admin accounts, please contact support@colossal.net to place your request
+        </p>
+    </div>
     <div class="row">
         <div class="col-md-12 table-responsive">
             <table class="table table-striped">
