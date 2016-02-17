@@ -27,6 +27,12 @@ ul.slider {
       position: absolute;
       width: 100%;
     }
+    &.right-align {
+      .content {
+        right:5%;
+        text-align: right;
+      }
+    }
   }
   .content {
     position: absolute;

@@ -1,6 +1,13 @@
 <div class="banner @yield('banner')" style="background: url(@yield('background'))">
     @if(URL::current() == URL::to('/'))
         <ul class="slider">
+            <li style="background:#F1F295 url({{ URL::asset('uploads/slideshow/slider-cookie-cake.jpg') }});" class="right-align">
+                <div class="content">
+                    <h2 class="subhead">Spring Just Got Sweeter</h2>
+                    <h1 class="heading" style="color:#2E1A11;text-shadow: 0px 3px 50px #fff">Cookie <br> Cakes</h1>
+                    <p class="tag">Grab a delicious <br> cookie cake slice today!</p>
+                </div>
+            </li>
             <li style="background:#F1F295 url({{ URL::asset('uploads/slideshow/slider-spring.jpg') }});">
                 <div class="content">
                     <h2 class="subhead">Spring Just Got Sweeter</h2>
