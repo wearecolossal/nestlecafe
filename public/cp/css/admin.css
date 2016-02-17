@@ -184,9 +184,7 @@ table.table thead {
     color: #525252; }
   table.table thead tr th.actions {
     background: #d7d7d7;
-    border-left: 4px solid #d7d7d7;
-    text-align: center;
-    padding: 0 25px; }
+    border-left: 4px solid #d7d7d7; }
 table.table tbody td {
   height: 75px; }
   table.table tbody td.actions {
