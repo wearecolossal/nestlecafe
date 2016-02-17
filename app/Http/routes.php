@@ -52,6 +52,7 @@ Route::group(['middleware' => 'web'], function(){
     Route::post('login', 'LoginController@login');
     Route::get('logout', function(){ Auth::logout(); return redirect('/'); });
     Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function(){
+        Route::get('blog', 'Admin\PagesController@blog');
         Route::get('admins', 'Admin\PagesController@admins');
         Route::resource('menu/categories', 'Admin\MenuCategoryController');
         Route::resource('menu', 'Admin\MenuController');

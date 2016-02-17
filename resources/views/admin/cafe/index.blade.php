@@ -4,20 +4,20 @@
 
 @section('content')
     <div class="col-md-12">
-        <a href="{{ URL::to('admin/cafes/create') }}" class="btn btn-default"><i class="glyphicon glyphicon-plus"></i>
+        <a href="{{ URL::to('admin/cafes/create') }}" class="btn btn-primary"><i class="glyphicon glyphicon-plus"></i>
             Add Cafe</a>
         <br><br>
     </div>
     <div class="row">
             <div class="col-md-12 table-responsive">
-                <table class="table table-condensed table-striped">
+                <table class="table table-striped">
                     <thead>
                     <tr class="active">
-                        <th style="width:75px">Store #</th>
+                        <th style="width:95px">Store #</th>
                         <th>Name</th>
                         <th>Services</th>
                         <th>City, State, Country</th>
-                        <th>Actions</th>
+                        <th class="actions">Actions</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -47,7 +47,7 @@
                                 {!! cafeHasNoServices($cafe->id) !!}
                             </td>
                             <td>{{ $cafe->city.', '.$cafe->state.' '.$cafe->country }}</td>
-                            <td>
+                            <td class="actions">
                                 <a href="{{ URL::to('admin/cafes/'.$cafe->id.'/edit') }}" class="btn btn-default btn-xs"><i
                                             class="glyphicon glyphicon-edit"></i></a>
                                 <a data-toggle="modal" data-target="#archive"

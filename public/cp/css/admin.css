@@ -175,6 +175,25 @@ ul.alert-dropdown {
 .panel-yellow > a:hover {
   color: #df8a13; }
 
+table.table thead {
+  font-size: 14px;
+  text-transform: uppercase; }
+  table.table thead th {
+    height: 65px;
+    vertical-align: middle;
+    color: #525252; }
+  table.table thead tr th.actions {
+    background: #d7d7d7;
+    border-left: 4px solid #d7d7d7;
+    text-align: center;
+    padding: 0 25px; }
+table.table tbody td {
+  height: 75px; }
+  table.table tbody td.actions {
+    text-align: center;
+    border-left: 4px solid rgba(0, 0, 0, 0.07);
+    background: rgba(0, 0, 0, 0.05); }
+
 .admin-navbar {
   min-height: 80px !important;
   height: inherit;
@@ -187,9 +206,10 @@ ul.alert-dropdown {
   align-items: center;
   height: 80px; }
   .profile p {
-    padding: 18px 10px; }
+    padding: 18px 0px; }
   .profile img {
-    padding: 18px 0; }
+    padding: 18px 0px;
+    margin: 0 15px; }
   .profile a {
     color: #c5cccd;
     font-size: .85em; }

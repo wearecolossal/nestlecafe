@@ -34,8 +34,13 @@ class PagesController extends Controller
 
     public function admins()
     {
-        $admins = $this->user->orderby('name', 'asc')->get();
+        $admins = $this->user->orderby('last_name', 'asc')->get();
         return view('admin.admins', compact('admins'));
+    }
+
+    public function blog()
+    {
+        return view('admin.blog');
     }
 
 }
