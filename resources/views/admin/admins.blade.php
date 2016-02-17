@@ -12,7 +12,7 @@
                     <th style="width:75px">ID</th>
                     <th width="75">Image</th>
                     <th>Name</th>
-                    <th>Email</th>
+                    <th class="actions">Email</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -24,7 +24,7 @@
                         <td style="padding:0;"><img src="{{ URL::asset('uploads/admins/'.$admin->photo) }}" width="75"
                                                     alt=""></td>
                         <td> {{ $admin->first_name.' '.$admin->last_name }}</td>
-                        <td>{{ $admin->email }}</td>
+                        <td class="actions">{{ $admin->email }}</td>
                     </tr>
                 @endforeach
                 </tbody>
