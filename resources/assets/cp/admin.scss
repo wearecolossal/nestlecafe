@@ -1,6 +1,30 @@
 @import "../sass/variables";
 @import "../sass/mixins";
 @import "partials/sb";
+
+//NAVIGATION
+.admin-navbar {
+  min-height:80px !important;
+  height: inherit;
+  background: #281912 url(../img/bg-header.jpg) left top no-repeat;
+  -webkit-background-size: cover;
+  background-size: cover;
+}
+.profile {
+  color: #fff;
+  align-items: center;
+  height: 80px;
+  p {
+    padding: 18px 10px;
+  }
+  img {
+    padding: 18px 0;
+  }
+  a {
+    color: #c5cccd;
+    font-size: .85em;
+  }
+}
 //EDIT MENU CATEGORY
 .category-grid {
   a {

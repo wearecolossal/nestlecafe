@@ -34,7 +34,8 @@ class CafeController extends Controller
     public function edit($id)
     {
         $cafe = $this->cafe->find($id);
-        return view('admin.cafe.edit', compact('cafe'));
+        $days = dayList();
+        return view('admin.cafe.edit', compact('cafe', 'days'));
     }
 
     public function update(Request $request, $id)
@@ -92,7 +93,8 @@ class CafeController extends Controller
 
     public function create()
     {
-        return view('admin.cafe.create');
+        $days = dayList();
+        return view('admin.cafe.create', compact('days'));
     }
 
     public function store(Request $request)
@@ -125,6 +127,7 @@ class CafeController extends Controller
             // store file name in database
             $cafe->image = $filename;
         }
+        $this->nullHoursOnClosed($cafe);
         $cafe->save();
         return redirect('admin/cafes/'.$cafe->id.'/edit')->with('success', 'Cafe Created!');
     }
@@ -134,5 +137,62 @@ class CafeController extends Controller
         $cafe = $this->cafe->find($id);
         $cafe->update($request->all());
         return back()->with('Cafe Services Updated!');
+    }
+
+    public function updateHours(Request $request, $id)
+    {
+        $cafe = $this->cafe->find($id);
+        $cafe->update($request->all());
+        $this->nullHoursOnClosed($cafe);
+        $cafe->save();
+        return back()->with('Cafe Hours Updated!');
+    }
+
+    public function archive($id) {
+        $cafe = $this->cafe->find($id);
+        if($cafe->archive == 0) {
+            $cafe->archive = 1;
+            $message = 'Cafe Archived!';
+        } else {
+            $cafe->archive = 0;
+            $message = 'Cafe Is Active!';
+        }
+        $cafe->save();
+        return back()->with('success', $message);
+    }
+
+    /**
+     * @param $cafe
+     */
+    public function nullHoursOnClosed($cafe)
+    {
+        if ($cafe['monday_open'] == 0) {
+            $cafe->monday_start = null;
+            $cafe->monday_end = null;
+        }
+        if ($cafe['tuesday_open'] == 0) {
+            $cafe->tuesday_start = null;
+            $cafe->tuesday_end = null;
+        }
+        if ($cafe['wednesday_open'] == 0) {
+            $cafe->wednesday_start = null;
+            $cafe->wednesday_end = null;
+        }
+        if ($cafe['thursday_open'] == 0) {
+            $cafe->thursday_start = null;
+            $cafe->thursday_end = null;
+        }
+        if ($cafe['friday_open'] == 0) {
+            $cafe->friday_start = null;
+            $cafe->friday_end = null;
+        }
+        if ($cafe['saturday_open'] == 0) {
+            $cafe->saturday_start = null;
+            $cafe->saturday_end = null;
+        }
+        if ($cafe['sunday_open'] == 0) {
+            $cafe->sunday_start = null;
+            $cafe->sunday_end = null;
+        }
     }
 }
