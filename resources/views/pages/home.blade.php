@@ -10,7 +10,7 @@
 @section('content')
 
     <div class="section red">
-        <h1>Our Sweet Treats <br><small>You'll love these unique treats' distinct flavor..</small></h1>
+        <h1>Our Sweet Treats <br><small>You'll love these unique treats' distinct flavor.</small></h1>
         <div class="container">
             <div class="masonry">
                 <div class="masonry-list-item one-third on-white"><a href="{{ URL::to('menu/cookie-cakes') }}"><img src="{{ URL::asset('library/img/callout-cookie-cake.jpg') }}" alt=""><span>Cookie Cakes</span></a></div>
