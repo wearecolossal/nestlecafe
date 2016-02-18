@@ -8,6 +8,8 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Validator;
+use Illuminate\Support\Str;
+use Intervention\Image\Facades\Image;
 
 class SlideController extends Controller
 {
@@ -67,14 +69,7 @@ class SlideController extends Controller
     public function update(Request $request, $id)
     {
         $input = array_except($request->all(), '_method');
-        if($request['draft'] == 0) {
-            $validation = Validator::make($input, Slide::$rules);
-            if($validation->passes()) {
-                $this->updateSlideFields($request, $id, $input);
-            }
-        } else {
-            $this->updateSlideFields($request, $id, $input);
-        }
+        $this->updateSlideFields($request, $id, $input);
         return back()->with('success', 'Slide Updated!');
     }
 
@@ -134,9 +129,9 @@ class SlideController extends Controller
             $slide->image = $filename;
         }
         if($request['no_headline'] == 1) {
-            $slide->headline_small = '';
-            $slide->headline_large = '';
-            $slide->headline_sub = '';
+            $slide->heading_small = '';
+            $slide->heading_large = '';
+            $slide->heading_sub = '';
         }
         $slide->save();
     }

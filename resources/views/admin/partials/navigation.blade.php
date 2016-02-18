@@ -6,6 +6,9 @@
         <li class="{{ isActive('admin/cafes') }}">
             <a href="{{ URL::to('admin/cafes') }}"><i class="fa fa-fw fa-coffee"></i> Cafe Locations</a>
         </li>
+        <li class="{{ isActive('admin/callouts') }}">
+            <a href="{{ URL::to('admin/callouts') }}"><i class="fa fa-fw fa-birthday-cake"></i> Home Page Callouts</a>
+        </li>
         <li class="{{ isActive('admin/menu') }}">
             <a data-url="{{ URL::to('admin/menu') }}" style="opacity:.2"><i class="fa fa-fw fa-cutlery"></i> Menu <small>pending</small></a>
         </li>

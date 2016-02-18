@@ -89,5 +89,11 @@ var applyValToHidden = function (ele) {
     });
 };
 
+//Hide on Load
+var hideOnLoad = function(ele) {
+    ele.hide();
+};
+hideOnLoad($('.hide-on-load'));
+
 //LET JS HINT KNOW I USE THESE FUNCTIONS OUTSIDE OF THIS FILE
 /* exported passValueToHidden, toggleHours, applyArchiveLink, draft, applyValToHidden */

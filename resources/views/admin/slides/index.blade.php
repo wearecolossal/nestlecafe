@@ -27,13 +27,15 @@
                     <tbody>
                         @foreach($slides as $slide)
                             <tr class="{{ $slide->draft == 1 ? 'warning text-warning' : null }}">
-                                <td>#{{ sprintf("%03d", $slide->order) }}</td>
+                                <td>#{{ sprintf("%03d", $slide->id) }}</td>
                                 <td style="padding:0;"><img src="{{ URL::asset('uploads/slideshow/'.$slide->image) }}" width="100%" alt=""></td>
                                 <td>
+                                    {!! $slide->no_headline ? '<em class="text-muted">No Headline</em>' : null !!}
                                     <small>{{ strip_tags($slide->heading_small) }}</small>
                                     <br>
                                     {{ strip_tags($slide->heading_large) }}
                                     {!! $slide->draft == 1 ? '<br/><em>(draft)</em>' : null !!}
+
                                 </td>
                                 <td class="actions">
                                     <a href="{{ URL::to('admin/slides/'.$slide->id.'/edit') }}" class="btn btn-default btn-xs"><i

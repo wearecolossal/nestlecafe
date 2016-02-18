@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Cafe;
+use App\HomePage;
 use App\MenuCategory;
 use App\MenuItem;
 use App\Slide;
@@ -29,6 +30,10 @@ class PagesController extends Controller
      * @var Slide
      */
     private $slide;
+    /**
+     * @var HomePage
+     */
+    private $homePage;
 
     /**
      * PagesController constructor.
@@ -36,13 +41,15 @@ class PagesController extends Controller
      * @param MenuItem $menuItem
      * @param Cafe $cafe
      * @param Slide $slide
+     * @param HomePage $homePage
      */
-    public function __construct(MenuCategory $menuCategory, MenuItem $menuItem, Cafe $cafe, Slide $slide)
+    public function __construct(MenuCategory $menuCategory, MenuItem $menuItem, Cafe $cafe, Slide $slide, HomePage $homePage)
     {
         $this->menuCategory = $menuCategory;
         $this->menuItem = $menuItem;
         $this->cafe = $cafe;
         $this->slide = $slide;
+        $this->homePage = $homePage;
     }
 
     /*
@@ -50,8 +57,9 @@ class PagesController extends Controller
      */
     public function index()
     {
+        $callout = $this->homePage->find(1);
         $slides = $this->slide->where('archive', 0)->where('draft', 0)->orderby('order', 'asc')->get();
-        return view('pages.home', compact('slides'));
+        return view('pages.home', compact('slides', 'callout'));
     }
 
     /*
