@@ -10,7 +10,7 @@
            <!-- Brand and toggle get grouped for better mobile display -->
            <div class="navbar-header">
 
-               <a class="navbar-brand" href="index.html"><img src="{{ URL::asset('cp/img/logo.png') }}" style="width:100%;max-width:385px;" alt=""></a>
+               <a class="navbar-brand" href="{{ URL::to('admin') }}"><img src="{{ URL::asset('cp/img/logo.png') }}" style="width:100%;max-width:385px;" alt=""></a>
                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
                    <span class="sr-only">Toggle navigation</span>
                    <span class="icon-bar"></span>

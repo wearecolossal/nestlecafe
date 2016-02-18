@@ -1,7 +1,7 @@
 <div class="collapse navbar-collapse navbar-ex1-collapse">
     <ul class="nav navbar-nav side-nav">
-        <li class="{{ isActive('admin/banners') }}">
-            <a data-url="{{ URL::to('admin/banners') }}" style="opacity:.2"><i class="fa fa-fw fa-flag"></i> Promo Banners <small>pending</small></a>
+        <li class="{{ isActive('admin/slides') }}">
+            <a href="{{ URL::to('admin/slides') }}"><i class="fa fa-fw fa-flag"></i> Promo Banners</a>
         </li>
         <li class="{{ isActive('admin/cafes') }}">
             <a href="{{ URL::to('admin/cafes') }}"><i class="fa fa-fw fa-coffee"></i> Cafe Locations</a>

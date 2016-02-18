@@ -3,14 +3,17 @@
 @section('page-header', 'Cafe Administration')
 
 @section('content')
-    <div class="col-md-12">
-        <a href="{{ URL::to('admin/cafes/create') }}" class="btn btn-primary pull-left {{ isActive('admin/cafes/archives') ? 'hidden' : null }}"><i class="glyphicon glyphicon-plus"></i>
-            Add Cafe</a>
-        <a href="{{ isActive('admin/cafes') ? URL::to('admin/cafes/archives') : URL::to('admin/cafes') }}" class="btn btn-default pull-right">{!! isActive('admin/cafes/archives') ? 'Active Caf&eacute;s' : 'Archived Caf&eacute;s' !!}</a>
+    <div class="col-md-2"><a href="{{ URL::to('admin/cafes/create') }}" class="btn btn-primary pull-left {{ isActive('admin/cafes/archives') ? 'hidden' : null }}"><i class="glyphicon glyphicon-plus"></i>
+            Add Cafe</a></div>
+    <div class="col-md-8 searchbar">
+        <input type="text" id="search" name="search" class="form-control" placeholder="Enter text to filter list">
+        <div class="search-response" style="height:25px;width:100%;display:block;"><span class="text-success"></span></div>
+    </div>
+    <div class="col-md-2 text-right"> <a href="{{ isActive('admin/cafes') ? URL::to('admin/cafes/archives') : URL::to('admin/cafes') }}" class="btn btn-default pull-right">{!! isActive('admin/cafes/archives') ? 'Active Caf&eacute;s' : 'Archived Caf&eacute;s' !!}</a></div>
+    <div class="row">
         <div class="clearfix"></div>
         <br><br>
-    </div>
-    <div class="row">
+        <div class="clearfix"></div>
             <div class="col-md-12 table-responsive">
                 <table class="table table-striped">
                     <thead>
@@ -24,28 +27,46 @@
                     </thead>
                     <tbody>
                     @foreach($cafes as $cafe)
-                        <tr class="{{ !$cafe->image ? 'danger' : null }}">
+                        <tr class="{{ !$cafe->image ? 'danger' : null }} {{ $cafe->draft == 1 ? 'warning text-warning' : null }}">
                             <td>#{{ sprintf('%04d', $cafe->store_number) }}</td>
-                            <td>{{ $cafe->name }} {!! !$cafe->image ? '<small class="text-danger"><em>No Image</em></small>' : null !!}</td>
+                            <td>{{ $cafe->name }} {!! !$cafe->image ? '<small class="text-danger"><em>No Image</em></small>' : null !!}{!! $cafe->draft == 1 ? '<em>(Draft)</em>' : null !!}</td>
                             <td>
-                        <span class="{{ $cafe->bakery != 1 ? 'hidden' : null }}"><img
-                                    src="{{ URL::asset('library/img/loc-bakery.png') }}" width="20" alt=""></span>
-                        <span class="{{ $cafe->coffee != 1 ? 'hidden' : null }}"><img
-                                    src="{{ URL::asset('library/img/loc-coffee.png') }}" width="20" alt=""></span>
-                        <span class="{{ $cafe->cookie != 1 ? 'hidden' : null }}"><img
-                                    src="{{ URL::asset('library/img/loc-cookie.png') }}" width="20" alt=""></span>
-                        <span class="{{ $cafe->curbside != 1 ? 'hidden' : null }}"><img
-                                    src="{{ URL::asset('library/img/loc-curbside.png') }}" width="20" alt=""></span>
-                        <span class="{{ $cafe->frozenyogurt != 1 ? 'hidden' : null }}"><img
-                                    src="{{ URL::asset('library/img/loc-frozenyogurt.png') }}" width="20" alt=""></span>
-                        <span class="{{ $cafe->icecream != 1 ? 'hidden' : null }}"><img
-                                    src="{{ URL::asset('library/img/loc-icecream.png') }}" width="20" alt=""></span>
-                        <span class="{{ $cafe->savory != 1 ? 'hidden' : null }}"><img
-                                    src="{{ URL::asset('library/img/loc-savory.png') }}" width="20" alt=""></span>
-                        <span class="{{ $cafe->smoothies != 1 ? 'hidden' : null }}"><img
-                                    src="{{ URL::asset('library/img/loc-smoothies.png') }}" width="20" alt=""></span>
-                        <span class="{{ $cafe->wifi != 1 ? 'hidden' : null }}"><img
-                                    src="{{ URL::asset('library/img/loc-wifi.png') }}" width="20" alt=""></span>
+                                    <span class="{{ $cafe->bakery != 1 ? 'hidden' : null }}"><img
+                                                src="{{ URL::asset('library/img/loc-bakery.png') }}" width="20" alt="bakery">
+                                                <span class="hidden">{{ $cafe->bakery ? 'bakery' : null }}</span>
+                                    </span>
+                                    <span class="{{ $cafe->coffee != 1 ? 'hidden' : null }}"><img
+                                                src="{{ URL::asset('library/img/loc-coffee.png') }}" width="20" alt="">
+                                                <span class="hidden">{{ $cafe->coffee ? 'coffee' : null }}</span>
+                                    </span>
+                                    <span class="{{ $cafe->cookie != 1 ? 'hidden' : null }}"><img
+                                                src="{{ URL::asset('library/img/loc-cookie.png') }}" width="20" alt="">
+                                                <span class="hidden">{{ $cafe->cookie ? 'cookie' : null }}</span>
+                                    </span>
+                                    <span class="{{ $cafe->curbside != 1 ? 'hidden' : null }}"><img
+                                                src="{{ URL::asset('library/img/loc-curbside.png') }}" width="20" alt="">
+                                                <span class="hidden">{{ $cafe->curbside ? 'curbside' : null }}</span>
+                                    </span>
+                                    <span class="{{ $cafe->frozenyogurt != 1 ? 'hidden' : null }}"><img
+                                                src="{{ URL::asset('library/img/loc-frozenyogurt.png') }}" width="20" alt="">
+                                                <span class="hidden">{{ $cafe->frozenyogurt ? 'frozen yogurt' : null }}</span>
+                                    </span>
+                                    <span class="{{ $cafe->icecream != 1 ? 'hidden' : null }}"><img
+                                                src="{{ URL::asset('library/img/loc-icecream.png') }}" width="20" alt="">
+                                                <span class="hidden">{{ $cafe->icecream ? 'icecream' : null }}</span>
+                                    </span>
+                                    <span class="{{ $cafe->savory != 1 ? 'hidden' : null }}"><img
+                                                src="{{ URL::asset('library/img/loc-savory.png') }}" width="20" alt="">
+                                                <span class="hidden">{{ $cafe->savory ? 'savory' : null }}</span>
+                                    </span>
+                                    <span class="{{ $cafe->smoothies != 1 ? 'hidden' : null }}"><img
+                                                src="{{ URL::asset('library/img/loc-smoothies.png') }}" width="20" alt="">
+                                                <span class="hidden">{{ $cafe->smoothies ? 'smoothies' : null }}</span>
+                                    </span>
+                                    <span class="{{ $cafe->wifi != 1 ? 'hidden' : null }}"><img
+                                                src="{{ URL::asset('library/img/loc-wifi.png') }}" width="20" alt="">
+                                                <span class="hidden">{{ $cafe->wifi ? 'wifi' : null }}</span>
+                                    </span>
                                 {!! cafeHasNoServices($cafe->id) !!}
                             </td>
                             <td>{{ $cafe->city.', '.$cafe->state.' '.$cafe->country }}</td>
@@ -107,11 +128,6 @@
 
 @section('scripts')
     <script>
-        //Archive
-        $('a.archive').on('click', function () {
-            var modalTarget = $(this).data('target');
-            var url = $(this).data('url');
-            $(modalTarget).find('a.submit').attr('href', url);
-        });
+        applyArchiveLink($('a.archive'));
     </script>
 @stop

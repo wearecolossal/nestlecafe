@@ -6,7 +6,7 @@
     <div class="col-md-8">
         <div class="panel panel-default">
             <div class="panel-heading">Cafe Information</div>
-            {!! Form::open(['route' => 'admin.cafes.store', 'files' => true]) !!}
+            {!! Form::open(['route' => 'admin.cafes.store', 'files' => true, 'class' => 'cafe']) !!}
             <div class="panel-body">
                 <div class="row">
                     <div class="col-md-4 form-group">
@@ -154,6 +154,9 @@
         <div class="panel panel-default">
             <div class="panel-footer text-center">
                 {!! Form::submit('Update Cafe', ['class' => 'btn btn-primary']) !!}
+                <a class="save-as-draft btn btn-default">Save As Draft</a>
+                <a href="{{ URL::to('admin/cafes') }}" class="btn btn-danger">Cancel</a>
+                {!! Form::hidden('draft', 0) !!}
             </div>
             {!! Form::close() !!}
         </div>

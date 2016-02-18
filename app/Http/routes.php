@@ -56,6 +56,9 @@ Route::group(['middleware' => 'web'], function(){
         Route::get('admins', 'Admin\PagesController@admins');
         Route::resource('menu/categories', 'Admin\MenuCategoryController');
         Route::resource('menu', 'Admin\MenuController');
+        Route::get('slides/{id}/archive', 'Admin\SlideController@archive');
+        Route::get('slides/archives', 'Admin\SlideController@archived');
+        Route::resource('slides', 'Admin\SlideController');
         Route::get('cafes/{id}/archive', 'Admin\CafeController@archive');
         Route::get('cafes/geolocate', 'Admin\CafeController@geolocate');
         Route::post('cafes/{id}/update-services', ['as' => 'cafe.update-services', 'uses' => 'Admin\CafeController@updateServices']);

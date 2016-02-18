@@ -1397,6 +1397,11 @@ ul.slider {
     ul.slider li.right-align .content {
       right: 5%;
       text-align: right; }
+    ul.slider li.on-white h1.heading {
+      color: #2E1A11 !important;
+      text-shadow: 0px 3px 50px #fff !important; }
+    ul.slider li.on-white p.tag {
+      text-shadow: 0px 0px 5px #fff !important; }
   ul.slider .content {
     position: absolute;
     -webkit-transition: all 0.3s ease-in-out;

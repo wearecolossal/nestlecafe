@@ -10,11 +10,11 @@
 @section('content')
 
     <div class="section red">
-        <h1>Our Seasonal Picks <br><small>You'll love these unique treats' distinct seasonal flavor.</small></h1>
+        <h1>Our Sweet Treats <br><small>You'll love these unique treats' distinct flavor..</small></h1>
         <div class="container">
             <div class="masonry">
-                <div class="masonry-list-item one-third"><a href="{{ URL::to('menu/bakery') }}"><img src="{{ URL::asset('library/img/callout-small-bakery.jpg') }}" alt=""><span>Strawberry <br>Cookie Cup</span></a></div>
-                <div class="masonry-list-item two-third"><a href="{{ URL::to('menu/bakery') }}"><img src="{{ URL::asset('library/img/callout-large-choco-strawberry.jpg') }}" alt=""><span>Treats for the <br> holiday season</span></a></div>
+                <div class="masonry-list-item one-third on-white"><a href="{{ URL::to('menu/cookie-cakes') }}"><img src="{{ URL::asset('library/img/callout-cookie-cake.jpg') }}" alt=""><span>Cookie Cakes</span></a></div>
+                <div class="masonry-list-item two-third"><a href="{{ URL::to('menu/bakery') }}"><img src="{{ URL::asset('library/img/callout-general.jpg') }}" alt=""><span>Treats for the <br> whole office</span></a></div>
             </div>
         </div>
         <div class="clearfix"></div>

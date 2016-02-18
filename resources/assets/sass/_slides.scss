@@ -10,13 +10,11 @@
 ul.slider {
   padding: 0;
   margin: 0 auto;
-  //max-width: 1200px;
   width: 100% !important;
   li {
     width: 100% !important;
     padding: 0;
     margin: 0;
-    //max-width: 1200px;
     height: 600px;
     position: relative;
     display: flex;
@@ -31,6 +29,16 @@ ul.slider {
       .content {
         right:5%;
         text-align: right;
+      }
+    }
+    &.on-white {
+      h1.heading {
+        color:#2E1A11 !important;
+        text-shadow: 0px 3px 50px #fff !important;
+      }
+      p.tag {
+        text-shadow: 0px 0px 5px #fff !important;
+
       }
     }
   }

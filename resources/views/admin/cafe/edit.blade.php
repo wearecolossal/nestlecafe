@@ -7,7 +7,7 @@
     <div class="col-md-8">
         <div class="panel panel-default">
             <div class="panel-heading">Cafe Information</div>
-            {!! Form::open(['route' => ['admin.cafes.update', $cafe->id]]) !!}
+            {!! Form::open(['route' => ['admin.cafes.update', $cafe->id], 'class' => 'cafe']) !!}
             {!! Form::hidden('_method', 'PUT') !!}
             <div class="panel-body">
                 <div class="row">
@@ -17,6 +17,10 @@
                         <img src="{{ URL::asset('library/img/loc-noimg.jpg') }}" style="max-width:100%;"
                              class="{{ $cafe->image ? 'hidden' : null }}" alt="">
                         {!! Form::file('image', ['class' => 'form-control']) !!}
+                        <small>
+                            Please upload a .jpg, pr .png image with <br>
+                            <strong>200 x 150 pixels in dimension</strong>
+                        </small>
                     </div>
                     <div class="col-md-8">
                         <div class="form-group">
@@ -31,7 +35,7 @@
                     <div class="col-md-12">
                         <hr>
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-md-6 location-inputs">
                         <div class="form-group">
                             {!! Form::label('address', 'Address') !!}
                             {!! Form::text('address', $cafe->address, ['class' => 'form-control']) !!}
@@ -62,6 +66,11 @@
                         </div>
                     </div>
                     <div class="col-md-6 form-group" style="position:relative;">
+                        <div class="alert alert-warning map-will-refresh" style="position:absolute;display:none;">
+                            <small><strong>Please note</strong><br> Map will refresh after you have clicked "update"
+                            </small>
+
+                        </div>
                         <img width="320" style="width:100% !important;max-width:320px !important;"
                              src="http://maps.googleapis.com/maps/api/staticmap?center={{ $cafe->lat.','.$cafe->lng }}&zoom=13&scale=2&size=320x320&maptype=roadmap&format=png&visual_refresh=true&markers=size:medium%7Ccolor:0x2E1A11%7Clabel:%7C{{ $cafe->lat.','.$cafe->lng }}"
                              class="img-circled" alt="Google Map of Albany, NY">
@@ -79,7 +88,10 @@
                 </div>
             </div>
             <div class="panel-footer text-center">
-                {!! Form::submit('Update Cafe', ['class' => 'btn btn-primary']) !!}
+                <input type="submit" value="Update Cafe" class="btn {{ $cafe->draft == 1 ? 'btn-default' : 'btn-primary' }}">
+                <a class="save-as-draft btn btn-default {{ $cafe->draft == 1 ? 'btn-success' : null }}">{{ $cafe->draft == 1 ? 'Make Café Active' : 'Save As Draft' }}</a>
+                <a href="{{ URL::to('admin/cafes') }}" class="btn btn-danger">Cancel</a>
+                {!! Form::hidden('draft', $cafe->draft) !!}
             </div>
             {!! Form::close() !!}
         </div>
@@ -153,9 +165,11 @@
                             <span class="pull-left">{{ $days[$i]['regular'] }}</span>
 
                             <div class="btn-group pull-right toggle-hours">
-                                <a class="btn btn-default {{ $cafe[$days[$i]['lowercase'].'_open'] == 1 ? 'btn-success' : null }} open btn-xs" data-value="1"
+                                <a class="btn btn-default {{ $cafe[$days[$i]['lowercase'].'_open'] == 1 ? 'btn-success' : null }} open btn-xs"
+                                   data-value="1"
                                    data-day="{{ $days[$i]['lowercase'] }}"><i class="glyphicon glyphicon-ok"></i></a>
-                                <a class="btn btn-default {{ $cafe[$days[$i]['lowercase'].'_open'] == 0 ? 'btn-danger' : null }} closed btn-xs" data-value="0"
+                                <a class="btn btn-default {{ $cafe[$days[$i]['lowercase'].'_open'] == 0 ? 'btn-danger' : null }} closed btn-xs"
+                                   data-value="0"
                                    data-day="{{ $days[$i]['lowercase'] }}"><i
                                             class="glyphicon glyphicon-remove"></i></a>
                                 {!! Form::hidden($days[$i]['lowercase'].'_open', $cafe[$days[$i]['lowercase'].'_open'], ['class' => $days[$i]['lowercase']]) !!}
@@ -163,14 +177,16 @@
                             <div class="clearfix"></div>
                             <br>
                         </div>
-                        <div class="form-group col-md-6 {{ $cafe[$days[$i]['lowercase'].'_open'] == 0 ? 'hidden' : null }}" data-day="{{ $days[$i]['lowercase'] }}">
+                        <div class="form-group col-md-6 {{ $cafe[$days[$i]['lowercase'].'_open'] == 0 ? 'hidden' : null }}"
+                             data-day="{{ $days[$i]['lowercase'] }}">
                             <select name="{{ $days[$i]['lowercase'] }}_start" id="{{ $days[$i]['lowercase'] }}_start"
                                     class="form-control input-sm">
                                 <option value="">Start</option>
                                 {!! timeHTMLSelect($cafe[$days[$i]['lowercase'].'_start'] ? $cafe[$days[$i]['lowercase'].'_start'] : null, $cafe[$days[$i]['lowercase'].'_start'] ? $cafe[$days[$i]['lowercase'].'_start'] : '10:00 am') !!}
                             </select>
                         </div>
-                        <div class="form-group col-md-6 {{ $cafe[$days[$i]['lowercase'].'_open'] == 0 ? 'hidden' : null }}" data-day="{{ $days[$i]['lowercase'] }}">
+                        <div class="form-group col-md-6 {{ $cafe[$days[$i]['lowercase'].'_open'] == 0 ? 'hidden' : null }}"
+                             data-day="{{ $days[$i]['lowercase'] }}">
                             <select name="{{ $days[$i]['lowercase'] }}_end" id="{{ $days[$i]['lowercase'] }}_end"
                                     class="form-control input-sm">
                                 <option value="">End</option>
@@ -189,6 +205,7 @@
 @section('scripts')
     <script>
         toggleHours($('.toggle-hours a'));
+        draft($('a.save-as-draft'), $('form.cafe'));
         $('.cafe-services a').on('click', function () {
             var inputField = $(this).find('input');
             $(this).toggleClass('active');
@@ -243,5 +260,11 @@
         $('form.cafe-hours select').on('change', function () {
             submitHours();
         });
+
+        $('.location-inputs input').on('keyup', function () {
+            $('.map-will-refresh').fadeIn();
+        });
+
+
     </script>
 @stop

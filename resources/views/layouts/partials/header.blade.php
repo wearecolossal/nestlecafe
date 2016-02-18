@@ -4,7 +4,8 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>{{ metaTitle(isset($metaTitle) ? $metaTitle : null) }}</title>
-    <meta name="description" content="">
+    <meta name="description" content="Nestl&eacute;&reg; Tollhouse&reg; Caf&eacute; By Chip&reg; is premiere dessert café and a leader in dessert destinations offering customers an unrivaled dessert experience through the use of fine ingredients, indulgent creations, distinct flavor profiles, and the rich tradition of the very best Nestl&eacute;&reg; brands.">
+    <meta name="keywords" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="canonical" href="http://nestlecafe.com/" />
     <link rel="apple-touch-icon" href="{{ URL::asset('library/img/avatar.png') }}"/>

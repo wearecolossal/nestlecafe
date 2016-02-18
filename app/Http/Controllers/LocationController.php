@@ -32,7 +32,7 @@ class LocationController extends Controller
      */
     public function ajax()
     {
-        $outputs = $this->cafe->orderby('lat', 'asc')->get();
+        $outputs = $this->cafe->where('archive', 0)->where('draft', 0)->orderby('lat', 'asc')->get();
         $locations = array();
         foreach ($outputs as $output) {
             if (strlen($output->image) < 1) {
@@ -61,13 +61,13 @@ class LocationController extends Controller
     {
         //$lat1 = 40.751754935372404;
         //$lng1 = -73.97476794280311;
-        $lists = $this->cafe->where('lat', '!=', '')->whereNotNull('lat')->orderby('lat', 'asc')->get();
+        $lists = $this->cafe->where('lat', '!=', '')->whereNotNull('lat')->where('draft', 0)->where('archive', 0)->orderby('lat', 'asc')->get();
         return $this->filterQuery($lat1, $lng1, $lists);
     }
 
     public function orderFilter($lat1, $lng1)
     {
-        $lists = $this->cafe->where('online_order', '!=', '')->orderby('lat', 'asc')->get();
+        $lists = $this->cafe->where('online_order', '!=', '')->where('draft', 0)->where('archive', 0)->orderby('lat', 'asc')->get();
         return $this->filterQuery($lat1, $lng1, $lists);
     }
 
