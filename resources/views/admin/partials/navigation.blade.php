@@ -4,7 +4,7 @@
             <a href="{{ URL::to('admin/slides') }}"><i class="fa fa-fw fa-flag"></i> Homepage Banners</a>
         </li>
         <li class="{{ isActive('admin/callouts') }}">
-            <a href="{{ URL::to('admin/callouts') }}"><i class="fa fa-fw fa-birthday-cake"></i> Homepage Callouts</a>
+            <a href="{{ URL::to('admin/callouts') }}"><i class="fa fa-fw fa-square"></i> Homepage Callouts</a>
         </li>
         <li class="{{ isActive('admin/cafes') }}">
             <a href="{{ URL::to('admin/cafes') }}"><i class="fa fa-fw fa-coffee"></i> Cafe Locations</a>

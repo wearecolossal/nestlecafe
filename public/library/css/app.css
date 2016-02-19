@@ -243,12 +243,15 @@ body {
     .navigation .menulist.active {
       display: block; }
     .navigation .menulist li {
-      padding: 0;
+      padding: 0 0 0 10px;
       margin: 0;
       float: left;
       width: 33%;
       display: block;
-      border-bottom: 2px solid #ffd41f; }
+      border-bottom: 2px solid #ffd41f;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box; }
       .navigation .menulist li:nth-child(7), .navigation .menulist li:nth-child(8), .navigation .menulist li:nth-child(9) {
         border-bottom: none; }
       .navigation .menulist li:hover {
