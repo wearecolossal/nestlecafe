@@ -3,11 +3,16 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\File;
 
 class MenuCategory extends Model
 {
     protected $table = 'menu_category';
     protected $fillable = ['list_order', 'order', 'name', 'headline', 'description', 'on_white', 'grid', 'image', 'banner'];
+    public static $rules = [
+      'name' => 'required',
+      'headline' => 'required'
+    ];
     //Delete photo for image uploader when replacing photo
     function deletePhoto($filename) {
 

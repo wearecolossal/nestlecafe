@@ -1,24 +1,20 @@
 @extends('layouts.admin')
 
-@section('page-header', 'Edit Menu Item <a href="'.URL::to('admin/menu').'" class="btn btn-default pull-right"><i class="glyphicon glyphicon-chevron-left"></i> Back To Menu Items</a>')
+@section('page-header', 'Create Menu Item')
 
 @section('content')
     <div class="col-md-8 col-md-offset-2">
         @include('admin.partials.alerts')
         <div class="panel panel-default">
             <div class="panel-heading">
-                {{ $item->name }}
+                Create Menu Item
             </div>
             <div class="panel-body">
-                {!! Form::open(['files' => true, 'route' => ['admin.menu.update', $item->id]]) !!}
-                    {!! Form::hidden('_method', 'PUT') !!}
+                {!! Form::open(['files' => true, 'route' => 'admin.menu.store']) !!}
                 <div class="row">
                     <div class="col-md-12">
-                        @if($item->image)
-                            <img src="{{ URL::asset('uploads/menu_items/'.$item->image) }}" style="width:100%;max-width:intrinsic;" alt="">
-                        @endif
                         {!! Form::file('image', ['class' => 'form-control']) !!}
-                            <small>Please upload a .jpg or .png image file that is <strong>700 × 525</strong> pixels in dimension.</small>
+                        <small>Please upload a .jpg or .png image file that is <strong>700 × 525</strong> pixels in dimension.</small>
                     </div>
                     <div class="col-md-12">
                         <hr>
@@ -26,17 +22,17 @@
                             <div class="col-md-8">
                                 <div class="form-group">
                                     {!! Form::label('name', 'Item Name') !!}
-                                    {!! Form::text('name', $item->name, ['class' => 'form-control']) !!}
+                                    {!! Form::text('name', null, ['class' => 'form-control']) !!}
                                 </div>
                             </div>
                             <div class="col-md-4">
                                 <div class="form-group">
                                     {!! Form::label('on_white', 'Text Style') !!}<br>
                                     <div class="btn-group on_white">
-                                        <a data-white="0" class="btn btn-default{{ $item->on_white == 0 ? 'active btn-primary' : null }}">Normal</a>
-                                        <a data-white="1" class="btn btn-default{{ $item->on_white == 1 ? 'active btn-primary' : null }}">On White</a>
+                                        <a data-white="0" class="btn btn-default active btn-primary">Normal</a>
+                                        <a data-white="1" class="btn btn-default">On White</a>
                                     </div>
-                                    {!! Form::hidden('on_white', $item->on_white) !!}
+                                    {!! Form::hidden('on_white', 0) !!}
                                 </div>
                             </div>
                         </div>
@@ -48,7 +44,7 @@
                             <select name="category" id="category" class="form-control">
                                 <option value="">Please Choose</option>
                                 @foreach($categories as $category)
-                                    <option value="{{ $category->id }}" {{ $item->category == $category->id ? 'selected' : null }}>{{ $category->name }}</option>
+                                    <option value="{{ $category->id }}">{{ $category->name }}</option>
                                 @endforeach
                             </select>
                         </div>
@@ -60,7 +56,7 @@
                             <select name="order" id="order" class="form-control">
                                 <option value="0">Please Choose</option>
                                 @for($i = 1; $i <= 100; $i++)
-                                    <option value="{{ $i }}" {{ $i == $item->order ? 'selected' : null }}>{{ $i }}</option>
+                                    <option value="{{ $i }}">{{ $i }}</option>
                                 @endfor
                             </select>
                         </div>
@@ -69,11 +65,11 @@
                         <hr>
                         <div class="form-group">
                             {!! Form::label('description', 'Description') !!}
-                            {!! Form::textarea('description', $item->description, ['class' => 'form-control']) !!}
+                            {!! Form::textarea('description', null, ['class' => 'form-control']) !!}
                         </div>
                     </div>
                     <div class="col-md-12 text-center">
-                        {!! Form::submit('Update', ['class' => 'btn btn-primary']) !!}
+                        {!! Form::submit('Create Menu Item', ['class' => 'btn btn-primary']) !!}
                     </div>
                 </div>
                 {!! Form::close() !!}
@@ -84,6 +80,6 @@
 
 @section('scripts')
     <script>
-           passValueToHidden($('.btn-group.on_white a'), 'white', $('input[name="on_white"]'), 'btn-default', 'btn-primary');
+        passValueToHidden($('.btn-group.on_white a'), 'white', $('input[name="on_white"]'), 'btn-default', 'btn-primary');
     </script>
 @stop
