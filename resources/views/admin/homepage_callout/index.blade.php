@@ -30,6 +30,7 @@
                                 <img src="{{ URL::asset('uploads/homepage_callouts/'.$callout->callout_1) }}" style="width:100%; max-width:intrinsic" alt="">
                             @endif
                             {!! Form::file('callout_1', ['class' => 'form-control']) !!}
+                            <small>Please upload a .jpg or .png image file that is <strong>627 × 320</strong> pixels in dimension.</small>
                         </div>
                         <div class="form-group">
                             {!! Form::label('callout_1_on_white', 'Is This Text On A Light Image?') !!}<br>
@@ -52,6 +53,7 @@
                                 <img src="{{ URL::asset('uploads/homepage_callouts/'.$callout->callout_2) }}" style="width:100%; max-width:intrinsic" alt="">
                             @endif
                             {!! Form::file('callout_2', ['class' => 'form-control']) !!}
+                            <small>Please upload a .jpg or .png image file that is <strong>627 × 320</strong> pixels in dimension.</small>
                         </div>
                         <div class="form-group">
                             {!! Form::label('callout_2_on_white', 'Is This Text On A Light Image?') !!}<br>

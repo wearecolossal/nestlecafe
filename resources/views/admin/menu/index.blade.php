@@ -6,9 +6,9 @@
     <div class="col-md-6">
         <h3 class="page-header">Menu Categories <a href="{{ URL::to('admin/menu/categories/create') }}" class="btn btn-default pull-right"><i class="glyphicon glyphicon-plus"></i> Create Menu Category</a></h3>
         <div class="table-responsive">
-            <table class="table table-bordered">
+            <table class="table table-striped">
                 <thead>
-                    <tr>
+                    <tr class="active">
                         <th>Thumbnail</th>
                         <th>Name</th>
                         <th class="actions">Action</th>
@@ -35,11 +35,11 @@
 
     </div>
     <div class="col-md-6">
-        <h3 class="page-header">Menu Items <a href="{{ URL::to('admin/menu/create') }}" class="btn btn-default pull-right"><i class="glyphicon glyphicon-plus"></i> Add Item</a></h3>
+        <h3 class="page-header">Menu Items <a href="{{ URL::to('admin/menu/create') }}" class="btn btn-default pull-right"><i class="glyphicon glyphicon-plus"></i> Create Menu Item</a></h3>
         <div class="table-responsive">
-            <table class="table table-bordered">
+            <table class="table table-striped">
                 <thead>
-                <tr>
+                <tr class="active">
                     <th>Thumbnail</th>
                     <th>Name</th>
                     <th>Category</th>
