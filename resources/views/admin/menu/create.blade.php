@@ -21,7 +21,7 @@
                         <div class="row">
                             <div class="col-md-8">
                                 <div class="form-group">
-                                    {!! Form::label('name', 'Item Name') !!}
+                                    {!! Form::label('name', 'Item Name') !!} <small>required</small>
                                     {!! Form::text('name', null, ['class' => 'form-control']) !!}
                                 </div>
                             </div>
@@ -64,12 +64,14 @@
                     <div class="col-md-12">
                         <hr>
                         <div class="form-group">
-                            {!! Form::label('description', 'Description') !!}
+                            {!! Form::label('description', 'Description') !!} <small>required</small>
                             {!! Form::textarea('description', null, ['class' => 'form-control']) !!}
                         </div>
                     </div>
                     <div class="col-md-12 text-center">
                         {!! Form::submit('Create Menu Item', ['class' => 'btn btn-primary']) !!}
+                        <a class="btn btn-default save-as-draft">Save As Draft</a>
+                        <a href="{{ URL::to('admin/menu') }}" class="btn btn-danger">Do Not Save & Cancel</a>
                     </div>
                 </div>
                 {!! Form::close() !!}
@@ -80,6 +82,7 @@
 
 @section('scripts')
     <script>
+        draft($('a.save-as-draft'), $('form.menu'));
         passValueToHidden($('.btn-group.on_white a'), 'white', $('input[name="on_white"]'), 'btn-default', 'btn-primary');
     </script>
 @stop

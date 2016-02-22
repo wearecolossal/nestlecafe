@@ -98,32 +98,12 @@ class MenuController extends Controller
     {
         $input = array_except($request->all(), '_method');
         $validation = Validator::make($input, MenuItem::$rules);
+        if($request['draft'] == 1) {
+            $item = $this->createMenuItem($request, $input);
+            return redirect('admin/menu/'.$item->id.'/edit')->with('success', 'Menu Item Created!');
+        }
         if($validation->passes()) {
-            $item = $this->menuItem->create($input);
-            if ($request->hasFile('image')) {
-                // check if previous photo exists and delete it.
-                $item->deletePhoto($item->image);
-
-                // generate a random file name
-                $filename = Str::random(10) . time();
-                // assinged file input to a variable
-                $image = $request['image'];
-                $extension = $image->getClientOriginalExtension();
-                // open image file
-                $photo = Image::make($image->getRealPath());
-                $photo->resize(700, null, function ($constraint) {
-                    $constraint->aspectRatio();
-                });
-                $photo->crop(700, 525);
-                // final file name
-                $filename = $filename . '.' . $extension;
-                // save file with medium quality
-                $photo->save(public_path() . '/uploads/menu_items/' . $filename, 100);
-                // get original image file extension
-                // store file name in database
-                $item->image = $filename;
-            }
-            $item->save();
+            $item = $this->createMenuItem($request, $input);
             return redirect('admin/menu/'.$item->id.'/edit')->with('success', 'Menu Item Created!');
         }
         return back()->with('error', 'Please fill out all required fields!');
@@ -141,6 +121,41 @@ class MenuController extends Controller
         }
         $item->save();
         return back()->with('success', $message);
+    }
+
+    /**
+     * @param Request $request
+     * @param $input
+     * @return static
+     */
+    public function createMenuItem(Request $request, $input)
+    {
+        $item = $this->menuItem->create($input);
+        if ($request->hasFile('image')) {
+            // check if previous photo exists and delete it.
+            $item->deletePhoto($item->image);
+
+            // generate a random file name
+            $filename = Str::random(10) . time();
+            // assinged file input to a variable
+            $image = $request['image'];
+            $extension = $image->getClientOriginalExtension();
+            // open image file
+            $photo = Image::make($image->getRealPath());
+            $photo->resize(700, null, function ($constraint) {
+                $constraint->aspectRatio();
+            });
+            $photo->crop(700, 525);
+            // final file name
+            $filename = $filename . '.' . $extension;
+            // save file with medium quality
+            $photo->save(public_path() . '/uploads/menu_items/' . $filename, 100);
+            // get original image file extension
+            // store file name in database
+            $item->image = $filename;
+        }
+        $item->save();
+        return $item;
     }
 
 }

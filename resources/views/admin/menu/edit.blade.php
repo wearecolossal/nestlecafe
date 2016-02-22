@@ -25,7 +25,7 @@
                         <div class="row">
                             <div class="col-md-8">
                                 <div class="form-group">
-                                    {!! Form::label('name', 'Item Name') !!}
+                                    {!! Form::label('name', 'Item Name') !!} <small>required</small>
                                     {!! Form::text('name', $item->name, ['class' => 'form-control']) !!}
                                 </div>
                             </div>
@@ -68,7 +68,7 @@
                     <div class="col-md-12">
                         <hr>
                         <div class="form-group">
-                            {!! Form::label('description', 'Description') !!}
+                            {!! Form::label('description', 'Description') !!} <small>required</small>
                             {!! Form::textarea('description', $item->description, ['class' => 'form-control']) !!}
                         </div>
                     </div>
