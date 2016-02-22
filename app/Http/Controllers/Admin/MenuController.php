@@ -102,9 +102,12 @@ class MenuController extends Controller
             $item = $this->createMenuItem($request, $input);
             return redirect('admin/menu/'.$item->id.'/edit')->with('success', 'Menu Item Created!');
         }
-        if($validation->passes()) {
-            $item = $this->createMenuItem($request, $input);
-            return redirect('admin/menu/'.$item->id.'/edit')->with('success', 'Menu Item Created!');
+        else {
+            if($validation->passes()) {
+                $item = $this->createMenuItem($request, $input);
+                return redirect('admin/menu/'.$item->id.'/edit')->with('success', 'Menu Item Created!');
+            }
+            return back()->with('error', 'Please fill out all required fields!');
         }
         return back()->with('error', 'Please fill out all required fields!');
     }
