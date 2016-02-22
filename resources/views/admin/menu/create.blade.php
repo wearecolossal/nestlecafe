@@ -10,7 +10,7 @@
                 Create Menu Item
             </div>
             <div class="panel-body">
-                {!! Form::open(['files' => true, 'route' => 'admin.menu.store']) !!}
+                {!! Form::open(['files' => true, 'route' => 'admin.menu.store', 'class' => 'menu']) !!}
                 <div class="row">
                     <div class="col-md-12">
                         {!! Form::file('image', ['class' => 'form-control']) !!}
