@@ -10,7 +10,7 @@
             <a href="{{ URL::to('admin/cafes') }}"><i class="fa fa-fw fa-coffee"></i> Cafe Locations</a>
         </li>
         <li class="{{ isActive('admin/menu') }}">
-            <a data-url="{{ URL::to('admin/menu') }}" style="opacity:.2"><i class="fa fa-fw fa-cutlery"></i> Menu <small>pending</small></a>
+            <a href="{{ URL::to('admin/menu') }}"><i class="fa fa-fw fa-cutlery"></i> Menu</a>
         </li>
         <li class="{{ isActive('admin/blog') }}">
             <a href="{{ URL::to('admin/blog') }}"><i class="fa fa-fw fa-comment"></i> Cookie Talk Blog</a>
