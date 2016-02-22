@@ -55,7 +55,10 @@ Route::group(['middleware' => 'web'], function(){
         Route::resource('callouts', 'Admin\CalloutController');
         Route::get('blog', 'Admin\PagesController@blog');
         Route::get('admins', 'Admin\PagesController@admins');
+        Route::get('menu/categories/{id}/archive', 'Admin\MenuCategoryController@archive');
         Route::resource('menu/categories', 'Admin\MenuCategoryController');
+        Route::get('menu/archives', 'Admin\MenuController@archived');
+        Route::get('menu/{id}/archive', 'Admin\MenuController@archive');
         Route::resource('menu', 'Admin\MenuController');
         Route::get('slides/{id}/archive', 'Admin\SlideController@archive');
         Route::get('slides/archives', 'Admin\SlideController@archived');

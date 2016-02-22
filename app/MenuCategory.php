@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\File;
 class MenuCategory extends Model
 {
     protected $table = 'menu_category';
-    protected $fillable = ['list_order', 'order', 'name', 'headline', 'description', 'on_white', 'grid', 'image', 'banner'];
+    protected $fillable = ['list_order', 'order', 'name', 'headline', 'description', 'on_white', 'grid', 'image', 'banner', 'archive', 'draft'];
     public static $rules = [
       'name' => 'required',
       'headline' => 'required'

@@ -11,7 +11,7 @@
             <div class="panel-heading">
                 {{ $item->name }}
             </div>
-            {!! Form::open(['files' => true, 'route' => ['admin.menu.categories.update', $item->id]]) !!}
+            {!! Form::open(['files' => true, 'route' => ['admin.menu.categories.update', $item->id], 'class' => 'category']) !!}
             {!! Form::hidden('_method', 'PUT') !!}
             <div class="panel-body">
                 <div class="col-md-6">
@@ -104,7 +104,10 @@
 
                 <div class="col-md-12 text-center">
                     <br><br>
-                    {!! Form::submit('Update', ['class' => 'btn btn-primary']) !!}
+                    <input type="submit" value="Update" class="btn btn-primary {!! $item->draft == 1 ? 'hidden' : null  !!}">
+                    <a class="btn {{ $item->draft == 1 ? 'btn-success' : 'btn-default ' }} save-as-draft">{{ $item->draft == 0 ? 'Save As Draft' : 'Make Item Active' }}</a>
+                    <a href="{{ URL::to('admin/menu') }}" class="btn btn-danger">Do Not Save & Cancel</a>
+                    {!! Form::hidden('draft', $item->draft) !!}
                 </div>
             </div>
             {!! Form::close() !!}
@@ -119,7 +122,7 @@
             </div>
             <div class="panel-body">
                 <div class="clearfix"></div>
-                @foreach(\App\MenuCategory::whereNotNull('image')->where('list_order', '!=', 0)->orderby('list_order', 'asc')->get() as $category)
+                @foreach(\App\MenuCategory::whereNotNull('image')->where('list_order', '!=', 0)->where('archive', 0)->where('draft', 0)->orderby('list_order', 'asc')->get() as $category)
                 <div class="{{ $category->grid == 1 ? 'col-md-5' : 'col-md-7' }}">
                     <div class="well" style="{{ $category->id == $item->id ? 'background:#2E1A11;color:#fff;' : null }}" ><small>{!! strlen($category->name) > 13 ? substr($category->name, 0, 12).'&hellip;' : $category->name !!}</small></div>
                 </div>
@@ -132,6 +135,7 @@
 
 @section('scripts')
     <script>
+        draft($('a.save-as-draft'), $('form.category'));
         passValueToHidden($('.category-grid a'), 'grid', $('input[name="grid"]'), 'inactive', 'active');
         passValueToHidden($('.on_white a'), 'grid', $('input[name="on_white"]'), 'btn-default', 'btn-primary');
     </script>

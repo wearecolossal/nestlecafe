@@ -38,14 +38,21 @@ class MenuController extends Controller
 
     public function index()
     {
-        $categories = $this->menuCategory->orderby('order', 'asc')->get();
-        $items = $this->menuItem->orderby('name', 'asc')->get();
+        $categories = $this->menuCategory->where('archive', 0)->orderby('order', 'asc')->get();
+        $items = $this->menuItem->where('archive', 0)->orderby('name', 'asc')->get();
+        return view('admin.menu.index', compact('items', 'categories'));
+    }
+
+    public function archived()
+    {
+        $categories = $this->menuCategory->where('archive', 1)->orderby('order', 'asc')->get();
+        $items = $this->menuItem->where('archive', 1)->orderby('name', 'asc')->get();
         return view('admin.menu.index', compact('items', 'categories'));
     }
 
     public function edit($id)
     {
-        $categories = $this->menuCategory->orderby('name', 'asc')->get();
+        $categories = $this->menuCategory->where('archive', 0)->orderby('name', 'asc')->get();
         $item = $this->menuItem->find($id);
         return view('admin.menu.edit', compact('item', 'categories'));
     }
@@ -120,6 +127,20 @@ class MenuController extends Controller
             return redirect('admin/menu/'.$item->id.'/edit')->with('success', 'Menu Item Created!');
         }
         return back()->with('error', 'Please fill out all required fields!');
+    }
+
+    public function archive($id)
+    {
+        $item = $this->menuItem->find($id);
+        if($item->archive == 0) {
+            $item->archive = 1;
+            $message = 'Menu Item Archived!';
+        } else {
+            $item->archive = 0;
+            $message = 'Menu Item Is Active!';
+        }
+        $item->save();
+        return back()->with('success', $message);
     }
 
 }

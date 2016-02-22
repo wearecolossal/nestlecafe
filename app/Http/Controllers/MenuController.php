@@ -38,7 +38,7 @@ class MenuController extends Controller
     public function single($url) {
         if(!menu301s($url)) {
             $category = $this->menuCategory->where('url', $url)->first();
-            $items = $this->menuItem->where('category', $category->id)->where('archive', 0)->orderby('order', 'asc')->get();
+            $items = $this->menuItem->where('archive', 0)->where('category', $category->id)->where('archive', 0)->where('draft', 0)->orderby('order', 'asc')->get();
             $metaTitle = 'Menu » '.$category->name;
             return view('pages.menu-single', compact('category', 'items', 'metaTitle'));
         }

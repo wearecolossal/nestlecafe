@@ -10,7 +10,7 @@
                 {{ $item->name }}
             </div>
             <div class="panel-body">
-                {!! Form::open(['files' => true, 'route' => ['admin.menu.update', $item->id]]) !!}
+                {!! Form::open(['files' => true, 'route' => ['admin.menu.update', $item->id], 'class' => 'menu']) !!}
                     {!! Form::hidden('_method', 'PUT') !!}
                 <div class="row">
                     <div class="col-md-12">
@@ -73,7 +73,10 @@
                         </div>
                     </div>
                     <div class="col-md-12 text-center">
-                        {!! Form::submit('Update', ['class' => 'btn btn-primary']) !!}
+                        <input type="submit" value="Update" class="btn btn-primary {!! $item->draft == 1 ? 'hidden' : null  !!}">
+                        <a class="btn {{ $item->draft == 1 ? 'btn-success' : 'btn-default ' }} save-as-draft">{{ $item->draft == 0 ? 'Save As Draft' : 'Make Item Active' }}</a>
+                        <a href="{{ URL::to('admin/menu') }}" class="btn btn-danger">Do Not Save & Cancel</a>
+                        {!! Form::hidden('draft', $item->draft) !!}
                     </div>
                 </div>
                 {!! Form::close() !!}
@@ -84,6 +87,7 @@
 
 @section('scripts')
     <script>
-           passValueToHidden($('.btn-group.on_white a'), 'white', $('input[name="on_white"]'), 'btn-default', 'btn-primary');
+        draft($('a.save-as-draft'), $('form.menu'));
+        passValueToHidden($('.btn-group.on_white a'), 'white', $('input[name="on_white"]'), 'btn-default', 'btn-primary');
     </script>
 @stop

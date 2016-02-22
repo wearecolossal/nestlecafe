@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\File;
 class MenuItem extends Model
 {
     protected $table = 'menu_items';
-    protected $fillable = ['name', 'order', 'on_white', 'description', 'image', 'category'];
+    protected $fillable = ['name', 'order', 'on_white', 'description', 'image', 'category', 'archive', 'draft'];
     public static $rules = [
       'name' => 'required',
       'order' => 'required',

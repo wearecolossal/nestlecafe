@@ -67,7 +67,7 @@ class PagesController extends Controller
      */
     public function menu() {
         $metaTitle = 'Menu';
-        $categories = $this->menuCategory->where('list_order', '!=', 0)->orderby('list_order', 'asc')->get();
+        $categories = $this->menuCategory->where('list_order', '!=', 0)->where('archive', 0)->where('draft', 0)->orderby('list_order', 'asc')->get();
         return view('pages.menu', compact('categories', 'metaTitle'));
     }
     

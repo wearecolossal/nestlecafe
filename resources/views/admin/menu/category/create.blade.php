@@ -4,11 +4,12 @@
 
 @section('content')
     <div class="col-md-8 col-md-offset-2">
+        @include('admin.partials.alerts')
         <div class="panel panel-default">
             <div class="panel-heading">
                 Create Menu Category
             </div>
-            {!! Form::open(['files' => true, 'route' => 'admin.menu.categories.store']) !!}
+            {!! Form::open(['files' => true, 'route' => 'admin.menu.categories.store', 'class' => 'category']) !!}
             <div class="panel-body">
                 <div class="col-md-6">
                     <div class="form-group">
@@ -34,11 +35,11 @@
                 <div class="col-md-12">
                     <hr>
                     <div class="form-group">
-                        {!! Form::label('name', 'Category Name') !!}
+                        {!! Form::label('name', 'Category Name') !!} <small>required</small>
                         {!! Form::text('name', null, ['class' => 'form-control']) !!}
                     </div>
                     <div class="form-group">
-                        {!! Form::label('headline', 'Category Headline') !!}
+                        {!! Form::label('headline', 'Category Headline') !!} <small>required</small>
                         {!! Form::text('headline', null, ['class' => 'form-control']) !!}
                     </div>
                     <div class="form-group">
@@ -93,6 +94,8 @@
                 <div class="col-md-12 text-center">
                     <br><br>
                     {!! Form::submit('Update', ['class' => 'btn btn-primary']) !!}
+                    <a class="btn btn-default save-as-draft">Save As Draft</a>
+                    {!! Form::hidden('draft', 0) !!}
                 </div>
             </div>
             {!! Form::close() !!}
@@ -102,6 +105,7 @@
 
 @section('scripts')
     <script>
+        draft($('a.save-as-draft'), $('form.category'));
         passValueToHidden($('.category-grid a'), 'grid', $('input[name="grid"]'), 'inactive', 'active');
         passValueToHidden($('.on_white a'), 'grid', $('input[name="on_white"]'), 'btn-default', 'btn-primary');
     </script>
