@@ -95,6 +95,7 @@
                     <br><br>
                     {!! Form::submit('Update', ['class' => 'btn btn-primary']) !!}
                     <a class="btn btn-default save-as-draft">Save As Draft</a>
+                    <a href="{{ URL::to('admin/menu') }}" class="btn btn-danger">Do Not Save & Cancel</a>
                     {!! Form::hidden('draft', 0) !!}
                 </div>
             </div>
