@@ -60,7 +60,7 @@
                 <li><a href="<?php echo str_replace('blog', 'contact', site_url()); ?>">Contact Us</a></li>
                 <li><a href="<?php echo str_replace('blog', 'franchise', site_url()); ?>">Franchising Opportunities</a>
                 </li>
-                <li><a href="<?php echo str_replace('blog', 'library/pdf/employment-application.df', site_url()); ?>">Employment Application</a></li>
+                <li><a href="<?php echo str_replace('blog', 'library/pdf/employment-application.pdf', site_url()); ?>">Employment Application</a></li>
                 <li><a href="https://www.treatdata.com/" target="_blank">Treatdata</a></li>
                 <li><a href="https://springfield2.franconnect.net/nestlecafe/" target="_blank">CafeConnect</a></li>
                 <li><a href="<?php echo str_replace('blog', 'legal', site_url()); ?>">Legal & Privacy Info</a></li>
