@@ -32,6 +32,11 @@
                     {!! Form::text('heading_sub', null, ['class' => 'form-control']) !!}
                 </div>
                 <div class="form-group">
+                    {!! Form::label('link', 'Link') !!} <br>
+                    <small>Please paste the entire URL, including the <em>http://</em>.</small>
+                    {!! Form::text('link', null, ['class' => 'form-control']) !!}
+                </div>
+                <div class="form-group">
                     {!! Form::label('on_white', 'Is The Text On A Light Image?') !!} <br>
 
                     <div class="btn-group">

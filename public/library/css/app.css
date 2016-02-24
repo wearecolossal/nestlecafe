@@ -1394,6 +1394,13 @@ ul.slider {
     background-position: top center !important;
     -webkit-background-size: cover !important;
     background-size: cover !important; }
+    ul.slider li > a {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      display: block;
+      text-indent: -9999px;
+      z-index: 1000; }
     ul.slider li img {
       position: absolute;
       width: 100%; }

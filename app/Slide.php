@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\File;
 class Slide extends Model
 {
     protected $table = 'slides';
-    protected $fillable = ['image', 'heading_small', 'heading_large', 'heading_sub', 'right_align', 'on_white', 'order', 'archive', 'draft', 'no_headline'];
+    protected $fillable = ['image', 'heading_small', 'heading_large', 'heading_sub', 'right_align', 'on_white', 'order', 'archive', 'draft', 'no_headline', 'link'];
     public static $rules = [
        'image' =>  'required'
     ];

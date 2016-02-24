@@ -9,6 +9,9 @@
                             <h1 class="heading">{!! $slide->heading_large !!}</h1>
                             <p class="tag">{!! $slide->heading_sub !!}</p>
                         </div>
+                        @if($slide->link)
+                            <a href="{{ $slide->link }}" target="_blank" class="slide-link">{{ $slide->link }}</a>
+                        @endif
                     </li>
                 @endforeach
             @endif

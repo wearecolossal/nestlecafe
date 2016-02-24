@@ -40,6 +40,11 @@
                     {!! Form::text('heading_sub', $slide->heading_sub, ['class' => 'form-control']) !!}
                 </div>
                 <div class="form-group">
+                    {!! Form::label('link', 'Link') !!} <br>
+                    <small>Please paste the entire URL, including the <em>http://</em>.</small>
+                    {!! Form::text('link', $slide->link, ['class' => 'form-control']) !!}
+                </div>
+                <div class="form-group">
                     {!! Form::label('on_white', 'Is The Text On A Light Image?') !!} <br>
                     <div class="btn-group">
                         <a data-value="1" data-show="heading-fields" data-active-class="btn-primary" class="btn btn-default {{ $slide->on_white == 1 ? 'btn-primary' : null }}">Yes</a>
