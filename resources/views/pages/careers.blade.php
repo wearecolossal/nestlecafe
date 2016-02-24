@@ -24,8 +24,8 @@
         <div class="container">
             <div class="content">
                 <h1 style="margin-top:0;padding-top:0;margin-bottom:10px;">Download Our Employment Application</h1>
-                <p style="font-size:1em;width:80%;margin:0 auto;">--}}
-                    We're always looking for potential new employees. Download and fill out our employment application below. Then visit your nearest Nestl&eacute;&reg; Toll House&reg; Caf&eacute; by Chip&reg; location for hiring inquiries.
+                <p style="font-size:1em;width:80%;margin:0 auto;">
+                    We're always looking for potential new employees. Download and fill out our employment application below. Then visit your nearest Nestl&eacute;&reg; Toll House&reg; Caf&eacute; by Chip&reg; location for inquiries.
                 </p>
                 <a href="{{ URL::to('library/pdf/employment-application.pdf') }}" target="_blank" class="btn wired">Download</a>
             </div>
