@@ -5,7 +5,7 @@
 @include('pages.partials.banner')
 
 <div class="dotted red {{ URL::current() == URL::to('/') ? 'hidden' : null }}"></div>
-<div class="wrapper {{ URL::current() == URL::to('/') ? 'home' : null }} @yield('wrapper')">
+<div class="wrapper {{ (URL::current() == URL::to('/')) || (URL::current() == URL::to('careers')) ? 'home' : null }} @yield('wrapper')">
     @yield('content')
 </div>
 

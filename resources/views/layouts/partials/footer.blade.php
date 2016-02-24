@@ -50,7 +50,7 @@
                 <li class="{{ isActive('contact') }}"><a href="{{ URL::to('contact') }}">Contact Us</a></li>
                 <li class="{{ isActive('franchise') }}"><a href="{{ URL::to('franchise') }}">Franchising
                         Opportunities</a></li>
-                <li><a href="{{ URL::asset('library/pdf/employment-application.pdf') }}" target="_blank">Employment Application</a></li>
+                <li class="{{ isActive('careers') }}"><a href="{{ URL::to('careers') }}">Careers</a></li>
                 <li><a href="https://www.treatdata.com/" target="_blank">Treatdata</a></li>
                 <li><a href="https://springfield2.franconnect.net/nestlecafe/" target="_blank">CafeConnect</a></li>
                 <li class="{{ isActive('legal') }}"><a href="{{ URL::to('legal') }}">Legal & Privacy Info</a></li>
