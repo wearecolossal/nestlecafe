@@ -9,8 +9,11 @@
 
 @section('content')
     {{--<section class="page">--}}
+        <div class="block header">
+            <h2 style="font-size:2em;">Join Our Team</h2>
+        </div>
         {{--<div class="block header">--}}
-            {{--<h2>We're Always Looking For Potential New Employees. Take A Look At Our Careers And See Where You Fit!</h2>--}}
+            {{--<h2>Join Our Team</h2>--}}
         {{--</div>--}}
         {{--<div class="block dark">--}}
             {{--<p><a href="http://nestlecafe.com/library/pdf/employment-application.pdf" target="_blank">Download our employment application</a> or search below for available positions.</p>--}}
@@ -21,12 +24,10 @@
         <div class="container">
             <div class="content">
                 <h1 style="margin-top:0;padding-top:0;margin-bottom:10px;">Download Our Employment Application</h1>
-                {{--<p style="font-size:1em;width:80%;margin:0 auto;">--}}
-                    {{--We invite you to explore the Nestl&eacute;&reg; Toll House&reg; Cafe&reg; franchise overview and engage in the subsequent learning and discovery steps of our highly compelling business opportunity.--}}
-                    {{--<br> <br>--}}
-                    {{--Please note, there are six (6) engaging questions for you to answer as you review our brochure. Once you are finished, you will have the opportunity to complete our online application.--}}
-                    {{--<br><br>--}}
-                {{--</p>--}}
+                <p style="font-size:1em;width:80%;margin:0 auto;">
+                    We're always looking for potential new employees. Download and fill out our employment application below. Then visit your nearest Nestl&eacute;&reg; Toll House&reg; Caf&eacute; by Chip&reg; location for inquiries.
+                    <br/><br/>
+                </p>
                 <a href="{{ URL::to('library/pdf/employment-application.pdf') }}" target="_blank" class="btn wired">Download</a>
             </div>
         </div>
