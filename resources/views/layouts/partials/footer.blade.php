@@ -3,7 +3,7 @@
         <div class="footer-section">
             <h1>Nestlé Café</h1>
             <ul>
-                <li class="{{ isActive('online-order') }}"><a href="{{ URL::to('online-order') }}">Online Ordering</a>
+                <li class="{{ isActive('online-order') }}"><a href="{{ URL::to('order-online') }}">Order Online</a>
                 </li>
                 <li class="{{ isActive('about') }}"><a href="{{ URL::to('about') }}">About Us</a></li>
                 <li class="{{ isActive('careers') }} hidden"><a href="{{ URL::to('careers') }}">Careers</a></li>

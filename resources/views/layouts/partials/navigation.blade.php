@@ -7,7 +7,7 @@
             <li><a class="{{ isActive('story') }}" href="{{ URL::to('story') }}">Our Story</a></li>
             <li><a class="{{ isActive('franchise') }}" href="{{ URL::to('franchise') }}">Franchise</a></li>
         </ul>
-        <a href="{{ URL::to('online-order') }}" class="order-online"><span>Order Online</span></a>
+        <a href="{{ URL::to('order-online') }}" class="order-online"><span>Order Online</span></a>
         <a class="mobile-show"><img src="{{ URL::asset('library/img/ico-menu.png') }}" height="30" alt=""></a>
     </div>
     <ul class="menulist dropdown" id="menu">

@@ -46,7 +46,7 @@
             <li><a class="" href="<?php echo str_replace('blog', 'story', site_url()); ?>">Our Story</a></li>
             <li><a class="" href="<?php echo str_replace('blog', 'franchise', site_url()); ?>">Franchise</a></li>
         </ul>
-        <a href="<?php echo str_replace('blog', 'online-order', site_url()); ?>" class="order-online"><span>Online Order</span></a>
+        <a href="<?php echo str_replace('blog', 'order-online', site_url()); ?>" class="order-online"><span>Order Online</span></a>
         <a class="mobile-show"><img src="<?php echo str_replace('blog', 'library/img/ico-menu.png', site_url()); ?>" height="30" alt=""></a>
     </div>
     <ul class="menulist dropdown" id="menu">
