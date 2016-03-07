@@ -52,6 +52,10 @@
                             </div>
                         </div>
                         <div class="form-group">
+                            {!! Form::label('phone', 'Phone Number') !!}
+                            {!! Form::text('phone', null, ['class' => 'form-control']) !!}
+                        </div>
+                        <div class="form-group">
                             {!! Form::label('maps_url', 'Google Map URL') !!}
                             {!! Form::text('maps_url', null, ['class'=>'form-control']) !!}
                         </div>
