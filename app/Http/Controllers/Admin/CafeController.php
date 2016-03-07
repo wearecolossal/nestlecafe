@@ -78,6 +78,7 @@ class CafeController extends Controller
             $cafe->image = $filename;
         }
         $cafe->save();
+        $this->updatePhoneNumber($cafe, $request);
         return back()->with('success', 'Cafe Updated!');
     }
 
@@ -135,7 +136,7 @@ class CafeController extends Controller
             // store file name in database
             $cafe->image = $filename;
         }
-        $this->nullHoursOnClosed($cafe);
+        $this->nullHoursOnClosed($cafe, $request);
         $cafe->save();
         return redirect('admin/cafes/'.$cafe->id.'/edit')->with('success', 'Cafe Created!');
     }
@@ -202,5 +203,25 @@ class CafeController extends Controller
             $cafe->sunday_start = null;
             $cafe->sunday_end = null;
         }
+    }
+
+    public function updatePhoneNumber($cafe, $request)
+    {
+        if($cafe->phone) {
+            $origPhone = $cafe->phone;
+            $phone = preg_replace( '/[^+.,0-9]/', '', $origPhone );
+            $phone = str_replace('+', '', $phone);
+            $phone = str_replace('.', '', $phone);
+            $phone = str_replace(',', '', $phone);
+            if (($cafe->country == "USA") || ($request['country'] == "USA")) {
+                if(  preg_match( '/^(\d{3})(\d{3})(\d{4})$/', $phone,  $matches ) )
+                {
+                    $result = '('.$matches[1] . ') ' .$matches[2] . '-' . $matches[3];
+                    $phone = $result;
+                }
+            }
+            $cafe->phone = $phone;
+        }
+        $cafe->save();
     }
 }

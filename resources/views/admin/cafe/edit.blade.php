@@ -61,8 +61,8 @@
                             </div>
                         </div>
                         <div class="form-group">
-                            {!! Form::label('maps_url', 'Google Map URL') !!}
-                            {!! Form::text('maps_url', $cafe->maps_url, ['class'=>'form-control']) !!}
+                            {!! Form::label('phone', 'Phone Number') !!}
+                            {!! Form::text('phone', $cafe->phone, ['class' => 'form-control']) !!}
                         </div>
                     </div>
                     <div class="col-md-6 form-group" style="position:relative;">
@@ -76,6 +76,10 @@
                              class="img-circled" alt="Google Map of Albany, NY">
                     </div>
                     <div class="col-md-12">
+                        <div class="form-group">
+                            {!! Form::label('maps_url', 'Google Map URL') !!}
+                            {!! Form::text('maps_url', $cafe->maps_url, ['class'=>'form-control']) !!}
+                        </div>
                         <div class="form-group">
                             {!! Form::label('facebook_url', 'Facebook URL') !!}
                             {!! Form::text('facebook_url', $cafe->facebook_url, ['class' => 'form-control']) !!}
