@@ -7,7 +7,7 @@
     <div class="col-md-8">
         <div class="panel panel-default">
             <div class="panel-heading">Cafe Information</div>
-            {!! Form::open(['route' => ['admin.cafes.update', $cafe->id], 'class' => 'cafe']) !!}
+            {!! Form::open(['route' => ['admin.cafes.update', $cafe->id], 'class' => 'cafe', 'files' => true]) !!}
             {!! Form::hidden('_method', 'PUT') !!}
             <div class="panel-body">
                 <div class="row">
