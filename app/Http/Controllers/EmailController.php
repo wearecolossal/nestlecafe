@@ -60,8 +60,8 @@ class EmailController extends Controller
             {
                 $m->from('marketing@nestlecafe.com', 'Nestlecafe');
 
-                //$m->to('tarun@colossal.net', 'Tarun Krishnan')->subject('A customer has submitted to the Nestlé® Toll House® Café By Chip Contact Form');
-                $m->to('info@nestlecafe.com', 'Nestlé Toll House Café By Chip')->subject('A customer has submitted to the Nestlé® Toll House® Café By Chip Contact Form');
+                $m->to('tarun@colossal.net', 'Tarun Krishnan')->subject('A customer has submitted to the Nestlé® Toll House® Café By Chip Contact Form');
+                //$m->to('info@nestlecafe.com', 'Nestlé Toll House Café By Chip')->subject('A customer has submitted to the Nestlé® Toll House® Café By Chip Contact Form');
             });
             return redirect('contact/success');
         }

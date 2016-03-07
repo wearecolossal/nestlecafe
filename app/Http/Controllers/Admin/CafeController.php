@@ -138,6 +138,7 @@ class CafeController extends Controller
         }
         $this->nullHoursOnClosed($cafe, $request);
         $cafe->save();
+        $this->updatePhoneNumber($cafe, $request);
         return redirect('admin/cafes/'.$cafe->id.'/edit')->with('success', 'Cafe Created!');
     }
 
