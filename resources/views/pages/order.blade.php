@@ -2,7 +2,7 @@
 
 @section('banner', 'page simple')
 @section('bannerText')
-    {!! "Online Order" !!}
+    {!! "Order Online" !!}
 @stop
 
 @section('wrapper', 'full no-padding')
