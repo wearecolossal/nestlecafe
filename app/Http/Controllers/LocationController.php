@@ -94,6 +94,7 @@ class LocationController extends Controller
         $unit = strtoupper($unit);
         //$miles = round($miles);
         $location = $this->cafe->find($id);
+        $phone = $location->phone ? '<br/>'.$location->phone : null;
         if(strlen($location->image) < 1) {
             $image = URL::asset('library/img/loc-noimg.jpg');
         } else {
@@ -106,7 +107,7 @@ class LocationController extends Controller
                 'miles' => $miles,
                 'id'   => $location->id,
                 'name' => $location->name,
-                'address' => $location->address.'<br/>'.$location->city.', '.$location->state.' '.$location->zip_code,
+                'address' => $location->address.'<br/>'.$location->city.', '.$location->state.' '.$location->zip_code.$phone,
                 'lat' => $location->lat,
                 'lng' => $location->lng,
                 'state' => $location->state,
