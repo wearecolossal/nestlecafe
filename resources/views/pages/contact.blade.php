@@ -53,7 +53,7 @@
                     <select name="store" id="store">
                         <option value="">Please Choose</option>
                         <option value="">Not Applicable</option>
-                        @foreach(\App\Cafe::orderby('namegit', 'asc')->get() as $cafe)
+                        @foreach(\App\Cafe::orderby('name', 'asc')->get() as $cafe)
                             <option value="{{ $cafe->id }}"> {{ $cafe->city }},  {{ $cafe->state }} ({{ $cafe->country }}) - {{ $cafe->name }}</option>
                         @endforeach
                     </select>
