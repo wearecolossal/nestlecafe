@@ -40,7 +40,7 @@
                         <option value="">Please Choose</option>
                         <option value="Change my order">Change my order</option>
                         <option value="Discuss a recent order">Discuss a recent order</option>
-                        <option value="Ask about a Nestl&eacute;<sup>&reg;</sup> Toll House<sup>&reg;</sup> Caf">Ask about a Nestl&eacute;<sup>&reg;</sup> Toll House<sup>&reg;</sup> Cafe</option>
+                        <option value="Ask about a Nestl&eacute;<sup>&reg;</sup> Toll House<sup>&reg;</sup> Caf&eacute;">Ask about a Nestl&eacute;<sup>&reg;</sup> Toll House<sup>&reg;</sup> Cafe</option>
                         <option value="Ask about dessert products">Ask about dessert products</option>
                         <option value="Learn more about Franchising">Learn more about Franchising</option>
                         <option value="Cookie Crew (kids club)">Cookie Crew (kids club)</option>

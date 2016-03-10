@@ -191,7 +191,7 @@
                                     <h2>The following message was sent via your contact form.</h2>
                                     <p><strong>Name</strong> {{ $name }}</p>
                                     <p><strong>Email</strong> {{ $email }}</p>
-                                    <h2>Subject: {{ $subject }}</h2>
+                                    <h2>Subject: {!! $subject !!}</h2>
                                     <p style="background:#f2f2f2;padding:15px;">
                                         <strong>Comments</strong><br>
                                         {{ $comments }}
