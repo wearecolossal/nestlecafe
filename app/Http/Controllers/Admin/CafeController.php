@@ -51,6 +51,9 @@ class CafeController extends Controller
         $cafe = $this->cafe->find($id);
         $cafe->update($request->all());
         list($lat, $long) = $this->geolocate($cafe->address, $cafe->city, $cafe->state, $cafe->zip_code, $cafe->country);
+        if($lat == null || $long == null) {
+            return redirect()->back()->with('error', 'Sorry! Our Geolocator could not find the address you have provided, please update the address, so that this cafe will show on the cafe locator map.');
+        }
         $cafe->lat = $lat;
         $cafe->lng = $long;
         $cafe->maps_url = 'http://maps.google.com/?ll='.$lat.','.$long;
@@ -84,19 +87,24 @@ class CafeController extends Controller
 
     public function geolocate($address, $city, $state, $zip, $country)
     {
-        $address = urlencode($address.' '.$city.', '.$state.' '.$zip.', '.$country);
-        $url = "http://maps.google.com/maps/api/geocode/json?address=" . $address . "&sensor=false";
-        $ch = curl_init();
-        curl_setopt($ch, CURLOPT_URL, $url);
-        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-        curl_setopt($ch, CURLOPT_PROXYPORT, 3128);
-        curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);
-        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
-        $response = curl_exec($ch);
-        curl_close($ch);
-        $response_a = json_decode($response);
-        $lat = $response_a->results[0]->geometry->location->lat;
-        $long = $response_a->results[0]->geometry->location->lng;
+        try {
+            $address = urlencode($address.' '.$city.', '.$state.' '.$zip.', '.$country);
+            $url = "http://maps.google.com/maps/api/geocode/json?address=" . $address . "&sensor=false";
+            $ch = curl_init();
+            curl_setopt($ch, CURLOPT_URL, $url);
+            curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+            curl_setopt($ch, CURLOPT_PROXYPORT, 3128);
+            curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);
+            curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
+            $response = curl_exec($ch);
+            curl_close($ch);
+            $response_a = json_decode($response);
+            $lat = $response_a->results[0]->geometry->location->lat;
+            $long = $response_a->results[0]->geometry->location->lng;
+        } catch(\Exception $e) {
+            $lat = null;
+            $long = null;
+        }
         return array($lat, $long);
     }
 
@@ -208,20 +216,24 @@ class CafeController extends Controller
 
     public function updatePhoneNumber($cafe, $request)
     {
+        $cafe->phone = $request['phone'];
         if($cafe->phone) {
+            if (($cafe->country == "USA") || ($request['country'] == "USA")) {
             $origPhone = $cafe->phone;
             $phone = preg_replace( '/[^+.,0-9]/', '', $origPhone );
             $phone = str_replace('+', '', $phone);
             $phone = str_replace('.', '', $phone);
             $phone = str_replace(',', '', $phone);
-            if (($cafe->country == "USA") || ($request['country'] == "USA")) {
+
                 if(  preg_match( '/^(\d{3})(\d{3})(\d{4})$/', $phone,  $matches ) )
                 {
                     $result = '('.$matches[1] . ') ' .$matches[2] . '-' . $matches[3];
                     $phone = $result;
+                    $cafe->phone = $phone;
+                } else {
+                    $cafe->phone = $request['phone'];
                 }
             }
-            $cafe->phone = $phone;
         }
         $cafe->save();
     }

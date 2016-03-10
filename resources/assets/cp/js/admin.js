@@ -95,5 +95,11 @@ var hideOnLoad = function(ele) {
 };
 hideOnLoad($('.hide-on-load'));
 
+$(document).ready(function(){
+   setTimeout(function(){
+       $('.fade-away').fadeOut(1000);
+   }, 3000);
+});
+
 //LET JS HINT KNOW I USE THESE FUNCTIONS OUTSIDE OF THIS FILE
 /* exported passValueToHidden, toggleHours, applyArchiveLink, draft, applyValToHidden */

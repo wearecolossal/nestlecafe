@@ -4,6 +4,18 @@
 
 
 @section('content')
+    <div class="col-md-12">
+        @if(Session::get('success'))
+            <div class="alert alert-success fade-away">
+                {{ Session::get('success') }}
+            </div>
+        @endif
+        @if(Session::get('error'))
+            <div class="alert alert-danger">
+                {{ Session::get('error') }}
+            </div>
+        @endif
+    </div>
     <div class="col-md-8">
         <div class="panel panel-default">
             <div class="panel-heading">Cafe Information</div>
