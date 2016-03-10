@@ -83,7 +83,7 @@ class CafeController extends Controller
         $cafe->save();
         $this->updatePhoneNumber($cafe, $request);
         if($lat == null || $long == null) {
-            Session::flash('error', 'Sorry! Our Geolocator could not find the address you have provided, please update the address, so that our Geolocator can provide a marker on the cafe locations map.<br/><small>For posterity, we have not removed the previous geolocation information in the system so that your viewers are not affected</small>');
+            Session::flash('error', 'Sorry! Our Geolocator could not find the address you have provided, please update the address so that our Geolocator can provide a marker on the cafe locations map.<br/><small>For posterity, we have not removed the previous geolocation information in the system so that your viewers are not affected</small>');
         }
         return back()->with('success', 'Cafe Updated!');
     }
