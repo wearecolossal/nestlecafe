@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Str;
 use Intervention\Image\Facades\Image;
 
@@ -51,12 +52,11 @@ class CafeController extends Controller
         $cafe = $this->cafe->find($id);
         $cafe->update($request->all());
         list($lat, $long) = $this->geolocate($cafe->address, $cafe->city, $cafe->state, $cafe->zip_code, $cafe->country);
-        if($lat == null || $long == null) {
-            return redirect()->back()->with('error', 'Sorry! Our Geolocator could not find the address you have provided, please update the address, so that this cafe will show on the cafe locator map.');
+        if($lat != null || $long != null) {
+            $cafe->lat = $lat;
+            $cafe->lng = $long;
+            $cafe->maps_url = 'http://maps.google.com/?ll='.$lat.','.$long;
         }
-        $cafe->lat = $lat;
-        $cafe->lng = $long;
-        $cafe->maps_url = 'http://maps.google.com/?ll='.$lat.','.$long;
         if ($request->hasFile('image')) {
             // check if previous photo exists and delete it.
             $cafe->deletePhoto($cafe->image);
@@ -82,6 +82,9 @@ class CafeController extends Controller
         }
         $cafe->save();
         $this->updatePhoneNumber($cafe, $request);
+        if($lat == null || $long == null) {
+            Session::flash('error', 'Sorry! Our Geolocator could not find the address you have provided, please update the address, so that our Geolocator can provide a marker on the cafe locations map.<br/><small>For posterity, we have not removed the previous geolocation information in the system so that your viewers are not affected</small>');
+        }
         return back()->with('success', 'Cafe Updated!');
     }
 
