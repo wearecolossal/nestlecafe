@@ -221,7 +221,7 @@ class CafeController extends Controller
     {
         $cafe->phone = $request['phone'];
         if($cafe->phone) {
-            if (($cafe->country == "USA") || ($request['country'] == "USA")) {
+            if (($cafe->country == "USA") || ($request['country'] == "USA") || strlen($request['phone']) == 10) {
             $origPhone = $cafe->phone;
             $phone = preg_replace( '/[^+.,0-9]/', '', $origPhone );
             $phone = str_replace('+', '', $phone);
