@@ -52,10 +52,10 @@ class CafeController extends Controller
         $cafe = $this->cafe->find($id);
         $cafe->update($request->all());
         list($lat, $long) = $this->geolocate($cafe->address, $cafe->city, $cafe->state, $cafe->zip_code, $cafe->country);
-        if($lat != null || $long != null) {
+        if ($lat != null || $long != null) {
             $cafe->lat = $lat;
             $cafe->lng = $long;
-            $cafe->maps_url = 'http://maps.google.com/?ll='.$lat.','.$long;
+            $cafe->maps_url = 'http://maps.google.com/?ll=' . $lat . ',' . $long;
         }
         if ($request->hasFile('image')) {
             // check if previous photo exists and delete it.
@@ -82,7 +82,7 @@ class CafeController extends Controller
         }
         $cafe->save();
         $this->updatePhoneNumber($cafe, $request);
-        if($lat == null || $long == null) {
+        if ($lat == null || $long == null) {
             Session::flash('error', 'Sorry! Our Geolocator could not find the address you have provided, please update the address so that our Geolocator can provide a marker on the cafe locations map.<br/><small>For posterity, we have not removed the previous geolocation information in the system so that your viewers are not affected</small>');
         }
         return back()->with('success', 'Cafe Updated!');
@@ -91,7 +91,7 @@ class CafeController extends Controller
     public function geolocate($address, $city, $state, $zip, $country)
     {
         try {
-            $address = urlencode($address.' '.$city.', '.$state.' '.$zip.', '.$country);
+            $address = urlencode($address . ' ' . $city . ', ' . $state . ' ' . $zip . ', ' . $country);
             $url = "http://maps.google.com/maps/api/geocode/json?address=" . $address . "&sensor=false";
             $ch = curl_init();
             curl_setopt($ch, CURLOPT_URL, $url);
@@ -104,7 +104,7 @@ class CafeController extends Controller
             $response_a = json_decode($response);
             $lat = $response_a->results[0]->geometry->location->lat;
             $long = $response_a->results[0]->geometry->location->lng;
-        } catch(\Exception $e) {
+        } catch (\Exception $e) {
             $lat = null;
             $long = null;
         }
@@ -123,7 +123,7 @@ class CafeController extends Controller
         list($lat, $long) = $this->geolocate($cafe->address, $cafe->city, $cafe->state, $cafe->zip_code, $cafe->country);
         $cafe->lat = $lat;
         $cafe->lng = $long;
-        $cafe->maps_url = 'http://maps.google.com/?ll='.$lat.','.$long;
+        $cafe->maps_url = 'http://maps.google.com/?ll=' . $lat . ',' . $long;
         if ($request->hasFile('image')) {
             // check if previous photo exists and delete it.
             $cafe->deletePhoto($cafe->image);
@@ -150,7 +150,7 @@ class CafeController extends Controller
         $this->nullHoursOnClosed($cafe, $request);
         $cafe->save();
         $this->updatePhoneNumber($cafe, $request);
-        return redirect('admin/cafes/'.$cafe->id.'/edit')->with('success', 'Cafe Created!');
+        return redirect('admin/cafes/' . $cafe->id . '/edit')->with('success', 'Cafe Created!');
     }
 
     public function updateServices(Request $request, $id)
@@ -169,9 +169,10 @@ class CafeController extends Controller
         return back()->with('Cafe Hours Updated!');
     }
 
-    public function archive($id) {
+    public function archive($id)
+    {
         $cafe = $this->cafe->find($id);
-        if($cafe->archive == 0) {
+        if ($cafe->archive == 0) {
             $cafe->archive = 1;
             $message = 'Cafe Archived!';
         } else {
@@ -220,17 +221,16 @@ class CafeController extends Controller
     public function updatePhoneNumber($cafe, $request)
     {
         $cafe->phone = $request['phone'];
-        if($cafe->phone) {
+        if ($cafe->phone) {
             if (($cafe->country == "USA") || ($request['country'] == "USA") || strlen($request['phone']) == 10) {
-            $origPhone = $cafe->phone;
-            $phone = preg_replace( '/[^+.,0-9]/', '', $origPhone );
-            $phone = str_replace('+', '', $phone);
-            $phone = str_replace('.', '', $phone);
-            $phone = str_replace(',', '', $phone);
+                $origPhone = $cafe->phone;
+                $phone = preg_replace('/[^+.,0-9]/', '', $origPhone);
+                $phone = str_replace('+', '', $phone);
+                $phone = str_replace('.', '', $phone);
+                $phone = str_replace(',', '', $phone);
 
-                if(  preg_match( '/^(\d{3})(\d{3})(\d{4})$/', $phone,  $matches ) )
-                {
-                    $result = '('.$matches[1] . ') ' .$matches[2] . '-' . $matches[3];
+                if (preg_match('/^(\d{3})(\d{3})(\d{4})$/', $phone, $matches)) {
+                    $result = '(' . $matches[1] . ') ' . $matches[2] . '-' . $matches[3];
                     $phone = $result;
                     $cafe->phone = $phone;
                 } else {
@@ -239,5 +239,30 @@ class CafeController extends Controller
             }
         }
         $cafe->save();
+    }
+
+    public function phoneHelper()
+    {
+        $cafes = $this->cafe->all();
+        $array = array();
+        foreach ($cafes as $cafe) {
+            if (($cafe->country == "USA")  || strlen($cafe->phone) == 10) {
+                if (strlen($cafe->phone) == 10) {
+                    $origPhone = $cafe->phone;
+                    $phone = preg_replace('/[^+.,0-9]/', '', $origPhone);
+                    $phone = str_replace('+', '', $phone);
+                    $phone = str_replace('.', '', $phone);
+                    $phone = str_replace(',', '', $phone);
+
+                    if (preg_match('/^(\d{3})(\d{3})(\d{4})$/', $phone, $matches)) {
+                        $result = '(' . $matches[1] . ') ' . $matches[2] . '-' . $matches[3];
+                        $phone = $result;
+                        $cafe->phone = $phone;
+                    }
+                }
+                $cafe->save();
+            }
+        }
+        return back()->with('success', 'Phone Numbers Formatted');
     }
 }
