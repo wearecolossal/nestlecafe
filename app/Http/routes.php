@@ -83,6 +83,9 @@ Route::get('snippet/menu-items', 'SnippetController@outputMenuItems');
 Route::get('snippet/clean-store-image-urls', 'SnippetController@cleanImageUrl');
 Route::get('snippet/fill-cafe-services', 'SnippetController@fillServiceColumns');
 //301s
+Route::get('library/pdf/NutritionFactsGrid.pdf', function(){
+   return redirect('uploads/documents/Nestle-Tollhouse-Cafe-by-Chip-Nutrition-Facts.pdf');
+});
 Route::get('{page}/{sub?}/{tert?}', 'RedirectController@index');
 
 /*
