@@ -375,10 +375,14 @@ function mapScript(filterLocation, outputLocation, markerIcon, imageLibrary) {
 
     function initialize(position) {
         geocoder = new google.maps.Geocoder();
-        var geoLat = position.coords.latitude;
-        var geoLng = position.coords.longitude;
-        //console.log(geoLat+' , '+geoLng);
-        filterStores(geoLat, geoLng);
+        var geoLat = detectSpecial(position.coords.latitude, position.coords.longitude, 'lat')
+        var geoLng = detectSpecial(position.coords.latitude, position.coords.longitude, 'lng')
+        if(detectSpecial(position.coords.latitude, position.coords.longitude, null)) {
+            var miles = 300;
+        } else {
+            var miles = 100;
+        }
+        filterStores(geoLat, geoLng, miles);
         setInitialMap(geoLat, geoLng, 9);
     }
 
@@ -393,13 +397,28 @@ function mapScript(filterLocation, outputLocation, markerIcon, imageLibrary) {
         var address = document.getElementById("address").value;
         geocoder.geocode({'address': address}, function (results, status) {
             if (status == google.maps.GeocoderStatus.OK) {
-                map.setZoom(9);
-                map.setCenter(results[0].geometry.location);
-                //var marker = new google.maps.Marker({
-                //    map: map,
-                //    position: results[0].geometry.location
-                //});
-                filterStores(results[0].geometry.location.lat(), results[0].geometry.location.lng());
+                console.log('Lat: ' + results[0].geometry.location.lat() + ', Long:' + results[0].geometry.location.lng());
+                //console.log('Location: '+results[0].geometry.location);
+                //var lat = '45.267381';
+                //var lng = '-75.829843';
+                //console.log('Location: 45.267381, -75.829843');
+                var lat = detectSpecial(results[0].geometry.location.lat(), results[0].geometry.location.lng(), 'lat');
+                var lng = detectSpecial(results[0].geometry.location.lat(), results[0].geometry.location.lng(), 'lng');
+                if(detectSpecial(results[0].geometry.location.lat(), results[0].geometry.location.lng(), null)) {
+                    var miles = 300;
+                    var zoom = 7;
+                    var middle = '(45.267381, -75.82984299999998)'; //FALLOWFIELD, CANADA
+                } else {
+                    var miles = 100;
+                    var zoom = 9;
+                    var middle = results[0].geometry.location;
+                }
+                console.log('Location: '+middle);
+                map.setZoom(zoom);
+                //map.setCenter(results[0].geometry.location);
+                map.setCenter(middle);
+
+                filterStores(lat, lng, miles);
                 outputStores();
             } else {
                 alert("Geocode was not successful for the following reason: " + status);
@@ -407,14 +426,38 @@ function mapScript(filterLocation, outputLocation, markerIcon, imageLibrary) {
         });
     }
 
+    var detectSpecial = function (latitude, longitude, filter) {
+        //DETECT CANADA
+        if (latitude == '56.130366' && longitude == '-106.34677099999999') {
+            var lat = '45.267381';
+            var lng = '-75.829843';
+            if (filter == 'lat') {
+                return lat;
+            } else if (filter == 'lng') {
+                return lng;
+            } else {
+                return true;
+            }
+        } else {
+            if (filter == 'lat') {
+                return latitude;
+            } else if (filter == 'lng') {
+                return longitude;
+            } else {
+                return false;
+            }
+        }
+
+    };
+
     setTimeout(function () {
         getLocation();
     }, 1000);
 
-    var filterStores = function (lat, lng) {
+    var filterStores = function (lat, lng, miles) {
         $('.map-list').html('');
         $('.map-list').hide();
-        $.getJSON(filterLocation + lat + "/" + lng, function (json1) {
+        $.getJSON(filterLocation + lat + "/" + lng + '/' + miles, function (json1) {
             $.each(json1, function (key, data) {
 
                 var onlineLength = data[0].online_order.length;

@@ -57,12 +57,10 @@ class LocationController extends Controller
      * @param $lng1
      * @return array
      */
-    public function filter($lat1, $lng1)
+    public function filter($lat1, $lng1, $miles = 100)
     {
-        //$lat1 = 40.751754935372404;
-        //$lng1 = -73.97476794280311;
         $lists = $this->cafe->where('lat', '!=', '')->whereNotNull('lat')->where('draft', 0)->where('archive', 0)->orderby('lat', 'asc')->get();
-        return $this->filterQuery($lat1, $lng1, $lists);
+        return $this->filterQuery($lat1, $lng1, $lists, $miles);
     }
 
     public function orderFilter($lat1, $lng1)
@@ -146,11 +144,14 @@ class LocationController extends Controller
      * @param $lists
      * @return array
      */
-    public function filterQuery($lat1, $lng1, $lists)
+    public function filterQuery($lat1, $lng1, $lists, $miles = 100)
     {
         $filter = array();
+//        if($lat1 == '56.130366' && $lng1 == '-106.34677099999999') {
+//            $miles = 3000;
+//        }
         foreach ($lists as $list) {
-            $answer = $this->distance($lat1, $lng1, $list->lat, $list->lng, 'm', 100, $list->id);
+            $answer = $this->distance($lat1, $lng1, $list->lat, $list->lng, 'm', $miles, $list->id);
             if ($answer) {
                 array_push($filter, $answer);
             }

@@ -44,7 +44,7 @@ Route::get('legal', 'PagesController@legal');
 Route::get('signup', function(){ return redirect('cafe-club'); });
 Route::get('cafe-club', 'PagesController@cafeclub');
 Route::get('output-locations', 'LocationController@ajax');
-Route::get('filter-locations/{lat1}/{lng1}', 'LocationController@filter');
+Route::get('filter-locations/{lat1}/{lng1}/{miles?}', 'LocationController@filter');
 Route::get('filter-order-locations/{lat1}/{lng1}', 'LocationController@orderFilter');
 
 //ADMIN
