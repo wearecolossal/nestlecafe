@@ -395,6 +395,10 @@ function mapScript(filterLocation, outputLocation, markerIcon, imageLibrary) {
 
     function codeAddress() {
         var address = document.getElementById("address").value;
+        //CHANGE CENTER POINT IF SEARCH FOR CANADA
+        if(address == 'Canada' || address == 'canada') {
+            address = 'Fallowfield, Canada';
+        }
         geocoder.geocode({'address': address}, function (results, status) {
             if (status == google.maps.GeocoderStatus.OK) {
                 console.log('Lat: ' + results[0].geometry.location.lat() + ', Long:' + results[0].geometry.location.lng());
@@ -404,19 +408,16 @@ function mapScript(filterLocation, outputLocation, markerIcon, imageLibrary) {
                 //console.log('Location: 45.267381, -75.829843');
                 var lat = detectSpecial(results[0].geometry.location.lat(), results[0].geometry.location.lng(), 'lat');
                 var lng = detectSpecial(results[0].geometry.location.lat(), results[0].geometry.location.lng(), 'lng');
-                if(detectSpecial(results[0].geometry.location.lat(), results[0].geometry.location.lng(), null)) {
+                if(detectSpecial(results[0].geometry.location.lat(), results[0].geometry.location.lng(), null) || address == 'Fallowfield, Canada') {
                     var miles = 300;
-                    var zoom = 5;
-                    var middle = '(45.267381, -75.82984299999998)'; //FALLOWFIELD, CANADA
+                    var zoom = 7;
                 } else {
                     var miles = 100;
                     var zoom = 9;
-                    var middle = results[0].geometry.location;
                 }
-                console.log('Location: '+middle);
                 map.setZoom(zoom);
                 //map.setCenter(results[0].geometry.location);
-                map.setCenter(middle);
+                map.setCenter(results[0].geometry.location);
 
                 filterStores(lat, lng, miles);
                 outputStores();
