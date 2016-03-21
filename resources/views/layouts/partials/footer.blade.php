@@ -58,12 +58,12 @@
         </div>
         <div class="footer-section text-center email-club">
             <h2>Join Our Email Club for News and Offers</h2>
-
-            <form action="">
-                <input type="text" placeholder="Your Email Address">
-            </form>
+            <br>
             <div class="clearfix"></div>
-            <small class="text-yellow">- Join! -</small>
+            <a href="{{ URL::to('cafe-club') }}" style="font-size:12px;padding:8px;" class="btn wired">Click To Join!</a>
+            <br><br>
+            <div class="clearfix"></div>
+            <small class="text-yellow">- Follow Us! -</small>
             <div class="clearfix"></div>
             <div class="social-links">
                 <a href="https://www.facebook.com/nestlecafe" target="_blank"></a>

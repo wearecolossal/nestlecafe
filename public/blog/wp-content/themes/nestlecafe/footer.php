@@ -68,10 +68,10 @@
         </div>
         <div class="footer-section text-center email-club">
             <h2>Join Our Email Club for News and Offers</h2>
-
-            <form action="<?php echo str_replace('blog', 'cafe-club', site_url()); ?>" method="GET">
-                <input type="text" name="EmailAddress" id="EmailAddress" placeholder="Your Email Address">
-            </form>
+            <br>
+            <div class="clearfix"></div>
+            <a href="<?php echo str_replace('blog', 'cafe-club', site_url()); ?>" style="font-size:12px;padding:8px;" class="btn wired">Click To Join!</a>
+            <br><br>
             <div class="clearfix"></div>
             <small class="text-yellow">- Join! -</small>
             <div class="clearfix"></div>
