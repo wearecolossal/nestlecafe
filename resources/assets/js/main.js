@@ -406,7 +406,7 @@ function mapScript(filterLocation, outputLocation, markerIcon, imageLibrary) {
                 var lng = detectSpecial(results[0].geometry.location.lat(), results[0].geometry.location.lng(), 'lng');
                 if(detectSpecial(results[0].geometry.location.lat(), results[0].geometry.location.lng(), null)) {
                     var miles = 300;
-                    var zoom = 7;
+                    var zoom = 5;
                     var middle = '(45.267381, -75.82984299999998)'; //FALLOWFIELD, CANADA
                 } else {
                     var miles = 100;
