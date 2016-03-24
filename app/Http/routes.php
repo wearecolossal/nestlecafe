@@ -45,7 +45,7 @@ Route::get('signup', function(){ return redirect('cafe-club'); });
 Route::get('cafe-club', 'PagesController@cafeclub');
 Route::get('output-locations', 'LocationController@ajax');
 Route::get('filter-locations/{lat1}/{lng1}/{miles?}', 'LocationController@filter');
-Route::get('filter-order-locations/{lat1}/{lng1}', 'LocationController@orderFilter');
+Route::get('filter-order-locations/{lat1}/{lng1}/{miles?}', 'LocationController@orderFilter');
 
 //ADMIN
 Route::group(['middleware' => 'web'], function(){
