@@ -70,8 +70,16 @@ $(document).ready(function () {
  * MAP SCRIPT
  ========================== */
 function mapScript(filterLocation, outputLocation, markerIcon, imageLibrary) {
+    var triggered = 'no';
+    console.log(triggered);
     $('button.find-address').on('click', function () {
-        codeAddress();
+        if(triggered == 'no') {
+            codeAddress();
+            triggered = 'yes';
+        }
+        setTimeout(function(){
+           triggered = 'no';
+        }, 3000);
     });
 
     //get markers
@@ -394,37 +402,37 @@ function mapScript(filterLocation, outputLocation, markerIcon, imageLibrary) {
     }
 
     function codeAddress() {
-        var address = document.getElementById("address").value;
-        //CHANGE CENTER POINT IF SEARCH FOR CANADA
-        if(address == 'Canada' || address == 'canada') {
-            address = 'Fallowfield, Canada';
-        }
-        geocoder.geocode({'address': address}, function (results, status) {
-            if (status == google.maps.GeocoderStatus.OK) {
-                console.log('Lat: ' + results[0].geometry.location.lat() + ', Long:' + results[0].geometry.location.lng());
-                //console.log('Location: '+results[0].geometry.location);
-                //var lat = '45.267381';
-                //var lng = '-75.829843';
-                //console.log('Location: 45.267381, -75.829843');
-                var lat = detectSpecial(results[0].geometry.location.lat(), results[0].geometry.location.lng(), 'lat');
-                var lng = detectSpecial(results[0].geometry.location.lat(), results[0].geometry.location.lng(), 'lng');
-                if(detectSpecial(results[0].geometry.location.lat(), results[0].geometry.location.lng(), null) || address == 'Fallowfield, Canada') {
-                    var miles = 300;
-                    var zoom = 7;
-                } else {
-                    var miles = 100;
-                    var zoom = 9;
-                }
-                map.setZoom(zoom);
-                //map.setCenter(results[0].geometry.location);
-                map.setCenter(results[0].geometry.location);
-
-                filterStores(lat, lng, miles);
-                outputStores();
-            } else {
-                alert("Geocode was not successful for the following reason: " + status);
+            var address = document.getElementById("address").value;
+            //CHANGE CENTER POINT IF SEARCH FOR CANADA
+            if(address == 'Canada' || address == 'canada') {
+                address = 'Fallowfield, Canada';
             }
-        });
+            geocoder.geocode({'address': address}, function (results, status) {
+                if (status == google.maps.GeocoderStatus.OK) {
+                    console.log('Lat: ' + results[0].geometry.location.lat() + ', Long:' + results[0].geometry.location.lng());
+                    //console.log('Location: '+results[0].geometry.location);
+                    //var lat = '45.267381';
+                    //var lng = '-75.829843';
+                    //console.log('Location: 45.267381, -75.829843');
+                    var lat = detectSpecial(results[0].geometry.location.lat(), results[0].geometry.location.lng(), 'lat');
+                    var lng = detectSpecial(results[0].geometry.location.lat(), results[0].geometry.location.lng(), 'lng');
+                    if(detectSpecial(results[0].geometry.location.lat(), results[0].geometry.location.lng(), null) || address == 'Fallowfield, Canada') {
+                        var miles = 300;
+                        var zoom = 7;
+                    } else {
+                        var miles = 100;
+                        var zoom = 9;
+                    }
+                    map.setZoom(zoom);
+                    //map.setCenter(results[0].geometry.location);
+                    map.setCenter(results[0].geometry.location);
+
+                    filterStores(lat, lng, miles);
+                    outputStores();
+                } else {
+                    alert("Geocode was not successful for the following reason: " + status);
+                }
+            });
     }
 
     var detectSpecial = function (latitude, longitude, filter) {
