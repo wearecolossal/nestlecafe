@@ -55,7 +55,6 @@
                 <div class="app-downloads">
                     <a href="https://itunes.apple.com/us/app/nestle-toll-house-cafe-by-chip/id1035761259?mt=8" target="_blank" class="apple"><img src="{{ URL::asset('library/img/app-apple.png') }}" alt=""></a>
                     <a href="https://play.google.com/store/apps/details?id=com.nestle.passconnect&hl=en" target="_blank" class="google"><img src="{{ URL::asset('library/img/app-google.png') }}" alt=""></a>
-                </div>
             </div>
         </div>
     </div>
@@ -71,7 +70,8 @@
                mode: 'fade',
                pager: false,
                auto: true,
-               pause: 10000
+               pause: 10000,
+               speed: 500
            });
         });
     </script>
