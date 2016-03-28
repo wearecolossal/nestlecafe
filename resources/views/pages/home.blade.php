@@ -69,7 +69,9 @@
         $(document).ready(function(){
            $('ul.slider').bxSlider({
                mode: 'fade',
-               pager: false
+               pager: false,
+               auto: true,
+               pause: 10000
            });
         });
     </script>
