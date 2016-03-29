@@ -19,8 +19,8 @@
             <ul>
                 <li><a href="http://www.nestle-purelife.us/" target="_blank">Nestl&eacute;<sup>&reg;</sup> Pure
                         Life<sup>&reg;</sup></a></li>
-                <li><a href="http://www.verybestbaking.com/Toll-House.aspx"
-                       target="_blank">Nestl&eacute;<sup>&reg;</sup> Toll House<sup>&reg;</sup></a></li>
+                <li style="margin-bottom:7px;"><a href="http://www.verybestbaking.com/Toll-House.aspx"
+                       target="_blank">Nestl&eacute;<sup>&reg;</sup> Toll House<sup>&reg;</sup> <br>Cafe by Chip<sup>&reg;</sup></a></li>
                 <li><a href="http://www.nestleusa.com/" target="_blank">Nestl&eacute;<sup>&reg;</sup></a></li>
                 <li><a href="http://www.wonka.com/" target="_blank">Wonka<sup>&reg;</sup></a></li>
                 <li><a href="http://www.butterfinger.com/" target="_blank">Butterfinger<sup>&reg;</sup></a></li>
@@ -77,7 +77,7 @@
     </div>
     <div class="container fine-print">
         <p>&copy; Copyright {{ date('Y') }} Crest Foods, Inc. All rights reserved. Nestl&eacute;<sup>&reg;</sup>, Toll
-            House<sup>&reg;</sup> and certain other marks and associated label designs are trademarks of Soci&eacute;t&eacute;
+            House<sup>&reg;</sup> Cafe by Chip<sup>&reg;</sup> and certain other marks and associated label designs are trademarks of Soci&eacute;t&eacute;
             des Produits Nestl&eacute; S.A., Used by Crest Foods, Inc., and its independent franchisees, with
             permission​.</p>
 

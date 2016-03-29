@@ -29,8 +29,8 @@
             <ul>
                 <li><a href="http://www.nestle-purelife.us/" target="_blank">Nestl&eacute;<sup>&reg;</sup> Pure
                         Life<sup>&reg;</sup></a></li>
-                <li><a href="http://www.verybestbaking.com/Toll-House.aspx"
-                       target="_blank">Nestl&eacute;<sup>&reg;</sup> Toll House<sup>&reg;</sup></a></li>
+                <li style="margin-bottom:7px;"><a href="http://www.verybestbaking.com/Toll-House.aspx"
+                  target="_blank">Nestl&eacute;<sup>&reg;</sup> Toll House<sup>&reg;</sup> <br>Cafe by Chip<sup>&reg;</sup></a></li>
                 <li><a href="http://www.nestleusa.com/" target="_blank">Nestl&eacute;<sup>&reg;</sup></a></li>
                 <li><a href="http://www.wonka.com/" target="_blank">Wonka<sup>&reg;</sup></a></li>
                 <li><a href="http://www.butterfinger.com/" target="_blank">Butterfinger<sup>&reg;</sup></a></li>

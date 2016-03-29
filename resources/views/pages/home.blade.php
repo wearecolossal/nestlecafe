@@ -24,7 +24,7 @@
         <div class="container">
             <div class="content">
                 <h1>Franchising Opportunity</h1>
-                <p>Explore the Nestl&eacute;&reg; Toll House&reg; Caf&eacute; franchise and engage in our highly compelling business opportunity.</p>
+                <p>Explore the Nestl&eacute;&reg; Toll House&reg; Caf&eacute; By Chip&reg; franchise and engage in our highly compelling business opportunity.</p>
                 <a href="{{ URL::to('franchise') }}" class="btn wired">Life is full of treats</a>
                 <div class="clearfix"></div>
                 <small class="fine-print"><a href="{{ URL::to('locations') }}">- Existing franchisees find your location -</a></small>
