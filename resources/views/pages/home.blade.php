@@ -35,7 +35,7 @@
 
     <div class="section yellow">
         <h1 class="standard">
-            Connect with Us and Share Your Nestl&eacute;<sup>&reg;</sup> Toll House<sup>&reg;</sup> Caf&eacute; Experience!
+            Connect with Us and Share Your Nestl&eacute;<sup>&reg;</sup> Toll House<sup>&reg;</sup> Caf&eacute; By Chip<sup>&reg;</sup> Experience!
         </h1>
         <div class="clearfix"></div>
             <div class="container full">
