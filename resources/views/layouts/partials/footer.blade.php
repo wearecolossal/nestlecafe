@@ -5,9 +5,8 @@
                 <h1>Allergy Notice</h1>
                 <br>
                 <p>
-                    Your health is of utmost concern to us. Nestl&eacute;&reg; Toll House&reg; Caf&eacute; by Chip&reg; products
-                    <br> are made on
-                    equipment that processes peanuts and other nuts.
+                    Your health is of utmost concern to us. Nestl&eacute;<sup>&reg;</sup> Toll House<sup>&reg;</sup> Caf&eacute; by Chip<sup>&reg;</sup> products
+                    <br> are made on equipment that processes peanuts and other nuts.
                 </p>
                 <br>
                 <em>Nutritional and allergy information available upon request.</em>
