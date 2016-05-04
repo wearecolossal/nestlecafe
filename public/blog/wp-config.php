@@ -23,13 +23,13 @@
 define('DB_NAME', 'nestlecafe_blog');
 
 /** MySQL database username */
-define('DB_USER', 'root');
+define('DB_USER', 'forge');
 
 /** MySQL database password */
-define('DB_PASSWORD', 'root');
+define('DB_PASSWORD', 'iTN2x12JUfOBYS6s5lT6');
 
 /** MySQL hostname */
-define('DB_HOST', 'localhost');
+define('DB_HOST', '45.55.75.104');
 
 /** Database Charset to use in creating database tables. */
 define('DB_CHARSET', 'utf8mb4');
