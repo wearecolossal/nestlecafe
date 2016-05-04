@@ -63,6 +63,7 @@
                 <li><a href="<?php echo str_replace('blog', 'careers', site_url()); ?>">Careers</a></li>
                 <li><a href="https://www.treatdata.com/" target="_blank">Treatdata</a></li>
                 <li><a href="https://springfield2.franconnect.net/nestlecafe/" target="_blank">CafeConnect</a></li>
+                <li><a target="_blank" href="<?php echo str_replace('blog', 'public/uploads/documents/Nestle-Tollhouse-Cafe-by-Chip-Nutrition-Facts.pdf', site_url())?>"></a></li>
                 <li><a href="<?php echo str_replace('blog', 'legal', site_url()); ?>">Legal & Privacy Info</a></li>
             </ul>
         </div>
