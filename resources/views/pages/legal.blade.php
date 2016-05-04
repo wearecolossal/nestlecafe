@@ -11,12 +11,12 @@
     <section class="page">
         <div class="block transparent">
             <p>LEGAL<br/>
-                Crest Foods, Inc. is authorized by Nestl&eacute;&reg; to feature Nestl&eacute;&reg; Toll House&reg; products. Caf&eacute;
-                by Chip&reg; is a registered trademark of Crest Foods, Inc. Nestl&eacute;&reg;<sup>&reg;</sup>, Toll
-                House<sup>&reg;</sup>, Nestl&eacute;&reg; Makes the Very Best<sup>&reg;</sup>, Nescaf&eacute;<sup>&reg;</sup>
+                Crest Foods, Inc. is authorized by Nestl&eacute;<sup>&reg;</sup> to feature Nestl&eacute;<sup>&reg;</sup> Toll House<sup>&reg;</sup> products. Caf&eacute;
+                by Chip<sup>&reg;</sup> is a registered trademark of Crest Foods, Inc. Nestl&eacute;<sup>&reg;</sup>, Toll
+                House<sup>&reg;</sup>, Nestl&eacute;<sup>&reg;</sup> Makes the Very Best<sup>&reg;</sup>, Nescaf&eacute;<sup>&reg;</sup>
                 and certain other marks featured on this website and in caf&eacute;s are registered trademarks of Soci&eacute;t&eacute;
-                des Produits Nestl&eacute;&reg; S.A., Vevey, Switzerland. Each franchise caf&eacute; is independently owned
-                and operated by a non-Nestl&eacute;&reg; entity under a franchise agreement with Crest Foods, Inc., the
+                des Produits Nestl&eacute;<sup>&reg;</sup> S.A., Vevey, Switzerland. Each franchise caf&eacute; is independently owned
+                and operated by a non-Nestl&eacute;<sup>&reg;</sup> entity under a franchise agreement with Crest Foods, Inc., the
                 franchisor. All product information materials produced here on this website are copyrighted and property
                 of Crest Foods, Inc. No portion of this material may be reproduced, retrieved, stored in a retrieval
                 system, or transmitted in any form or by means without prior written permission of Crest Foods, Inc. and
@@ -24,8 +24,8 @@
 
             <p>PRIVACY POLICY<br/>
                 Crest Foods, Inc. has developed this Privacy Policy to explain why we collect particular information and
-                how we will protect your personal privacy within our brand website for Nestle Toll House&reg; Caf&eacute; by
-                Chip&reg; found at <a href="/">www.nestlecafe.com</a> (the "Site"). Ensuring the privacy and security of your
+                how we will protect your personal privacy within our brand website for Nestle Toll House<sup>&reg;</sup> Caf&eacute; by
+                Chip<sup>&reg;</sup> found at <a href="/">www.nestlecafe.com</a> (the "Site"). Ensuring the privacy and security of your
                 personal information is of upmost importance to us. Our privacy policy details the information we
                 collect about you, how and why we use the information and the choices you have to restrict our usage of
                 the information. The Site may contain technical inaccuracies or typographical errors and from time to
@@ -57,7 +57,7 @@
 
             <p>OUR EMAIL LIST<br/>
                 We offer those who sign-up for our email list advanced notice of sales, new merchandise, store openings
-                and other Nestl&eacute;&reg;<sup>&reg;</sup> Toll House&reg;<sup>&reg;</sup> Caf&eacute; by Chip&reg; news. Email
+                and other Nestl&eacute;<sup>&reg;</sup> Toll House<sup>&reg;</sup> Caf&eacute; by Chip<sup>&reg;</sup> news. Email
                 addresses collected at nestlecafe.com are only used internally. We respect your privacy rights and will
                 not sell or rent your email address to other companies. If you would like to unsubscribe from our email
                 list, click here or contact us. We will remove your name from our email list as soon as possible. Please
