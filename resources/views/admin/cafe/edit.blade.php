@@ -43,6 +43,13 @@
                             {!! Form::label('name', 'Store Name') !!}
                             {!! Form::text('name', $cafe->name, ['class' => 'form-control']) !!}
                         </div>
+                        <div class="form-group">
+                            {!! Form::label('coming_soon', 'Coming Soon?') !!}
+                            <select name="coming_soon" id="coming_soon" class="form-control">
+                                <option value="0" {{ $cafe->coming_soon == 0 ? 'selected' : null }}>No</option>
+                                <option value="1" {{ $cafe->coming_soon == 1 ? 'selected' : null }}>Yes</option>
+                            </select>
+                        </div>
                     </div>
                     <div class="col-md-12">
                         <hr>

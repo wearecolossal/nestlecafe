@@ -121,7 +121,8 @@ class LocationController extends Controller
                 'savory' => $location->savory,
                 'map' => $location->maps_url,
                 'facebook' => $location->facebook_url,
-                'online_order' => $location->online_order
+                'online_order' => $location->online_order,
+                'coming_soon' => $location->coming_soon
             ]);
             return $array;
         }

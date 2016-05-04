@@ -22,6 +22,13 @@
                             {!! Form::label('name', 'Store Name') !!}
                             {!! Form::text('name', null, ['class' => 'form-control']) !!}
                         </div>
+                        <div class="form-group">
+                            {!! Form::label('coming_soon', 'Coming Soon?') !!}
+                            <select name="coming_soon" id="coming_soon" class="form-control">
+                                <option value="0">No</option>
+                                <option value="1">Yes</option>
+                            </select>
+                        </div>
                     </div>
                     <div class="col-md-12">
                         <hr>
