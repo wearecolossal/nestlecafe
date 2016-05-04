@@ -28,9 +28,20 @@
                 <p>
                     <a data-load="document" href="Nestle-Tollhouse-Cafe-by-Chip-Nutrition-Facts.pdf" target="_blank" class="btn btn-yellow white-text">Nutrition Fact Sheet</a>
                 </p>
+                <div class="allergy-info text-center" style="max-width:640px;margin-top:75px;">
+                    <h1>Allergy Notice</h1>
+                    <br>
+                    <p>
+                        Your health is of utmost concern to us. Nestl&eacute;&reg; Toll House&reg; Caf&eacute; by Chip&reg; products are made on
+                        equipment that processes peanuts and other nuts.
+                    </p>
+                    <br>
+                    <em>Nutritional and allergy information available upon request.</em>
+                </div>
             </div>
         </div>
     </div>
+
 
 @stop
 

@@ -1977,6 +1977,26 @@ ul.map-list .list-container {
       .map-filter-bar .filter-choices a:last-child {
         border-right: none; }
 
+.allergy-info {
+  display: block;
+  background: transparent;
+  border: 3px solid #ffd41f;
+  padding: 10px;
+  display: block;
+  margin: 0 auto;
+  color: #fff;
+  background: #2E1A11; }
+  .allergy-info h1, .allergy-info p, .allergy-info em {
+    margin: 0;
+    padding: 0; }
+  .allergy-info p {
+    padding: 0 40px; }
+  .allergy-info h1 {
+    font-size: 20px; }
+  .allergy-info em {
+    font-size: 12px;
+    color: #beab9e; }
+
 /* ==========================================================================
    Helper classes
    ========================================================================== */
