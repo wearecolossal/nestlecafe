@@ -13,7 +13,7 @@
         </div>
         <div class="block dark">
             <h2 class="text-center">
-                Receive sneak peeks of new products and upcoming promotions. <br />Get special invitations to Nestl&eacute;<sup>&reg;</sup> Toll House<sup>&reg;</sup> Caf&eacute; By Chip<sup>&reg;</sup> Club exclusive events and <br />a birthday gift to celebrate your special day!
+                Receive sneak peeks of new products and upcoming promotions. <br />Get special invitations to Nestl&eacute;<sup>&reg;</sup> Toll House<sup>&reg;</sup> Caf&eacute; By Chip<sup>&reg;</sup> Club exclusive events and a birthday gift to celebrate your special day!
             </h2>
         </div>
         <div class="block light no-border">
