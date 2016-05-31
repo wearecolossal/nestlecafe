@@ -1,18 +1,5 @@
 <footer id="footer">
-    @if(URL::current() == URL::to('/'))
-        <div class="container" style="border-top:none;">
-            <div class="allergy-info text-center">
-                <h1>Allergy Notice</h1>
-                <br>
-                <p>
-                    Your health is of utmost concern to us. Nestl&eacute;<sup>&reg;</sup> Toll House<sup>&reg;</sup> Caf&eacute; by Chip<sup>&reg;</sup> products
-                    <br> are made on equipment that processes peanuts and other nuts.
-                </p>
-                <br>
-                <em>Nutritional and allergy information available upon request.</em>
-            </div>
-        </div>
-    @endif
+
     <div class="container">
 
         <div class="footer-section">
@@ -71,6 +58,7 @@
                 <li><a href="https://springfield2.franconnect.net/nestlecafe/" target="_blank">CafeConnect</a></li>
                 <li><a data-load="document" href="Nestle-Tollhouse-Cafe-by-Chip-Nutrition-Facts.pdf" target="_blank">Nutritional
                         Info</a></li>
+                <li><a data-load="document" href="allergy-disclaimer.pdf" target="_blank">Allergy Notice</a></li>
                 <li class="{{ isActive('legal') }}"><a href="{{ URL::to('legal') }}">Legal & Privacy Info</a></li>
             </ul>
         </div>
