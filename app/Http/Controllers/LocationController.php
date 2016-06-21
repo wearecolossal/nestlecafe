@@ -102,7 +102,7 @@ class LocationController extends Controller
         if ($miles <= $limit) {
             array_push($array, [
                 'image' => $image,
-                'miles' => $miles,
+                'miles' => intval($miles),
                 'id'   => $location->id,
                 'name' => $location->name,
                 'address' => $location->address.'<br/>'.$location->city.', '.$location->state.' '.$location->zip_code.$phone,

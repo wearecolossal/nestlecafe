@@ -106,7 +106,7 @@
 <script>window.jQuery || document.write('<script src="{{ URL::asset('library/js/vendor/jquery-1.11.3.min.js') }}"><\/script>')</script>
 <script src="{{ URL::asset('library/js/plugins.js') }}"></script>
 <script src="{{ URL::asset('library/js/parallax.js') }}"></script>
-<script src="{{ URL::asset('library/js/main-min.js') }}"></script>
+<script src="{{ URL::asset('library/js/main.js') }}"></script>
 <script>
     $(document).ready(function () {
         //Find document links in SQL DB and updates their URL
