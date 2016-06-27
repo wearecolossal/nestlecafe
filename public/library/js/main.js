@@ -449,18 +449,19 @@ function mapScript(filterLocation, outputLocation, markerIcon, imageLibrary) {
                 return true;
             }
         } 
-        // DETECT VIRGINIA
-        else if(latitude == '37.4315734' && longitude == '-78.65689420000001'){
-            var lat = '37.074921';
-            var lng = '-76.884100';
-            if (filter == 'lat') {
-                return lat;
-            } else if (filter == 'lng') {
-                return lng;
-            } else {
-                return true;
-            }
-        }else {
+        // // DETECT VIRGINIA
+        // else if(latitude == '37.4315734' && longitude == '-78.65689420000001'){
+        //     var lat = '37.074921';
+        //     var lng = '-76.884100';
+        //     if (filter == 'lat') {
+        //         return lat;
+        //     } else if (filter == 'lng') {
+        //         return lng;
+        //     } else {
+        //         return true;
+        //     }
+        //}
+        else {
             if (filter == 'lat') {
                 return latitude;
             } else if (filter == 'lng') {
