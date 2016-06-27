@@ -436,6 +436,7 @@ function mapScript(filterLocation, outputLocation, markerIcon, imageLibrary) {
     }
 
     var detectSpecial = function (latitude, longitude, filter) {
+        //[Log] Lat: 37.4315734, Long:-78.65689420000001 (main.js, line 412)
         //DETECT CANADA
         if (latitude == '56.130366' && longitude == '-106.34677099999999') {
             var lat = '45.267381';
@@ -447,7 +448,19 @@ function mapScript(filterLocation, outputLocation, markerIcon, imageLibrary) {
             } else {
                 return true;
             }
-        } else {
+        } 
+        // DETECT VIRGINIA
+        else if(latitude == '37.4315734' && longitude == '-78.65689420000001'){
+            var lat = '37.074921';
+            var lng = '-76.884100';
+            if (filter == 'lat') {
+                return lat;
+            } else if (filter == 'lng') {
+                return lng;
+            } else {
+                return true;
+            }
+        }else {
             if (filter == 'lat') {
                 return latitude;
             } else if (filter == 'lng') {
@@ -494,7 +507,7 @@ function mapScript(filterLocation, outputLocation, markerIcon, imageLibrary) {
                 $('.map-list').append('' +
                     '<li data-miles="' + data[0].miles + '" class="cafe-list-item"><div class="list-container"><div class="image-container" style="background:url(' + data[0].image + ')"></div><div class="cafe-info"><span class="name">' + data[0].name + ' <a target="_blank" href="' + data[0].facebook + '" class="' + hideFacebook + '"><img src="' + imageLibrary + '/ico-facebook.png" width="15" style="margin-top:-3px;"/></a></span><br>' + '<small>' + data[0].address + '</small>' +
                     '<br/><small>' + Math.round(data[0].miles) +
-                    ' miles</small><br>'+soon_message+'<a target="_blank" class="' + hideOnline + ' online-order" href="' + data[0].online_order + '">Order Online </a> <a target="_blank" class="' + hideMap + '" href="' + data[0].map + '">Get Directions</a></div><div class="clearfix"></div><div class="services">' + '<img class="active-' + data[0].wifi + ' loc-wifi" src="' + imageLibrary + '/loc-wifi.png" width="30"/>' + '<img class="active-' + data[0].coffee + ' loc-coffee" src="' + imageLibrary + '/loc-coffee.png" width="30"/>' + '<img class="active-' + data[0].cookie + ' loc-cookie" src="' + imageLibrary + '/loc-cookie.png" width="30"/>' + '<img class="active-' + data[0].frozenyogurt + ' loc-frozenyogurt" src="' + imageLibrary + '/loc-frozenyogurt.png" width="30"/>' + '<img class="active-' + data[0].bakery + ' loc-bakery" src="' + imageLibrary + '/loc-bakery.png" width="30"/>' + '<img class="active-' + data[0].curbside + ' loc-curbside" src="' + imageLibrary + '/loc-curbside.png" width="30"/>' + '<img class="active-' + data[0].icecream + ' loc-icecream" src="' + imageLibrary + '/loc-icecream.png" width="30"/>' + '<img class="active-' + data[0].savory + ' loc-savory" src="' + imageLibrary + '/loc-savory.png" width="30"/>' + '<div class="clearfix"></div></div><div class="clearfix"></div></div><div class="clearfix"></div></li>');
+                    ' miles</small><br>'+soon_message+'<a target="_blank" class="' + hideOnline + ' online-order" href="' + data[0].online_order + '">Order Online </a> <a style="padding-left:5px;" target="_blank" class="' + hideMap + '" href="' + data[0].map + '">Get Directions</a></div><div class="clearfix"></div><div class="services">' + '<img class="active-' + data[0].wifi + ' loc-wifi" src="' + imageLibrary + '/loc-wifi.png" width="30"/>' + '<img class="active-' + data[0].coffee + ' loc-coffee" src="' + imageLibrary + '/loc-coffee.png" width="30"/>' + '<img class="active-' + data[0].cookie + ' loc-cookie" src="' + imageLibrary + '/loc-cookie.png" width="30"/>' + '<img class="active-' + data[0].frozenyogurt + ' loc-frozenyogurt" src="' + imageLibrary + '/loc-frozenyogurt.png" width="30"/>' + '<img class="active-' + data[0].bakery + ' loc-bakery" src="' + imageLibrary + '/loc-bakery.png" width="30"/>' + '<img class="active-' + data[0].curbside + ' loc-curbside" src="' + imageLibrary + '/loc-curbside.png" width="30"/>' + '<img class="active-' + data[0].icecream + ' loc-icecream" src="' + imageLibrary + '/loc-icecream.png" width="30"/>' + '<img class="active-' + data[0].savory + ' loc-savory" src="' + imageLibrary + '/loc-savory.png" width="30"/>' + '<div class="clearfix"></div></div><div class="clearfix"></div></div><div class="clearfix"></div></li>');
                 //country: "USA"
                 //id: 33
                 //lat: "40.093139"

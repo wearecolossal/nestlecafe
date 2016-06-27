@@ -97,7 +97,9 @@
                     <div class="col-md-12">
                         <div class="form-group">
                             {!! Form::label('maps_url', 'Google Map URL') !!}
-                            {!! Form::text('maps_url', $cafe->maps_url, ['class'=>'form-control']) !!}
+                            {!! Form::text('maps_url', $cafe->maps_url, ['class'=>'form-control', 'readonly' => 'readonly']) !!}
+                            <a class="edit-map-url btn btn-primary btn-xs">Edit Map Url</a>
+                            {!! Form::hidden('self_edited_map_url', $cafe->self_edited_map_url) !!}
                         </div>
                         <div class="form-group">
                             {!! Form::label('facebook_url', 'Facebook URL') !!}
@@ -229,6 +231,11 @@
     <script>
         toggleHours($('.toggle-hours a'));
         draft($('a.save-as-draft'), $('form.cafe'));
+        $('.edit-map-url').on('click',function(){
+            $('input[name="maps_url"]').removeAttr('readonly');
+            $(this).fadeOut();
+            $('input[name="self_edited_map_url"]').val(1);
+        });
         $('.cafe-services a').on('click', function () {
             var inputField = $(this).find('input');
             $(this).toggleClass('active');

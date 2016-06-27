@@ -436,6 +436,7 @@ function mapScript(filterLocation, outputLocation, markerIcon, imageLibrary) {
     }
 
     var detectSpecial = function (latitude, longitude, filter) {
+        //[Log] Lat: 37.4315734, Long:-78.65689420000001 (main.js, line 412)
         //DETECT CANADA
         if (latitude == '56.130366' && longitude == '-106.34677099999999') {
             var lat = '45.267381';
@@ -447,7 +448,19 @@ function mapScript(filterLocation, outputLocation, markerIcon, imageLibrary) {
             } else {
                 return true;
             }
-        } else {
+        } 
+        // DETECT VIRGINIA
+        else if(latitude == '37.4315734' && longitude == '-78.65689420000001'){
+            var lat = '37.074921';
+            var lng = '-76.884100';
+            if (filter == 'lat') {
+                return lat;
+            } else if (filter == 'lng') {
+                return lng;
+            } else {
+                return true;
+            }
+        }else {
             if (filter == 'lat') {
                 return latitude;
             } else if (filter == 'lng') {
@@ -587,3 +600,4 @@ function mapScript(filterLocation, outputLocation, markerIcon, imageLibrary) {
         }
     });
 }
+

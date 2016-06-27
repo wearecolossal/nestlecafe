@@ -49,13 +49,16 @@ class CafeController extends Controller
 
     public function update(Request $request, $id)
     {
+
         $cafe = $this->cafe->find($id);
         $cafe->update($request->all());
         list($lat, $long) = $this->geolocate($cafe->address, $cafe->city, $cafe->state, $cafe->zip_code, $cafe->country);
         if ($lat != null || $long != null) {
             $cafe->lat = $lat;
             $cafe->lng = $long;
-            $cafe->maps_url = 'http://maps.google.com/?ll=' . $lat . ',' . $long;
+            if($cafe->self_edited_map_url != 1) {
+                $cafe->maps_url = 'https://www.google.com/maps/dir/\'\'/'.urlencode($cafe->name).'/@' . $lat . ',' . $long;
+            }
         }
         if ($request->hasFile('image')) {
             // check if previous photo exists and delete it.
@@ -123,7 +126,9 @@ class CafeController extends Controller
         list($lat, $long) = $this->geolocate($cafe->address, $cafe->city, $cafe->state, $cafe->zip_code, $cafe->country);
         $cafe->lat = $lat;
         $cafe->lng = $long;
-        $cafe->maps_url = 'http://maps.google.com/?ll=' . $lat . ',' . $long;
+        if(!$request['maps_url']) {
+            $cafe->maps_url = 'https://www.google.com/maps/dir/\'\'/'.urlencode($cafe->name).'/@' . $lat . ',' . $long;
+        }
         if ($request->hasFile('image')) {
             // check if previous photo exists and delete it.
             $cafe->deletePhoto($cafe->image);
