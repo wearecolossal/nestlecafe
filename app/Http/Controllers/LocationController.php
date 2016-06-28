@@ -160,4 +160,12 @@ class LocationController extends Controller
         return $filter;
     }
 
+    public function searchByCountry(Request $request) {
+        $country = $request['country'];
+        if($request['online-order'] == 1) {
+            return $this->cafe->where('country', $country)->where('online_order', '!=', '')->groupby('state')->orderby('state', 'asc')->lists('state');
+        }
+        return $this->cafe->where('country', $country)->groupby('state')->orderby('state', 'asc')->lists('state');
+    }
+
 }

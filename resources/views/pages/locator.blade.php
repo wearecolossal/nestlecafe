@@ -43,7 +43,27 @@
 
             </ul>
             <div class="clearfix"></div>
+                <!--<div class="fallback-form">
+                    <h1>Not Finding Your Caf&eacute;?</h1>
+                    <div class="form-filter">
+                        <div class="form-group">
+                            <label for="">Which Country?</label><br>
+                            {!! Form::open(['class' => 'search-country']) !!}
+                                {!! Form::hidden('online-order', 0) !!}
+                                <select name="country" id="country">
+                                <option value="">Please Choose</option>
+                                    @foreach(\App\Cafe::whereNotNull('country')->groupby('country')->orderby('country', 'asc')->get() as $country)
+                                    <option value="{{ $country->country }}">{{ $country->country }}</option>
+                                    @endforeach
+                                </select>
+                            {!! Form::close() !!}
+                        </div>
+                    </div>
+                    <div class="form-results"></div>
+                </div>-->
+                <div class="clearfix"></div>
         </div>
+        
     </div>
 
     <div class="clearfix"></div>
@@ -55,6 +75,19 @@
     {{--<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script>--}}
     <script>
         $(document).ready(function () {
+            $('select#country').on('change', function() {
+                var country = $(this).val();
+                var form = $(this).parent();
+                var data = form.serialize();
+                $.ajax({
+                    method: 'POST',
+                    url: "{{ URL::to('location-search') }}",
+                    data: data,
+                    success:function(response){
+                        console.log(response);
+                    }
+                });
+            });
             $('input#address').on('focus', function(){
                 $(document).keypress(function(e) {
                     if(e.which == 13) {

@@ -47,6 +47,7 @@ Route::get('dadsgiveaway', function(){
 });
 Route::get('cafe-club', 'PagesController@cafeclub');
 Route::get('output-locations', 'LocationController@ajax');
+Route::post('location-search', 'LocationController@searchByCountry');
 Route::get('filter-locations/{lat1}/{lng1}/{miles?}', 'LocationController@filter');
 Route::get('filter-order-locations/{lat1}/{lng1}/{miles?}', 'LocationController@orderFilter');
 
@@ -78,7 +79,46 @@ Route::group(['middleware' => 'web'], function(){
     });
 });
 
-
+//DEV FIXES
+Route::get('fix-cafes', function(){
+    $cafes = \App\Cafe::all();
+    \App\Cafe::where('country', 'like', '%TX%')->update(['country' => 'United States']);
+    \App\Cafe::where('country', 'like', '%FL%')->update(['country' => 'United States']);
+    \App\Cafe::where('country', 'like', '%USA%')->update(['country' => 'United States of America']);
+    \App\Cafe::where('country', 'like', '%Canada%')->update(['country' => 'Canada']);
+    \App\Cafe::where('country', 'like', '%CANADA%')->update(['country' => 'Canada']);
+    \App\Cafe::where('country', 'like', '%United States%')->update(['country' => 'United States of America']);
+    \App\Cafe::where('country', 'like', '')->update(['country' => 'United States of America']);
+    \App\Cafe::where('state', 'TX')->update(['state' => 'Texas']);
+    \App\Cafe::where('state', 'CA')->update(['state' => 'California']);
+    \App\Cafe::where('state', 'FL')->update(['state' => 'Florida']);
+    \App\Cafe::where('state', 'MI')->update(['state' => 'Michigan']);
+    \App\Cafe::where('state', 'NY')->update(['state' => 'New York']);
+    \App\Cafe::where('state', 'IL')->update(['state' => 'Illinois']);
+    \App\Cafe::where('state', 'AK')->update(['state' => 'Alaska']);
+    \App\Cafe::where('state', 'MD')->update(['state' => 'Maryland']);
+    \App\Cafe::where('state', 'VA')->update(['state' => 'Virginia']);
+    \App\Cafe::where('state', 'NC')->update(['state' => 'North Carolina']);
+    \App\Cafe::where('state', 'PA')->update(['state' => 'Pennsylvania']);
+    \App\Cafe::where('state', 'IN')->update(['state' => 'Indiana']);
+    \App\Cafe::where('state', 'SC')->update(['state' => 'South Carolina']);
+    \App\Cafe::where('state', 'AZ')->update(['state' => 'Arizona']);
+    \App\Cafe::where('state', 'CO')->update(['state' => 'Colarado']);
+    \App\Cafe::where('state', 'LA')->update(['state' => 'Louisiana']);
+    \App\Cafe::where('state', 'NV')->update(['state' => 'Nevada']);
+    \App\Cafe::where('state', 'KS')->update(['state' => 'Kansas']);
+    \App\Cafe::where('state', 'NM')->update(['state' => 'New Mexico']);
+    \App\Cafe::where('state', 'AL')->update(['state' => 'Alabama']);
+    \App\Cafe::where('state', 'OK')->update(['state' => 'Oklahoma']);
+    \App\Cafe::where('state', 'WA')->update(['state' => 'Washington']);
+    \App\Cafe::where('state', 'AR')->update(['state' => 'Arkansas']);
+    \App\Cafe::where('state', 'MO')->update(['state' => 'Missouri']);
+    \App\Cafe::where('state', 'MN')->update(['state' => 'Minnesota']);
+    \App\Cafe::where('state', 'ON')->update(['state' => 'Ontario']);
+    \App\Cafe::where('state', 'like', '%GA%')->update(['state' => 'Georgia']);
+    \App\Cafe::whereNull('country')->update(['country' => 'United States of America']);
+    return 'done';
+});
 //SANDBOX
 Route::get('view-mailer', function(){ return view('emails.contact'); });
 //Snippets

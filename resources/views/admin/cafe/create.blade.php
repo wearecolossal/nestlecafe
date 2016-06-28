@@ -185,7 +185,7 @@
                         {!! Form::label('country', 'Country') !!}
                         <select name="country" id="country" class="form-control">
                             <option value="">Choose Country</option>
-                            <option data-state="usa" value="United States">United States</option>
+                            <option data-state="usa" value="United States of America">United States of America</option>
                             <option data-state="canada" value="Canada">Canada</option>
                             <option data-state="" value="Bahrain">Bahrain</option>
                             <option data-state="" value="Iraq">Iraq</option>

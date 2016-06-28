@@ -22,6 +22,16 @@
 @import "blog";
 @import "instafeed";
 @import "locator";
+.fallback-form {
+  h1 {
+    color: $yellow;
+    font-family: $gothamBook;
+  }
+  label {
+    color: $yellow;
+    font-family: $gothamBook;
+  }
+}
 .allergy-info {
   display:block;
   background:transparent;

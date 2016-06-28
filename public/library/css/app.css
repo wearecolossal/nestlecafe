@@ -1977,6 +1977,13 @@ ul.map-list .list-container {
       .map-filter-bar .filter-choices a:last-child {
         border-right: none; }
 
+.fallback-form h1 {
+  color: #ffd41f;
+  font-family: "Gotham Rounded Book"; }
+.fallback-form label {
+  color: #ffd41f;
+  font-family: "Gotham Rounded Book"; }
+
 .allergy-info {
   display: block;
   background: transparent;
