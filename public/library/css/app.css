@@ -1725,7 +1725,7 @@ aside#secondary {
         padding-left: 10px;
         margin-right: 3px; }
 
-.output-list {
+.output-list, .store-filter-results {
   width: 100%;
   float: none;
   display: block;
@@ -1733,16 +1733,16 @@ aside#secondary {
   background: rgba(0, 0, 0, 0.4);
   padding: 10px;
   box-sizing: border-box; }
-  .output-list.online-order li.cafe-list-item {
+  .output-list.online-order li.cafe-list-item, .store-filter-results.online-order li.cafe-list-item {
     position: relative;
     width: 100% !important;
     min-height: inherit !important;
     padding-bottom: 5px; }
-    .output-list.online-order li.cafe-list-item:first-child {
+    .output-list.online-order li.cafe-list-item:first-child, .store-filter-results.online-order li.cafe-list-item:first-child {
       background-color: #2E1A11;
       color: #ffd41f;
       padding: 0 0 10px 0; }
-      .output-list.online-order li.cafe-list-item:first-child .cafe-info span.name:before {
+      .output-list.online-order li.cafe-list-item:first-child .cafe-info span.name:before, .store-filter-results.online-order li.cafe-list-item:first-child .cafe-info span.name:before {
         content: "Your Closest Cafe";
         position: absolute;
         top: 0px;
@@ -1755,31 +1755,31 @@ aside#secondary {
         padding: 5px 10px;
         z-index: 9999;
         font-family: "Helvetica Rounded"; }
-    .output-list.online-order li.cafe-list-item .cafe-info {
+    .output-list.online-order li.cafe-list-item .cafe-info, .store-filter-results.online-order li.cafe-list-item .cafe-info {
       max-width: 600px !important;
       width: 100% !important; }
-    .output-list.online-order li.cafe-list-item .services {
+    .output-list.online-order li.cafe-list-item .services, .store-filter-results.online-order li.cafe-list-item .services {
       display: none; }
-  .output-list .image-container {
+  .output-list .image-container, .store-filter-results .image-container {
     width: 33%;
     position: relative;
     display: block;
     max-width: 200px;
     height: 150px; }
-  .output-list .cafe-info {
+  .output-list .cafe-info, .store-filter-results .cafe-info {
     float: left !important;
     box-sizing: border-box;
     padding: 20px; }
-    .output-list .cafe-info a {
+    .output-list .cafe-info a, .store-filter-results .cafe-info a {
       color: #b91322;
       font-size: 14px;
       text-decoration: none; }
-      .output-list .cafe-info a.hide {
+      .output-list .cafe-info a.hide, .store-filter-results .cafe-info a.hide {
         display: none; }
-  .output-list a.facebook {
+  .output-list a.facebook, .store-filter-results a.facebook {
     float: right;
     width: 25px; }
-  .output-list .online-order {
+  .output-list .online-order, .store-filter-results .online-order {
     background: #8b0e1a;
     color: #fff !important;
     text-decoration: none;
@@ -1787,22 +1787,22 @@ aside#secondary {
     font-family: "Helvetica Rounded";
     padding: 5px;
     margin: 0 0 0 0; }
-    .output-list .online-order.hide {
+    .output-list .online-order.hide, .store-filter-results .online-order.hide {
       display: none; }
-  .output-list .services {
+  .output-list .services, .store-filter-results .services {
     height: 50px;
     width: 100%;
     float: none;
     box-sizing: border-box;
     padding: 0px 10px; }
-    .output-list .services a.hide {
+    .output-list .services a.hide, .store-filter-results .services a.hide {
       display: none; }
-  .output-list ul {
+  .output-list ul, .store-filter-results ul {
     margin: 0;
     padding: 0;
     list-style-type: none;
     width: 100%; }
-  .output-list li {
+  .output-list li, .store-filter-results li {
     height: inherit;
     width: 50%;
     float: left;
@@ -1812,7 +1812,7 @@ aside#secondary {
     justify-content: flex-start;
     background: url(../img/repeat-dotted-yellow.png) bottom center repeat-x;
     margin-bottom: 10px; }
-    .output-list li.no-result {
+    .output-list li.no-result, .store-filter-results li.no-result {
       width: 100%;
       background: #5d0a11;
       border: 1px solid #b91322;
@@ -1823,30 +1823,30 @@ aside#secondary {
       padding: 20px;
       height: inherit  !important;
       box-sizing: border-box; }
-  .output-list .services {
+  .output-list .services, .store-filter-results .services {
     width: 100%;
     padding-top: 10px;
     text-align: left; }
-    .output-list .services img {
+    .output-list .services img, .store-filter-results .services img {
       margin-right: 5px;
       -webkit-transition: all 0.5s ease-in-out;
       transition: all 0.5s ease-in-out; }
-      .output-list .services img.active-0 {
+      .output-list .services img.active-0, .store-filter-results .services img.active-0 {
         display: none; }
-      .output-list .services img.filter-out {
+      .output-list .services img.filter-out, .store-filter-results .services img.filter-out {
         opacity: 0; }
-      .output-list .services img.remove {
+      .output-list .services img.remove, .store-filter-results .services img.remove {
         display: none; }
 
-ul.map-list .list-container {
+ul.map-list .list-container, ul.map-store-filter-results .list-container {
   width: 100%; }
-  ul.map-list .list-container .image-container {
+  ul.map-list .list-container .image-container, ul.map-store-filter-results .list-container .image-container {
     background-position: top left !important;
     background-size: cover !important;
     width: 200px;
     height: 150px;
     float: left; }
-  ul.map-list .list-container .cafe-info {
+  ul.map-list .list-container .cafe-info, ul.map-store-filter-results .list-container .cafe-info {
     width: 240px; }
 
 @media (max-width: 990px) {
@@ -1977,12 +1977,21 @@ ul.map-list .list-container {
       .map-filter-bar .filter-choices a:last-child {
         border-right: none; }
 
+.form-filter .form-group {
+  width: 33%;
+  float: left;
+  padding: 20px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
 .fallback-form h1 {
   color: #ffd41f;
   font-family: "Gotham Rounded Book"; }
 .fallback-form label {
   color: #ffd41f;
-  font-family: "Gotham Rounded Book"; }
+  font-family: "Gotham Rounded Book";
+  padding: 0 0 10px 0px; }
 
 .allergy-info {
   display: block;

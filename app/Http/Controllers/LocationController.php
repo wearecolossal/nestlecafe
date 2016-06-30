@@ -63,10 +63,10 @@ class LocationController extends Controller
         return $this->filterQuery($lat1, $lng1, $lists, $miles);
     }
 
-    public function orderFilter($lat1, $lng1)
+    public function orderFilter($lat1, $lng1, $miles = 100)
     {
         $lists = $this->cafe->where('online_order', '!=', '')->where('draft', 0)->where('archive', 0)->orderby('lat', 'asc')->get();
-        return $this->filterQuery($lat1, $lng1, $lists);
+        return $this->filterQuery($lat1, $lng1, $lists, $miles);
     }
 
 
@@ -163,9 +163,32 @@ class LocationController extends Controller
     public function searchByCountry(Request $request) {
         $country = $request['country'];
         if($request['online-order'] == 1) {
-            return $this->cafe->where('country', $country)->where('online_order', '!=', '')->groupby('state')->orderby('state', 'asc')->lists('state');
+            return $this->cafe->where('archive', 0)->where('draft', 0)->where('country', $country)->where('online_order', '!=', '')->groupby('state')->orderby('state', 'asc')->lists('state');
         }
-        return $this->cafe->where('country', $country)->groupby('state')->orderby('state', 'asc')->lists('state');
+        return $this->cafe->where('archive', 0)->where('draft', 0)->where('country', $country)->groupby('state')->orderby('state', 'asc')->lists('state');
     }
 
+    public function searchByState(Request $request) {
+        $state = $request['state'];
+        if($request['online-order'] == 1) {
+            return $this->cafe->where('archive', 0)->where('draft', 0)->where('state', $state)->where('online_order', '!=', '')->groupby('city')->orderby('city', 'asc')->lists('city');
+        }
+        return $this->cafe->where('archive', 0)->where('draft', 0)->where('state', $state)->groupby('city')->orderby('city', 'asc')->lists('city');
+    }
+
+    public function listStoresByCountry(Request $request) {
+        $country = $request['country'];
+        if($request['online-order'] == 1) {
+            return $this->cafe->where('archive', 0)->where('draft', 0)->where('country', $country)->where('online_order', '!=', '')->orderby('store_number', 'asc')->get();
+        }
+        return $this->cafe->where('archive', 0)->where('draft', 0)->where('country', $country)->orderby('store_number', 'asc')->get();
+    }
+
+    public function listStoresByCity(Request $request) {
+        $city = $request['city'];
+        if($request['online-order'] == 1) {
+            return $this->cafe->where('archive', 0)->where('draft', 0)->where('city', $city)->where('online_order', '!=', '')->orderby('store_number', 'asc')->get();
+        }
+        return $this->cafe->where('archive', 0)->where('draft', 0)->where('city', $city)->orderby('store_number', 'asc')->get();
+    }
 }

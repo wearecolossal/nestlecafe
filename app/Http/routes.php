@@ -48,6 +48,9 @@ Route::get('dadsgiveaway', function(){
 Route::get('cafe-club', 'PagesController@cafeclub');
 Route::get('output-locations', 'LocationController@ajax');
 Route::post('location-search', 'LocationController@searchByCountry');
+Route::post('location-search-state', 'LocationController@searchByState');
+Route::post('location-search-by-country', 'LocationController@listStoresByCountry');
+Route::post('location-search-by-city', 'LocationController@listStoresByCity');
 Route::get('filter-locations/{lat1}/{lng1}/{miles?}', 'LocationController@filter');
 Route::get('filter-order-locations/{lat1}/{lng1}/{miles?}', 'LocationController@orderFilter');
 

@@ -388,7 +388,7 @@ function mapScript(filterLocation, outputLocation, markerIcon, imageLibrary) {
         if(detectSpecial(position.coords.latitude, position.coords.longitude, null)) {
             var miles = 300;
         } else {
-            var miles = 100;
+            var miles = 200;
         }
         filterStores(geoLat, geoLng, miles);
         setInitialMap(geoLat, geoLng, 9);

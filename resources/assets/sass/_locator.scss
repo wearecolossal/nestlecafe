@@ -47,7 +47,7 @@
     width: 20%;
   }
 }
-.output-list {
+.output-list, .store-filter-results {
   width:100%;
   float: none;
   display: block;
@@ -188,7 +188,7 @@
   }
 }
 
-ul.map-list {
+ul.map-list, ul.map-store-filter-results {
   .list-container {
     width: 100%;
     .image-container {

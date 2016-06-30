@@ -43,10 +43,10 @@
 
             </ul>
             <div class="clearfix"></div>
-                <!--<div class="fallback-form">
+                <div class="fallback-form" style="display:none;">
                     <h1>Not Finding Your Caf&eacute;?</h1>
                     <div class="form-filter">
-                        <div class="form-group">
+                        <div class="form-group country">
                             <label for="">Which Country?</label><br>
                             {!! Form::open(['class' => 'search-country']) !!}
                                 {!! Form::hidden('online-order', 0) !!}
@@ -58,9 +58,34 @@
                                 </select>
                             {!! Form::close() !!}
                         </div>
+                        <div class="form-group state hidden">
+                            <label for="">Which State/Province?</label><br>
+                            {!! Form::open(['class' => 'search-state']) !!}
+                                {!! Form::hidden('online-order', 0) !!}
+                                <select name="state" id="state">
+                                <option value="">Please Choose</option>
+                                    
+                                </select>
+                            {!! Form::close() !!}
+                        </div>
+                        <div class="form-group city hidden">
+                            <label for="">Which City?</label><br>
+                            {!! Form::open(['class' => 'search-city']) !!}
+                                {!! Form::hidden('online-order', 0) !!}
+                                <select name="city" id="city">
+                                <option value="">Please Choose</option>
+                                    
+                                </select>
+                            {!! Form::close() !!}
+                        </div>
+                        <div class="clearfix"></div>
                     </div>
-                    <div class="form-results"></div>
-                </div>-->
+                    <div class="store-filter-results">
+                        <ul class="map-store-filter-results" style="color:#fff;"></ul>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
                 <div class="clearfix"></div>
         </div>
         
@@ -75,18 +100,136 @@
     {{--<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script>--}}
     <script>
         $(document).ready(function () {
+            $('select#city').on('change', function() {
+                 var city = $(this).val();
+                 var form = $(this).parent();
+                 var data = form.serialize();
+                 $('.map-store-filter-results').html('');
+                 $.ajax({
+                        method: 'POST',
+                        url: "{{ URL::to('location-search-by-city') }}",
+                        data: data,
+                        success:function(response){
+                            var stores = response;
+                            $('.map-store-filter-results').html();
+                            var storeLength = stores.length;
+                            $('.map-store-filter-results').html('');
+                            //console.log(stores[0]['name'].length);
+                            for(var i = 0; i <= storeLength - 1; i++) {
+
+                                var onlineLength = stores[i]['online_order'].length;
+                                var hideOnline = " ";
+                                if (onlineLength < 1) {
+                                    hideOnline = 'hide';
+                                }
+                                var mapLength = stores[i]['maps_url'].length;
+                                var hideMap = " ";
+                                if (mapLength < 1) {
+                                    hideMap = 'hide';
+                                }
+                                var facebookLength = stores[i]['facebook_url'].length;
+                                var hideFacebook = " ";
+                                if (facebookLength < 1) {
+                                    hideFacebook = 'hide';
+                                }
+                                var comingSoon = stores[i]['coming_soon'];
+                                var soon_message = '';
+                                if(comingSoon === 1) {
+                                    soon_message = '<span style="background:#FAC216;color:#8B680E;padding:5px;font-size:10px;font-weight:bold;">COMING SOON</span><br/>';
+                                }
+                                $('.map-store-filter-results').append('' +
+                    '<li class="cafe-list-item"><div class="list-container"><div class="image-container" style="background:url({{ URL::asset('uploads/store_images') }}/' + stores[i]['image'] + ')"></div><div class="cafe-info"><span class="name">' + stores[i]['name'] + '<a target="_blank" href="' + stores[i]['facebook_url'] + '" class="' + hideFacebook + '"><img src="' + imageLibrary + '/ico-facebook.png" width="15" style="margin-top:-3px;"/></a></span><br>' + '<small>' + stores[i]['address'] + '<br/>'+stores[i]['city']+', '+stores[i]['state']+' '+stores[i]['country']+'</small>' +
+                    '<br/><br>'+soon_message+'<a target="_blank" class="' + hideOnline + ' online-order" href="' + stores[i]['online_order'] + '">Order Online </a><a style="padding-left:5px;" target="_blank" class="' + hideMap + '" href="' + stores[i]['maps_url'] + '">Get Directions</a></div><div class="clearfix"></div><div class="services">' + '<img class="active-' + stores[i]['wifi'] + ' loc-wifi" src="' + imageLibrary + '/loc-wifi.png" width="30"/>' + '<img class="active-' + stores[i]['coffee'] + ' loc-coffee" src="' + imageLibrary + '/loc-coffee.png" width="30"/>' + '<img class="active-' + stores[i]['cookie'] + ' loc-cookie" src="' + imageLibrary + '/loc-cookie.png" width="30"/>' + '<img class="active-' + stores[i]['frozenyogurt'] + ' loc-frozenyogurt" src="' + imageLibrary + '/loc-frozenyogurt.png" width="30"/>' + '<img class="active-' + stores[i]['bakery'] + ' loc-bakery" src="' + imageLibrary + '/loc-bakery.png" width="30"/>' + '<img class="active-' + stores[i]['curbside'] + ' loc-curbside" src="' + imageLibrary + '/loc-curbside.png" width="30"/>' + '<img class="active-' + stores[i]['icecream'] + ' loc-icecream" src="' + imageLibrary + '/loc-icecream.png" width="30"/>' + '<img class="active-' + stores[i]['savory'] + ' loc-savory" src="' + imageLibrary + '/loc-savory.png" width="30"/>' + '<div class="clearfix"></div></div><div class="clearfix"></div></div><div class="clearfix"></div></li>');
+                                
+                            }
+                            }
+                    });   
+            });
+            $('select#state').on('change', function(){
+                var state = $(this).val();
+                var form = $(this).parent();
+                var data = form.serialize();
+                $('.form-group.city').removeClass('hidden');
+                $('.map-store-filter-results').html('');
+                $.ajax({
+                        method: 'POST',
+                        url: "{{ URL::to('location-search-state') }}",
+                        data: data,
+                        success:function(response){
+                            //console.log(response);
+                            var states = response;
+                            $('select#city').html('<option value="">Please Choose</option>');
+                            $.each(states, function(index, value) {
+                                $('select#city').append('<option value="'+value+'">'+value+'</option>');
+                            });
+                        }
+                    });
+            });
             $('select#country').on('change', function() {
                 var country = $(this).val();
                 var form = $(this).parent();
                 var data = form.serialize();
-                $.ajax({
-                    method: 'POST',
-                    url: "{{ URL::to('location-search') }}",
-                    data: data,
-                    success:function(response){
-                        console.log(response);
-                    }
-                });
+
+                if((country == 'United States of America') || (country == 'Canada')) {
+                    $('.form-group.state').removeClass('hidden');
+                    $('.form-group.city').addClass('hidden');
+                    $('.map-store-filter-results').html('');
+                    $.ajax({
+                        method: 'POST',
+                        url: "{{ URL::to('location-search') }}",
+                        data: data,
+                        success:function(response){
+                            //console.log(response);
+                            var states = response;
+                            $('select#state').html('<option value="">Please Choose</option>');
+                            $.each(states, function(index, value) {
+                                $('select#state').append('<option value="'+value+'">'+value+'</option>');
+                            });
+                        }
+                    });
+                } else {
+                    $('.form-group.state').addClass('hidden');
+                    $('.form-group.city').addClass('hidden');
+                    $.ajax({
+                        method: 'POST',
+                        url: "{{ URL::to('location-search-by-country') }}",
+                        data: data,
+                        success:function(response){
+                            var stores = response;
+                            $('.map-store-filter-results').html();
+                            var storeLength = stores.length;
+                            $('.map-store-filter-results').html('');
+                            //console.log(stores[0]['name'].length);
+                            for(var i = 0; i <= storeLength - 1; i++) {
+
+                                var onlineLength = stores[i]['online_order'].length;
+                                var hideOnline = " ";
+                                if (onlineLength < 1) {
+                                    hideOnline = 'hide';
+                                }
+                                var mapLength = stores[i]['maps_url'].length;
+                                var hideMap = " ";
+                                if (mapLength < 1) {
+                                    hideMap = 'hide';
+                                }
+                                var facebookLength = stores[i]['facebook_url'].length;
+                                var hideFacebook = " ";
+                                if (facebookLength < 1) {
+                                    hideFacebook = 'hide';
+                                }
+                                var comingSoon = stores[i]['coming_soon'];
+                                var soon_message = '';
+                                if(comingSoon === 1) {
+                                    soon_message = '<span style="background:#FAC216;color:#8B680E;padding:5px;font-size:10px;font-weight:bold;">COMING SOON</span><br/>';
+                                }
+                                $('.map-store-filter-results').append('' +
+                    '<li class="cafe-list-item"><div class="list-container"><div class="image-container" style="background:url({{ URL::asset('uploads/store_images') }}/' + stores[i]['image'] + ')"></div><div class="cafe-info"><span class="name">' + stores[i]['name'] + '<a target="_blank" href="' + stores[i]['facebook_url'] + '" class="' + hideFacebook + '"><img src="' + imageLibrary + '/ico-facebook.png" width="15" style="margin-top:-3px;"/></a></span><br>' + '<small>' + stores[i]['address'] + '</small>' +
+                    '<br/><br>'+soon_message+'<a target="_blank" class="' + hideOnline + ' online-order" href="' + stores[i]['online_order'] + '">Order Online </a><a style="padding-left:5px;" target="_blank" class="' + hideMap + '" href="' + stores[i]['maps_url'] + '">Get Directions</a></div><div class="clearfix"></div><div class="services">' + '<img class="active-' + stores[i]['wifi'] + ' loc-wifi" src="' + imageLibrary + '/loc-wifi.png" width="30"/>' + '<img class="active-' + stores[i]['coffee'] + ' loc-coffee" src="' + imageLibrary + '/loc-coffee.png" width="30"/>' + '<img class="active-' + stores[i]['cookie'] + ' loc-cookie" src="' + imageLibrary + '/loc-cookie.png" width="30"/>' + '<img class="active-' + stores[i]['frozenyogurt'] + ' loc-frozenyogurt" src="' + imageLibrary + '/loc-frozenyogurt.png" width="30"/>' + '<img class="active-' + stores[i]['bakery'] + ' loc-bakery" src="' + imageLibrary + '/loc-bakery.png" width="30"/>' + '<img class="active-' + stores[i]['curbside'] + ' loc-curbside" src="' + imageLibrary + '/loc-curbside.png" width="30"/>' + '<img class="active-' + stores[i]['icecream'] + ' loc-icecream" src="' + imageLibrary + '/loc-icecream.png" width="30"/>' + '<img class="active-' + stores[i]['savory'] + ' loc-savory" src="' + imageLibrary + '/loc-savory.png" width="30"/>' + '<div class="clearfix"></div></div><div class="clearfix"></div></div><div class="clearfix"></div></li>');
+                                
+                            }
+                            }
+                    });
+                }
             });
             $('input#address').on('focus', function(){
                 $(document).keypress(function(e) {
