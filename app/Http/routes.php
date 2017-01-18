@@ -60,6 +60,7 @@ Route::group(['middleware' => 'web'], function(){
     Route::post('login', 'LoginController@login');
     Route::get('logout', function(){ Auth::logout(); return redirect('/'); });
     Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function(){
+        Route::resource('promotions', 'Admin\PromotionController');
         Route::resource('callouts', 'Admin\CalloutController');
         Route::get('blog', 'Admin\PagesController@blog');
         Route::get('admins', 'Admin\PagesController@admins');
