@@ -36,6 +36,7 @@ Route::get('franchise', 'PagesController@franchise');
 Route::get('order-online', 'PagesController@order');
 Route::get('online-order', function(){ return redirect('order-online'); });
 Route::get('about', 'PagesController@about');
+Route::get('promotions', 'PagesController@promotion');
 Route::get('contact', 'PagesController@contact');
 Route::post('contact', 'EmailController@sendContact');
 Route::get('contact/success', function(){ return view('pages.contact-thank'); });

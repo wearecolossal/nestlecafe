@@ -22,7 +22,6 @@ class Promotion extends Model
 
         return false;
     }
-
     public function file()
     {
         return URL::asset('uploads/promotion/'.$this->file);
