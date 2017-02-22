@@ -2077,7 +2077,11 @@ ul.map-list .list-container, ul.map-store-filter-results .list-container {
     width: 100%;
     max-width: intrinsic;
     max-width: max-content;
-    border: 5px solid #fff; }
+    border: 5px solid #fff;
+    transition: all .3s ease-in; }
+    .fundraise-block img:hover {
+      border: 5px solid #ffd41f;
+      transform: scale(1.02, 1.02); }
 
 .popover {
   position: fixed;
