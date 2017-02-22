@@ -1,4 +1,4 @@
-<div class="banner @yield('banner')" style="background: url(@yield('background'))">
+<div class="banner @yield('banner')" style="background: url(@yield('background'));@yield('banner_style')">
     @if(URL::current() == URL::to('/'))
         <ul class="slider">
             @if(isset($slides))

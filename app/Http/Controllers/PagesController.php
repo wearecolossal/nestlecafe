@@ -160,4 +160,10 @@ class PagesController extends Controller
             return redirect('/');
         }
     }
+
+    public function funraise()
+    {
+        $metaTitle = 'Funraise';
+        return view('pages.fundraise', compact('metaTitle'));
+    }
 }

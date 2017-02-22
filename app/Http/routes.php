@@ -47,6 +47,8 @@ Route::get('dadsgiveaway', function(){
    return redirect('uploads/documents/Nestle-Toll-House-Cafe-by-Chip-Dad-Giveaway-Official-Rules.pdf');
 });
 Route::get('cafe-club', 'PagesController@cafeclub');
+Route::get('fundraise', function(){return redirect('funraise');});
+Route::get('funraise', 'PagesController@funraise');
 Route::get('output-locations', 'LocationController@ajax');
 Route::post('location-search', 'LocationController@searchByCountry');
 Route::post('location-search-state', 'LocationController@searchByState');
