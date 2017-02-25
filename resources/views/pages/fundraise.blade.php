@@ -32,7 +32,7 @@
                     <div class="fundraise-block">
                         <h3>COOKIE COUPON BOOKS</h3>
                         <a style="cursor:pointer;">
-                            <img src="{{ URL::asset('library/img/fundraise-001.png') }}" alt="">
+                            <img src="{{ URL::asset('library/img/fundraise-discount.png') }}" alt="">
                             <div class="data-text hidden">
                                 <p>The Nestl&eacute;&reg; Toll House&reg; Caf&eacute; by Chip&reg; Discount Coupon Book is a great way to fundraise by selling coupons for our great-tasting products. You will receive the coupon books at no cost to you and your organization gets to keep all the sales! The Discount Coupon Book offers include:</p>
                                 <ul>
@@ -53,7 +53,7 @@
                     <div class="fundraise-block">
                         <h3>CHIP IN NIGHT</h3>
                         <a style="cursor:pointer">
-                            <img src="{{ URL::asset('library/img/fundraise-001.png') }}" alt="">
+                            <img src="{{ URL::asset('library/img/fundraise-chip-in.png') }}" alt="">
                             <div class="data-text hidden">
                                 <p>A Chip In Night is a fun, easy, and tasty way for your school or organization to raise some dough. Get the word out and invite everyone you know to enjoy some sweet treats at your local Nestl&eacute;&reg; Toll House&reg; Caf&eacute; by Chip&reg; on a designated night. At the end of the night, we’ll give your school or organization 20% of all ticketed sales redeemed by your guests. Sounds like a win-win!</p>
                             </div>
@@ -63,7 +63,7 @@
                     <div class="fundraise-block">
                         <h3>COOKIE DOUGH PROGRAM</h3>
                         <a style="cursor:pointer">
-                            <img src="{{ URL::asset('library/img/fundraise-001.png') }}" alt="">
+                            <img src="{{ URL::asset('library/img/fundraise-cookie-dough.png') }}" alt="">
 
                             <div class="data-text hidden">
                                 <p>
