@@ -482,7 +482,7 @@ function mapScript(filterLocation, outputLocation, markerIcon, imageLibrary) {
         $('.map-list').hide();
         $.getJSON(filterLocation + lat + "/" + lng + '/' + miles, function (json1) {
             $.each(json1, function (key, data) {
-
+                console.log(data);
                 var onlineLength = data[0].online_order.length;
                 var hideOnline = " ";
                 if (onlineLength < 1) {
