@@ -99,6 +99,16 @@ class LocationController extends Controller
             $image = URL::asset('uploads/store_images/'.$location->image);
         }
         $array = array();
+
+        $hours = '
+        '.($location->monday_open ? '<strong>Mon</strong> '.$location->monday_start.'-'.$location->monday_end.'<br/>' : null).'
+        '.($location->tuesday_open ? '<strong>Tue</strong> '.$location->tuesday_start.'-'.$location->tuesday_end.'<br/>' : null).'
+        '.($location->wednesday_open ? '<strong>Wed</strong> '.$location->wednesday_start.'-'.$location->wednesday_end.'<br/>' : null).'
+        '.($location->thursday_open ? '<strong>Thu</strong> '.$location->thursday_start.'-'.$location->thursday_end.'<br/>' : null).'
+        '.($location->friday_open ? '<strong>Fri</strong> '.$location->friday_start.'-'.$location->friday_end.'<br/>' : null).'
+        '.($location->saturday_open ? '<strong>Sat</strong> '.$location->saturday_start.'-'.$location->saturday_end.'<br/>' : null).'
+        '.($location->sunday_open ? '<strong>Sun</strong> '.$location->sunday_start.'-'.$location->sunday_end.'<br/>' : null).'
+        ';
         if ($miles <= $limit) {
             array_push($array, [
                 'image' => $image,
@@ -122,7 +132,8 @@ class LocationController extends Controller
                 'map' => $location->maps_url,
                 'facebook' => $location->facebook_url,
                 'online_order' => $location->online_order,
-                'coming_soon' => $location->coming_soon
+                'coming_soon' => $location->coming_soon,
+                'hours' => strlen($hours) > 0 ? '<strong>Hours</strong><br/>'.$hours : null
             ]);
             return $array;
         }
