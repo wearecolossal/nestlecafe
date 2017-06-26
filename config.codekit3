@@ -7,7 +7,7 @@
 		"uuidString": "A15E3312-2BBD-4597-A7F4-567F668D3529"
 		}
 	],
-"creatorBuild": "25504",
+"creatorBuild": "25568",
 "files": {
 	"\/.env": {
 		"ft": 8192,
@@ -12369,6 +12369,30 @@
 		"oF": 0,
 		"opt": 0
 		},
+	"\/public\/library\/img\/fundraise-chip-in.png": {
+		"ft": 32768,
+		"iS": 622347,
+		"oA": 0,
+		"oAP": "\/public\/library\/img\/fundraise-chip-in.png",
+		"oF": 0,
+		"opt": 0
+		},
+	"\/public\/library\/img\/fundraise-cookie-dough.png": {
+		"ft": 32768,
+		"iS": 600677,
+		"oA": 0,
+		"oAP": "\/public\/library\/img\/fundraise-cookie-dough.png",
+		"oF": 0,
+		"opt": 0
+		},
+	"\/public\/library\/img\/fundraise-discount.png": {
+		"ft": 32768,
+		"iS": 515411,
+		"oA": 0,
+		"oAP": "\/public\/library\/img\/fundraise-discount.png",
+		"oF": 0,
+		"opt": 0
+		},
 	"\/public\/library\/img\/ico-arrow-down.gif": {
 		"ft": 4194304,
 		"iS": 1092,
@@ -17539,6 +17563,12 @@
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/storage\/framework\/views\/b78c5b964fd18f0b92e1fd22c619fa98d7af2df0.php",
+		"oF": 0
+		},
+	"\/storage\/framework\/views\/c06669254432ed14741699aec19c1afc4ac6e91f.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/storage\/framework\/views\/c06669254432ed14741699aec19c1afc4ac6e91f.php",
 		"oF": 0
 		},
 	"\/storage\/framework\/views\/cdee98060c5498a086610b7bd5910c7037afa2c3.php": {
@@ -51266,6 +51296,10 @@
 			"active": 0,
 			"optionString": ""
 			},
+		"no-multi-assign": {
+			"active": 0,
+			"optionString": ""
+			},
 		"no-multi-spaces": {
 			"active": 0,
 			"optionString": "{'exceptions': {'Property': true, 'BinaryExpression': false, 'VariableDeclarator': false, 'ImportDeclaration': false}}"
@@ -51594,6 +51628,10 @@
 			"active": 0,
 			"optionString": ""
 			},
+		"prefer-promise-reject-errors": {
+			"active": 0,
+			"optionString": "{'allowEmptyReject': false}"
+			},
 		"prefer-rest-params": {
 			"active": 0,
 			"optionString": ""
@@ -51687,6 +51725,10 @@
 			"optionString": ""
 			},
 		"template-curly-spacing": {
+			"active": 0,
+			"optionString": "'never'"
+			},
+		"template-tag-spacing": {
 			"active": 0,
 			"optionString": "'never'"
 			},
