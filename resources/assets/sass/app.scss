@@ -67,6 +67,69 @@
     color: rgb(190, 171, 158);
   }
 }
+
+.fundraise-block {
+  width:50%;
+  float:left;
+  padding:10px 20px;
+  box-sizing: border-box;
+  display: block;
+  img {
+    width:100%;
+    max-width:intrinsic;
+    max-width:max-content;
+    border:5px solid #fff;
+    transition: all .3s ease-in;
+    &:hover {
+      border:5px solid $yellow;
+      transform: scale(1.02, 1.02);
+    }
+  }
+}
+
+.popover {
+  position: fixed;
+  width: 100%;
+  top:-9999px;
+  left:0;
+  min-height: 100vh;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  background:rgba($brown, .8);
+  overflow: hidden;
+  transition: all .3s ease-in-out;
+  opacity: 0;
+  .popover-wrapper {
+    position: relative;
+    width:100%;
+    max-width:480px;
+    display: block;
+    margin: 0;
+    padding: 0;
+    max-height: 100vh;
+    overflow: scroll;
+  }
+  .popover-heading {
+    padding:20px 0px;
+    text-align: right;
+  }
+  .popover-text {
+    background:$yellow;
+    box-sizing: border-box;
+    padding: 20px;
+  }
+  img {
+    width:100%;
+    max-width: max-content;
+    max-width:intrinsic;
+  }
+  &.show {
+    top:0;
+    opacity: 1;
+  }
+}
 /* ==========================================================================
    Helper classes
    ========================================================================== */

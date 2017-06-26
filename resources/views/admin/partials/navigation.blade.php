@@ -15,6 +15,9 @@
         <li class="{{ isActive('admin/blog') }}">
             <a href="{{ URL::to('admin/blog') }}"><i class="fa fa-fw fa-comment"></i> Cookie Talk Blog</a>
         </li>
+        <li class="{{ isActive('admin/promotions') }}">
+            <a href="{{ URL::to('admin/promotions') }}"><i class="fa fa-star" aria-hidden="true"></i> Promotions</a>
+        </li>
         <li class="{{ isActive('admin/admins') }}">
             <a href="{{ URL::to('admin/admins') }}"><i class="fa fa-fw fa-group"></i> Admins</a>
         </li>

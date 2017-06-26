@@ -2,6 +2,11 @@
   &.wired, &.btn-yellow {
     @include wiredButton();
   }
+  &.btn-close {
+    &:after {
+      content:none !important;
+    }
+  }
   &.yellow-text {
     color: $yellow !important;
   }

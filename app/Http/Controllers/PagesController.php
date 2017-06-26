@@ -6,11 +6,13 @@ use App\Cafe;
 use App\HomePage;
 use App\MenuCategory;
 use App\MenuItem;
+use App\Promotion;
 use App\Slide;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\URL;
 
 class PagesController extends Controller
 {
@@ -34,6 +36,10 @@ class PagesController extends Controller
      * @var HomePage
      */
     private $homePage;
+    /**
+     * @var Promotion
+     */
+    private $promotion;
 
     /**
      * PagesController constructor.
@@ -42,14 +48,16 @@ class PagesController extends Controller
      * @param Cafe $cafe
      * @param Slide $slide
      * @param HomePage $homePage
+     * @param Promotion $promotion
      */
-    public function __construct(MenuCategory $menuCategory, MenuItem $menuItem, Cafe $cafe, Slide $slide, HomePage $homePage)
+    public function __construct(MenuCategory $menuCategory, MenuItem $menuItem, Cafe $cafe, Slide $slide, HomePage $homePage, Promotion $promotion)
     {
         $this->menuCategory = $menuCategory;
         $this->menuItem = $menuItem;
         $this->cafe = $cafe;
         $this->slide = $slide;
         $this->homePage = $homePage;
+        $this->promotion = $promotion;
     }
 
     /*
@@ -141,5 +149,21 @@ class PagesController extends Controller
     public function cafeClub() {
         $metaTitle = 'Café Club';
         return view('pages.cafe-club', compact('metaTitle'));
+    }
+
+    public function promotion()
+    {
+        if($this->promotion->whereNotNull('created_at')->first()) {
+            //return $this->promotion->whereNotNull('created_at')->first()->file();
+            return redirect($this->promotion->whereNotNull('created_at')->first()->file());
+        } else {
+            return redirect('/');
+        }
+    }
+
+    public function funraise()
+    {
+        $metaTitle = 'Funraise';
+        return view('pages.fundraise', compact('metaTitle'));
     }
 }

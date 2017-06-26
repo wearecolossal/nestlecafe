@@ -36,6 +36,7 @@ Route::get('franchise', 'PagesController@franchise');
 Route::get('order-online', 'PagesController@order');
 Route::get('online-order', function(){ return redirect('order-online'); });
 Route::get('about', 'PagesController@about');
+Route::get('promotions', 'PagesController@promotion');
 Route::get('contact', 'PagesController@contact');
 Route::post('contact', 'EmailController@sendContact');
 Route::get('contact/success', function(){ return view('pages.contact-thank'); });
@@ -46,6 +47,8 @@ Route::get('dadsgiveaway', function(){
    return redirect('uploads/documents/Nestle-Toll-House-Cafe-by-Chip-Dad-Giveaway-Official-Rules.pdf');
 });
 Route::get('cafe-club', 'PagesController@cafeclub');
+Route::get('fundraise', function(){return redirect('funraise');});
+Route::get('funraise', 'PagesController@funraise');
 Route::get('output-locations', 'LocationController@ajax');
 Route::post('location-search', 'LocationController@searchByCountry');
 Route::post('location-search-state', 'LocationController@searchByState');
@@ -60,6 +63,7 @@ Route::group(['middleware' => 'web'], function(){
     Route::post('login', 'LoginController@login');
     Route::get('logout', function(){ Auth::logout(); return redirect('/'); });
     Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function(){
+        Route::resource('promotions', 'Admin\PromotionController');
         Route::resource('callouts', 'Admin\CalloutController');
         Route::get('blog', 'Admin\PagesController@blog');
         Route::get('admins', 'Admin\PagesController@admins');
