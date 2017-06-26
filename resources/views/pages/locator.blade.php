@@ -110,6 +110,7 @@
                         url: "{{ URL::to('location-search-by-city') }}",
                         data: data,
                         success:function(response){
+                            console.log(response);
                             var stores = response;
                             $('.map-store-filter-results').html();
                             var storeLength = stores.length;
@@ -196,6 +197,7 @@
                         data: data,
                         success:function(response){
                             var stores = response;
+                            console.log(response);
                             $('.map-store-filter-results').html();
                             var storeLength = stores.length;
                             $('.map-store-filter-results').html('');
