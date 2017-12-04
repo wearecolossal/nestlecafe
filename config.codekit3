@@ -18956,7 +18956,7 @@
 		},
 	"\/resources\/views\/pages\/locator.blade.php": {
 		"ft": 8192,
-		"oA": 0,
+		"oA": 2,
 		"oAP": "\/resources\/views\/pages\/locator.blade.php",
 		"oF": 0
 		},
@@ -18974,7 +18974,7 @@
 		},
 	"\/resources\/views\/pages\/order.blade.php": {
 		"ft": 8192,
-		"oA": 0,
+		"oA": 2,
 		"oAP": "\/resources\/views\/pages\/order.blade.php",
 		"oF": 0
 		},
