@@ -65,7 +65,7 @@
 
 @section('scripts')
     <script src="{{ URL::asset('library/js/jquery.bxslider.js') }}"></script>
-    <script src="{{ URL::asset('library/js/instafeed.js') }}"></script>
+    <script src="{{ URL::asset('library/js/instafeed.min.js') }}"></script>
     <script>
         $(document).ready(function(){
            $('ul.slider').bxSlider({
