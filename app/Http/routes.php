@@ -65,7 +65,7 @@ Route::group(['middleware' => 'web'], function(){
     Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function(){
         Route::resource('promotions', 'Admin\PromotionController');
         Route::resource('callouts', 'Admin\CalloutController');
-        Route::get('blog', 'Admin\PagesController@blog');
+//        Route::get('blog', 'Admin\PagesController@blog');
         Route::get('admins', 'Admin\PagesController@admins');
         Route::get('menu/categories/{id}/archive', 'Admin\MenuCategoryController@archive');
         Route::resource('menu/categories', 'Admin\MenuCategoryController');
