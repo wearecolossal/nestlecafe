@@ -1,5 +1,5 @@
 <!-- jQuery -->
-<script src="{{ URL::asset('cp/js/jquery.js') }}"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 
 <!-- Bootstrap Core JavaScript -->
 <script src="{{ URL::asset('cp/js/bootstrap.min.js') }}"></script>
