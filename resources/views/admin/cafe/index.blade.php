@@ -93,10 +93,52 @@
                         <td class="actions">
                             <a href="{{ URL::to('admin/cafes/'.$cafe->id.'/edit') }}" class="btn btn-default btn-xs"><i
                                         class="glyphicon glyphicon-edit"></i></a>
-                            <a data-toggle="modal" data-target="#{{ isActive('admin/cafes') ? 'archive' : 'activate' }}"
+                            <a data-toggle="modal" data-target="#{{ (isActive('admin/cafes') ? 'archive' : 'activate').$cafe->id }}"
                                data-url="{{ URL::to('admin/cafes/'.$cafe->id.'/archive') }}"
-                               class="btn btn-default btn-xs archive"><i
+                               class="btn btn-default btn-xs"><i
                                         class="glyphicon glyphicon-{{ isActive('admin/cafes') ? 'trash' : 'ok' }} {{ isActive('admin/cafes') ? 'text-danger' : 'text-success' }}"></i></a>
+                            <!-- Modal -->
+                            <div class="modal fade" id="archive{{ $cafe->id }}" tabindex="-1" role="dialog" aria-labelledby="archive">
+                                <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                                                        aria-hidden="true">&times;</span></button>
+                                            <h4 class="modal-title" id="myModalLabel">Archive Caf&eacute;?</h4>
+                                        </div>
+                                        {!! Form::open(['url' => URL::to('admin/cafes/'.$cafe->id.'/archive'), 'method' => 'GET']) !!}
+                                        <div class="modal-body">
+                                            Archived caf&eacute;s will be hidden from users and removed from this list of active caf&eacute;s.
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                            <button type="submit" class="btn btn-danger submit">Archive</button>
+                                        </div>
+                                        {!! Form::close() !!}
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Modal -->
+                            <div class="modal fade" id="activate{{ $cafe->id }}" tabindex="-1" role="dialog" aria-labelledby="activate">
+                                <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                                                        aria-hidden="true">&times;</span></button>
+                                            <h4 class="modal-title" id="myModalLabel">Activate Caf&eacute;?</h4>
+                                        </div>
+                                        {!! Form::open(['url' => URL::to('admin/cafes/'.$cafe->id.'/archive'), 'method' => 'GET']) !!}
+                                        <div class="modal-body bg-success">
+                                            This caf&eacute; will be shown to users and added to this list of active caf&eacute;s.
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                            <button type="submit" class="btn btn-success">Activate</button>
+                                        </div>
+                                        {!! Form::close() !!}
+                                    </div>
+                                </div>
+                            </div>
                         </td>
                     </tr>
                 @endforeach
@@ -105,45 +147,9 @@
         </div>
     </div>
 
-    <!-- Modal -->
-    <div class="modal fade" id="archive" tabindex="-1" role="dialog" aria-labelledby="archive">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
-                                aria-hidden="true">&times;</span></button>
-                    <h4 class="modal-title" id="myModalLabel">Archive Caf&eacute;?</h4>
-                </div>
-                <div class="modal-body">
-                    Archived caf&eacute;s will be hidden from users and removed from this list of active caf&eacute;s.
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                    <a class="btn btn-danger submit">Archive</a>
-                </div>
-            </div>
-        </div>
-    </div>
 
-    <!-- Modal -->
-    <div class="modal fade" id="activate" tabindex="-1" role="dialog" aria-labelledby="activate">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
-                                aria-hidden="true">&times;</span></button>
-                    <h4 class="modal-title" id="myModalLabel">Activate Caf&eacute;?</h4>
-                </div>
-                <div class="modal-body bg-success">
-                    This caf&eacute; will be shown to users and added to this list of active caf&eacute;s.
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                    <a class="btn btn-success submit">Activate</a>
-                </div>
-            </div>
-        </div>
-    </div>
+
+
 
 @stop
 
