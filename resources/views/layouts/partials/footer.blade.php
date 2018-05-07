@@ -11,7 +11,7 @@
                 <li class="{{ isActive('locations') }}"><a href="{{ URL::to('locations') }}">Caf&eacute; Locations</a></li>
                 <li class="{{ isActive('cafe-club') }}"><a href="{{ URL::to('cafe-club') }}">The Caf&eacute; Club</a></li>
                 {{--<li><a href="{{ URL::to('blog') }}">Cookie Talk</a></li>--}}
-                @if(\App\Promotion::hasFile()->first())
+                @if(count(\App\Promotion::all()) > 0)
                     <li><a href="{{ URL::to('promotions') }}" target="_blank">Promotions</a></li>
                 @endif
             </ul>

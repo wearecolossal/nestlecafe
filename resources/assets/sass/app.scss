@@ -130,7 +130,57 @@
     opacity: 1;
   }
 }
+
+/*==========================================================================
+   Franchise page
+==========================================================================*/
+.franchise-1 {
+  padding-top:80px;
+  padding-bottom:80px;
+  .row {
+    margin-top:50px;
+    display: grid;
+    grid-template-columns: 25% 75%;
+    grid-template-rows: auto;
+    grid-gap: 30px;
+    > * {
+      height:300px;
+    }
+  }
+  img {
+    object-fit:cover;
+    height:100%;
+    width:100%;
+  }
+}
+
+.franchise-3 {
+  .store-images {
+    display: grid;
+    grid-template-columns:repeat(3, 1fr); 
+    grid-template-rows:auto;
+    grid-gap:30px;
+    margin-top:-50px;
+    padding-bottom:75px;
+    img {
+      object-fit: cover;
+      height:100%;
+      width:100%;
+    }
+  }
+}
+
+@media (max-width:1440px) {
+  .franchise-2.section.image {
+    .content {
+      box-sizing: border-box;
+      padding-left:45px;
+      padding-right:45px;
+    }
+  }
+}
+
 /* ==========================================================================
    Helper classes
-   ========================================================================== */
+   ==========================================================================*/
 @import "helper";

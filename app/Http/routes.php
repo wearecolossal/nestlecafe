@@ -33,6 +33,7 @@ Route::post('mailer', 'EmailController@sendContact');
 Route::get('locations', 'PagesController@locator');
 Route::get('story', 'PagesController@story');
 Route::get('franchise', 'PagesController@franchise');
+Route::get('franchise-2', 'PagesController@newFranchise');
 Route::get('order-online', 'PagesController@order');
 Route::get('online-order', function(){ return redirect('order-online'); });
 Route::get('about', 'PagesController@about');

@@ -104,6 +104,14 @@ class PagesController extends Controller
     }
 
     /*
+     * FRANCHISE NEW
+     */
+    public function newFranchise() {
+        $metaTitle = 'Franchising Opportunities';
+        return view('pages.franchise-2', compact('metaTitle'));
+    }
+
+    /*
      * FRANCHISE
      */
     public function order() {
