@@ -137,14 +137,18 @@
 .franchise-1 {
   padding-top:80px;
   padding-bottom:80px;
-  .row {
+  .row {  
     margin-top:50px;
     display: grid;
-    grid-template-columns: 25% 75%;
+    grid-template-columns: 40% 60%;
     grid-template-rows: auto;
-    grid-gap: 30px;
+    div:first-child {
+      padding-right:30px;
+    }
     > * {
       height:300px;
+      overflow: hidden;
+      box-sizing: border-box;
     }
   }
   img {
@@ -170,7 +174,66 @@
   }
 }
 
+.franchise-4 {
+  p {
+    margin-bottom:50px;
+  }
+  a.btn {
+    font-size: 1.5em;
+    padding-top:12px;
+  }
+  h3 {
+    color:#FFF;
+    font-size: 2em;
+    margin-top:0px;
+    small {
+      font-size: .5em;
+    }
+  }
+}
+
+.franchise-2 {
+  h1 {
+    color:$brown !important;
+  }
+  p {
+    color:$brown !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .franchise-1 {
+    .row {
+      grid-template-columns: 1fr;
+      > * {
+        padding-bottom:30px;
+        padding-right:0 !important;
+      }
+    }
+  }
+
+  .franchise-3 {
+    .store-images {
+      grid-template-columns: 1fr;
+    }
+  }
+}
+
 @media (max-width:1440px) {
+  .franchise-1 {
+    .row {
+      padding-left:30px;
+      padding-right:30px;
+    }
+  }
+  .franchise-3 {
+    .store-images {
+      box-sizing: border-box;
+      padding-left:30px;
+      padding-right:30px;
+    }
+  }
+
   .franchise-2.section.image {
     .content {
       box-sizing: border-box;

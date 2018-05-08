@@ -53,11 +53,11 @@
             <h2 style="font-size:2em;">US and Canada are wide open</h2>
         </div>
     </section>
-        <div class="section image franchise-2" data-parallax="scroll" data-image-src="{{ URL::asset('library/img/franchise-map.png') }}" style="background-position-y: center !important;min-height:750px;z-index: 9999">
+        <div class="section image franchise-2" data-parallax="scroll" data-image-src="{{ URL::asset('library/img/franchise-map.jpg') }}" style="background-position-y: center !important;z-index: 9999">
         <div class="container">
             <div class="content" style="text-align: left;">
                 <h1 style="margin-top:0;padding-top:0;margin-bottom:10px;text-align:left;">Lorem ipsum dolor sit amet</h1>
-                <p style="font-size:1em;">
+                <p style="font-size:1.2em;">
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse architecto tempora soluta sunt illum consequatur, quasi quia facilis, ea aliquid veniam eum suscipit minima doloribus iure nam maxime, nostrum iste. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum numquam, ab provident quia magni ex suscipit molestias magnam unde fuga, a deleniti consectetur incidunt, nostrum sapiente. Qui reiciendis quis, dolores.
                     <br><br>
                 </p>
@@ -72,6 +72,7 @@
         </h1>
         <div class="container" style="text-align:center; padding-bottom:90px;">
             <p style="font-size:1.25em;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero ab non quisquam quibusdam porro illum nisi provident reprehenderit, dolorem a doloremque dignissimos magni voluptas velit harum aut, amet ratione optio! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam laudantium modi numquam consectetur dolores, sint delectus ex optio facere tempore dicta atque. Magni quae, vero veritatis sunt, impedit nesciunt quaerat?</p>
+            <a href="#" target="_blank" class="btn wired btn-red">Learn More</a>
         </div>
         <div class="container store-images">
             <div class="store-img">
@@ -83,6 +84,21 @@
             <div class="store-img">
                 <img src="{{ URL::asset('library/img/franchise-store-img-3.jpg') }}" alt="">
             </div>
+        </div>
+    </div>
+    <div class="section red franchise-4">
+        <h1 class="standard">
+            You Just Have To Know Where To Find Them
+        </h1>
+        <div class="container" style="text-align:center; padding-bottom:90px;">
+            <p style="font-size:1.25em;">We invite you to explore the Nestlé® Toll House® Cafe® by Chip® franchise overview and engage in the subsequent learning and discovery steps of our highly compelling business opportunity. 
+<br><br>
+Please note, there are six (6) engaging questions for you to answer as you review our brochure. Once you are finished, you will have the opportunity to complete our online application. </p>
+<a href="#" target="_blank" class="btn wired">Learn More</a>
+    <h3>
+        <small>or </small> <br>
+        call us at (214) 495-9533
+    </h3>
         </div>
     </div>
 @stop
