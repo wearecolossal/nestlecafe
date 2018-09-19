@@ -24,6 +24,7 @@
     <link rel="stylesheet" href="{{ URL::asset('library/css/app.css') }}">
     @yield('styles')
     <script src="{{ URL::asset('library/js/vendor/modernizr-2.8.3.min.js') }}"></script>
+    <script src='https://www.google.com/recaptcha/api.js'></script>
 </head>
 <body>
 <!--[if lt IE 8]>

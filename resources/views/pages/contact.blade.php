@@ -65,6 +65,7 @@
                 <div class="form-group">
                     {!! Form::submit('Submit') !!}
                 </div>
+                <div class="g-recaptcha" data-sitekey="6LeXIXEUAAAAAC2I4tdWqlMHYIZJ73qCaEsNAUoV"></div>
                 {!! Form::close() !!}
             </div>
         </div>
