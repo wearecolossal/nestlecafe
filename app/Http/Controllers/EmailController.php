@@ -38,7 +38,8 @@ class EmailController extends Controller
             'name'     => 'required',
             'email'    => 'required',
             'subject'  => 'required',
-            'comments' => 'required'
+            'comments' => 'required',
+            'g-recaptcha-response' => 'required'
         ];
 
         $input = $request->all();
